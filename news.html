@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/libs/css/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="static/css/news.min.css">
+    <title>Новости</title>
+  </head>
+  <body>
+    <div class="callback-popup-wrap mfp-hide" id="callback">
+      <div class="callback-popup__body">
+        <div class="callback-popup__header">Заполните форму и с вами свяжутся в ближайшее время</div>
+        <form class="callback-popup__form" action="#">
+          <label class="callback-popup__label">Ваше имя:
+            <input class="callback-popup__input input" type="text" placeholder="Александр">
+          </label>
+          <label class="callback-popup__label">Ваш телефон:
+            <input class="callback-popup__input input" type="tel" placeholder="+7 (000) 000-00-00">
+          </label>
+          <label class="label checkbox">
+            <input class="checkbox__input" type="checkbox"><span class="checkbox__box"></span><span class="checkbox__text">Я соглашаюсь на обработку персональных данных и с <a href="#">политикой конфиденциальности</a></span>
+          </label>
+          <input class="callback-popup__submit" type="submit" value="Отправить">
+          <button class="callback-popup__close" type="button"><img src="./static/img/icons/close.svg" alt="Закрыть"></button>
+        </form>
+      </div>
+      <div class="callback-success">
+        <div class="callback-success__title">Спасибо за заявку!</div>
+        <div class="callback-success__img"><img src="./static/img/icons/popup-success.svg" alt="Спасибо"></div>
+        <div class="callback-success__desc">Наш менеджер свяжется с Вами в течении 10 минут.</div>
+        <button class="callback-popup__close" type="button"><img src="./static/img/icons/close-orange.svg" alt="Закрыть"></button>
+      </div>
+    </div>
+    <header class="header" id="header">
+      <div class="container">
+        <nav class="nav">
+          <button class="hamb"></button>
+          <div class="logo nav__logo"><a href="index.html">
+              <picture>
+                <source media="(max-width: 1090px)" srcset="./static/img/icons/logo-white.svg"><img src="./static/img/icons/logo-header.svg" alt="logo">
+              </picture></a></div>
+          <div class="recall-single"><a href="#callback"><img src="./static/img/icons/call-white.svg" alt="перезвонить"></a></div>
+          <div class="menu-wrap" id="mobile-menu">
+            <ul class="menu">
+              <li><a class="menu__link" href="/shinshilla/">Главная</a></li>
+              <li><a class="menu__link" href="farm.html">Наша ферма</a></li>
+              <li><a class="menu__link" href="partnership.html">Партнерство</a></li>
+              <li><a class="menu__link" href="salon.html">Салон меха</a></li>
+              <li><a class="menu__link" href="news.html">Новости</a></li>
+            </ul>
+            <div class="callbacks">
+              <div class="callbacks__phone"><a href="tel:+7(965)101-49-39">+7 (965) 101-49-39</a></div>
+              <div class="callbacks__recall"><a href="#callback">Перезвонить мне</a></div>
+            </div>
+            <div class="socials socials--header"><a class="socials__link" href="#"><img src="./static/img/icons/viber-white.svg" alt="Viber"></a><a class="socials__link" href="#"><img src="./static/img/icons/whatsapp-white.svg" alt="Whatsapp"></a><a class="socials__link" href="#"><img src="./static/img/icons/facebook-white.svg" alt="facebook"></a><a class="socials__link" href="#"><img src="./static/img/icons/insta-white.svg" alt="instagram"></a><a class="socials__link" href="#"><img src="./static/img/icons/telegram-white.svg" alt="telegram"></a></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="newspaper-modal mfp-hide" id="newspaper"><img class="js-lazy-load" src="" alt="газета" data-src="./static/img/pictures/newspaper-big.jpg"></div>
+      <section class="news section">
+        <div class="container">
+          <div class="news-intro">
+            <h2 class="title-secondary news-intro__title">Новости</h2>
+            <div class="news-slider-wrapper">
+              <div class="news-slider js-news-slider">
+                <div class="news-slider__item">
+                  <div class="news-slider__bg">
+                    <picture>
+                      <source media="(max-width: 768px)" srcset="" data-srcset="./static/img/backgrounds-mobile/slide-bg-3-mobile.jpg">
+                      <source media="(max-width: 769px)" srcset="" data-srcset="./static/img/backgrounds-mobile/slide-bg-3.jpg"><img class="js-lazy-load" src="" alt="фон" data-src="./static/img/backgrounds/slide-bg-3.jpg">
+                    </picture>
+                  </div>
+                  <div class="news-slider__image"><img class="js-lazy-load" src="" alt="Газета" data-src="./static/img/pictures/newspaper.jpg"></div>
+                  <div class="news-slider__content">
+                    <div class="news-slider__title">Ферма <span>Retas</span> на газетных страницах</div><a class="news-slider__button" href="#newspaper">Прочитать</a>
+                  </div>
+                </div>
+                <div class="news-slider__item">
+                  <div class="news-slider__bg">
+                    <picture>
+                      <source media="(max-width: 768px)" srcset="" data-srcset="./static/img/backgrounds-mobile/slide-bg-1-mobile.jpg">
+                      <source media="(max-width: 769px)" srcset="" data-srcset="./static/img/backgrounds-mobile/slide-bg-1.jpg"><img class="js-lazy-load" src="" alt="фон" data-src="./static/img/backgrounds/slide-bg-1.jpg">
+                    </picture>
+                  </div>
+                  <div class="news-slider__content">
+                    <div class="news-slider__title">Выставка в Милане MIFUR</div>
+                    <div class="news-slider__text">24-27 февраля</div>
+                  </div>
+                </div>
+                <div class="news-slider__item">
+                  <div class="news-slider__bg">
+                    <picture>
+                      <source media="(max-width: 768px)" srcset="" data-srcset="./static/img/backgrounds-mobile/slide-bg-2-mobile.jpg">
+                      <source media="(max-width: 769px)" srcset="" data-srcset="./static/img/backgrounds-mobile/slide-bg-2.jpg"><img class="js-lazy-load" src="" alt="фон" data-src="./static/img/backgrounds/slide-bg-2.jpg">
+                    </picture>
+                  </div>
+                  <div class="news-slider__content">
+                    <div class="news-slider__title">Московская выставка LeShow</div>
+                    <div class="news-slider__text">14-16 мая</div>
+                  </div>
+                </div>
+              </div>
+              <div class="news-slider-controls">
+                <div class="news-slider-controls__dots"></div>
+                <div class="news-slider-controls__arrows"></div>
+              </div>
+            </div>
+          </div>
+          <div class="news-gallery">
+            <h2 class="title-secondary news-gallery__title">Новинки из меха</h2>
+            <div class="news-gallery__content">
+              <div class="news-gallery__img"><img src="./static/img/pictures/gallery-image-1.jpg" alt="" width="570"><a href="#"></a></div>
+              <div class="news-gallery__img"><img src="./static/img/pictures/gallery-image-2.jpg" alt="Шуба" width="370"><a href="#"></a></div>
+              <div class="news-gallery__img"><img src="./static/img/pictures/gallery-image-3.jpg" alt="Шуба" width="170"><a href="#"></a></div>
+              <div class="news-gallery__img"><img src="./static/img/pictures/gallery-image-4.jpg" alt="Шуба" width="170"><a href="#"></a></div>
+              <div class="news-gallery__img"><img src="./static/img/pictures/gallery-image-5.jpg" alt="Шуба" width="270"><a href="#"></a></div>
+              <div class="news-gallery__img"><img src="./static/img/pictures/gallery-image-6.jpg" alt="Шуба" width="270"><a href="#"></a></div>
+            </div>
+          </div>
+          <div class="television">
+            <h2 class="title-secondary television__title">Мы на ТВ</h2>
+            <div class="television__content">
+              <div class="television__item">
+                <iframe class="js-lazy-load" src="" data-src="https://www.youtube.com/embed/9bUZqFsEpDw" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="television__item">
+                <iframe class="js-lazy-load" src="" data-src="https://vk.com/video_ext.php?oid=418466768&amp;id=456239017&amp;hash=06dc7983bb6052e4" allowfullscreen></iframe>
+              </div>
+              <div class="television__item">
+                <iframe class="js-lazy-load" allowfullscreen src="" data-src="http://player.vgtrk.com/iframe/video/id/1010473/start_zoom/true/showZoomBtn/false/sid/mayak/isPlay/false/?acc_video_id=1010473"></iframe>
+              </div>
+              <div class="television__item">
+                <iframe class="js-lazy-load" src="" data-src="https://www.youtube.com/embed/wRDeWfZzIjY" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="rights">
+            <div class="rights__inner">
+              <div class="logo rights__logo"><a href="index.html"><img class="js-lazy-load" src="" alt="Лого" data-src="./static/img/icons/logo.svg"></a></div>
+              <div class="rights__text">Шиншилловая ферма Ретас Copyright © 2019 <br>Все права защищены</div>
+            </div>
+            <div class="socials footer__socials"><a class="socials__link" href="#"><img class="js-lazy-load" src="" alt="Viber" data-src="./static/img//icons/viber.svg"></a><a class="socials__link" href="#"><img class="js-lazy-load" src="" alt="Whatsapp" data-src="./static/img/icons/whatsapp.svg"></a><a class="socials__link" href="#"><img class="js-lazy-load" src="" alt="facebook" data-src="./static/img/icons/facebook.svg"></a><a class="socials__link" href="#"><img class="js-lazy-load" src="" alt="instagram" data-src="./static/img/icons/insta.svg"></a><a class="socials__link" href="#"><img class="js-lazy-load" src="" alt="telegram" data-src="./static/img/icons/telegram.svg"></a></div>
+          </div>
+          <div class="info">
+            <div class="info__title">Информация</div>
+            <ul class="info__list">
+              <li><a class="info__link" href="#">О нас</a></li>
+              <li><a class="info__link" href="#">Партнерство</a></li>
+              <li><a class="info__link" href="#">Перезвонить мне</a></li>
+            </ul>
+          </div>
+          <div class="info">
+            <div class="info__title">Контакты</div>
+            <ul class="info__list info__list--contacts">
+              <li><a class="info__link" href="#"> <img class="js-lazy-load" src="" alt="адрес" data-src="./static/img/icons/geo.svg">Петелино, Московская обл, ул. Запрудная ул., 43</a></li>
+              <li><a class="info__link info__link--big" href="tel:+7(965)101-49-39"> <img class="js-lazy-load" src="" alt="позвонить" data-src="./static/img/icons/call.svg">+7 (965) 101-49-39</a></li>
+              <li><a class="info__link info__link info__link--big info__link--without-img" href="#"> <img class="js-lazy-load" src="" alt="отправить сообщение" data-src="./static/img/icons/message.svg">retas-chin@yandex.ru</a></li>
+            </ul>
+          </div>
+          <div class="rights-mobile">Copyright © 2019 Все права защищены</div>
+        </div>
+      </div>
+    </footer>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./static/libs/js/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./static/libs/js/imagesloaded.pkgd.min.js"></script>
+    <script src="./static/libs/js/masonry.pkgd.min.js"></script>
+    <script src="static/js/news.min.js"></script>
+  </body>
+</html>

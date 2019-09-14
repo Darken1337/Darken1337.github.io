@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/libs/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="static/libs/css/selectric.min.css">
+    <link rel="stylesheet" href="static/css/home.min.css">
+    <title>Главная страница</title>
+  </head>
+  <body>
+    <div class="callback-popup-wrap mfp-hide" id="callback">
+      <div class="callback-popup__body">
+        <div class="callback-popup__header">Заполните форму и с вами свяжутся в ближайшее время</div>
+        <form class="callback-popup__form" action="#">
+          <label class="callback-popup__label">Ваше имя:
+            <input class="callback-popup__input input" type="text" placeholder="Александр">
+          </label>
+          <label class="callback-popup__label">Ваш телефон:
+            <input class="callback-popup__input input" type="tel" placeholder="+7 (000) 000-00-00">
+          </label>
+          <label class="label checkbox">
+            <input class="checkbox__input" type="checkbox"><span class="checkbox__box"></span><span class="checkbox__text">Я соглашаюсь на обработку персональных данных и с <a href="#">политикой конфиденциальности</a></span>
+          </label>
+          <input class="callback-popup__submit" type="submit" value="Отправить">
+          <button class="callback-popup__close" type="button"><img src="./static/img/icons/close.svg" alt="Закрыть"></button>
+        </form>
+      </div>
+      <div class="callback-success">
+        <div class="callback-success__title">Спасибо за заявку!</div>
+        <div class="callback-success__img"><img src="./static/img/icons/popup-success.svg" alt="Спасибо"></div>
+        <div class="callback-success__desc">Наш менеджер свяжется с Вами в течении 10 минут.</div>
+        <button class="callback-popup__close" type="button"><img src="./static/img/icons/close-orange.svg" alt="Закрыть"></button>
+      </div>
+    </div>
+    <header class="header" id="header">
+      <div class="container">
+        <nav class="nav">
+          <button class="hamb"></button>
+          <div class="logo nav__logo"><a href="index.html">
+              <picture>
+                <source media="(max-width: 1090px)" srcset="./static/img/icons/logo-white.svg"><img src="./static/img/icons/logo-header.svg" alt="logo">
+              </picture></a></div>
+          <div class="recall-single"><a href="#callback"><img src="./static/img/icons/call-white.svg" alt="перезвонить"></a></div>
+          <div class="menu-wrap" id="mobile-menu">
+            <ul class="menu">
+              <li><a class="menu__link" href="/shinshilla/">Главная</a></li>
+              <li><a class="menu__link" href="farm.html">Наша ферма</a></li>
+              <li><a class="menu__link" href="partnership.html">Партнерство</a></li>
+              <li><a class="menu__link" href="salon.html">Салон меха</a></li>
+              <li><a class="menu__link" href="news.html">Новости</a></li>
+            </ul>
+            <div class="callbacks">
+              <div class="callbacks__phone"><a href="tel:+7(965)101-49-39">+7 (965) 101-49-39</a></div>
+              <div class="callbacks__recall"><a href="#callback">Перезвонить мне</a></div>
+            </div>
+            <div class="socials socials--header"><a class="socials__link" href="#"><img src="./static/img/icons/viber-white.svg" alt="Viber"></a><a class="socials__link" href="#"><img src="./static/img/icons/whatsapp-white.svg" alt="Whatsapp"></a><a class="socials__link" href="#"><img src="./static/img/icons/facebook-white.svg" alt="facebook"></a><a class="socials__link" href="#"><img src="./static/img/icons/insta-white.svg" alt="instagram"></a><a class="socials__link" href="#"><img src="./static/img/icons/telegram-white.svg" alt="telegram"></a></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="banner">
+        <div class="container">
+          <div class="banner__inner">
+            <div class="banner__content">
+              <h1 class="banner__title">Шиншилловая ферма <span>retas</span></h1>
+              <h2 class="banner__subtitle">Шиншиллы для бизнеса</h2>
+              <button class="btn banner__button">Подробнее</button>
+            </div>
+            <div class="banner__image"><img class="js-lazy-load" src="" alt="Шиншилла" data-src="./static/img/pictures/banner-img.png"></div>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="container">
+          <h2 class="title-secondary about__title">О нас</h2>
+          <div class="about__body">
+            <div class="about__content">
+              <p class="about__text text"><span>Ферма  Retas</span> одна из самых успешных на территории СНГ.  Благодаря эффективно налаженной системе и любви к своему делу мы занимаем лидирующее место в шиншилловом бизнесе, а постоянное участие на международных выставках шуб Милана и Москвы помогают перенимать опыт зарубежных коллег и не упускать последние нововведения.<br> Сегодня мы гордимся тем, что делимся своим опытом и помогаем людям открыть свой бизнес.</p>
+              <ul class="advantages">
+                <li>Крупнейший питомник на территории России</li>
+                <li>Уникальная система ионизации, дезинфекции и вентиляции</li>
+                <li>Большая численность поголовья</li>
+                <li>Технический контроль на всех этапах</li>
+                <li>Эксклюзивный производитель мехового сырья</li>
+                <li>Система кредитования от банка Тинькофф</li>
+              </ul>
+            </div>
+            <div class="company-map">
+              <div class="company-map__list">
+                <div class="company-map__item company-map__item--first">
+                  <div class="company-map__year">2002</div>
+                  <div class="company-map__event">Начало работы</div>
+                </div>
+                <div class="company-map__item company-map__item--first">
+                  <div class="company-map__year">2004</div>
+                  <div class="company-map__event">Окупаем вложенные деньги</div>
+                </div>
+                <div class="company-map__item company-map__item--first">
+                  <div class="company-map__year">2006</div>
+                  <div class="company-map__event">Официальное открытие фермы</div>
+                </div>
+                <div class="company-map__item company-map__item--first">
+                  <div class="company-map__year">2008</div>
+                  <div class="company-map__event">Выход на прибыль в 300%</div>
+                </div>
+              </div>
+              <div class="company-map__img"><img class="js-lazy-load" src="" alt="точки" data-src="./static/img/pictures/company-map.png"></div>
+              <div class="company-map__list">
+                <div class="company-map__item company-map__item--last">
+                  <div class="company-map__year">2016</div>
+                  <div class="company-map__event">Становимся крупнейшим питомником на территории РФ </div>
+                </div>
+                <div class="company-map__item company-map__item--last">
+                  <div class="company-map__year">2019</div>
+                  <div class="company-map__event">Помогаем другим основать свои фермы</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="demand">
+        <div class="container">
+          <h2 class="title-secondary demand__title">Почему шиншиллы востребованы?</h2>
+          <div class="demand__body">
+            <div class="features">
+              <div class="feature">
+                <div class="feature__inner">
+                  <div class="feature__num">01.</div>
+                  <div class="feature__desc">Питомцы имеют красивую шерсть, которая пользуется огромным спросом</div>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature__inner">
+                  <div class="feature__num">02.</div>
+                  <div class="feature__desc">Доход не только от сбыта молодняка, но и от продажи шкур</div>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature__inner">
+                  <div class="feature__num">03.</div>
+                  <div class="feature__desc">Неприхотливы в уходе</div>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature__inner">
+                  <div class="feature__num">04.</div>
+                  <div class="feature__desc">Привлекают не только производителей меховых изделий, но и любителей экзотических животных </div>
+                </div>
+              </div>
+            </div>
+            <div class="demand__image"><img class="js-lazy-load" src="" alt="Шишилла" data-src="./static/img/pictures/why-img.jpg"></div>
+          </div>
+        </div>
+      </section>
+      <section class="partners section">
+        <div class="partners-intro">
+          <div class="container">
+            <div class="partners-intro__inner">
+              <h2 class="title-secondary">Партнерская программа от фермы RETAS</h2>
+              <h3 class="partners-intro__subtitle">Мы предлагаем готовое решение для бизнеса и сотрудничества с доходностью более 300% годовых. </h3>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="partners-content">
+            <div class="outcome">
+              <div class="outcome__title">Вы получите:</div>
+              <ul class="outcome__list">
+                <li>Бессрочный договор на сбыт молодняка и шкурок </li>
+                <li>Привлекательные цены на корма и всё оборудование</li>
+                <li>Бесплатная доставка поголовья и забор молодняка</li>
+                <li>Обмен самцов при необходимости</li>
+                <li>Консультация на всех этапах сотрудничества</li>
+              </ul>
+            </div>
+            <div class="partners-content__image">
+              <picture>
+                <source class="js-lazy-load" media="(max-width: 768px)" srcset="" data-srcset="./static/img/pictures-mobile/you-got-mobile.jpg"><img class="js-lazy-load" src="" alt="Вы получите" data-src="./static/img/pictures/you-got.jpg">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="count">
+        <div class="container">
+          <h2 class="count__title title-secondary">Расчитайте сумму прибыли</h2>
+          <div class="calculator">
+            <div class="calculator__instruction">Необходимое количество пар:</div>
+            <select class="select">
+              <option class="select__option" value="1">1</option>
+              <option class="select__option" value="2">2</option>
+              <option class="select__option" value="3">3</option>
+              <option class="select__option" value="4">4</option>
+              <option class="select__option" value="5">5</option>
+              <option class="select__option" value="6">6</option>
+              <option class="select__option" value="7">7</option>
+              <option class="select__option" value="8">8</option>
+              <option class="select__option" value="9">9</option>
+              <option class="select__option" value="10">10</option>
+            </select>
+            <div class="calculator__slider dragdealer" id="calculator">
+              <div class="calculator__dot handle"> </div>
+            </div>
+          </div>
+          <div class="profit">
+            <div class="profit__body">
+              <div class="price-table">
+                <div class="price-table__row"> 
+                  <div class="price-table__cell"><span class="bold">Стоимость одной пары</span>
+                    <div class="price-table__subscription">*при оптовой покупке возможны скидки</div>
+                  </div>
+                  <div class="price-table__cell price-table__cell--align-right"><span class="bold">14 000 руб*.</span></div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell">Всё необходимое на первый месяц</div>
+                  <div class="price-table__cell price-table__cell--align-right"> <span class="bold">В подарок</span></div>
+                </div>
+              </div>
+              <div class="price-table__total">Всего: <span class="orange" id="total">70 000 руб.</span></div>
+              <div class="price-table">
+                <div class="price-table__row">
+                  <div class="price-table__col">
+                    <div class="price-table__cell price-table__cell--main"> <span class="bold">Минимальный годовой расчет на прибыль</span></div>
+                    <div class="price-table__cell">Одна пара племенных шиншилл приносит в год <span class="bold">3 оката*</span></div>
+                  </div>
+                  <div class="price-table__col">
+                    <div class="price-table__cell">Кол-во щенков за год</div>
+                    <div class="price-table__cell"><span class="bold">8-9 голов</span></div>
+                  </div>
+                  <div class="price-table__col">
+                    <div class="price-table__cell">Стоимость</div>
+                    <div class="price-table__cell">2500 руб</div>
+                  </div>
+                </div>
+              </div>
+              <div class="price-table__attention">*При парном разведении, самка шиншиллы дает стабильно 3 помета в год от 1 до 6 щенков в одном помете!</div>
+              <div class="price-table__total bold">Итого: <span class="orange" id="total-profit">22 550 руб/год</span></div>
+            </div>
+            <div class="profit__image"><img class="js-lazy-load" src="" alt="Шиншилла" data-src="./static/img/pictures/calculate.jpg"></div>
+          </div>
+        </div>
+      </section>
+      <section class="callback section">
+        <div class="container">
+          <div class="callback__inner">
+            <div class="callback-intro">
+              <h3 class="callback-intro__title title-secondary">Появились вопросы?</h3>
+              <div class="callback-intro__text">Напишите нам и мы обязательно ответим</div>
+            </div>
+            <form class="form" action="#">
+              <div class="form__row">
+                <div class="form__col">
+                  <label class="form__label">Имя
+                    <input class="form__input" type="text" placeholder="Ваше имя" name="client_name">
+                  </label>
+                  <label class="form__label">Почта
+                    <input class="form__input" type="email" placeholder="Ваша почта" name="client_email">
+                  </label>
+                  <label class="form__label">Телефон
+                    <input class="form__input" type="tel" placeholder="+7 (ххх) ххх хх хх" name="client_phone">
+                  </label>
+                </div>
+                <div class="form__col form__col--fluid">
+                  <label class="form__label form__label--fluid">Сообщение
+                    <textarea class="form__input" placeholder="Введите сообщение" name="client_message"></textarea>
+                  </label>
+                </div>
+              </div>
+              <div class="form__row">
+                <input class="btn" value="Отправить" type="submit">
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="rights">
+            <div class="rights__inner">
+              <div class="logo rights__logo"><a href="index.html"><img class="js-lazy-load" src="" alt="Лого" data-src="./static/img/icons/logo.svg"></a></div>
+              <div class="rights__text">Шиншилловая ферма Ретас Copyright © 2019 <br>Все права защищены</div>
+            </div>
+            <div class="socials footer__socials"><a class="socials__link" href="#"><img class="js-lazy-load" src="" alt="Viber" data-src="./static/img//icons/viber.svg"></a><a class="socials__link" href="#"><img class="js-lazy-load" src="" alt="Whatsapp" data-src="./static/img/icons/whatsapp.svg"></a><a class="socials__link" href="#"><img class="js-lazy-load" src="" alt="facebook" data-src="./static/img/icons/facebook.svg"></a><a class="socials__link" href="#"><img class="js-lazy-load" src="" alt="instagram" data-src="./static/img/icons/insta.svg"></a><a class="socials__link" href="#"><img class="js-lazy-load" src="" alt="telegram" data-src="./static/img/icons/telegram.svg"></a></div>
+          </div>
+          <div class="info">
+            <div class="info__title">Информация</div>
+            <ul class="info__list">
+              <li><a class="info__link" href="#">О нас</a></li>
+              <li><a class="info__link" href="#">Партнерство</a></li>
+              <li><a class="info__link" href="#">Перезвонить мне</a></li>
+            </ul>
+          </div>
+          <div class="info">
+            <div class="info__title">Контакты</div>
+            <ul class="info__list info__list--contacts">
+              <li><a class="info__link" href="#"> <img class="js-lazy-load" src="" alt="адрес" data-src="./static/img/icons/geo.svg">Петелино, Московская обл, ул. Запрудная ул., 43</a></li>
+              <li><a class="info__link info__link--big" href="tel:+7(965)101-49-39"> <img class="js-lazy-load" src="" alt="позвонить" data-src="./static/img/icons/call.svg">+7 (965) 101-49-39</a></li>
+              <li><a class="info__link info__link info__link--big info__link--without-img" href="#"> <img class="js-lazy-load" src="" alt="отправить сообщение" data-src="./static/img/icons/message.svg">retas-chin@yandex.ru</a></li>
+            </ul>
+          </div>
+          <div class="rights-mobile">Copyright © 2019 Все права защищены</div>
+        </div>
+      </div>
+    </footer>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./static/libs/js/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
+    <script src="./static/libs/js/dragdealer.js"></script>
+    <script src="./static/libs/js/jquery.selectric.min.js"></script>
+    <script src="static/js/home.min.js"></script>
+  </body>
+</html>
