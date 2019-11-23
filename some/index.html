@@ -5,51 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="static/css/main.css">
-    <title>В среде</title>
+    <title>Главная</title>
   </head>
   <body>
-    <div class="header-wrap">
+    <section id="s-banner">
       <div class="container">
-        <header class="header">
-          <ul class="menu-main">
-            <li><a class="current-page link" href="#"><span>в среде</span></a></li>
-            <li><a class="link" href="#"><span>студийные</span></a></li>
-            <li><a class="link" href="#"><span>фуд-фото</span></a></li>
-            <li><a class="link" href="#"><span>Бекстейджи</span></a></li>
-          </ul>
-          <button class="button_transparent link" type="button"><span>оставить заявку</span><span class="plus-icon">+</span></button>
-        </header>
+        <div class="banner"><img class="banner__image" src="static/img/banner-bg.png" alt="" id="banner-image">
+          <div class="banner__col">
+            <button class="current-page link main" type="button" data-tab="tab-1"><span>Главная</span></button>
+            <h1 class="title-primary">андрей юдин</h1>
+            <h2 class="title-secondary">Я смогу всем показать твою красоту</h2>
+            <div class="subscribtion">professional photographer</div>
+            <ul class="menu-vertical">
+              <li>
+                <button class="link" type="button" data-tab="tab-2"> <span>Услуги</span></button>
+              </li>
+              <li>
+                <button class="link" type="button" data-tab="tab-3"> <span>Контакты</span></button>
+              </li>
+            </ul>
+          </div>
+          <div class="banner__col about" id="tab-4" style="display:none;">
+            <p>Фотографирую с 2014 года. Специализируюсь на портретах в среде и пейзажной съемке. Вхожу в топ-35 фотографов Самары, мои работы попали в топ-100 "Концептуальная фотография" по версии 35award2018. 1 место в номинации"Концептуальная фотография" Всероссийском Фестивале Фотографии '17</p>
+          </div>
+          <div class="prices" id="tab-2" style="display:none;">
+                <div class="price">
+                  <div class="price__part">
+                    <div class="price__title">«Light»</div>
+                    <ul class="price__list">
+                      <li>от 50 фотографий в цветокоррекции</li>
+                      <li>10 фотографий в ретуши</li>
+                      <li>1,5-2 часа</li>
+                      <li>аренда студии не включена в стоимость</li>
+                    </ul>
+                  </div>
+                  <div class="price__part">
+                    <div class="price__number">3000 р</div>
+                    <button class="button_transparent link" type="button"><span>оставить заявку</span><span class="plus-icon">+</span></button>
+                  </div>
+                </div>
+                <div class="price">
+                  <div class="price__part">
+                    <div class="price__title">«Mini»</div>
+                    <ul class="price__list">
+                      <li>от 50 фотографий в цветокоррекции</li>
+                      <li>+ передача всех исходников (в формате RAW)</li>
+                      <li>1,5-2 часа</li>
+                      <li>аренда студии не включена в стоимость</li>
+                    </ul>
+                  </div>
+                  <div class="price__part">
+                    <div class="price__number">3000 р</div>
+                    <button class="button_transparent link" type="button"><span>оставить заявку</span><span class="plus-icon">+</span></button>
+                  </div>
+                </div>
+                <div class="price">
+                  <div class="price__part">
+                    <div class="price__title">«PRO»</div>
+                    <ul class="price__list">
+                      <li>от 100 фотографий в цветокоррекции</li>
+                      <li>15 фотографий в ретуши</li>
+                      <li>2 часа</li>
+                      <li>+ аренда студии или трансфер до локации</li>
+                    </ul>
+                  </div>
+                  <div class="price__part">
+                    <div class="price__number">5000 р</div>
+                    <button class="button_transparent link" type="button"><span>оставить заявку</span><span class="plus-icon">+</span></button>
+                  </div>
+                </div>
+                <div class="price">
+                  <div class="price__part">
+                    <div class="price__title">«Comfort»</div>
+                    <ul class="price__list">
+                      <li>от 100 фотографий в цветокоррекции</li>
+                      <li> + передача всех исходников (в формате RAW)</li>
+                      <li>15 фотографий в ретуши</li>
+                      <li>+ профессиональные макияж и прическа</li>
+                      <li>+ аренда студии или трансфер до локации</li>
+                    </ul>
+                  </div>
+                  <div class="price__part">
+                    <div class="price__number">8000 р</div>
+                    <button class="button_transparent link" type="button"><span>оставить заявку</span><span class="plus-icon">+</span></button>
+                  </div>
+                </div>
+          </div>
+          <div class="contacts" id="tab-3" style="display:none;">
+            <div class="contacts__inner">
+              <ul class="socials-horizontal">
+                <li><a href="https://instagram.com/andrey.yudin?igshid=tb6li4gnzi5q" target="_blank">
+                    <svg style="width: 24px;height:24px">
+                      <use xlink:href="static/img/sprites.svg#instagram"></use>
+                    </svg></a></li>
+                <li><a href="https://vk.com/a.yudin_photo" target="_blank">
+                    <svg style="width: 24px;height:14px">
+                      <use xlink:href="static/img/sprites.svg#vk"></use>
+                    </svg></a></li>
+                <li><a href="https://t.me/ayudin_photo" target="_blank">
+                    <svg style="width: 24px;height:24px">
+                      <use xlink:href="static/img/sprites.svg#telegram"></use>
+                    </svg></a></li>
+              </ul><a href="">тел +7 (999) 158-42-54</a>
+              <div class="email">a.yudin.photo@ya.ru</div>
+            </div>
+          </div>
+          <div class="banner__col">
+            <button class="button_transparent link main" type="button" id="button-main"><span>оставить заявку</span><span class="plus-icon">+</span></button>
+            <ul class="socials-vertical">
+              <li><a href="https://instagram.com/andrey.yudin?igshid=tb6li4gnzi5q" target="_blank">
+                  <svg style="width: 24px;height:24px">
+                    <use xlink:href="static/img/sprites.svg#instagram"></use>
+                  </svg></a></li>
+              <li><a href="https://vk.com/a.yudin_photo" target="_blank">
+                  <svg style="width: 24px;height:14px">
+                    <use xlink:href="static/img/sprites.svg#vk"></use>
+                  </svg></a></li>
+              <li><a href="https://t.me/ayudin_photo" target="_blank">
+                  <svg style="width: 24px;height:24px">
+                    <use xlink:href="static/img/sprites.svg#telegram"></use>
+                  </svg></a></li>
+            </ul>
+            <button class="button_gradient_violet" type="button" data-tab="tab-4">Обо мне</button>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="natural-gallery_wrap">
+    </section>
+    <div id="s-gallery-prev">
       <div class="container">
-        <div class="natural-gallery" id="natural-gallery">
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/1.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/2.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/3.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/4.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/5.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/6.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/7.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/8.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/9.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/10.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/11.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/12.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/13.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/14.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/15.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/16.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/17.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/18.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/19.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/20.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/21.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/22.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/23.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/24.jpg" alt=""></div>
-          <div class="natural-gallery__item"><img src="static/img/natural-gallery/25.jpg" alt=""></div>
-          <div class="grid-sizer"></div>
+        <div class="gallery-prev">
+          <div class="gallery-item"><img class="img-gray" src="static/img/photo1-gray.jpg" alt=""><img class="img-colored" src="static/img/photo1.jpg" alt="">
+            <div class="gallery-item__content">
+              <h2 class="title-primary">В среде</h2>
+            </div>
+          </div>
+          <div class="gallery-item"><img class="img-gray" src="static/img/photo2-gray.jpg" alt=""><img class="img-colored" src="static/img/photo2.jpg" alt="">
+            <div class="gallery-item__content">
+              <h2 class="title-primary">Два</h2>
+            </div>
+          </div>
+          <div class="gallery-item"><img class="img-gray" src="static/img/photo3-gray.jpg" alt=""><img class="img-colored" src="static/img/photo3.jpg" alt="">
+            <div class="gallery-item__content">
+              <h2 class="title-primary">В среде</h2>
+            </div>
+          </div>
+          <div class="gallery-item">  <img class="img-gray" src="static/img/photo4-gray.jpg" alt=""><img class="img-colored" src="static/img/photo4.jpg" alt="">
+            <div class="gallery-item__content">
+              <h2 class="title-primary">Пять</h2>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -57,9 +161,12 @@
       <div class="container">
         <div class="footer">
           <ul class="menu-hor">
-            <li><a class="link" href="#">контакты</a></li>
-            <li><a class="link" href="#">услуги</a></li>
-            <li><a class="link" href="#">за кадром</a></li>
+            <li>
+              <button class="link" type="button" data-tab="tab-2"> <span>Услуги</span></button>
+              <li>
+                <button class="link" type="button" data-tab="tab-3"> <span>Контакты</span></button>
+              </li>
+            </li>
           </ul>
           <ul class="socials-hor">
             <li><a href="#">
