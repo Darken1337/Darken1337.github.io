@@ -472,6 +472,9 @@ img {
   @media (max-width: 850px) {
     .banner .title-primary {
       margin-bottom: 67px; } }
+  @media (max-width: 450px) {
+    .banner .title-primary {
+      width: 265px; } }
 
 .banner .list {
   margin-bottom: 56px; }
@@ -516,7 +519,11 @@ img {
   z-index: 3; }
   @media (max-width: 1525px) {
     .banner__tip {
-      right: 19vw; } }
+      right: 25vw; } }
+  @media (max-width: 1175px) {
+    .banner__tip {
+      top: 40vw;
+      right: 17vw; } }
   @media (max-width: 950px) {
     .banner__tip {
       top: 449px;
@@ -709,9 +716,9 @@ img {
     content: url("../img/arrow.svg");
     position: absolute;
     z-index: -1;
-    top: 50rem;
+    top: 500px;
     left: -122px; }
-    @media (max-width: 900px) {
+    @media (max-width: 1125px) {
       .you-get::after {
         display: none; } }
   .you-get__col {
@@ -1093,20 +1100,24 @@ img {
 
 .tariff {
   padding: 50px 44px 45px 40px;
-  max-width: 496px; }
+  max-width: 496px;
+  background-color: #F6FCFF; }
   @media (max-width: 1100px) {
     .tariff {
-      padding: 40px 0px 44px 20px; } }
+      padding: 40px 16px 44px 32px; } }
   @media (max-width: 850px) {
-    .tariff:first-child {
-      -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-      order: 2;
-      margin-bottom: 48px; }
-    .tariff:nth-child(2) {
-      -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-      order: 3; } }
+    .tariff {
+      margin-left: -16px;
+      margin-right: -16px; }
+      .tariff:first-child {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+        margin-bottom: 48px; }
+      .tariff:nth-child(2) {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+        order: 3; } }
   .tariff:not(:last-child) {
     margin-right: 24px; }
     @media (max-width: 1100px) {
@@ -1114,7 +1125,7 @@ img {
         margin-right: 10px; } }
     @media (max-width: 850px) {
       .tariff:not(:last-child) {
-        margin-right: 0; } }
+        margin-right: -16px; } }
   .tariff__title {
     margin-bottom: 36px;
     font-size: 28px;
