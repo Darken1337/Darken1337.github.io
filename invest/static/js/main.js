@@ -28,7 +28,51 @@ $(document).ready(function(){
 
     })
 
-    
+    var modalsInit = {
+        currentModal: null,
+        modalFade: 500,
+        openModal: function (modal) {
+            this.currentModal = modal;
+
+            modal.fadeIn(this.modalFade)
+            $('body').addClass('hidden');
+        },
+        closeModal: function () {
+
+            this.currentModal.fadeOut(this.modalFade)
+            $('body').removeClass('hidden');
+
+            this.currentModal = null;
+        }
+    }
+
+    $('[data-modal]').on('click', function(){
+
+        var modalId = $(this).attr('data-action');
+            modal = $('#' + modalId)
+
+        modalsInit.openModal(modal)
+
+    })
+
+    $('.modal-wrap').on('click', function(e){
+
+        modalsInit.closeModal()
+
+    })
+
+    $('[data-action="close-modal"]').on('click', function(e){
+
+        modalsInit.closeModal()
+
+    })
+
+    $('.modal-window').on('click', function(e){
+
+        e.stopPropagation()
+
+    })
+
 
 
 })

@@ -1,135 +1,9 @@
 @font-face {
-  font-family: 'Inter Extra';
-  src: url("../fonts/Inter-ExtraBold.eot");
-  src: url("../fonts/Inter-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-ExtraBold.woff2") format("woff2"), url("../fonts/Inter-ExtraBold.woff") format("woff"), url("../fonts/Inter-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Inter UI';
-  src: url("../fonts/InterUI-BlackItalic.eot");
-  src: url("../fonts/InterUI-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/InterUI-BlackItalic.woff2") format("woff2"), url("../fonts/InterUI-BlackItalic.woff") format("woff"), url("../fonts/InterUI-BlackItalic.ttf") format("truetype");
-  font-weight: 900;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Inter Semi';
-  src: url("../fonts/Inter-SemiBold.eot");
-  src: url("../fonts/Inter-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff"), url("../fonts/Inter-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Inter Semi';
-  src: url("../fonts/Inter-SemiBoldItalic.eot");
-  src: url("../fonts/Inter-SemiBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Inter-SemiBoldItalic.woff") format("woff"), url("../fonts/Inter-SemiBoldItalic.ttf") format("truetype");
-  font-weight: 600;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Inter Extra Light  BETA';
-  src: url("../fonts/Inter-ExtraLightItalicBETA.eot");
-  src: url("../fonts/Inter-ExtraLightItalicBETA.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-ExtraLightItalicBETA.woff2") format("woff2"), url("../fonts/Inter-ExtraLightItalicBETA.woff") format("woff"), url("../fonts/Inter-ExtraLightItalicBETA.ttf") format("truetype");
-  font-weight: 200;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Inter';
-  src: url("../fonts/Inter-BoldItalic.eot");
-  src: url("../fonts/Inter-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-BoldItalic.woff2") format("woff2"), url("../fonts/Inter-BoldItalic.woff") format("woff"), url("../fonts/Inter-BoldItalic.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Inter Light BETA';
-  src: url("../fonts/Inter-LightBETA.eot");
-  src: url("../fonts/Inter-LightBETA.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-LightBETA.woff2") format("woff2"), url("../fonts/Inter-LightBETA.woff") format("woff"), url("../fonts/Inter-LightBETA.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Inter';
-  src: url("../fonts/Inter-MediumItalic.eot");
-  src: url("../fonts/Inter-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-MediumItalic.woff2") format("woff2"), url("../fonts/Inter-MediumItalic.woff") format("woff"), url("../fonts/Inter-MediumItalic.ttf") format("truetype");
-  font-weight: 500;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Inter Extra';
-  src: url("../fonts/Inter-ExtraBoldItalic.eot");
-  src: url("../fonts/Inter-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Inter-ExtraBoldItalic.woff") format("woff"), url("../fonts/Inter-ExtraBoldItalic.ttf") format("truetype");
-  font-weight: 800;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Inter Extra Light BETA';
-  src: url("../fonts/Inter-ExtraLightBETA.eot");
-  src: url("../fonts/Inter-ExtraLightBETA.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-ExtraLightBETA.woff2") format("woff2"), url("../fonts/Inter-ExtraLightBETA.woff") format("woff"), url("../fonts/Inter-ExtraLightBETA.ttf") format("truetype");
-  font-weight: 200;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Inter';
-  src: url("../fonts/Inter-Italic.eot");
-  src: url("../fonts/Inter-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-Italic.woff2") format("woff2"), url("../fonts/Inter-Italic.woff") format("woff"), url("../fonts/Inter-Italic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Inter Light  BETA';
-  src: url("../fonts/Inter-LightItalicBETA.eot");
-  src: url("../fonts/Inter-LightItalicBETA.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-LightItalicBETA.woff2") format("woff2"), url("../fonts/Inter-LightItalicBETA.woff") format("woff"), url("../fonts/Inter-LightItalicBETA.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic; }
-
-@font-face {
   font-family: 'Inter';
   src: url("../fonts/Inter-Bold.eot");
   src: url("../fonts/Inter-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff"), url("../fonts/Inter-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal; }
-
-@font-face {
-  font-family: 'Inter';
-  src: url("../fonts/Inter-Black.eot");
-  src: url("../fonts/Inter-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-Black.woff2") format("woff2"), url("../fonts/Inter-Black.woff") format("woff"), url("../fonts/Inter-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Inter Thin  BETA';
-  src: url("../fonts/Inter-ThinItalicBETA.eot");
-  src: url("../fonts/Inter-ThinItalicBETA.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-ThinItalicBETA.woff2") format("woff2"), url("../fonts/Inter-ThinItalicBETA.woff") format("woff"), url("../fonts/Inter-ThinItalicBETA.ttf") format("truetype");
-  font-weight: 100;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Inter Thin BETA';
-  src: url("../fonts/Inter-ThinBETA.eot");
-  src: url("../fonts/Inter-ThinBETA.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-ThinBETA.woff2") format("woff2"), url("../fonts/Inter-ThinBETA.woff") format("woff"), url("../fonts/Inter-ThinBETA.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Inter';
-  src: url("../fonts/Inter-Regular.eot");
-  src: url("../fonts/Inter-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff"), url("../fonts/Inter-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Inter';
-  src: url("../fonts/Inter-Medium.eot");
-  src: url("../fonts/Inter-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff"), url("../fonts/Inter-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url("../fonts/ProximaNova-LightIt.eot");
-  src: local("Proxima Nova Light Italic"), local("ProximaNova-LightIt"), url("../fonts/ProximaNova-LightIt.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-LightIt.woff") format("woff"), url("../fonts/ProximaNova-LightIt.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic; }
 
 @font-face {
   font-family: 'Proxima Nova';
@@ -146,20 +20,6 @@
   font-style: normal; }
 
 @font-face {
-  font-family: 'Proxima Nova Lt';
-  src: url("../fonts/ProximaNova-SemiboldIt.eot");
-  src: local("Proxima Nova Semibold Italic"), local("ProximaNova-SemiboldIt"), url("../fonts/ProximaNova-SemiboldIt.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-SemiboldIt.woff") format("woff"), url("../fonts/ProximaNova-SemiboldIt.ttf") format("truetype");
-  font-weight: 600;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url("../fonts/ProximaNova-Black.eot");
-  src: local("Proxima Nova Black"), local("ProximaNova-Black"), url("../fonts/ProximaNova-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Black.woff") format("woff"), url("../fonts/ProximaNova-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal; }
-
-@font-face {
   font-family: 'Proxima Nova';
   src: url("../fonts/ProximaNova-Bold.eot");
   src: local("Proxima Nova Bold"), local("ProximaNova-Bold"), url("../fonts/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova-Bold.ttf") format("truetype");
@@ -168,23 +28,9 @@
 
 @font-face {
   font-family: 'Proxima Nova';
-  src: url("../fonts/ProximaNovaT-Thin.eot");
-  src: local("Proxima Nova Thin"), local("ProximaNovaT-Thin"), url("../fonts/ProximaNovaT-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNovaT-Thin.woff") format("woff"), url("../fonts/ProximaNovaT-Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Proxima Nova';
   src: url("../fonts/ProximaNova-BoldIt.eot");
   src: local("Proxima Nova Bold Italic"), local("ProximaNova-BoldIt"), url("../fonts/ProximaNova-BoldIt.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-BoldIt.woff") format("woff"), url("../fonts/ProximaNova-BoldIt.ttf") format("truetype");
   font-weight: bold;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url("../fonts/ProximaNova-BlackIt.eot");
-  src: local("Proxima Nova Black Italic"), local("ProximaNova-BlackIt"), url("../fonts/ProximaNova-BlackIt.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-BlackIt.woff") format("woff"), url("../fonts/ProximaNova-BlackIt.ttf") format("truetype");
-  font-weight: 900;
   font-style: italic; }
 
 html {
@@ -265,16 +111,27 @@ img {
   min-width: 258px;
   border-radius: 33.5px;
   font-size: 18px;
-  line-height: 120%; }
+  line-height: 1.2; }
   @media (max-width: 850px) {
     .button-big {
       width: 100%;
       max-width: 400px;
       padding: 20px; } }
 
+.button-medium {
+  padding: 10px 15px;
+  border-radius: 33.5px;
+  font-size: 18px;
+  line-height: 1.2;
+  min-width: 100px; }
+
 .button-yellow {
   background-color: #FFCE39;
   color: #131418; }
+
+.button-green {
+  background-color: #0bfc03;
+  color: #F6F4F0; }
 
 .list {
   padding-left: 20px; }
@@ -580,6 +437,83 @@ img {
   .container {
     max-width: 500px;
     margin: 0 auto; } }
+
+.hidden {
+  overflow: hidden;
+  padding-right: 16px; }
+  @media (max-width: 1100px) {
+    .hidden {
+      padding-right: 0; } }
+
+.modal-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 10; }
+  .modal-wrap::after {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+    content: ''; }
+
+.modal-window {
+  display: inline-block;
+  overflow: auto;
+  background-color: #F6F4F0;
+  max-width: 400px;
+  width: 90%;
+  text-align: initial;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.37);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.37);
+  vertical-align: middle;
+  position: relative; }
+  .modal-window__header {
+    padding: 10px 20px;
+    border-bottom: 1px solid #262626;
+    font-size: 20px; }
+  .modal-window__body {
+    padding: 10px 20px;
+    border-bottom: 1px solid #262626; }
+  .modal-window__buttons {
+    padding: 10px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .modal-window__buttons > .modal-window__buttons:not(:last-child) {
+      margin-right: 20px; }
+  .modal-window .input_wrap:not(:last-child) {
+    margin-bottom: 20px; }
+  .modal-window__close {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    z-index: 11; }
+    .modal-window__close img {
+      width: 15px;
+      height: 15px; }
+
+.input {
+  padding: 10px 5px;
+  width: 100%;
+  font-size: 16px; }
+  .input::-webkit-input-placeholder {
+    font-size: 16px; }
+  .input:-ms-input-placeholder {
+    font-size: 16px; }
+  .input::-ms-input-placeholder {
+    font-size: 16px; }
+  .input::placeholder {
+    font-size: 16px; }
 
 .attention__inner {
   display: -webkit-box;
