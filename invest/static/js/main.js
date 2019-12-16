@@ -59,7 +59,7 @@ $(document).ready(function(){
                 prevArrow: '<button type="button" class="lightbox__button prev"></button>',
                 nextArrow: '<button type="button" class="lightbox__button next"></button>'
             })
-        }, 500);
+        }, 100);
         
     })
 
