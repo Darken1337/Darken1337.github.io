@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="static/css/main.css">
     <title></title>
   </head>
@@ -21,7 +21,7 @@
                   <li>Зарабатывайте, минимум, в 2 раза больше депозита;</li>
                 </ul>
               </div>
-              <button class="button-big button-yellow" type="button" id="button-fixed" data-modal data-action="form">Записаться на курс</button>
+              <button class="button-big button-yellow" type="button" data-modal data-action="form" id="button-fixed">Записаться на курс</button>
             </div>
             <div class="banner__tip color-white font-18 font-bold">Честно показываем, куда мы с командой вкладываем сами и объясняем почему</div>
             <div class="banner__image"><img src="static/img/banner.jpg" alt="Инвестор"></div>
@@ -259,7 +259,7 @@
           <div class="warranty">
             <div class="warranty__content">
               <h2 class="title-primary">Гарантии</h2>
-              <p class="font-18 warranty__text">Мы вкладываем деньги в те же активы, поэтому нам выгодно, чтобы у вас было все в порядке с доходностью. Иначе, потеряете вы — потеряем и мы; <br><br>Если в течение недели решите, что курс не для вас, вернём оплату;<br><br>А здесь можно прочитать отзывы по обучению: <a href="https://t.me/invest365review" class="color-blue" target="_blank"> https://t.me/invest365review</a></p>
+              <p class="font-18 warranty__text">Мы вкладываем деньги в те же активы, поэтому нам выгодно, чтобы у вас было все в порядке с доходностью. Иначе, потеряете вы — потеряем и мы; <br><br>Если в течение недели решите, что курс не для вас, вернём оплату;<br><br>А здесь можно прочитать отзывы по обучению: <button type="button" class="color-blue font-18" data-modal data-action="gallery"> https://t.me/invest365review</button></p>
             </div>
             <div class="warranty__image"><img src="static/img/garanty.jpg" alt="Инвестор"></div>
           </div>
@@ -356,9 +356,18 @@
           </div>
         </div>
       </div>
+      <div class="modal-wrap lightbox-wrap" id="gallery">
+        <div class="modal-window lightbox-window">
+          <div class="lightbox" id="lightbox-slider">
+            <div class="lightbox__item"><img src="static/img/gallery/gallery-1.jpg" alt=""></div>
+            <div class="lightbox__item"><img src="static/img/gallery/gallery-2.jpg" alt=""></div>
+            <div class="lightbox__item"><img src="static/img/gallery/gallery-3.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script><script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="static/js/main.js"></script>
 </html>

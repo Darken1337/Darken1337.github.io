@@ -1018,6 +1018,8 @@ p {
       @media (max-width: 850px) {
         .warranty__content .title-primary {
           margin-bottom: 20px; } }
+    .warranty__content button {
+      padding: 0; }
   .warranty__text {
     line-height: 150%; }
 
@@ -1188,3 +1190,48 @@ p {
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       transform: translateX(-50%); } }
+
+.lightbox-wrap {
+  overflow: auto; }
+
+.lightbox-window {
+  padding: 0;
+  max-width: 646px;
+  background-color: transparent;
+  overflow: unset;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  @media (max-width: 800px) {
+    .lightbox-window {
+      max-width: 90%; } }
+  @media (max-width: 650px) {
+    .lightbox-window {
+      max-width: 81%; } }
+
+.lightbox {
+  position: relative;
+  margin: 20px 0; }
+  .lightbox__image {
+    max-height: 100%; }
+  .lightbox img {
+    width: 100%; }
+  .lightbox__button {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px; }
+    .lightbox__button.prev {
+      left: -30px;
+      background-image: url(../img/left-arrow.svg); }
+    .lightbox__button.next {
+      right: -30px;
+      background-image: url(../img/right-arrow.svg); }
+
+.html-hidden {
+  overflow: unset; }
+  .html-hidden body {
+    overflow: hidden;
+    padding-right: 16px; }

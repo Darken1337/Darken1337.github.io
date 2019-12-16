@@ -35,16 +35,33 @@ $(document).ready(function(){
             this.currentModal = modal;
 
             modal.fadeIn(this.modalFade)
-            $('body').addClass('hidden');
+            $('html').addClass('html-hidden');
         },
         closeModal: function () {
 
             this.currentModal.fadeOut(this.modalFade)
-            $('body').removeClass('hidden');
+            $('html').removeClass('html-hidden');
+
+            if(this.currentModal.attr('id') == 'gallery'){
+                setTimeout(() => {
+                    $('#lightbox-slider').slick('unslick');
+                }, 500);
+            }
 
             this.currentModal = null;
         }
     }
+
+    $('[data-action="gallery"]').on('click', function(){
+        setTimeout(() => {
+            $('#lightbox-slider').slick({
+                adaptiveHeight: true,
+                prevArrow: '<button type="button" class="lightbox__button prev"></button>',
+                nextArrow: '<button type="button" class="lightbox__button next"></button>'
+            })
+        }, 500);
+        
+    })
 
     $('[data-modal]').on('click', function(){
 
