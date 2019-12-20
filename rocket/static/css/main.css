@@ -873,6 +873,9 @@ img {
   .income__header .red {
     font-size: 60px; }
 
+.income__title {
+  display: block; }
+
 .income__subtitle {
   font-size: 24px;
   line-height: 134.51%;
