@@ -1031,7 +1031,8 @@ img {
   font-size: 64px;
   line-height: 63px;
   margin-bottom: 60px;
-  color: #292121; }
+  color: #292121;
+  text-align: center; }
 
 .testimonials__content > *:not(:last-child) {
   margin-bottom: 24px; }
