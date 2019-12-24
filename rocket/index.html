@@ -352,7 +352,7 @@
           <div class="strategy__plan">
             <div class="plan-tabs">
               <div class="plan-tabs__controls" id="tabs-controls">
-                <div class="plan-tabs__controls-item js-tab"><img class="js-lazy" src="" alt="стратегия" data-src="static/img/tab_1.jpg"></div>
+                <div class="plan-tabs__controls-item js-tab js-tab-active"><img class="js-lazy" src="" alt="стратегия" data-src="static/img/tab_1.jpg"></div>
                 <div class="plan-tabs__controls-item js-tab"><img class="js-lazy" src="" alt="стратегия" data-src="static/img/tab_2.jpg"></div>
                 <div class="plan-tabs__controls-item js-tab"><img class="js-lazy" src="" alt="стратегия" data-src="static/img/tab_3.jpg"></div>
                 <div class="plan-tabs__controls-item js-tab"><img class="js-lazy" src="" alt="стратегия" data-src="static/img/tab_4.jpg"></div>
@@ -537,13 +537,27 @@
           <h2 class="testimonials__header">Нас благодарят</h2>
           <div class="testimonials__content-wrap">
             <div class="testimonials__content">
-              <div class="testimonials__item testimonials__item--small"><iframe width="255" height="453" src="" data-src="https://www.youtube.com/embed/cJ23x9NanzI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="js-lazy"></iframe></div>
-              <div class="testimonials__item testimonials__item--small"><iframe width="255" height="453" src="" data-src="https://www.youtube.com/embed/57UtM9qi5PY" class="js-lazy" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-              <div class="testimonials__item testimonials__item--small"><iframe width="255" height="453" src="" data-src="https://www.youtube.com/embed/pfUpW56MP8w" class="js-lazy" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-              <div class="testimonials__item testimonials__item--small"><iframe width="255" height="453" src="" data-src="https://www.youtube.com/embed/dDQJejohljY" class="js-lazy" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-              <div class="testimonials__item testimonials__item--large"><iframe width="350" height="197" src="" data-src="https://www.youtube.com/embed/Jv5yAr6vPUo" class="js-lazy" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-              <div class="testimonials__item testimonials__item--large"><iframe width="350" height="197" src="" data-src="https://www.youtube.com/embed/Yxmrz76X1G0" class="js-lazy" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-              <div class="testimonials__item testimonials__item--large"><iframe width="350" height="197" src="" data-src="https://www.youtube.com/embed/QTFuUiU3c7Y" class="js-lazy" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+              <div class="testimonials__item testimonials__item--small"><iframe width="255" height="453" src="" data-src="https://www.youtube.com/embed/cJ23x9NanzI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="js-lazy"></iframe>
+                <div class="preloader"></div>
+              </div>
+              <div class="testimonials__item testimonials__item--small"><iframe width="255" height="453" src="" data-src="https://www.youtube.com/embed/57UtM9qi5PY" class="js-lazy" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="preloader"></div>
+              </div>
+              <div class="testimonials__item testimonials__item--small"><iframe width="255" height="453" src="" data-src="https://www.youtube.com/embed/pfUpW56MP8w" class="js-lazy" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="preloader"></div>
+              </div>
+              <div class="testimonials__item testimonials__item--small"><iframe width="255" height="453" src="" data-src="https://www.youtube.com/embed/dDQJejohljY" class="js-lazy" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="preloader"></div>
+              </div>
+              <div class="testimonials__item testimonials__item--large"><iframe width="350" height="197" src="" data-src="https://www.youtube.com/embed/Jv5yAr6vPUo" class="js-lazy" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="preloader"></div>
+              </div>
+              <div class="testimonials__item testimonials__item--large"><iframe width="350" height="197" src="" data-src="https://www.youtube.com/embed/Yxmrz76X1G0" class="js-lazy" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="preloader"></div>
+              </div>
+              <div class="testimonials__item testimonials__item--large"><iframe width="350" height="197" src="" data-src="https://www.youtube.com/embed/QTFuUiU3c7Y" class="js-lazy" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="preloader"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -578,18 +592,20 @@
               <li> <a class="footer-menu__item">Каталог продуктов</a></li>
             </ul>
             <div class="footer__contacts">
-              <div class="font-bold">Служба поддержки клиентов</div>
+              <div class="font-bold footer__contacts-title">Служба поддержки клиентов</div>
               <div class="red footer__contacts-mail">mail@icoach.ge</div>
               <div>+7 499 112 47 33</div>
               <div>+44 20 8089 2847</div>
-              <div class="rights">Все права защищены.</div>
+              <div class="rights rights-desktop">Все права защищены.</div>
             </div>
           </div>
+          <div class="rights rights-mobile">Все права защищены.</div>
         </div>
       </div>
     </footer>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="static/libs/lazy-load.min.js"></script>
     <script src="static/js/main.js"></script>
   </body>
 </html>

@@ -1,7 +1,9 @@
 $(document).ready(function(){
 
     var lazyLoadInstance = new LazyLoad({
-        elements_selector: ".js-lazy"
+        elements_selector: ".js-lazy",
+        threshold: 500,
+        class_loading: 'js-lazyloading'
     });
 
     $('#toggle-menu').on('click', function(){
@@ -21,25 +23,11 @@ $(document).ready(function(){
 
         if (mainTabSrc != imgCurrentSrc){
             $('.js-tab-active').removeClass('js-tab-active')
-            $(this).removeClass('js-tab-active')
+            $(this).addClass('js-tab-active')
             mainTab.attr('src', imgCurrentSrc)
         }
 
-        
 
     })
-
-    // function checkMenuVisiblity(){
-    //     if ($(window).width() <= 768) {
-    //         $('#menu-main').hide()
-    //     } else {
-    //         $('#menu-main').show()
-    //     }
-    // }
-    // checkMenuVisiblity()
-
-    // $(window).on('resize', function(){
-    //     checkMenuVisiblity()
-    // })
 
 })

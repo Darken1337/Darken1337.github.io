@@ -8,80 +8,10 @@
 
 @font-face {
   font-family: 'HelveticaNeueCyr';
-  src: url("../fonts/HelveticaNeueCyr-Heavy.eot");
-  src: local("HelveticaNeueCyr-Heavy"), url("../fonts/HelveticaNeueCyr-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Heavy.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Heavy.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url("../fonts/HelveticaNeueCyr-HeavyItalic.eot");
-  src: local("HelveticaNeueCyr-HeavyItalic"), url("../fonts/HelveticaNeueCyr-HeavyItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-HeavyItalic.woff") format("woff"), url("../fonts/HelveticaNeueCyr-HeavyItalic.ttf") format("truetype");
-  font-weight: 900;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr';
   src: url("../fonts/HelveticaNeueCyr-Black.eot");
   src: local("HelveticaNeueCyr-Black"), url("../fonts/HelveticaNeueCyr-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Black.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url("../fonts/HelveticaNeueCyr-UltraLightItalic.eot");
-  src: local("HelveticaNeueCyr-UltraLightItalic"), url("../fonts/HelveticaNeueCyr-UltraLightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-UltraLightItalic.woff") format("woff"), url("../fonts/HelveticaNeueCyr-UltraLightItalic.ttf") format("truetype");
-  font-weight: 200;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url("../fonts/HelveticaNeueCyr-BlackItalic.eot");
-  src: local("HelveticaNeueCyr-BlackItalic"), url("../fonts/HelveticaNeueCyr-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-BlackItalic.woff") format("woff"), url("../fonts/HelveticaNeueCyr-BlackItalic.ttf") format("truetype");
-  font-weight: 900;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url("../fonts/HelveticaNeueCyr-ThinItalic.eot");
-  src: local("HelveticaNeueCyr-ThinItalic"), url("../fonts/HelveticaNeueCyr-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-ThinItalic.woff") format("woff"), url("../fonts/HelveticaNeueCyr-ThinItalic.ttf") format("truetype");
-  font-weight: 100;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url("../fonts/HelveticaNeueCyr-MediumItalic.eot");
-  src: local("HelveticaNeueCyr-MediumItalic"), url("../fonts/HelveticaNeueCyr-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-MediumItalic.woff") format("woff"), url("../fonts/HelveticaNeueCyr-MediumItalic.ttf") format("truetype");
-  font-weight: 500;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url("../fonts/HelveticaNeueCyr-LightItalic.eot");
-  src: local("HelveticaNeueCyr-LightItalic"), url("../fonts/HelveticaNeueCyr-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-LightItalic.woff") format("woff"), url("../fonts/HelveticaNeueCyr-LightItalic.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url("../fonts/HelveticaNeueCyr-UltraLight.eot");
-  src: local("HelveticaNeueCyr-UltraLight"), url("../fonts/HelveticaNeueCyr-UltraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-UltraLight.woff") format("woff"), url("../fonts/HelveticaNeueCyr-UltraLight.ttf") format("truetype");
-  font-weight: 200;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url("../fonts/HelveticaNeueCyr-BoldItalic.eot");
-  src: local("HelveticaNeueCyr-BoldItalic"), url("../fonts/HelveticaNeueCyr-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-BoldItalic.woff") format("woff"), url("../fonts/HelveticaNeueCyr-BoldItalic.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url("../fonts/HelveticaNeueCyr-Italic.eot");
-  src: local("HelveticaNeueCyr-Italic"), url("../fonts/HelveticaNeueCyr-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Italic.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Italic.ttf") format("truetype");
-  font-weight: 500;
-  font-style: italic; }
 
 @font-face {
   font-family: 'HelveticaNeueCyr';
@@ -98,23 +28,9 @@
   font-style: normal; }
 
 @font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url("../fonts/HelveticaNeueCyr-Light.eot");
-  src: local("HelveticaNeueCyr-Light"), url("../fonts/HelveticaNeueCyr-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Light.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url("../fonts/HelveticaNeueCyr-Thin.eot");
-  src: local("HelveticaNeueCyr-Thin"), url("../fonts/HelveticaNeueCyr-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Thin.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal; }
-
-@font-face {
   font-family: 'Bebas Neue';
-  src: url("../fonts/BebasNeueCyrillic.eot");
-  src: url("../fonts/BebasNeueCyrillic.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeueCyrillic.woff2") format("woff2"), url("../fonts/BebasNeueCyrillic.woff") format("woff"), url("../fonts/BebasNeueCyrillic.ttf") format("truetype");
+  src: url("../fonts/BebasNeueBook.eot");
+  src: url("../fonts/BebasNeueBook.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeueBook.woff2") format("woff2"), url("../fonts/BebasNeueBook.woff") format("woff"), url("../fonts/BebasNeueBook.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -187,6 +103,45 @@ input {
 img {
   max-width: 100%;
   height: auto; }
+
+.js-lazyloading {
+  background-color: #9c9c9c;
+  border-radius: 7px; }
+
+.js-lazyloading + .preloader {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 4px solid #363636;
+  border-radius: 50%;
+  border-right: 4px solid transparent;
+  -webkit-animation: rotate 1s linear infinite;
+  animation: rotate 1s linear infinite; }
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg); } }
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg); } }
+
+.preloader {
+  display: none; }
 
 #header {
   position: absolute;
@@ -581,6 +536,7 @@ img {
       .menu-main-wrap {
         position: fixed;
         top: 77px;
+        height: 100%;
         display: none; } }
   .menu-main > *:not(:last-child) {
     margin-right: 32px; }
@@ -597,7 +553,8 @@ img {
   .menu-main__link {
     text-transform: uppercase;
     color: #FFEDE0;
-    font-family: "Bebas Neue", sans-serif; }
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 300; }
     @media (max-width: 992px) {
       .menu-main__link {
         font-size: 14px;
@@ -777,7 +734,8 @@ img {
   @media (max-width: 992px) {
     .footer-menu {
       max-width: 255px;
-      margin-right: 45px; } }
+      margin-right: 45px;
+      width: 100%; } }
   @media (max-width: 567px) {
     .footer-menu {
       margin-right: 0; } }
@@ -792,10 +750,36 @@ img {
     .footer__contacts {
       max-width: 390px;
       width: 100%; } }
+  @media (max-width: 567px) {
+    .footer__contacts {
+      margin-top: 40px; } }
+  @media (max-width: 567px) {
+    .footer__contacts-title {
+      margin-bottom: 27px; } }
   .footer__contacts-mail {
     margin-top: 15px; }
   .footer__contacts .rights {
     margin-top: 50px; }
+
+.rights {
+  font-size: 16px;
+  line-height: 30px;
+  color: #515151; }
+  @media (max-width: 992px) {
+    .rights-desktop {
+      display: none; } }
+  .rights-mobile {
+    display: none;
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3; }
+    @media (max-width: 992px) {
+      .rights-mobile {
+        display: block;
+        margin-top: 17px; } }
+    @media (max-width: 567px) {
+      .rights-mobile {
+        margin-top: 20px; } }
 
 .business {
   display: -webkit-box;
@@ -921,7 +905,10 @@ img {
   font-weight: 900;
   font-size: 52px;
   line-height: 110%;
-  color: #292121; }
+  color: #292121;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
   @media (max-width: 768px) {
     .clients__title {
       font-size: 42px; } }
@@ -933,7 +920,10 @@ img {
   font-size: 30px;
   line-height: 134.51%;
   max-width: 350px;
-  width: 100%; }
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
   @media (max-width: 992px) {
     .clients__text {
       max-width: 510px; } }
@@ -1218,7 +1208,9 @@ img {
     font-weight: bold;
     font-size: 22px;
     line-height: 130%;
-    color: #292121; }
+    color: #292121;
+    position: relative;
+    z-index: 1; }
   .example__text {
     font-weight: 300;
     font-size: 18px;
@@ -1291,6 +1283,10 @@ img {
     @media (max-width: 992px) {
       .component__text {
         font-size: 15px; } }
+  .component__body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
 
 .schedule__header {
   font-weight: 900;
@@ -1368,7 +1364,10 @@ img {
         font-size: 40px; } }
   .stage__content {
     -ms-flex-item-align: end;
-    align-self: flex-end; }
+    align-self: flex-end;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
   .stage__header {
     font-weight: bold;
     font-size: 30px;
@@ -1675,6 +1674,8 @@ img {
           .plan-tabs__controls-item:not(:last-child) {
             margin-right: 8px;
             margin-bottom: 0; } }
+      .plan-tabs__controls-item.js-tab-active {
+        border: 4px solid #C4C4C4; }
 
 @media (max-width: 992px) {
   .plan {
@@ -1729,9 +1730,11 @@ img {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
-  @media (max-width: 567px) {
+  @media (max-width: 400px) {
     .plan__button {
       min-width: 100%; } }
+  .plan__button span {
+    display: inline-block; }
 
 .income__header {
   font-weight: 900;
@@ -1902,10 +1905,14 @@ img {
         .results__content > * {
           width: 100%;
           margin-bottom: 30px; } }
+    .results__content-wrap {
+      overflow: hidden; }
 
 .result-card {
-  padding-top: 113px;
-  text-align: center; }
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   @media (max-width: 567px) {
     .result-card {
       max-width: 336px; } }
@@ -1924,10 +1931,10 @@ img {
     background-color: #fff;
     border-radius: 12px;
     padding: 0 30px 30px;
-    min-height: 470px;
-    height: 100%;
     -webkit-box-shadow: 0px 4px 30px rgba(44, 69, 133, 0.05);
-    box-shadow: 0px 4px 30px rgba(44, 69, 133, 0.05); }
+    box-shadow: 0px 4px 30px rgba(44, 69, 133, 0.05);
+    margin-top: 113px;
+    max-width: 100%; }
     @media (max-width: 768px) {
       .result-card__inner {
         padding: 0 15px 20px 18px; } }
@@ -1935,17 +1942,7 @@ img {
       .result-card__inner {
         padding: 0 28px 28px; } }
   .result-card__content {
-    text-align: initial;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-height: 297px; }
-    .result-card__content-wrap {
-      overflow: hidden; }
+    text-align: left; }
   .result-card__name {
     font-weight: 900;
     font-size: 32px;
@@ -2203,5 +2200,8 @@ img {
     border-radius: 8px; }
     @media (max-width: 567px) {
       .offer__button {
-        padding: 13px 10px;
+        padding: 13px 25px;
         font-size: 16px; } }
+    @media (max-width: 400px) {
+      .offer__button {
+        padding: 13px 8px; } }
