@@ -26,8 +26,26 @@ $(document).ready(function(){
             $(this).addClass('js-tab-active')
             mainTab.attr('src', imgCurrentSrc)
         }
-
-
     })
+
+    $(document).ready(function () {
+        $("#menu-main a, [data-smooth]").on('click', function (event) {
+
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                },{
+                    duration: 2000,
+                    easing: "swing"
+                },
+                function () {
+                    window.location.hash = hash;
+                });
+            } 
+        });
+    });
 
 })

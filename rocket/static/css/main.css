@@ -35,7 +35,6 @@
   font-style: normal; }
 
 html {
-  scroll-behavior: smooth;
   font-size: 16px;
   font-family: 'HelveticaNeueCyr', sans-serif;
   color: #292121; }
@@ -103,6 +102,11 @@ input {
 img {
   max-width: 100%;
   height: auto; }
+
+.js-lazy::before {
+  display: block;
+  content: '';
+  padding-top: 114%; }
 
 .js-lazyloading {
   background-color: #9c9c9c;
@@ -760,6 +764,8 @@ img {
     margin-top: 15px; }
   .footer__contacts .rights {
     margin-top: 50px; }
+  .footer__contacts a {
+    display: block; }
 
 .rights {
   font-size: 16px;
@@ -1475,11 +1481,17 @@ img {
     line-height: 110%;
     color: #FFFFFF;
     margin-bottom: 16px; }
+    @media (max-width: 567px) {
+      .protection-list__title {
+        font-size: 24px; } }
   .protection-list__text {
     font-size: 18px;
     line-height: 140%;
     color: #ffffff;
     opacity: 0.7; }
+    @media (max-width: 567px) {
+      .protection-list__text {
+        font-size: 16px; } }
 
 .strategy__header {
   max-width: 931px;
