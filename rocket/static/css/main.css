@@ -538,9 +538,6 @@ img {
         width: 100%; } }
     @media (max-width: 567px) {
       .menu-main-wrap {
-        position: fixed;
-        top: 77px;
-        height: 100%;
         display: none; } }
   .menu-main > *:not(:last-child) {
     margin-right: 32px; }

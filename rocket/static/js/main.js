@@ -20,46 +20,51 @@ $(document).ready(function(){
         class_loading: 'js-lazyloading'
     });
 
-    $('#toggle-menu').on('click', function(){
+
+    $('#toggle-menu').on('click', function () {
 
         $(this).toggleClass('js-open');
         $('#header').toggleClass('js-active');
         $('#menu-main').slideToggle(200);
-        $('body').toggleClass('hidden')
 
     })
 
-    $('#tabs-controls .js-tab').on('click', function(){
+    $('#tabs-controls .js-tab').on('click', function () {
 
         var imgCurrentSrc = $(this).find('img').attr('src'),
             mainTab = $('#tab-picked'),
             mainTabSrc = mainTab.attr('src');
 
-        if (mainTabSrc != imgCurrentSrc){
+        if (mainTabSrc != imgCurrentSrc) {
             $('.js-tab-active').removeClass('js-tab-active')
             $(this).addClass('js-tab-active')
             mainTab.attr('src', imgCurrentSrc)
         }
     })
+   
+    $("#menu-main a, [data-smooth]").on('click', function (event) {
 
-    $(document).ready(function () {
-        $("#menu-main a, [data-smooth]").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
 
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
+            if($('#toggle-menu').hasClass('js-open')){
+                $('#toggle-menu').removeClass('js-open');
+                $('#header').removeClass('js-active');
+                $('#menu-main').slideUp(200);
+                $('body').removeClass('hidden')
+            }
 
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                },{
-                    duration: 2000,
-                    easing: "swing"
-                },
-                function () {
-                    window.location.hash = hash;
-                });
-            } 
-        });
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            },{
+                duration: 2000,
+                easing: "swing"
+            },
+            function () {
+                window.location.hash = hash;
+            });
+        } 
     });
 
 })
