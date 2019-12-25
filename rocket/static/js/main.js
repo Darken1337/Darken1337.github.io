@@ -1,3 +1,17 @@
+function fillPlaceholders(width, height) {
+    return 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+width+' '+height+'"%3E%3C/svg%3E'
+}
+
+$('img.js-lazy').each(function(){
+
+    var imgWidth = $(this).attr('width'),
+        imgHeight = $(this).attr('height'),
+        calculatedWidth = fillPlaceholders(imgWidth, imgHeight)
+
+    $(this).attr('src', calculatedWidth)
+})
+
+
 $(document).ready(function(){
 
     var lazyLoadInstance = new LazyLoad({
