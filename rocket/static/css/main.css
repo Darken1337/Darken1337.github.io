@@ -830,6 +830,7 @@ img {
     margin-right: 56px; }
     @media (max-width: 992px) {
       .business__content {
+        margin-right: 0;
         max-width: 618px; } }
   .business__text {
     max-width: 350px;
