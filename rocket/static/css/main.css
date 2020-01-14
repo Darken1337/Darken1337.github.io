@@ -94,6 +94,9 @@ button {
   button:focus {
     outline: 0; }
 
+.main {
+  overflow-x: hidden; }
+
 input {
   display: inline-block;
   outline: 0;
@@ -1162,11 +1165,7 @@ img {
 
 @media (max-width: 992px) {
   .examples {
-    padding-left: 53px; } }
-
-@media (max-width: 567px) {
-  .examples {
-    padding-left: 16px; } }
+    padding-left: 0; } }
 
 .examples__header {
   font-weight: 900;
@@ -1184,7 +1183,10 @@ img {
   @media (max-width: 567px) {
     .examples__header {
       font-size: 26px;
-      margin-bottom: 34px; } }
+      margin-bottom: 34px; }
+      .examples__header::before {
+        top: -71px;
+        left: -110px; } }
 
 .examples__content {
   display: -webkit-box;
@@ -1215,6 +1217,9 @@ img {
         margin-bottom: 50px; } }
   .example__image {
     margin: 0 auto; }
+    @media (max-width: 992px) {
+      .example__image.img-small {
+        max-width: 524px; } }
   .example__title {
     font-weight: bold;
     font-size: 22px;
@@ -1241,8 +1246,8 @@ img {
     font-size: 48px;
     line-height: 110%;
     color: #292121;
-    margin-bottom: 70px;
-    max-width: 920px; }
+    margin: 0 auto 70px;
+    max-width: 808px; }
     @media (max-width: 992px) {
       .components__header {
         font-size: 42px; } }
@@ -1565,21 +1570,19 @@ img {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: 81px; }
-  @media (max-width: 992px) {
-    .advantages {
-      margin-bottom: 65px; } }
   @media (max-width: 768px) {
     .advantages {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       margin-right: -30px;
-      margin-top: -50px;
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start; } }
+      margin-top: 0;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
   @media (max-width: 567px) {
     .advantages {
-      margin-top: -30px; } }
+      margin-right: 0;
+      margin-top: 20px; } }
   .advantages-wrap {
     overflow: hidden; }
 
@@ -1588,19 +1591,25 @@ img {
   @media (max-width: 768px) {
     .advantage {
       width: calc(100%/2 - 30px);
+      max-width: 100%;
       margin-top: 50px;
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex;
+      margin-right: 30px; } }
   @media (max-width: 567px) {
     .advantage {
       width: 100%;
-      margin-top: 30px; } }
+      margin-top: 30px;
+      margin-right: 0; } }
   .advantage:not(:last-child) {
     margin-right: 30px; }
     @media (max-width: 768px) {
       .advantage:not(:last-child) {
         margin-right: 30px; } }
+    @media (max-width: 567px) {
+      .advantage:not(:last-child) {
+        margin-right: 0; } }
   .advantage__icon {
     margin-bottom: 16px; }
     @media (max-width: 992px) {
@@ -1641,7 +1650,8 @@ img {
   max-width: 445px;
   width: 100%;
   background-color: #F2F2F2;
-  padding: 16px 16px 0; }
+  padding: 16px 16px 0;
+  position: relative; }
   @media (max-width: 992px) {
     .plan-tabs {
       display: -webkit-box;
@@ -1701,23 +1711,35 @@ img {
       .plan-tabs__controls-item.js-tab-active {
         border: 4px solid #C4C4C4; }
   .plan-tabs__content {
-    position: relative; }
+    position: relative;
+    cursor: crosshair; }
   .plan-tabs__scale {
     position: absolute;
     left: calc(100% + 16px);
-    top: 0;
-    background-color: #fff;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     z-index: 10;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    padding: 5px; }
-    .plan-tabs__scale-content {
-      border: 1px solid #000000; }
-      .plan-tabs__scale-content img {
-        -webkit-transform: scale(2);
-        -ms-transform: scale(2);
-        transform: scale(2); }
+    height: 200px;
+    overflow: hidden; }
+
+.drift-zoom-pane.drift-open {
+  border: 1px solid #000000;
+  padding: 5px;
+  background-color: #fff; }
+
+@media (max-width: 992px) {
+  .drift-zoom-pane {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000000;
+    border-radius: 50%; } }
+
+.drift-bounding-box.drift-open {
+  background-color: rgba(189, 9, 21, 0.2);
+  border: 1px solid black; }
 
 @media (max-width: 992px) {
   .plan {
@@ -1789,7 +1811,7 @@ img {
   line-height: 120%;
   color: #292121;
   max-width: 931px;
-  margin-bottom: 15px; }
+  margin-bottom: 22px; }
   .income__header .red {
     font-size: 60px; }
     @media (max-width: 768px) {
@@ -2260,4 +2282,5 @@ img {
         font-size: 16px; } }
     @media (max-width: 400px) {
       .offer__button {
-        padding: 13px 8px; } }
+        padding: 13px 8px;
+        width: 100%; } }

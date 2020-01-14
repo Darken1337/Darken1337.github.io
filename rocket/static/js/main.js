@@ -36,14 +36,11 @@ $(document).ready(function(){
             mainTab = $('#tab-picked'),
             mainTabSrc = mainTab.attr('src');
 
-        console.log(largeSrc, mainTabSrc != imgCurrentSrc );
-        
-
         if (mainTabSrc != imgCurrentSrc) {
             $('.js-tab-active').removeClass('js-tab-active')
             $(this).addClass('js-tab-active')
             mainTab.attr('src', imgCurrentSrc);
-            mainTab.attr('data-large', largeSrc)
+            mainTab.attr('data-zoom', largeSrc)
         }
     })
    
@@ -71,23 +68,14 @@ $(document).ready(function(){
             });
         } 
     });
+        
+    new Drift(document.querySelector('#tab-picked'), {
+        paneContainer: document.querySelector('.plan-tabs__scale'),
+        inlinePane: 992,
+        containInline: true,
+        hoverBoundingBox: true
+    });
 
-    if($(window).width() > 992){
-        $('#tab-picked').imagezoomsl({
-
-            zoomrange: [3, 3]
-        });
-    }else{
-        $("#tab-picked").imagezoomsl({
-
-            innerzoommagnifier: true,
-            classmagnifier: window.external ? window.navigator.vendor === "Yandex" ? "" : "round-loupe" : "",
-            magnifierborder: "5px solid #F0F0F0",                               // fix для Opera, Safary, Yandex		  
-            zoomrange: [2, 8],
-            zoomstart: 4,
-            magnifiersize: [150, 150]	
-        });
-    }
         
 
 })
