@@ -68,6 +68,12 @@ $(document).ready(function(){
             });
         } 
     });
+
+    $('#tab-picked').hover(function(){
+        $('.plan-tabs__scale').removeClass('is-hidden');
+    },function(){
+        $('.plan-tabs__scale').addClass('is-hidden');
+    })
         
     new Drift(document.querySelector('#tab-picked'), {
         paneContainer: document.querySelector('.plan-tabs__scale'),
@@ -75,7 +81,5 @@ $(document).ready(function(){
         containInline: true,
         hoverBoundingBox: true
     });
-
-        
 
 })

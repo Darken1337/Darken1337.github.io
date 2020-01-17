@@ -115,6 +115,9 @@ img {
   background-color: #9c9c9c;
   border-radius: 7px; }
 
+.is-hidden {
+  visibility: hidden; }
+
 .js-lazyloading + .preloader {
   display: block;
   position: absolute;
