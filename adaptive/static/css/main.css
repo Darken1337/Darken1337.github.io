@@ -283,7 +283,7 @@ button {
   width: 100%; }
   .account-form__input input {
     width: 100%;
-    font-weight: 1.3vw;
+    font-size: 1.3vw;
     line-height: 3.5vw;
     padding: 0 1.4vw;
     border: 1px solid #CCCCCC;
