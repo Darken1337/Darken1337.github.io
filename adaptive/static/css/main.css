@@ -80,8 +80,7 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: auto;
-    margin-top: 1.6vw; }
+    margin-left: auto; }
   .nav-main .logo-main {
     width: 13.9vw;
     height: 6vw; }
@@ -113,8 +112,14 @@ button {
 
 .languages {
   font-weight: 500;
-  font-size: 1.4vw;
-  margin-right: 3px; }
+  font-size: 1.6vw;
+  margin-right: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
   .languages img {
     width: 1.62vw;
     height: 1.1vw;
