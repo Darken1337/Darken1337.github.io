@@ -266,7 +266,7 @@ button {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  min-height: 64.9vh;
+  min-height: 649px;
   height: calc(100vh - (11.9vw + 22.047vw)); }
   .my-account__header {
     font-size: 2.2vw;
