@@ -1,8 +1,11 @@
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 10px;
   font-family: 'Roboto', sans-serif;
   color: #333333; }
+  @media (max-width: 767px) {
+    html {
+      font-size: 8px; } }
 
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
@@ -375,6 +378,12 @@ button {
       width: calc(100%/6 - .2vw); }
       .payment__content > * img {
         width: 100%; }
+
+#s-my-account {
+  background-image: url(../img/bg-cabinet.png);
+  background-position: center center;
+  background-size: 100% auto;
+  background-repeat: no-repeat; }
 
 .my-account {
   margin: 0;
