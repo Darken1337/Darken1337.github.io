@@ -290,6 +290,10 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 25.8vw;
   margin-bottom: 2.1vw; }
   @media (max-width: 767px) {
     .footer-menu {
@@ -297,10 +301,7 @@ button {
       font-size: 4.0625vw;
       font-weight: 500; } }
   .footer-menu > *:not(:last-child) {
-    margin-right: 2.5vw; }
-    @media (max-width: 767px) {
-      .footer-menu > *:not(:last-child) {
-        margin-right: 10.9375vw; } }
+    margin-right: 0.2vw; }
 
 .maintain {
   text-align: center; }
