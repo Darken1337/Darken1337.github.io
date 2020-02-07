@@ -266,7 +266,8 @@ button {
       align-items: center;
       -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
-      order: 1; } }
+      order: 1;
+      width: 100%; } }
   .footer__rights {
     font-size: 1.2vw;
     color: #808080;
@@ -299,7 +300,8 @@ button {
     .footer-menu {
       margin-bottom: 3.75vw;
       font-size: 4.0625vw;
-      font-weight: 500; } }
+      font-weight: 500;
+      width: 100%; } }
   .footer-menu > *:not(:last-child) {
     margin-right: 0.2vw; }
 
@@ -383,7 +385,7 @@ button {
 #s-my-account {
   background-image: url(../img/bg-cabinet.png);
   background-position: center center;
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat; }
 
 .my-account {

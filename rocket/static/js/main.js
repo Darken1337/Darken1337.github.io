@@ -45,6 +45,7 @@ $(document).ready(function(){
     })
    
     $("#menu-main a, [data-smooth]").on('click', function (event) {
+        
 
         if (this.hash !== "") {
             event.preventDefault();
