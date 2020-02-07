@@ -887,6 +887,7 @@ img {
   justify-content: center;
   align-items: center;
   padding: 12.5px;
+  line-height: 1;
   font-size: 18px;
   color: #ffffff;
   font-family: 'HelveticaNeueCyr', sans-serif;
@@ -2651,16 +2652,14 @@ img {
   min-width: 343px;
   font-weight: bold;
   font-size: 18px;
-  line-height: 120%;
+  line-height: 1;
   color: #FFFFFF;
   border-radius: 8px;
   display: inline-flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+  align-items: center;
 }
 
 @media (max-width: 400px) {
@@ -3401,7 +3400,7 @@ img {
   color: #FFFFFF;
   font-weight: bold;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1;
   position: relative;
   z-index: 1;
   border-radius: 8px;
