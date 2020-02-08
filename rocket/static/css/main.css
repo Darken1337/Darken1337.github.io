@@ -3400,11 +3400,14 @@ img {
   color: #FFFFFF;
   font-weight: 700;
   font-size: 18px;
-  line-height: 47px;
+  height: 47px;
+  position: relative;
+  z-index: 1;
   border-radius: 8px;
   text-align: center;
-  box-shadow: none;
-  background: #000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 567px) {
