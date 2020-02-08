@@ -3405,9 +3405,6 @@ img {
   z-index: 1;
   border-radius: 8px;
   text-align: center;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
 @media (max-width: 567px) {
@@ -3419,7 +3416,7 @@ img {
 
 @media (max-width: 400px) {
   .offer__button {
-    padding: 13px 4px;
+    padding: 0 4px;
     width: 100%;
   }
 }
