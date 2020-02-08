@@ -3408,6 +3408,7 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Arial';
 }
 
 @media (max-width: 567px) {
