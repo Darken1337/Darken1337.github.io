@@ -3403,6 +3403,7 @@ img {
   line-height: 1;
   position: relative;
   z-index: 1;
+  vertical-align: middle;
   border-radius: 8px;
   text-align: center;
   display: inline-flex;
