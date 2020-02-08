@@ -3405,7 +3405,8 @@ img {
   z-index: 1;
   border-radius: 8px;
   text-align: center;
-  align-items: flex-end;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
 }
 
