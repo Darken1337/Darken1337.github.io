@@ -3405,6 +3405,7 @@ img {
   z-index: 1;
   border-radius: 8px;
   text-align: center;
+  box-shadow: none;
 }
 
 @media (max-width: 567px) {
