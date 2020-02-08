@@ -3396,14 +3396,13 @@ img {
 }
 
 .offer__button {
-  padding: 13px 30px;
+  padding: 0 30px;
   color: #FFFFFF;
   font-weight: bold;
   font-size: 18px;
-  line-height: 1;
+  line-height: 47px;
   position: relative;
   z-index: 1;
-  vertical-align: middle;
   border-radius: 8px;
   text-align: center;
   display: inline-flex;
@@ -3413,7 +3412,7 @@ img {
 
 @media (max-width: 567px) {
   .offer__button {
-    padding: 13px 25px;
+    padding: 0 25px;
     font-size: 16px;
   }
 }
