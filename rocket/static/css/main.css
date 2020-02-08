@@ -890,7 +890,7 @@ img {
   line-height: 1;
   font-size: 18px;
   color: #ffffff;
-  font-family: 'HelveticaNeueCyr', sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 .features {
@@ -2660,6 +2660,7 @@ img {
   -ms-flex-pack: justify;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Arial';
 }
 
 @media (max-width: 400px) {
@@ -3408,7 +3409,7 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Arial';
+  font-family: 'Arial', sans-serif;
 }
 
 @media (max-width: 567px) {
