@@ -114,6 +114,7 @@ button {
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
+  font-family: 'HelveticaNeueCyr', sans-serif;
 }
 
 a:focus,
@@ -890,7 +891,6 @@ img {
   line-height: 1;
   font-size: 18px;
   color: #ffffff;
-  font-family: 'Arial', sans-serif;
 }
 
 .features {
@@ -2660,7 +2660,6 @@ img {
   -ms-flex-pack: justify;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Arial';
 }
 
 @media (max-width: 400px) {
@@ -3409,7 +3408,6 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Arial', sans-serif;
 }
 
 @media (max-width: 567px) {
