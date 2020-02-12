@@ -64,19 +64,6 @@
 }
 
 @font-face {
-  font-family: 'Bebas Neue';
-  src: url('../fonts/bebasneuecyrillic-webfont.eot');
-  src: url('../fonts/bebasneuecyrillic-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/bebasneuecyrillic-webfont.woff2') format('woff2'),
-  url('../fonts/bebasneuecyrillic-webfont.woff') format('woff'),
-  url('../fonts/bebasneuecyrillic-webfont.ttf') format('truetype'),
-  url('../fonts/bebasneuecyrillic-webfont.svg#bebas_neue_cyrillicregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-@font-face {
   font-family: 'HelveticaNeueCyr';
   src: url('../fonts/helveticaneuecyr-black-webfont.eot');
   src: url('../fonts/helveticaneuecyr-black-webfont.eot?#iefix') format('embedded-opentype'),
@@ -250,19 +237,19 @@ h6 {
   color: #ffffff;
 }
 
-ul {
+.list {
   position: relative;
   z-index: 2;
 }
 
-ul > li {
+.list > li {
   font-size: 18px;
   line-height: 1.4;
   padding-left: 12px;
   position: relative;
 }
 
-ul > li::before {
+.list > li::before {
   content: '';
   position: absolute;
   background-color: #D90916;
