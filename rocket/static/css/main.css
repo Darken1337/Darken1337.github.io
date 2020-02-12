@@ -6,7 +6,7 @@
   url('../fonts/helveticaneuecyr-light-webfont.woff') format('woff'),
   url('../fonts/helveticaneuecyr-light-webfont.ttf') format('truetype'),
   url('../fonts/helveticaneuecyr-light-webfont.svg#helveticaneuecyrlight') format('svg');
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 
 }
@@ -19,7 +19,7 @@
   url('../fonts/helveticaneuecyr-medium-webfont.woff') format('woff'),
   url('../fonts/helveticaneuecyr-medium-webfont.ttf') format('truetype'),
   url('../fonts/helveticaneuecyr-medium-webfont.svg#helveticaneuecyrmedium') format('svg');
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
 
 }
@@ -45,7 +45,7 @@
   url('../fonts/helveticaneuecyr-thin-webfont.woff') format('woff'),
   url('../fonts/helveticaneuecyr-thin-webfont.ttf') format('truetype'),
   url('../fonts/helveticaneuecyr-thin-webfont.svg#helveticaneuecyrthin') format('svg');
-  font-weight: normal;
+  font-weight: 100;
   font-style: normal;
 
 }
@@ -58,7 +58,7 @@
   url('../fonts/bebasneuebook-webfont.woff') format('woff'),
   url('../fonts/bebasneuebook-webfont.ttf') format('truetype'),
   url('../fonts/bebasneuebook-webfont.svg#bebas_neuebook') format('svg');
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 
 }
@@ -71,7 +71,7 @@
   url('../fonts/helveticaneuecyr-black-webfont.woff') format('woff'),
   url('../fonts/helveticaneuecyr-black-webfont.ttf') format('truetype'),
   url('../fonts/helveticaneuecyr-black-webfont.svg#helveticaneuecyrblack') format('svg');
-  font-weight: normal;
+  font-weight: 900;
   font-style: normal;
 
 }
@@ -84,7 +84,7 @@
   url('../fonts/helveticaneuecyr-bold-webfont.woff') format('woff'),
   url('../fonts/helveticaneuecyr-bold-webfont.ttf') format('truetype'),
   url('../fonts/helveticaneuecyr-bold-webfont.svg#helveticaneuecyrbold') format('svg');
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
 
 }
