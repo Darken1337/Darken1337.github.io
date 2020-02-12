@@ -364,11 +364,6 @@ p {
   box-shadow: none;
 }
 
-a {
-  color: #007bff;
-  text-decoration: underline;
-}
-
 .form-check {
   position: relative;
   font-size: 15px;
@@ -405,37 +400,31 @@ a {
   h1 {
     font-weight: 800;
     font-size: 60px;
-    color: #292121;
   }
 
   h2 {
     font-weight: 800;
     font-size: 52px;
-    color: #292121;
   }
 
   h3 {
     font-weight: 800;
     font-size: 42px;
-    color: #292121;
   }
 
   h4 {
     font-weight: 800;
     font-size: 40px;
-    color: #292121;
   }
 
   h5 {
     font-weight: 700;
     font-size: 30px;
-    color: #292121;
   }
 
   h6 {
     font-weight: 700;
     font-size: 24px;
-    color: #292121;
   }
 }
 
@@ -444,42 +433,35 @@ a {
     font-weight: 800;
     font-size: 54px;
     line-height: 1.1;
-    color: #292121;
   }
 
   h2 {
     font-weight: 800;
     font-size: 40px;
-    color: #292121;
   }
 
   h3 {
     font-weight: 800;
     font-size: 32px;
-    color: #292121;
   }
 
   h4 {
     font-weight: 800;
     font-size: 28px;
-    color: #292121;
   }
 
   h5 {
     font-weight: 700;
     font-size: 24px;
-    color: #292121;
   }
 
   h6 {
     font-weight: 700;
     font-size: 20px;
-    color: #292121;
   }
 
   p {
     font-size: 16px;
-    color: #828282;
   }
 }
 
