@@ -8,11 +8,46 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./static/css/default-extend.css">
+    <link rel="stylesheet" href="./static/css/main.css">
     <title>заголовки</title>
 </head>
 
 <body>
+    <header id="header">
+    <div class="container">
+        <nav class="navigation">
+            <button class="hamburger" type="button" id="toggle-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="logo"><img src="static/img/logo.png" alt="Icoach"></div>
+            <div class="menu-main-wrap" id="menu-main">
+                <ul class="menu-main">
+                    <li>
+                        <a class="menu-main__link" href="#s-results">Кейсы</a>
+                    </li>
+                    <li>
+                        <a class="menu-main__link" href="#s-income">Партнерство</a>
+                    </li>
+                    <li>
+                        <a class="menu-main__link" href="#s-specialization">Гарантия</a>
+                    </li>
+                    <li>
+                        <a class="menu-main__link" href="#s-strategy">Разработка стратегии</a>
+                    </li>
+                    <li>
+                        <a class="menu-main__link" href="#s-testimonials">Отзывы</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation__phones">
+                <a href="tel:+74991124733">+7&nbsp;499&nbsp;112 47 33</a>
+                <a href="tel:+442080892847">+44 20 8089 2847</a>
+            </div>
+        </nav>
+    </div>
+</header>
     <div class="section bg-brown">
         <div class="container">
             <h1 class="title-w-circle circle-brown"><span>Header 1</span></h1>
@@ -86,6 +121,52 @@
             </ul>
         </div>
     </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer">
+                <div class="footer__description">
+                    <div class="footer__center">
+                        <h3 class="font-bold footer__name">ICOACH.</h3>
+                        <p class="text">Продюсерский центр для тренеров, коучей и&nbsp;экспертов.</p>
+                    </div>
+                    <div class="footer__create">Упакуем продукт и&nbsp;создадим стабильный и&nbsp;управляемый поток целевых клиентов, пока вы&nbsp;будете заниматься другими делами.</div>
+                </div>
+                <div class="footer__right">
+                    <ul class="footer-menu">
+                        <li>
+                            <a class="footer-menu__item">Главная</a>
+                        </li>
+                        <li>
+                            <a class="footer-menu__item">О&nbsp;компании</a>
+                        </li>
+                        <li>
+                            <a class="footer-menu__item">Отзывы</a>
+                        </li>
+                        <li>
+                            <a class="footer-menu__item">Условия использования</a>
+                        </li>
+                        <li>
+                            <a class="footer-menu__item">Договор</a>
+                        </li>
+                        <li>
+                            <a class="footer-menu__item">Коммерческое предложение</a>
+                        </li>
+                        <li>
+                            <a class="footer-menu__item">Каталог продуктов</a>
+                        </li>
+                    </ul>
+                    <div class="footer__contacts">
+                        <div class="font-bold footer__contacts-title">Служба поддержки клиентов</div>
+                        <div class="red footer__contacts-mail">mail@icoach.ge</div>
+                        <a href="tel:+74991124733">+7&nbsp;499&nbsp;112 47 33</a>
+                        <a href="tel:+442080892847">+44 20 8089 2847</a>
+                        <div class="rights rights-desktop">Все права защищены.</div>
+                    </div>
+                </div>
+                <div class="rights rights-mobile">Все права защищены.</div>
+            </div>
+        </div>
+    </footer>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="static/libs/lazy-load.min.js"></script>
