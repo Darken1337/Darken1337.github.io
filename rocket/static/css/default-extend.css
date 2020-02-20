@@ -40,35 +40,6 @@
     font-style: normal;
 }
 
-/* Базовые стили */
-html {
-    font-size: 16px;
-    font-family: 'HelveticaNeueCyr', sans-serif;
-    color: #292121;
-}
-
-ul {
-    list-style: none;
-}
-
-ul > li {
-    display: block;
-    padding: 0;
-}
-
-.main {
-    overflow-x: hidden;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-body {
-    color: #828282;
-}
-
 .section {
     padding: 150px 0;
 }
