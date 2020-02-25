@@ -75,12 +75,15 @@ $(document).ready(function(){
     },function(){
         $('.plan-tabs__scale').addClass('is-hidden');
     })
-        
-    new Drift(document.querySelector('#tab-picked'), {
-        paneContainer: document.querySelector('.plan-tabs__scale'),
-        inlinePane: 992,
-        containInline: true,
-        hoverBoundingBox: true
-    });
+
+    if(document.querySelector('#tab-picked')){
+        new Drift(document.querySelector('#tab-picked'), {
+            paneContainer: document.querySelector('.plan-tabs__scale'),
+            inlinePane: 992,
+            containInline: true,
+            hoverBoundingBox: true
+        });
+    }
+
 
 })
