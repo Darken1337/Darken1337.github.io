@@ -401,6 +401,7 @@ main {
 .course-button-wrap {
   margin: 44px auto 64px;
   max-width: 816px;
+  padding: 0 15px;
 }
 
 @media (max-width: 567px) {
@@ -410,6 +411,7 @@ main {
     bottom: 18px;
     width: 100%;
     margin: 0;
+    padding: 0;
     text-align: center;
   }
 
@@ -526,7 +528,7 @@ main {
 .caution::before {
   content: '';
   position: absolute;
-  right: 15%;
+  right: 5%;
   bottom: 0;
   -webkit-transform: translateY(50%);
   -ms-transform: translateY(50%);
