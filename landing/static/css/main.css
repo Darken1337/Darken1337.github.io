@@ -498,7 +498,7 @@ main {
 
 @media (max-width: 567px) {
   .income__image {
-    margin: 32px -15px 32px;
+    margin: 32px -15px 0;
   }
 }
 
