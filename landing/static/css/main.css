@@ -107,6 +107,21 @@ main {
   background-color: #edeff1;
 }
 
+.color-white{
+  color: #ffffff !important;
+}
+
+.black-bg{
+  background-image: url('../img/banner-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.bg-transparent{
+  background-color: transparent !important;
+}
+
 .title-primary {
   font-weight: 700;
   font-size: 36px;

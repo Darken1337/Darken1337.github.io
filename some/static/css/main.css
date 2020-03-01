@@ -371,9 +371,48 @@ img {
 
 .banner__about {
   position: absolute;
-  bottom: 45px;
-  right: 8%;
-  z-index: 3; }
+  max-width: 405px;
+  bottom: 90px;
+  right: 14.5%;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .banner__about-text {
+    margin-right: 20px;
+    font-size: 16px;
+    font-family: "TT Travels", sans-serif;
+    color: rgba(255, 255, 255, 0.8); }
+    .banner__about-text a {
+      font-family: "TT Travels", sans-serif;
+      position: relative; }
+      .banner__about-text a:hover {
+        text-decoration: none; }
+      .banner__about-text a::after {
+        content: '';
+        height: 1px;
+        background-color: #fff;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0; }
+  .banner__about-icon {
+    -webkit-animation: radial-pulse 1s infinite linear;
+    animation: radial-pulse 1s infinite linear;
+    border-radius: 50%;
+    background-color: #FA7456;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
 
 .banner__list {
   max-width: 305px;
@@ -389,8 +428,8 @@ img {
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
-  width: 305px;
-  height: 160px;
+  width: 379px;
+  height: 239px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -401,8 +440,12 @@ img {
   -ms-flex-pack: center;
   justify-content: center; }
   .banner__subtitle p {
-    max-width: 200px;
+    max-width: 244px;
+    margin-left: 20px;
+    margin-top: 10px;
     color: #5C5853;
+    font-family: "TT Travels", sans-serif;
+    font-style: italic;
     -webkit-transform: rotate(-8deg);
     -ms-transform: rotate(-8deg);
     transform: rotate(-8deg); }
@@ -418,6 +461,28 @@ img {
     max-width: unset;
     width: auto;
     height: 100%; }
+
+@-webkit-keyframes radial-pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0px rgba(250, 116, 86, 0.5);
+    box-shadow: 0 0 0 0px rgba(250, 116, 86, 0.5); }
+  50% {
+    -webkit-box-shadow: 0 0 0 11px rgba(250, 116, 86, 0.5);
+    box-shadow: 0 0 0 11px rgba(250, 116, 86, 0.5); }
+  100% {
+    -webkit-box-shadow: 0 0 0 0px rgba(250, 116, 86, 0.5);
+    box-shadow: 0 0 0 0px rgba(250, 116, 86, 0.5); } }
+
+@keyframes radial-pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0px rgba(250, 116, 86, 0.5);
+    box-shadow: 0 0 0 0px rgba(250, 116, 86, 0.5); }
+  50% {
+    -webkit-box-shadow: 0 0 0 11px rgba(250, 116, 86, 0.5);
+    box-shadow: 0 0 0 11px rgba(250, 116, 86, 0.5); }
+  100% {
+    -webkit-box-shadow: 0 0 0 0px rgba(250, 116, 86, 0.5);
+    box-shadow: 0 0 0 0px rgba(250, 116, 86, 0.5); } }
 
 #s-start {
   padding: 116px 0 59px; }
