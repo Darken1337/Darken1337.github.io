@@ -750,6 +750,13 @@ img {
         .hamb span:not(:last-child) {
           margin-bottom: 3px; } }
 
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    .menu-mobile-wrap {
+      -webkit-transform: translateY(70px);
+      -ms-transform: translateY(70px);
+      transform: translateY(70px); } } }
+
 .menu-mobile-wrap {
   position: fixed;
   top: 0;
@@ -810,6 +817,9 @@ img {
     -ms-flex-align: center;
     align-items: center;
     width: 100%; }
+    @media (max-width: 767px) {
+      .menu-mobile__header {
+        max-width: 460px; } }
   .menu-mobile__close {
     width: 20px;
     height: 20px;
