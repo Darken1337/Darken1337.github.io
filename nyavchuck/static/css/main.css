@@ -786,7 +786,7 @@ img {
     .menu-mobile-wrap {
       padding-left: 20px;
       padding-right: 20px;
-      padding-top: 18px; } }
+      padding-top: 0px; } }
   .menu-mobile-wrap.is-active {
     opacity: 1;
     visibility: visible;
