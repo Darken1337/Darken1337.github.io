@@ -750,12 +750,9 @@ img {
         .hamb span:not(:last-child) {
           margin-bottom: 3px; } }
 
-@media not all and (min-resolution: 0.001dpcm) {
-  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-    .menu-mobile-wrap {
-      -webkit-transform: translateY(70px);
-      -ms-transform: translateY(70px);
-      transform: translateY(70px); } } }
+@media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+  .menu-mobile-wrap {
+    padding-top: 50px; } }
 
 .menu-mobile-wrap {
   position: fixed;
