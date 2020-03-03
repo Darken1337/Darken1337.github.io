@@ -553,6 +553,9 @@ img {
 .content {
   overflow-x: hidden; }
 
+.overflow-hidden {
+  overflow: hidden; }
+
 .title-primary {
   font-size: 90px;
   line-height: 0.95;
