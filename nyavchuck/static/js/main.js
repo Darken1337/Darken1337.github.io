@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    
+
     //Modals
     var modalsInit = {
         fadeTime: 400,
@@ -52,12 +52,14 @@ $(document).ready(function(){
     //Меню мобильное
     $('#hamb').on('click', function(){
 
+        $('body').addClass('overflow-hidden');
         $('#menu-mobile').addClass('is-active')
 
     })
     $('#close-menu').on('click', function(){
 
         $('#menu-mobile').removeClass('is-active')
+        $('body').removeClass('overflow-hidden');
 
     })
 
