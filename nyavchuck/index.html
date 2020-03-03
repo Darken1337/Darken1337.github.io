@@ -3,9 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="./static/css/main.css">
     <title></title>
+    <!--[if IE]>
+      <style>
+          .testimonial{
+            display: block;
+          }
+      </style>
+    <![endif]-->
+    <!--[if IE]>
+      <style>
+
+        .testimonial{
+          display: block;
+        }
+
+      </style>
+    <![endif]-->
   </head>
   <body>
     <div class="content">
@@ -17,9 +33,26 @@
               <li> <a>Instagram</a></li>
               <li> <a>Facebook</a></li>
             </ul>
+            <button class="hamb" type="button" id="hamb"><span></span><span></span><span></span></button>
           </nav>
         </div>
       </header>
+      <div class="menu-mobile-wrap" id="menu-mobile">
+        <div class="menu-mobile__header">
+          <div class="logo">Anastasiya Nyavchuk</div>
+          <div class="menu-mobile__close" id="close-menu"><img src="./static/img/svg/close-menu.svg" alt="Закрыть меню"></div>
+        </div>
+        <ul class="menu-mobile">
+          <li><a>Программа</a></li>
+          <li><a>О коуче</a></li>
+          <li><a>Отзывы</a></li>
+        </ul>
+        <ul class="menu-socials">
+          <li><a href="tel:+380954890840">+380954890840</a></li>
+          <li><a href="mailto:@mind.coach">@mind.coach</a></li>
+          <li><a href="mailto:anastasiia.niavchuk@gmail.com">anastasiia.niavchuk@gmail.com</a></li>
+        </ul>
+      </div>
       <section id="s-banner">
         <div class="container">
           <div class="banner">
@@ -36,9 +69,19 @@
                 </div>
                 <button class="button-medium button-orange" type="button" data-action="send-request" data-modal>Начать действовать</button>
               </div>
-              <div class="banner__image"><img src="./static/img/banner-img.jpg" alt="Анастасия"></div>
+              <div class="banner__image">
+                <picture>
+                  <source srcset="./static/img/mobile/banner-img.jpg" media="(max-width: 767px)"><img src="./static/img/banner-img.jpg" alt="Анастасия">
+                </picture>
+              </div>
               <div class="banner__about">
-                <p class="banner__about-text">Анастасия Нявчук - лайф-коуч, эксперт по осознанным изменениям в жизни. <a href="#">Смотреть видео приглашение.</a></p>
+                <div class="banner__about-text"> 
+                  <p class="show-desktop">Анастасия Нявчук - лайф-коуч, эксперт по осознанным изменениям в жизни. <a href="#">Смотреть видео приглашение.</a></p>
+                  <div class="show-mobile">
+                    <p>Меня зовукт Анастасия Нявчук, я лайф-коуч, эксперт по осознанным изменениям в жизни. </p>
+                    <p class="banner__about-text-video">Смотреть видео приглашение.</p>
+                  </div>
+                </div>
                 <div class="banner__about-icon"><svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 12.3622V1.71106C0 0.94596 0.824188 0.464276 1.4908 0.839787L11.3811 6.41116C12.0752 6.80211 12.0558 7.80803 11.3472 8.17196L1.45687 13.2517C0.791395 13.5935 0 13.1103 0 12.3622Z" fill="white"/>
 </svg>
@@ -54,7 +97,7 @@
             <div class="start__image"><img src="./static/img/start.jpg" alt="Анастасия"></div>
             <div class="start__content">
               <div class="start__title-wrap">
-                <h2 class="title-secondary">Перестань просто наблюдать и начни действовать</h2>
+                <h2 class="title-secondary"> <span>Перестань просто наблюдать и начни </span><span class="underline">действовать</span></h2>
                 <div class="start__subtitle">
                   <p>Почему твоя жизнь идет не так, как тебе хочется?</p>
                 </div>
@@ -75,7 +118,7 @@
         <div class="container">
           <div class="learn">
             <div class="learn__content">
-              <h2 class="title-secondary">Научись быть тем, кто вызывает восхищение в любой сфере деятельности</h2>
+              <h2 class="title-secondary"><span>Научись быть тем, кто вызывает восхищение в любой сфере <span class="underline">деятельности</span></span></h2>
               <ul class="list">
                 <li>Уверенно формулировать и излагать свои мысли</li>
                 <li>Легко находить выход из сложных  ситуаций</li>
@@ -84,7 +127,8 @@
                 <li>Получать удовольствие от новых жизненных вызовов</li>
               </ul>
               <div class="learn__about">
-                <p>Найди свой собственный путь к уверенности!</p>
+                <p class="show-desktop">Найди свой собственный путь к уверенности!</p>
+                <p class="show-mobile">Действуй без оглядки на мнение других, иди своим собственным путем</p>
               </div>
             </div>
             <div class="learn__image"><img src="./static/img/learn.jpg" alt="Анастасия"></div>
@@ -132,7 +176,7 @@
                     </div>
                   </div>
                   <div class="packet__price">200 $</div>
-                  <button class="button-medium button-orange" type="button">Оставить заявку</button>
+                  <button class="button-medium button-orange" type="button" data-action="send-request" data-modal>Оплатить участие</button>
                 </div>
               </div>
             </div>
@@ -143,7 +187,7 @@
         <div class="container">
           <div class="about">
             <div class="about__image"><img src="./static/img/about.jpg" alt="Лайф-коуч">
-              <div class="about__image-subscribtion">Анастасия Нявчук, сертифицированный лайф-коуч</div>
+              <div class="about__image-subscribtion">Анастасия Нявчук, я сертифицированный лайф-коуч</div>
             </div>
             <div class="about__content">
               <h2 class="title-secondary">Я уверена, что смогу помочь тебе потому что:</h2>
@@ -161,84 +205,79 @@
         <div class="container">
           <div class="testimonials">
             <h2 class="title-secondary">Они уже изменили свою жизнь</h2>
-            <div class="testimonials__content">
-              <div class="testimonial">
-                <div class="testimonial__text"> 
-                  <p>Хочу поделиться своими личными инсайтами, которые я получала во время коуч-сессии с Анастасией. За маленький промежуток времени (5 коуч-сессий), благодаря действительно результативным техникам, которые практикует Настя, у меня вышло пробудиться в прямом смысле и сделать действия к моим желаниям, и даже получить результат. </p>
-                  <p class="break">&#160;</p>
-                  <p>Мой главный инсайт: делать запросы вселенной, проговаривать и главное в мыслях прорисовывать свои желания, и они подтянутся к вам. </p>
-                  <p class="break">&#160;</p>
-                  <p>На второй коуч-сессии Настя погрузила меня в мысли о возможностях реализации моих навыков и уже через неделю я ПОЛУЧИЛА бизнес предложение от хорошей знакомой, плюс ко мне пришла конкретная идея своего агентства, и подтянулись новые знакомства и люди которые мне для этого нужны.</p>
-                  <p class="break">&#160;</p>
-                  <p>Я задала себе самые важные вопросы, от которых обычно убегала.</p>
-                  <p class="break">&#160;</p>
-                  <p>Искренне рекомендую проработать свои запросы с Настей, так как её профессиональные навыки коуча и личностные качества, дают двойной эффект в понимании самого себя.</p>
-                </div>
-                <div class="testimonial__content">
-                  <div class="testimonial__info">
-                    <div class="testimonial__photo"><img src="./static/img/testimonial_1.png" alt="Фото клиента"></div>
-                    <div class="testimonial__bio">
-                      <div class="tesimonial__name">Юлия Выговская</div>
-                      <div class="testimonial__age">23 года</div>
+            <div class="wrap">
+              <div class="testimonials__content js-slider-testimonials">
+                <div class="testimonial">
+                  <div class="testimonial__text"> 
+                    <p>Хочу поделиться своими личными инсайтами, которые я получала во время коуч-сессии с Анастасией. За маленький промежуток времени (5 коуч-сессий), благодаря действительно результативным техникам, которые практикует Настя, у меня вышло пробудиться в прямом смысле и сделать действия к моим желаниям, и даже получить результат. </p>
+                    <p class="break">&#160;</p>
+                    <p>Мой главный инсайт: делать запросы вселенной, проговаривать и главное в мыслях прорисовывать свои желания, и они подтянутся к вам. </p>
+                    <p class="break">&#160;</p>
+                    <p>На второй коуч-сессии Настя погрузила меня в мысли о возможностях реализации моих навыков и уже через неделю я ПОЛУЧИЛА бизнес предложение от хорошей знакомой, плюс ко мне пришла конкретная идея своего агентства, и подтянулись новые знакомства и люди которые мне для этого нужны.</p>
+                    <p class="break">&#160;</p>
+                    <p>Я задала себе самые важные вопросы, от которых обычно убегала.</p>
+                    <p class="break">&#160;</p>
+                    <p>Искренне рекомендую проработать свои запросы с Настей, так как её профессиональные навыки коуча и личностные качества, дают двойной эффект в понимании самого себя.</p>
+                  </div>
+                  <div class="testimonial__content">
+                    <div class="testimonial__info">
+                      <div class="testimonial__photo"><img src="./static/img/testimonial_1.png" alt="Фото клиента"></div>
+                      <div class="testimonial__bio">
+                        <div class="tesimonial__name">Юлия Выговская</div><a class="testimonial__link" href="">Instagram</a>
+                      </div>
                     </div>
                   </div>
-                  <div class="testimonial__social"><a href="">Facebook</a><a href="">Instagram</a></div>
                 </div>
-              </div>
-              <div class="testimonial">
-                <div class="testimonial__text"> 
-                  <p>Моя проблема заключалась в том, что я не могла понять, какие сдерживающие факторы</p>
-                  <p class="break">&#160;</p>
-                  <p>мешают мне добиться, желаемых результатов! Во время сессии, были найдены, те стопы, о которых я даже не догадывалась. Проработаны и благодаря метафорической истории "болото", которая мотивирует действовать и не останавливаться, я стремительно, развиваюсь, реализовываю свои цели, ставлю новые! Мои родные и близкие, становятся моей поддержкой!)</p>
-                  <p class="break">&#160;</p>
-                  <p>Очень круто!</p>
-                </div>
-                <div class="testimonial__content">
-                  <div class="testimonial__info">
-                    <div class="testimonial__photo"><img src="./static/img/testimonial_3.png" alt="Фото клиента"></div>
-                    <div class="testimonial__bio">
-                      <div class="tesimonial__name">Рита</div>
-                      <div class="testimonial__age">33 года</div>
+                <div class="testimonial">
+                  <div class="testimonial__text"> 
+                    <p>Моя проблема заключалась в том, что я не могла понять, какие сдерживающие факторы</p>
+                    <p class="break">&#160;</p>
+                    <p>мешают мне добиться, желаемых результатов! Во время сессии, были найдены, те стопы, о которых я даже не догадывалась. Проработаны и благодаря метафорической истории "болото", которая мотивирует действовать и не останавливаться, я стремительно, развиваюсь, реализовываю свои цели, ставлю новые! Мои родные и близкие, становятся моей поддержкой!)</p>
+                    <p class="break">&#160;</p>
+                    <p>Очень круто!</p>
+                  </div>
+                  <div class="testimonial__content">
+                    <div class="testimonial__info">
+                      <div class="testimonial__photo"><img src="./static/img/testimonial_3.png" alt="Фото клиента"></div>
+                      <div class="testimonial__bio">
+                        <div class="tesimonial__name">Рита</div><a class="testimonial__link" href="">Instagram</a>
+                      </div>
                     </div>
                   </div>
-                  <div class="testimonial__social"><a href="">Facebook</a><a href="">Instagram</a></div>
                 </div>
-              </div>
-              <div class="testimonial">
-                <div class="testimonial__text"> 
-                  <p>Очень долго не решалась на коуч-сессию, сомневалась, что это мне даст, что изменит, но уже после второй сессии подумала, почему я не сделала этого раньше). С каждой сессией я становилась более уверенная в себе, разобралась в своих желаниях, научилась преодолевать страх. Мне очень нравится стиль общения и то, что ответы на вопросы я нахожу сама. Никто не подталкивает к правильному ответу, супер для меня было также то, что я смогла посмотреть на ситуацию со стороны совсем другим взглядом. Настя очень положительный, добрый человек. Также хочу поблагодарить за теплую и доверительную атмосферу во время сессий. Я очень рада, что в моей жизни появился коуч и я не побоялась сделать вызов самой себе, многое, конечно же, зависит от меня, но благодаря коучу у меня появилась внутренняя уверенность и сила. Я понимаю, что двигаюсь в правильном направлении!</p>
-                </div>
-                <div class="testimonial__content">
-                  <div class="testimonial__info">
-                    <div class="testimonial__photo"><img src="./static/img/testimonial_2.png" alt="Фото клиента"></div>
-                    <div class="testimonial__bio">
-                      <div class="tesimonial__name">Марианна</div>
-                      <div class="testimonial__age">34 года</div>
+                <div class="testimonial">
+                  <div class="testimonial__text"> 
+                    <p>Очень долго не решалась на коуч-сессию, сомневалась, что это мне даст, что изменит, но уже после второй сессии подумала, почему я не сделала этого раньше). С каждой сессией я становилась более уверенная в себе, разобралась в своих желаниях, научилась преодолевать страх. Мне очень нравится стиль общения и то, что ответы на вопросы я нахожу сама. Никто не подталкивает к правильному ответу, супер для меня было также то, что я смогла посмотреть на ситуацию со стороны совсем другим взглядом. Настя очень положительный, добрый человек. Также хочу поблагодарить за теплую и доверительную атмосферу во время сессий. Я очень рада, что в моей жизни появился коуч и я не побоялась сделать вызов самой себе, многое, конечно же, зависит от меня, но благодаря коучу у меня появилась внутренняя уверенность и сила. Я понимаю, что двигаюсь в правильном направлении!</p>
+                  </div>
+                  <div class="testimonial__content">
+                    <div class="testimonial__info">
+                      <div class="testimonial__photo"><img src="./static/img/testimonial_2.png" alt="Фото клиента"></div>
+                      <div class="testimonial__bio">
+                        <div class="tesimonial__name">Марианна</div><a class="testimonial__link" href="">Instagram</a>
+                      </div>
                     </div>
                   </div>
-                  <div class="testimonial__social"><a href="">Facebook</a><a href="">Instagram</a></div>
                 </div>
-              </div>
-              <div class="testimonial">
-                <div class="testimonial__text"> 
-                  <p>Профилем Анастасии в Instagram я интересовалась давно, но даже мысли, что мне понадобится работа с коучем, не появлялось, до тех пор, пока я месяц назад не переехала в США. Мне казалось, что после переезда я сразу сделаю большой рывок, начну развиваться и постигать интересные сферы. А на деле, пришла затяжная апатия и нежелание делать даже то, что раньше приносило массу удовольствия.</p>
-                  <p class="break">&#160;</p>
-                  <p>При помощи, казалось бы, простого дружеского диалога и нестандартных техник, я снова</p>
-                  <p class="break">&#160;</p>
-                  <p>смогла прийти к себе и начала развиваться и двигаться в правильном направлении дальше. Что меня поразило больше всего, так это то, что Анастасия не даёт советы и не учит, как правильно жить. Она просто сопровождает тебя на пути поиска, помогает обратить внимание на скрытый потенциал, сильные стороны и истинные желания. Я невероятно счастлива, что решилась на Коуч-сессию!</p>
-                </div>
-                <div class="testimonial__content">
-                  <div class="testimonial__info">
-                    <div class="testimonial__photo"><img src="./static/img/testimonial_4.png" alt="Фото клиента"></div>
-                    <div class="testimonial__bio">
-                      <div class="tesimonial__name">Елена</div>
-                      <div class="testimonial__age">22 года</div>
+                <div class="testimonial">
+                  <div class="testimonial__text"> 
+                    <p>Профилем Анастасии в Instagram я интересовалась давно, но даже мысли, что мне понадобится работа с коучем, не появлялось, до тех пор, пока я месяц назад не переехала в США. Мне казалось, что после переезда я сразу сделаю большой рывок, начну развиваться и постигать интересные сферы. А на деле, пришла затяжная апатия и нежелание делать даже то, что раньше приносило массу удовольствия.</p>
+                    <p class="break">&#160;</p>
+                    <p>При помощи, казалось бы, простого дружеского диалога и нестандартных техник, я снова</p>
+                    <p class="break">&#160;</p>
+                    <p>смогла прийти к себе и начала развиваться и двигаться в правильном направлении дальше. Что меня поразило больше всего, так это то, что Анастасия не даёт советы и не учит, как правильно жить. Она просто сопровождает тебя на пути поиска, помогает обратить внимание на скрытый потенциал, сильные стороны и истинные желания. Я невероятно счастлива, что решилась на Коуч-сессию!</p>
+                  </div>
+                  <div class="testimonial__content">
+                    <div class="testimonial__info">
+                      <div class="testimonial__photo"><img src="./static/img/testimonial_4.png" alt="Фото клиента"></div>
+                      <div class="testimonial__bio">
+                        <div class="tesimonial__name">Елена</div><a class="testimonial__link" href="">Instagram</a>
+                      </div>
                     </div>
                   </div>
-                  <div class="testimonial__social"><a href="">Facebook</a><a href="">Instagram</a></div>
                 </div>
               </div>
             </div>
+            <div class="testimonials__dots"></div>
           </div>
           <div class="form">
             <div class="form__content">
@@ -254,7 +293,7 @@
                   <input class="input" type="email" placeholder="ivan@ivanov.com">
                 </div>
               </div>
-              <input class="form__submit button-medium button-orange" type="submit" value="Оставить заявку">
+              <input class="form__submit button-medium button-orange" type="submit" value="Оплатить участие">
               <p class="form__terms">Нажимая на кнопку, я соглашаюсь с <a href="#">Политикой конфиденциальности</a></p>
             </div>
           </div>
@@ -265,12 +304,16 @@
           <div class="footer">
             <div class="footer__row">
               <div class="logo">Anastasiya Nyavchuk</div>
-              <ul class="footer__socials">
-                <li><a href="mailto:anastasiia.niavchuk@gmail.com">anastasiia.niavchuk@gmail.com</a></li>
-                <li><a href="tel:+380954890840">+38 095 489 08 40</a></li>
-                <li><a>Facebook</a></li>
-                <li><a>Instagram</a></li>
-              </ul>
+              <div class="footer__socials-wrap">
+                <ul class="footer__socials">
+                  <li><a href="mailto:anastasiia.niavchuk@gmail.com">anastasiia.niavchuk@gmail.com</a></li>
+                  <li><a href="tel:+380954890840">+38 095 489 08 40</a></li>
+                </ul>
+                <ul class="footer__socials s-media">
+                  <li><a>Facebook</a></li>
+                  <li><a>Instagram</a></li>
+                </ul>
+              </div>
             </div>
             <div class="footer__row">
               <ul class="footer__info">
@@ -284,6 +327,7 @@
     </div>
     <div class="modal-request" id="send-request">
       <div class="modal-request__inner">
+        <button class="modal-request__close" type="button" data-action="close-modal"><img src="./static/img/svg/close-menu.svg" alt="Закрыть"></button>
         <div class="modal-request__title">Оставь свои данные!</div>
         <div class="modal-request__subtitle">Я перезвоню тебе в течение дня и подробно все расскажу</div>
         <div class="modal-request__fields">
@@ -301,6 +345,6 @@
   </body>
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="./static/libs/js/jquery.maskedinput.min.js"></script>
+  <script src="./static/libs/js/jquery.maskedinput.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="./static/js/main.js"></script>
 </html>
