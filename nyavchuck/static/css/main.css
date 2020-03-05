@@ -636,6 +636,13 @@ img {
   .input::placeholder {
     color: rgba(50, 50, 44, 0.5); }
 
+.error_info {
+  font-size: 12px;
+  padding-left: 15px;
+  margin-top: 5px;
+  color: red;
+  display: none; }
+
 .list li {
   padding-left: 28px;
   position: relative; }
@@ -1991,22 +1998,22 @@ img {
     margin-bottom: 40px; }
     @media (max-width: 767px) {
       .form__title {
-        margin: 0 15px 25px;
+        margin: 0 15px 35px;
         font-size: 28px;
         line-height: 32px; } }
-  .form__input:not(:last-child) {
-    margin-bottom: 15px; }
-    @media (max-width: 767px) {
-      .form__input:not(:last-child) {
-        margin-bottom: 10px; } }
+  .form__input {
+    position: relative; }
+    .form__input:not(:last-child) {
+      margin-bottom: 25px; }
+    .form__input .error_info {
+      position: absolute;
+      left: 0;
+      top: 100%; }
   .form__submit {
-    margin-top: 30px;
+    margin-top: 25px;
     border: 0;
     width: 100%;
     margin-bottom: 15px; }
-    @media (max-width: 1024px) {
-      .form__submit {
-        margin-top: 20px; } }
   .form__terms {
     color: #5C5853;
     text-align: center;
@@ -2240,8 +2247,14 @@ img {
     text-align: center; }
   .modal-request__fields {
     margin-bottom: 30px; }
-    .modal-request__fields .input:not(:last-child) {
-      margin-bottom: 15px; }
+    .modal-request__fields .modal-request__input:not(:last-child) {
+      margin-bottom: 25px; }
+  .modal-request__input {
+    position: relative; }
+    .modal-request__input .error_info {
+      position: absolute;
+      left: 0;
+      top: 100%; }
   .modal-request__submit {
     width: 100%; }
   .modal-request__terms {

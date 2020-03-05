@@ -14,8 +14,8 @@
           <nav class="nav">
             <div class="logo">Anastasiya Nyavchuk</div>
             <ul class="nav__menu">
-              <li> <a>Instagram</a></li>
-              <li> <a>Facebook</a></li>
+              <li> <a href="https://www.instagram.com/mind.coach/">Instagram</a></li>
+              <li> <a href="https://www.facebook.com/mindcoach.niavchuk/">Facebook</a></li>
             </ul>
             <button class="hamb" type="button" id="hamb"><span></span><span></span><span></span></button>
           </nav>
@@ -264,22 +264,25 @@
             <div class="testimonials__dots"></div>
           </div>
           <div class="form">
-            <div class="form__content">
+            <form class="form__content js-form-validate" action="#" novalidate>
               <div class="form__title">Хватит сомневаться - <span class="underline">действуй!</span></div>
               <div class="form__fields">
                 <div class="form__input">
-                  <input class="input" type="text" placeholder="Имя">
+                  <input class="input" type="text" placeholder="Имя" data-required data-name="name">
+                  <div class="error_info"></div>
                 </div>
                 <div class="form__input">
-                  <input class="input" type="tel" placeholder="+380(__)___-__-__" data-mask="phone">
+                  <input class="input" type="tel" placeholder="+380(__)___-__-__" data-mask="phone" data-required data-name="phone">
+                  <div class="error_info"></div>
                 </div>
                 <div class="form__input">
-                  <input class="input" type="email" placeholder="ivan@ivanov.com">
+                  <input class="input" type="email" placeholder="ivan@ivanov.com" data-required data-name="email">
+                  <div class="error_info"></div>
                 </div>
               </div>
               <input class="form__submit button-medium button-orange" type="submit" value="Оплатить участие">
               <p class="form__terms">Нажимая на кнопку, я соглашаюсь с <a href="#">Политикой конфиденциальности</a></p>
-            </div>
+            </form>
           </div>
         </div>
       </section>
@@ -294,8 +297,8 @@
                   <li><a href="tel:+380954890840">+38 095 489 08 40</a></li>
                 </ul>
                 <ul class="footer__socials s-media">
-                  <li><a>Facebook</a></li>
-                  <li><a>Instagram</a></li>
+                  <li><a href="https://www.facebook.com/mindcoach.niavchuk/">Facebook</a></li>
+                  <li><a href="https://www.instagram.com/mind.coach/">Instagram</a></li>
                 </ul>
               </div>
             </div>
@@ -310,18 +313,27 @@
       </footer>
     </div>
     <div class="modal-request" id="send-request">
-      <div class="modal-request__inner">
+      <form class="modal-request__inner js-form-validate" action="#" novalidate>
         <button class="modal-request__close" type="button" data-action="close-modal"><img src="./static/img/svg/close-menu.svg" alt="Закрыть"></button>
         <div class="modal-request__title">Оставь свои данные!</div>
         <div class="modal-request__subtitle">Я перезвоню тебе в течение дня и подробно все расскажу</div>
         <div class="modal-request__fields">
-          <input class="input" type="text" placeholder="Имя">
-          <input class="input" type="tel" placeholder="+380(__)___-__-__" data-mask="phone">
-          <input class="input" type="email" placeholder="ivan@ivanov.com">
+          <div class="modal-request__input">
+            <input class="input" type="text" placeholder="Имя" data-name="name" data-required>
+            <div class="error_info">Заполните обязательное поле</div>
+          </div>
+          <div class="modal-request__input">
+            <input class="input" type="tel" placeholder="+380(__)___-__-__" data-mask="phone" data-name="phone" data-required>
+            <div class="error_info">Заполните обязательное поле</div>
+          </div>
+          <div class="modal-request__input">
+            <input class="input" type="email" placeholder="ivan@ivanov.com" data-name="email" data-required>
+            <div class="error_info">Заполните обязательное поле</div>
+          </div>
         </div>
         <input class="modal-request__submit button-medium button-orange" type="submit" value="Оплатить участие">
         <div class="modal-request__terms">Нажимая на кнопку, я соглашаюсь с Политикой конфиденциальности</div>
-      </div>
+      </form>
     </div>
     <div class="modal-overlay">
       <button class="modal-overlay__close" type="button" data-action="close-modal"><img src="./static/img/svg/close.svg" alt="Закрыть"></button>

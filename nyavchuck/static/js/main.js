@@ -101,3 +101,94 @@ $(document).ready(function(){
     }
 
 })
+
+var validator = {
+    checkInputs: function(form){
+
+        var inputs = form.find('input[data-required]'),
+            errors = [];
+
+        inputs.each(function(index){
+
+            var type = $(this).attr('data-name'),
+                value = $(this).val(),
+                errorHolder = $(this).siblings('.error_info');
+
+            if(value === ''){
+                errors.push({
+                    holder: errorHolder,
+                    message: 'Заполните обязательное поле'
+                })
+
+                return true;
+            }
+
+            if(type === 'email' &&
+                value !== ''){
+
+                var regExpression = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/gi;
+
+                if(! regExpression.test(value)){
+                    errors.push({
+                        holder: errorHolder,
+                        message: 'Введите корректный email'
+                    })
+                }
+
+                return true;
+
+            }
+            
+            if(type === 'phone' && 
+                    value.length !== 17 &&
+                    value !== ''){
+
+                errors.push({
+                    holder: errorHolder,
+                    message: 'Введите корректный телефон'
+                })
+
+                return true;
+            }
+
+        })
+
+        if(errors.length === 0){
+            
+            return true;
+
+        }else{
+            for (var i = 0; i < errors.length; i++) {
+
+                this.renderErrors(errors[i]);
+                
+            }
+            return false;
+        }
+
+    },
+    renderErrors: function(error){
+        error.holder.show();
+        error.holder.text(error.message);
+
+    }
+}
+
+$(".js-form-validate").submit(function(e) {
+    
+    if(! validator.checkInputs($(this))){
+        e.preventDefault()
+    }else {
+        console.log('Done!')
+    }
+});
+
+$('input[data-required]').on('input keydown', function(){
+
+    var errorHolder = $(this).siblings('.error_info');
+
+    if(errorHolder.length > 0){
+        errorHolder.hide();
+    }
+
+})
