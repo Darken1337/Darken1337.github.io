@@ -1,4 +1,4 @@
-<!-- {% if include.upfront %}
+{% if include.upfront %}
   {% assign title="Внести частичную предоплату $" | append: include.upfront %}
   {% include paybutton.html id=include.id name=include.name amount=include.upfront title=title %}
 {% elsif include.amount %}
@@ -23,4 +23,4 @@
       {% include paybutton.html id=id name=name amount=include.p upfront=include.upfront %}
     </div>
   </div>
-{% endif %} -->
+{% endif %}
