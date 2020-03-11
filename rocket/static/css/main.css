@@ -105,6 +105,10 @@ html {
   margin: 0 auto;
 }
 
+.section{
+  padding: 150px 0;
+}
+
 @media (max-width: 992px) {
   .container {
     padding: 0 25px;
@@ -114,6 +118,9 @@ html {
 @media (max-width: 768px) {
   .container {
     padding: 0 33px;
+  }
+  .section{
+    padding: 50px 0;
   }
 }
 
@@ -170,6 +177,11 @@ button:focus {
 
 .main {
   overflow-x: hidden;
+}
+
+a{
+  color: #007bff;
+  text-decoration: underline;
 }
 
 input {
@@ -1306,6 +1318,8 @@ p {
 .footer__name {
   margin-bottom: 5px;
   color: #292121;
+  font-size: 16px;
+  line-height: 25px;
 }
 
 .footer__description {
@@ -1346,6 +1360,10 @@ p {
 .footer__center {
   max-width: 255px;
   width: 100%;
+}
+
+.footer__center .text{
+  font-size: 16px;
 }
 
 @media (max-width: 992px) {
@@ -1411,6 +1429,12 @@ p {
   margin-right: 82px;
 }
 
+.footer-menu a{
+  color: #515151;
+  font-size: 16px;
+  text-decoration: none;
+}
+
 @media (max-width: 992px) {
   .footer-menu {
     max-width: 255px;
@@ -1464,6 +1488,9 @@ p {
 
 .footer__contacts a {
   display: block;
+  color: #515151;
+  font-size: 16px;
+  text-decoration: none;
 }
 
 .rights {
