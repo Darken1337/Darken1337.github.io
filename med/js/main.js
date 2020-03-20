@@ -53,10 +53,54 @@ var menuDropInit = {
             openMain.css('z-index', 1)
                     .removeClass('active');
             
+        })
+    }
+}
+
+menuDropInit.init();
+
+//filter drop init
+
+var dropdownInit = {
+    toggleItem: function(item){
+
+        item.slideToggle(200);
+        item.toggleClass('active');
+
+    },
+    init: function(){
+
+        var dropInitButtons = $('[data-accordeon="open"]'),
+            _this = this;
+
+        dropInitButtons.on('click', function(){
+
+            var dropToToggle = $(this).siblings('[data-accordeon="body"]');
+
+            _this.toggleItem(dropToToggle);
 
         })
     }
 }
 
+dropdownInit.init();
 
-menuDropInit.init();
+// Price range picker
+
+var slider = document.getElementById('price-picker');
+
+if(slider){
+    noUiSlider.create(slider, {
+        start: [0, 20000],
+        step: 1,
+        behaviour: 'drag',
+        connect: true,
+        range: {
+            'min': 0,
+            'max': 20000
+        }
+    });
+}
+
+
+
