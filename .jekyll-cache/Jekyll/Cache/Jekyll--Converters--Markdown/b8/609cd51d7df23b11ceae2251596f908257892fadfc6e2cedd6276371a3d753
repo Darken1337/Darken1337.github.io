@@ -1,0 +1,79 @@
+I"<h1 id="зачем-вам-это"><strong>Зачем вам это</strong></h1>
+
+<p>Обсуждение продукта, брейншторм, получение экспертного мнения, обзор продукта и поиск слабых мест — как использовать выделенное время, решать вам.</p>
+
+<h1 id="что-входит">Что входит</h1>
+
+<ul>
+  <li>1 час беседы в любом удобном мессенджере (Skype, WhatsApp, Telegram)</li>
+</ul>
+
+<h1 id="сколько-стоит"><strong>Сколько стоит</strong></h1>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $225</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "225",
+      productName = "Консультация маркетолога под ключ",
+      productId = "marketer-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-marketer-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-marketer-turnkey').length > 1) {
+    alert('Duplicate product ID: marketer-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-marketer-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $225" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $150</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "150",
+      productName = "Консультация маркетолога для партнёра",
+      productId = "marketer-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-marketer-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-marketer-partner').length > 1) {
+    alert('Duplicate product ID: marketer-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-marketer-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $150" />
+</form>
+    </div>
+  </div>
+
+:ET

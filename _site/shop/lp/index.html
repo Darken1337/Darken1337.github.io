@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/static/img/favicon.png" type="image/png" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/css/main.css">
+  <title></title>
+</head>
+<body>
+  <header id="header">
+    <div class="container">
+        <nav class="navigation">
+            <button class="hamburger" type="button" id="toggle-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="logo"><img src="/static/img/logo.png" alt="Icoach"></div>
+            <div class="menu-main-wrap" id="menu-main">
+                <ul class="menu-main">
+                    <li>
+                        <a class="menu-main__link" href="#s-results">Кейсы</a>
+                    </li>
+                    <li>
+                        <a class="menu-main__link" href="#s-income">Партнерство</a>
+                    </li>
+                    <li>
+                        <a class="menu-main__link" href="#s-specialization">Гарантия</a>
+                    </li>
+                    <li>
+                        <a class="menu-main__link" href="#s-strategy">Разработка стратегии</a>
+                    </li>
+                    <li>
+                        <a class="menu-main__link" href="#s-testimonials">Отзывы</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation__phones">
+                <a href="tel:+74991124733">+7&nbsp;499&nbsp;112 47 33</a>
+                <a href="tel:+442080892847">+44 20 8089 2847</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+  <style type="text/css">
+.page-content h1, .page-content h2, .page-content h3 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}  
+</style>
+
+<div class="section bg-brown">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h1 class="title-w-circle circle-brown color-white"><span>Продающий лендинг</span></h1>
+        
+          <p class="color-white">Разработка продающего лендинга для вашего продукта</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="block py-5 page-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h1 id="зачем-вам-это"><strong>Зачем вам это</strong></h1>
+
+<p>Качественный лендинг просто, понятно, и выгодно объясняет посетителю, почему ему стоит работать именно с вами, отделяет целевых от нецелевых, побуждает оставить заявку на ваши услуги</p>
+
+<h1 id="что-входит"><strong>Что входит</strong></h1>
+
+<ul>
+  <li>Интервью с маркетологом для выявления ключевых смыслов о вас и вашем продукте для лендинга</li>
+  <li>Разработка продающего текста</li>
+  <li>Вёрстка лендинга</li>
+  <li>Подключение систем оплаты</li>
+</ul>
+
+<h1 id="сколько-стоит"><strong>Сколько стоит</strong></h1>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $1500</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "1500",
+      productName = "Продающий лендинг под ключ",
+      productId = "lp-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-lp-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-lp-turnkey').length > 1) {
+    alert('Duplicate product ID: lp-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-lp-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $1500" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $1000</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "1000",
+      productName = "Продающий лендинг для партнёра",
+      productId = "lp-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-lp-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-lp-partner').length > 1) {
+    alert('Duplicate product ID: lp-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-lp-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $1000" />
+</form>
+    </div>
+  </div>
+
+<h1 id="индивидуальный-дизайн-лендинга"><strong>Индивидуальный дизайн лендинга</strong></h1>
+
+<p>Визуальное оформление лендинга и рекламных материалов в соответствии с вашим фирменным стилем</p>
+
+<h1 id="зачем-вам-это-1"><strong>Зачем вам это</strong></h1>
+
+<p>«Встречают по одёжке» — профессиональный качественный дизайн создаёт у потенциального клиента ощущение качества вашего продукта на подсознательном уровне и повышает доверие</p>
+
+<h1 id="что-входит-1"><strong>Что входит</strong></h1>
+
+<ul>
+  <li>Интервью с маркетологом для выявления ключевых смыслов о вас и вашем продукте для лендинга</li>
+  <li>Разработка продающего текста</li>
+  <li>Подключение систем оплаты</li>
+  <li>Разработка фирменного стиля — подбор цветов и стилистики оформления</li>
+  <li>Разработка дизайна лендинга</li>
+  <li>Вёрстка лендинга в соответствии с дизайном</li>
+</ul>
+
+<h1 id="сколько-стоит-1"><strong>Сколько стоит</strong></h1>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $2700</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "2700",
+      productName = "Дизайн лендинга под ключ",
+      productId = "lp-design-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-lp-design-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-lp-design-turnkey').length > 1) {
+    alert('Duplicate product ID: lp-design-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-lp-design-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $2700" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $1800</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "1800",
+      productName = "Дизайн лендинга для партнёра",
+      productId = "lp-design-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-lp-design-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-lp-design-partner').length > 1) {
+    alert('Duplicate product ID: lp-design-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-lp-design-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $1800" />
+</form>
+    </div>
+  </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+  <footer id="footer">
+  <div class="container">
+    <div class="footer">
+      <div class="footer__description">
+        <div class="footer__center">
+          <h3 class="font-bold footer__name">ICOACH.</h3>
+          <p class="text">Продюсерский центр для тренеров, коучей и&nbsp;экспертов.</p>
+        </div>
+        <div class="footer__create">Упакуем продукт и&nbsp;создадим стабильный и&nbsp;управляемый поток целевых клиентов, пока вы&nbsp;будете заниматься другими делами.</div>
+      </div>
+      <div class="footer__right">
+        <ul class="footer-menu">
+          <li><a href="/"></a></li>
+          <li><a href="/reviews/"></a></li>
+          <li><a href="/shop/"></a></li>
+        </ul>
+        <div class="footer__contacts">
+          <div class="font-bold footer__contacts-title">Служба поддержки клиентов</div>
+          <div class="red footer__contacts-mail">mail@icoach.ge</div>
+          <a href="tel:+74991124733">+7&nbsp;499&nbsp;112 47 33</a>
+          <a href="tel:+442080892847">+44&nbsp;20&nbsp;8089&nbsp;2847</a>
+          <div class="rights rights-desktop">Все права защищены.</div>
+        </div>
+      </div>
+      <div class="rights rights-mobile">Все права защищены.</div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="/static/libs/lazy-load.min.js"></script>
+  <script src="/static/libs/Drift.min.js"></script>
+  <script src="/static/js/main.js"></script>
+</body>
+
+</html>

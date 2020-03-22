@@ -1,0 +1,256 @@
+I"�*<h1 id="зачем-вам-это"><strong>Зачем вам это</strong></h1>
+
+<p>«Встречают по одёжке» — профессиональный качественный дизайн создаёт у потенциального клиента ощущение качества вашего продукта на подсознательном уровне и повышает доверие</p>
+
+<h1 id="разработка-дизайна">Разработка дизайна</h1>
+
+<p>Разработка всех рекламных материалов в соответствии с концепцией вашего бренда</p>
+
+<h2 id="что-входит">Что входит</h2>
+
+<ul>
+  <li>Разработка фирменного стиля — подбор цветов и стилистики оформления</li>
+  <li>Разработка дизайна лендинга</li>
+  <li>Вёрстка лендинга в соответствии с дизайном</li>
+  <li>Разработка пакета баннеров для рекламных объявлений (количество соответствует количеству постов на этот месяц, но до 10 шт)</li>
+  <li>Разработка пакета баннеров для постов в соцсетях (количество соответствует количеству постов на этот месяц, но до 15 шт)</li>
+  <li>Разработка оформления в соцсетях</li>
+</ul>
+
+<h2 id="сколько-стоит"><strong>Сколько стоит</strong></h2>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $3750</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "3750",
+      productName = "Индивидуальный дизайн под ключ",
+      productId = "design-init-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-design-init-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-design-init-turnkey').length > 1) {
+    alert('Duplicate product ID: design-init-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-design-init-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $3750" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $2500</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "2500",
+      productName = "Индивидуальный дизайн для партнёра",
+      productId = "design-init-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-design-init-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-design-init-partner').length > 1) {
+    alert('Duplicate product ID: design-init-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-design-init-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $2500" />
+</form>
+    </div>
+  </div>
+
+<hr />
+
+<h1 id="обновление-дизайна">Обновление дизайна</h1>
+
+<p>Создание новых рекламных материалов для соцсетей, когда старые потеряли актуальность или были уже использованы</p>
+
+<h2 id="что-входит-1">Что входит</h2>
+
+<ul>
+  <li>Разработка пакета баннеров для рекламных объявлений (количество соответствует количеству постов на этот месяц, но до 10 шт)</li>
+  <li>Разработка пакета баннеров для постов в соцсетях (количество соответствует количеству постов на этот месяц, но до 15 шт)</li>
+</ul>
+
+<h2 id="сколько-стоит-1"><strong>Сколько стоит</strong></h2>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $1425</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "1425",
+      productName = "Обновление дизайна под ключ",
+      productId = "design-refresh-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-design-refresh-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-design-refresh-turnkey').length > 1) {
+    alert('Duplicate product ID: design-refresh-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-design-refresh-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $1425" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $950</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "950",
+      productName = "Обновление дизайна для партнёра",
+      productId = "design-refresh-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-design-refresh-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-design-refresh-partner').length > 1) {
+    alert('Duplicate product ID: design-refresh-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-design-refresh-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $950" />
+</form>
+    </div>
+  </div>
+
+<hr />
+
+<h1 id="разработка-фирменного-стиля">Разработка фирменного стиля</h1>
+
+<p>Разработка фирменного стиля, а также создание всех необходимых рекламных материалов. Предоставление шаблонов, образцов шрифтов, цветов и элементов. Позволяет создавать дизайны в будущем даже новичку</p>
+
+<h2 id="что-входит-2">Что входит</h2>
+
+<ul>
+  <li>Разработка фирменного стиля — подбор цветов и стилистики оформления</li>
+  <li>Текстовое описание визуальной концепции и набор визуальных элементов (шрифты, цвета, элементы)</li>
+  <li>Разработка дизайна лендинга</li>
+  <li>Вёрстка лендинга в соответствии с дизайном</li>
+  <li>Разработка шаблонов баннеров для рекламных объявлений</li>
+  <li>Разработка визуальной сетки в соцсетях</li>
+  <li>Разработка шаблонов баннеров для постов в соцсетях (количество соответствует дизайну сетки, обычно равно 6-9 шт)</li>
+  <li>Разработка оформления в соцсетях</li>
+</ul>
+
+<h2 id="сколько-стоит-2"><strong>Сколько стоит</strong></h2>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $4875</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "4875",
+      productName = "Разработка фирменного стиля под ключ",
+      productId = "design-style-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-design-style-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-design-style-turnkey').length > 1) {
+    alert('Duplicate product ID: design-style-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-design-style-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $4875" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $3250</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "3250",
+      productName = "Разработка фирменного стиля для партнёра",
+      productId = "design-style-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-design-style-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-design-style-partner').length > 1) {
+    alert('Duplicate product ID: design-style-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-design-style-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $3250" />
+</form>
+    </div>
+  </div>
+
+:ET

@@ -1,0 +1,83 @@
+I"�<h1 id="зачем-вам-это"><strong>Зачем вам это</strong></h1>
+
+<p>Об услуге лучше всего узнавать от самого эксперта. Мы разработаем сценарий, который сделает эту презентацию короткой и чёткой, и будет составлен по продающей структуре, быстро и последовательно подводящей посетителя лендинга к решению совершить ключевое действие — заказать ваши услуги.</p>
+
+<h1 id="что-входит">Что входит</h1>
+
+<ul>
+  <li>Разработка и согласование сути сообщений</li>
+  <li>Разработка сценария видео</li>
+  <li>Выдача рекомендаций по записи видео</li>
+  <li>Обратная связь на снятое вами видео от маркетолога</li>
+  <li>Монтаж готового видео</li>
+</ul>
+
+<h1 id="сколько-стоит">Сколько стоит</h1>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $525</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "525",
+      productName = "Продающий видеоролик под ключ",
+      productId = "video-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-video-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-video-turnkey').length > 1) {
+    alert('Duplicate product ID: video-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-video-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $525" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $350</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "350",
+      productName = "Продающий видеоролик для партнёра",
+      productId = "video-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-video-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-video-partner').length > 1) {
+    alert('Duplicate product ID: video-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-video-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $350" />
+</form>
+    </div>
+  </div>
+
+:ET

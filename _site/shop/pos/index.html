@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/static/img/favicon.png" type="image/png" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/css/main.css">
+  <title></title>
+</head>
+<body>
+  <header id="header">
+    <div class="container">
+        <nav class="navigation">
+            <button class="hamburger" type="button" id="toggle-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="logo"><img src="/static/img/logo.png" alt="Icoach"></div>
+            <div class="menu-main-wrap" id="menu-main">
+                <ul class="menu-main">
+                    <li>
+                        <a class="menu-main__link" href="#s-results">Кейсы</a>
+                    </li>
+                    <li>
+                        <a class="menu-main__link" href="#s-income">Партнерство</a>
+                    </li>
+                    <li>
+                        <a class="menu-main__link" href="#s-specialization">Гарантия</a>
+                    </li>
+                    <li>
+                        <a class="menu-main__link" href="#s-strategy">Разработка стратегии</a>
+                    </li>
+                    <li>
+                        <a class="menu-main__link" href="#s-testimonials">Отзывы</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation__phones">
+                <a href="tel:+74991124733">+7&nbsp;499&nbsp;112 47 33</a>
+                <a href="tel:+442080892847">+44 20 8089 2847</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+  <style type="text/css">
+.page-content h1, .page-content h2, .page-content h3 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}  
+</style>
+
+<div class="section bg-brown">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h1 class="title-w-circle circle-brown color-white"><span>Позиционирование. Исследование рынка</span></h1>
+        
+          <p class="color-white">Выбор правильного позиционирования и узкой специализации — ниши, которая соответствует вашей экспертности, пользуется спросом, и не занята конкурентами</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="block py-5 page-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h1 id="зачем-вам-это"><strong>Зачем вам это</strong></h1>
+
+<p>Невозможно быть лучшим во всём. Если хотите стать №1, важно выбрать лучшую для себя нишу, грамотно в ней позиционироваться, и сконцентрировать все усилия именно на ней. Тогда вас будет знать рынок, а средства массовой информации — приглашать как ведущего эксперта в этой теме.</p>
+
+<p>Кого ищут лучшие платежеспособные клиенты? Лучших экспертов. Кого приглашают на ТВ? Лучших экспертов. О ком пишут целые книги и создают вирусные ролики? О лучших экспертах. Но разве можно стать лучшим, если распыляться сразу на несколько направлений?</p>
+
+<p>Разработаем для вас индивидуальную стратегию позиционирования, которая позволит выбрать наиболее подходящую для вас нишу, чтобы занять в ней лидирующую позицию на рынке.</p>
+
+<h1 id="что-входит"><strong>Что входит</strong></h1>
+
+<h2 id="модуль-1-полное-маркетинговое-исследование-рынка">Модуль 1. Полное маркетинговое исследование рынка</h2>
+
+<p>Команда маркетологов исследует рынок, чтобы понять, какая тема наименее занята конкурентами, а также наименее раскрыта. Но при этом она пользуется спросом у целевой аудитории и имеет большой потенциал для роста и будущих больших продаж.</p>
+
+<h3 id="результат--отчёт-о-полном-маркетинговом-исследовании-рынка">Результат — Отчёт о полном маркетинговом исследовании рынка</h3>
+
+<p>Отчёт будет содержать информацию и рекомендации о том, какую тему лучше выбрать, отталкиваясь от того, что уже представлено на рынке.</p>
+
+<h3 id="стоимость">Стоимость</h3>
+
+<script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "1250",
+      productName = "Позиционирование, 1 модуль",
+      productId = "pos-1";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-pos-1').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-pos-1').length > 1) {
+    alert('Duplicate product ID: pos-1');
+  }
+})
+</script>
+
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-pos-1" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $1250" />
+</form>
+
+<hr />
+
+<h2 id="модуль-2-исследование-целевой-аудитории">Модуль 2. Исследование целевой аудитории</h2>
+
+<p>Изучим целевую аудиторию, чтобы быть на 100 % уверенными в том, какая тема интересует потенциальных клиентов ― лучших клиентов.</p>
+
+<h3 id="результат--отчёт-об-исследовании-целевой-аудитории">Результат — Отчёт об исследовании целевой аудитории</h3>
+
+<p>Отчёт будет содержать информацию и рекомендации о том, какую тему лучше выбрать, отталкиваясь от того, в чём нуждаются и чего хотят ваши идеальные клиенты.</p>
+
+<h3 id="стоимость-1">Стоимость</h3>
+
+<script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "850",
+      productName = "Позиционирование, 2 модуль",
+      productId = "pos-2";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-pos-2').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-pos-2').length > 1) {
+    alert('Duplicate product ID: pos-2');
+  }
+})
+</script>
+
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-pos-2" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $850" />
+</form>
+
+<hr />
+
+<h2 id="модуль-3-выбор-одной-темы-или-узкой-специализации">Модуль 3. Выбор одной темы или узкой специализации</h2>
+
+<p>Зададим вам 100+ вопросов или даже больше ― столько, сколько понадобится, чтобы понять, в какой теме вы наиболее сильны. Доберёмся до самой сути и найдём ту специализацию, в которой вы уверенно станете номером один. Свой выбор будем также основывать на результатах исследования рынка и ЦА.</p>
+
+<h3 id="результат--индивидуальная-стратегия-позиционирования">Результат — Индивидуальная стратегия позиционирования</h3>
+
+<p>Разработанная специально для вас стратегия позиционирования будет содержать информацию о той узкой специализации, которую вам стоит выбрать, чтобы стать в ней номером один. На этом этапе вы окончательно определитесь с темой, на которой нужно сосредоточиться.</p>
+
+<h3 id="стоимость-2">Стоимость</h3>
+
+<script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "450",
+      productName = "Позиционирование, 3 модуль",
+      productId = "pos-3";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-pos-3').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-pos-3').length > 1) {
+    alert('Duplicate product ID: pos-3');
+  }
+})
+</script>
+
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-pos-3" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $450" />
+</form>
+
+<hr />
+
+<h2 id="модуль-4-выбор-ценовой-политики">Модуль 4. Выбор ценовой политики</h2>
+
+<p>Когда тема будет выбрана, мы поставим цену вашей экспертности. Такую цену, которая достойна вас и которую будут платить лучшие клиенты. Определим, сколько стоят услуги такого топового узкоспециализированного коуча, как вы.</p>
+
+<h3 id="результат--сформированная-ценовая-политика">Результат — Сформированная ценовая политика</h3>
+
+<p>Когда тема будет выбрана, мы выберем обоснованную цену ваших услуг и продуктов, основываясь на исследовании рынка и ЦА, а также ваших предпочтений. После этого модуля вы будете точно знать, сколько стоите как эксперт. Вы будете называть эту цену уверенно, без страха, что это слишком дорого или слишком дёшево.</p>
+
+<h3 id="стоимость-3">Стоимость</h3>
+
+<script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "850",
+      productName = "Позиционирование, 4 модуль",
+      productId = "pos-4";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-pos-4').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-pos-4').length > 1) {
+    alert('Duplicate product ID: pos-4');
+  }
+})
+</script>
+
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-pos-4" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $850" />
+</form>
+
+<hr />
+
+<h2 id="модуль-5-создание-утп">Модуль 5. Создание УТП</h2>
+
+<p>Составим уникальное торговое предложение, которое будет ясно раскрывать вашу экспертность и показывать ключевые выгоды от сотрудничества. Это станет возможным, потому что у вас теперь будет одна понятная специализация, а не много разных.</p>
+
+<h3 id="результат--готовое-утп">Результат — Готовое УТП</h3>
+
+<p>Готовое УТП — этое формула его создания и не инструкция, как его написать, а именно готовое предложение ― мощный оффер, от которого глупо отказываться и который будет ориентирован к клиентам премиум-класса.</p>
+
+<h3 id="стоимость-4">Стоимость</h3>
+
+<script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "450",
+      productName = "Позиционирование, 5 модуль",
+      productId = "pos-5";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-pos-5').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-pos-5').length > 1) {
+    alert('Duplicate product ID: pos-5');
+  }
+})
+</script>
+
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-pos-5" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $450" />
+</form>
+
+<hr />
+<h1 id="итого"><strong>Итого</strong></h1>
+
+<p>При покупке 5 модулей — <del>$3850</del> $3000</p>
+
+<script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "3000",
+      productName = "Позиционирование",
+      productId = "pos-6";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-pos-6').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-pos-6').length > 1) {
+    alert('Duplicate product ID: pos-6');
+  }
+})
+</script>
+
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-pos-6" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $3000" />
+</form>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+  <footer id="footer">
+  <div class="container">
+    <div class="footer">
+      <div class="footer__description">
+        <div class="footer__center">
+          <h3 class="font-bold footer__name">ICOACH.</h3>
+          <p class="text">Продюсерский центр для тренеров, коучей и&nbsp;экспертов.</p>
+        </div>
+        <div class="footer__create">Упакуем продукт и&nbsp;создадим стабильный и&nbsp;управляемый поток целевых клиентов, пока вы&nbsp;будете заниматься другими делами.</div>
+      </div>
+      <div class="footer__right">
+        <ul class="footer-menu">
+          <li><a href="/"></a></li>
+          <li><a href="/reviews/"></a></li>
+          <li><a href="/shop/"></a></li>
+        </ul>
+        <div class="footer__contacts">
+          <div class="font-bold footer__contacts-title">Служба поддержки клиентов</div>
+          <div class="red footer__contacts-mail">mail@icoach.ge</div>
+          <a href="tel:+74991124733">+7&nbsp;499&nbsp;112 47 33</a>
+          <a href="tel:+442080892847">+44&nbsp;20&nbsp;8089&nbsp;2847</a>
+          <div class="rights rights-desktop">Все права защищены.</div>
+        </div>
+      </div>
+      <div class="rights rights-mobile">Все права защищены.</div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="/static/libs/lazy-load.min.js"></script>
+  <script src="/static/libs/Drift.min.js"></script>
+  <script src="/static/js/main.js"></script>
+</body>
+
+</html>
