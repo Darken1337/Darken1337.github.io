@@ -1,464 +1,1903 @@
-
-<div class="modal-window quick-order prior-1" id="quick-order">
-  <button class="modal-window__close" type="button" data-action="close-modal">
-    <svg> 
-      <use xlink:href="./img/sprites.svg#close"></use>
-    </svg>
-  </button>
-  <div class="modal-window__header"> <span class="color-blue">Кофеварка CofeStaion-204m</span></div>
-  <div class="modal-window__body">
-    <div class="modal-window__product">
-      <div class="modal-window__thumb"><img src="./img/dummy-big.png" alt=""/>
-        <div class="modal-window__thumb-scale">
-          <svg> 
-            <use xlink:href="./img/sprites.svg#scale"></use>
-          </svg>
-        </div>
-      </div>
-      <div class="modal-window__content">
-        <div class="modal-window__code"><span class="color-gray-300 mr-5 font-15">Код товара:</span><span class="color-gray-335">835923</span></div>
-        <div class="product-price">
-          <div class="product-price__header color-gray-300"></div>
-          <div class="product-price__body">
-            <div class="price-new weight-500">165 399 ₸</div>
-            <div class="price-old weight-500 color-gray-300 line-through line-through-pink">145 279 ₸</div>
-          </div>
-        </div>
-        <div class="product-quantity">
-          <button class="color-gray-335" type="button">-</button>
-          <input class="color-blue" type="text"/>
-          <button class="color-gray-335" type="button">+</button>
-        </div>
-        <div class="product-total"><span>Итого:</span>
-          <div class="product-total__line"></div><span class="product-total__price color-blue weight-500">165 399 ₸</span>
-        </div>
-      </div>
-    </div>
-    <div class="modal-window__checkout">
-      <div class="checkout-field">
-        <div class="checkout-field__name"> <span>Email</span><span class="color-pink">*</span></div>
-        <div class="checkout-field__input">
-          <input type="email"/>
-        </div>
-      </div>
-      <div class="checkout-field">
-        <div class="checkout-field__name"> <span>Телефон</span><span class="color-pink">*</span></div>
-        <div class="checkout-field__input">
-          <input type="tel"/>
-        </div>
-      </div>
-      <div class="checkout-field">
-        <div class="checkout-field__name"> <span>Имя</span></div>
-        <div class="checkout-field__input">
-          <input type="text"/>
-        </div>
-      </div>
-      <div class="checkout-field">
-        <div class="checkout-field__name"> <span>Комментарий</span></div>
-        <div class="checkout-field__input">
-          <input type="text"/>
-        </div>
-      </div>
-    </div>
-    <p class="checkout-tip">Нажмите «Оформить заказ», чтобы сделать запрос, и мы скоро свяжемся с вами(по будням с 10 до 18 часов)</p>
-    <p class="checkout-tip checkout-tip--success">Ваш заказ #27056 сформирован, мы скоро вам перезвоним</p>
-    <div class="modal-window__footer">
-      <button class="btn-large bg-pink-main" type="submit">Оформить заказ</button>
-      <button class="btn-large bg-green-dark" type="button" data-action="close-modal">Заказ отправлен</button>
-      <button class="color-gray-300" type="button" data-action="close-modal">Продолжить покупки</button>
-    </div>
-  </div>
-</div>
-<div class="modal-window modal-register prior-3" id="register">
-  <button class="modal-window__close" type="button" data-action="close-modal">
-    <svg> 
-      <use xlink:href="./img/sprites.svg#close"></use>
-    </svg>
-  </button>
-  <div class="modal-window__header text-center"><span class="color-blue">Регистрация</span></div>
-  <div class="modal-register__radios">
-    <div class="color-pink font-17 text-center">Вы регистрируетесь как:</div>
-    <fieldset>
-      <label class="radio">
-        <input type="radio" name="register"/>
-        <div class="radio__box"></div>
-        <div class="radio__text font-14">Торгующая или иная организация</div>
-      </label>
-      <label class="radio">
-        <input type="radio" name="register"/>
-        <div class="radio__box"></div>
-        <div class="radio__text font-14">Конечный покупатель</div>
-      </label>
-    </fieldset>
-  </div>
-  <div class="modal-register__fields text-right">
-    <div class="checkout-field">
-      <div class="checkout-field__name font-15"><span>Наименование вашей организации</span></div>
-      <div class="checkout-field__input">
-        <input type="text"/>
-      </div>
-    </div>
-    <div class="checkout-field">
-      <div class="checkout-field__name font-15"><span>ИНН вашей организации</span></div>
-      <div class="checkout-field__input">
-        <input type="text"/>
-      </div>
-    </div>
-    <div class="checkout-field">
-      <div class="checkout-field__name font-15"> <span>Ваше имя</span></div>
-      <div class="checkout-field__input">
-        <input type="text"/>
-      </div>
-    </div>
-    <div class="checkout-field">
-      <div class="checkout-field__name font-15"><span>Телефон</span></div>
-      <div class="checkout-field__input">
-        <input type="tel"/>
-      </div>
-    </div>
-    <div class="checkout-field">
-      <div class="checkout-field__name font-15"> <span>Email</span></div>
-      <div class="checkout-field__input">
-        <input type="email"/>
-      </div>
-    </div>
-    <div class="checkout-field">
-      <div class="checkout-field__name font-15"> <span>Пароль</span></div>
-      <div class="checkout-field__input">
-        <input type="password"/>
-      </div>
-    </div>
-  </div>
-  <p class="font-14 color-gray-300 text-center">Все поля обязательны к заполнению</p>
-  <div class="modal-register__terms text-center">
-    <label class="checkbox">
-      <input type="checkbox"/>
-      <div class="checkbox__box"></div>
-      <div class="checkbox__text font-13 font-condensed">Фактом регистрации вы соглашаетесь с <a class="color-blue-light text-underline">Пользовательским соглашением</a></div>
-    </label>
-  </div>
-  <div class="text-center">
-    <button class="btn-large bg-pink-main font-22" type="submit" data-action="close-modal">Зарегистрироваться</button>
-  </div>
-</div>
-<div class="modal-window modal-login prior-2" id="login">
-  <button class="modal-window__close" type="button" data-action="close-modal">
-    <svg> 
-      <use xlink:href="./img/sprites.svg#close"></use>
-    </svg>
-  </button>
-  <div class="modal-window__header text-center"><span class="color-blue">Авторизация</span></div>
-  <div class="modal-login__fields">
-    <div class="checkout-field">
-      <div class="checkout-field__name"> <span>Email</span></div>
-      <div class="checkout-field__input">
-        <input type="email"/>
-      </div>
-    </div>
-    <div class="checkout-field">
-      <div class="checkout-field__name"> <span>Пароль</span></div>
-      <div class="checkout-field__input">
-        <input type="password"/>
-      </div>
-    </div>
-    <div class="modal-login__restore"><a class="color-blue-light text-underline" href="">Забыли пароль?</a></div>
-    <div class="modal-login__remember">
-      <label class="checkbox checkbox--big">
-        <input type="checkbox"/>
-        <div class="checkbox__box"></div>
-        <div class="checkbox__text">Запомнить меня</div>
-      </label>
-    </div>
-    <div class="modal-login__submit">
-      <button class="btn-medium bg-pink-main" type="submit">Войти</button>
-    </div>
-    <div class="font-15"><span class="mr-5">Нет аккаунта?</span>
-      <button class="color-pink text-underline" type="button" data-modal="data-modal" data-action="register">Зарегистрируйтесь</button>
-    </div>
-  </div>
-</div>
-<div class="modal-window modal-restore prior-2">
-  <button class="modal-window__close" type="button" data-action="close-modal">
-    <svg> 
-      <use xlink:href="./img/sprites.svg#close"></use>
-    </svg>
-  </button>
-  <div class="modal-window__header text-center"><span class="color-blue">Восстановить доступ</span></div>
-  <div class="modal-login__fields">
-    <div class="checkout-field">
-      <div class="checkout-field__name"> <span>Email</span></div>
-      <div class="checkout-field__input">
-        <input type="email"/>
-      </div>
-    </div>
-  </div>
-  <div class="text-center modal-restore__submit">
-    <button class="bg-pink-main btn-large" type="submit">Сменить пароль</button>
-  </div>
-  <div class="font-15"><span class="mr-5">Нет аккаунта?</span>
-    <button class="color-pink text-underline" type="button" data-modal="data-modal" data-action="register">Зарегистрируйтесь</button>
-  </div>
-</div>
-<div class="modal-window modal-product prior-3" id="product-prev">
-  <button class="modal-window__close" type="button" data-action="close-modal">
-    <svg> 
-      <use xlink:href="./img/sprites.svg#close"></use>
-    </svg>
-  </button>
-  <h2 class="product-page__title color-blue">Кофеварка CofeStaion-204m </h2>
-  <div class="product-page__header">
-    <div> <span class="color-gray-300 mr-5 font-15">Код товара:</span><span class="color-gray-335">835923</span></div>
-    <div class="color-blue weight-500 font-18">Есть в наличии</div>
-  </div>
-  <div class="product-body">
-    <div class="product-gallery">
-      <div class="product-gallery__main"><img src="./img/dummy-big.png" alt=""/>
-        <div class="product-gallery__scale">
-          <svg>
-            <use xlink:href="./img/sprites.svg#scale"></use>
-          </svg>
-        </div>
-      </div>
-    </div>
-    <div class="product-body__center">
-      <div class="product-price">
-        <div class="product-price__header color-gray-300">Цена:</div>
-        <div class="product-price__body">
-          <div class="price-new weight-500">165 399 ₸</div>
-          <div class="price-old weight-500 color-gray-300 line-through line-through-pink">145 279 ₸</div>
-        </div>
-      </div>
-      <div class="product-quantity-wrap">
-        <div class="product-quantity">
-          <button class="color-gray-335" type="button">-</button>
-          <input class="color-blue" type="text"/>
-          <button class="color-gray-335" type="button">+</button>
-        </div>
-        <div class="product-in-stock"><span class="mr-5">В наличие:</span><span class="color-pink">1 шт.</span></div>
-      </div>
-      <div class="product-body__buttons">
-        <button class="btn-medium bg-blue-main font-20 font-condensed" type="button">В корзину</button>
-        <button class="btn-medium bg-pink-main font-18 font-condensed" type="button">Купить в 1 клик</button>
-      </div>
-      <div class="product-actions">
-        <button class="color-blue" type="button">
-          <svg class="fill-none mr-10">
-            <use xlink:href="./img/sprites.svg#like"></use>
-          </svg><span>В избранное</span>
-        </button>
-        <button class="color-blue" type="button">
-          <svg class="mr-10">
-            <use xlink:href="./img/sprites.svg#compare"></use>
-          </svg><span>Сравнение</span>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="product-about">
-    <div class="product-about__content">
-      <div class="product-about__tab-header color-pink weight-300">Описание</div>
-      <p class="weight-300 font-15 mb-50">Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить</p>
-    </div>
-  </div>
-  <div class="product-qualities">
-    <div class="product-qualities__header color-pink">Характеристики</div>
-    <div class="product-qualities__content">
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Длинна, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Ширина, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">53640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Длинна, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Ширина, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">53640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Длинна, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Ширина, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">53640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Длинна, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Ширина, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">53640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Длинна, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Ширина, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">53640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Длинна, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Ширина, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">53640</div>
-      </div>
-    </div>
-  </div>
-  <div class="product-subscribtion weight-300 color-gray-300">Перед применением необходимо ознакомиться с инструкцией по применению (паспортом изделия) или получить консультацию специалиста</div>
-  <div class="text-right mt-15">
-    <button class="btn-medium font-19 weight-500 bg-pink-main" type="button" data-action="close-modal">Закрыть</button>
-  </div>
-</div>
-<div class="modal-window modal-basket prior-3" id="add-basket">
-  <button class="modal-window__close" type="button" data-action="close-modal">
-    <svg> 
-      <use xlink:href="./img/sprites.svg#close"></use>
-    </svg>
-  </button>
-  <div class="modal-window__header mb-50">Товар добавлен в корзину!</div>
-  <div class="basket-table text-center">
-    <div class="basket-table__thead"> 
-      <div class="basket-table__trow color-blue font-18">
-        <div class="basket-table__th thumb">Фото</div>
-        <div class="basket-table__th name">Наименование товара</div>
-        <div class="basket-table__th model">Модель</div>
-        <div class="basket-table__th quantity">Кол-во</div>
-        <div class="basket-table__th price">Цена</div>
-      </div>
-    </div>
-    <div class="basket-table__body">
-      <div class="basket-table__trow color-gray-335">
-        <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""/></div>
-        <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
-        <div class="basket-table__td model font-18 weight-300">835923</div>
-        <div class="basket-table__td quantity font-18 font-condensed">1</div>
-        <div class="basket-table__td price font-19">165 399 ₸</div>
-      </div>
-      <div class="basket-table__trow color-gray-335">
-        <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""/></div>
-        <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
-        <div class="basket-table__td model font-18 weight-300">835923</div>
-        <div class="basket-table__td quantity font-18 font-condensed">1</div>
-        <div class="basket-table__td price font-19">165 399 ₸</div>
-      </div>
-      <div class="basket-table__trow color-gray-335">
-        <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""/></div>
-        <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
-        <div class="basket-table__td model font-18 weight-300">835923</div>
-        <div class="basket-table__td quantity font-18 font-condensed">1</div>
-        <div class="basket-table__td price font-19">165 399 ₸</div>
-      </div>
-    </div>
-  </div>
-  <div class="modal-basket__buttons">
-    <button class="btn-large bg-pink-main" type="submit">Оформить заказ</button>
-    <button class="btn-large bg-blue-main" type="button" data-action="close-modal">Продолжить покупки</button>
-  </div>
-</div>
-<div class="modal-window modal-compare prior-3">
-  <button class="modal-window__close" type="button" data-action="close-modal">
-    <svg> 
-      <use xlink:href="./img/sprites.svg#close"></use>
-    </svg>
-  </button>
-  <div class="modal-window__header mb-10"><span class="color-blue">Столы игровые</span></div>
-  <div class="compare-table-compact mb-15">
-    <div class="font-18 color-blue d-flex align-center text-center weight-300">
-      <div class="compare-table-compact__th compare-info"></div>
-      <div class="compare-table-compact__th">Артикул</div>
-      <div class="compare-table-compact__th">Бренд</div>
-      <div class="compare-table-compact__th">Артикул</div>
-      <div class="compare-table-compact__th">Бренд</div>
-      <div class="compare-table-compact__th">Артикул</div>
-      <div class="compare-table-compact__th">Бренд</div>
-      <div class="compare-table-compact__th">Артикул</div>
-    </div>
-    <div class="compare-table-compact__row d-flex font-14 weight-300">
-      <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""/><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-    </div>
-    <div class="compare-table-compact__row d-flex font-14 weight-300">
-      <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""/><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-    </div>
-    <div class="compare-table-compact__row d-flex font-14 weight-300">
-      <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""/><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-    </div>
-    <div class="compare-table-compact__row d-flex font-14 weight-300">
-      <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""/><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-    </div>
-  </div>
-  <div class="text-right">
-    <button class="btn-medium bg-pink-main font-19 weight-500" type="button" data-action="close-modal">Закрыть</button>
-  </div>
-</div>
-<div class="compare-alert" data-tip="item" data-template="tip">
-  <div class="container">
-    <div class="compare-alert__inner">
-      <div class="compare-alert__image"><img src="./img/dummy-small.png" alt=""/></div>
-      <div class="compare-alert__content"> 
-        <div class="color-gray-335"><span class="color-blue font-20">Кофеварка CofeStaion-204m </span><span class="font-18 weight-300">добавлен к сравнению</span></div>
-        <div class="font-13 weight-300">Товар добавлен в список сравнения из категории Кресла гинекологические</div>
-      </div>
-      <button class="btn-medium bg-pink-main mr-15 font-19" type="button">Сравнить</button>
-      <button class="compare-alert__close" type="button" data-tip="close">
-        <svg class="icon-16">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css?family=Fira+Sans:300:400,500,700|Fira+Sans+Condensed:500|Fira+Mono:500&display=swap&subset=cyrillic" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./libs/css/nouislider.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Страница продукта</title>
+  </head>
+  <body>
+    <div class="modal-window quick-order prior-1" id="quick-order">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
           <use xlink:href="./img/sprites.svg#close"></use>
         </svg>
       </button>
+      <div class="modal-window__header"> <span class="color-blue">Кофеварка CofeStaion-204m</span></div>
+      <div class="modal-window__body">
+        <div class="modal-window__product">
+          <div class="modal-window__thumb"><img src="./img/dummy-big.png" alt="">
+            <div class="modal-window__thumb-scale">
+              <svg> 
+                <use xlink:href="./img/sprites.svg#scale"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-window__content">
+            <div class="modal-window__code"><span class="color-gray-300 mr-5 font-15">Код товара:</span><span class="color-gray-335">835923</span></div>
+            <div class="product-price">
+              <div class="product-price__header color-gray-300"></div>
+              <div class="product-price__body">
+                <div class="price-new weight-500">165 399 ₸</div>
+                <div class="price-old weight-500 color-gray-300 line-through line-through-pink">145 279 ₸</div>
+              </div>
+            </div>
+            <div class="product-quantity">
+              <button class="color-gray-335" type="button">-</button>
+              <input class="color-blue" type="text">
+              <button class="color-gray-335" type="button">+</button>
+            </div>
+            <div class="product-total"><span>Итого:</span>
+              <div class="product-total__line"></div><span class="product-total__price color-blue weight-500">165 399 ₸</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-window__checkout">
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Email</span><span class="color-pink">*</span></div>
+            <div class="checkout-field__input">
+              <input type="email">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Телефон</span><span class="color-pink">*</span></div>
+            <div class="checkout-field__input">
+              <input type="tel">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Имя</span></div>
+            <div class="checkout-field__input">
+              <input type="text">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Комментарий</span></div>
+            <div class="checkout-field__input">
+              <input type="text">
+            </div>
+          </div>
+        </div>
+        <p class="checkout-tip">Нажмите «Оформить заказ», чтобы сделать запрос, и мы скоро свяжемся с вами(по будням с 10 до 18 часов)</p>
+        <p class="checkout-tip checkout-tip--success">Ваш заказ #27056 сформирован, мы скоро вам перезвоним</p>
+        <div class="modal-window__footer">
+          <button class="btn-large bg-pink-main" type="submit">Оформить заказ</button>
+          <button class="btn-large bg-green-dark" type="button" data-action="close-modal">Заказ отправлен</button>
+          <button class="color-gray-300" type="button" data-action="close-modal">Продолжить покупки</button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class="compare-alert-wrap prior-5" data-tip="wrap"></div>
-<div class="overlay"></div>
-<div class="shadow"></div><!DOCTYPE html>
+    <div class="modal-window modal-register prior-3" id="register">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header text-center"><span class="color-blue">Регистрация</span></div>
+      <div class="modal-register__radios">
+        <div class="color-pink font-17 text-center">Вы регистрируетесь как:</div>
+        <fieldset>
+          <label class="radio">
+            <input type="radio" name="register">
+            <div class="radio__box"></div>
+            <div class="radio__text font-14">Торгующая или иная организация</div>
+          </label>
+          <label class="radio">
+            <input type="radio" name="register">
+            <div class="radio__box"></div>
+            <div class="radio__text font-14">Конечный покупатель</div>
+          </label>
+        </fieldset>
+      </div>
+      <div class="modal-register__fields text-right">
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"><span>Наименование вашей организации</span></div>
+          <div class="checkout-field__input">
+            <input type="text">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"><span>ИНН вашей организации</span></div>
+          <div class="checkout-field__input">
+            <input type="text">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"> <span>Ваше имя</span></div>
+          <div class="checkout-field__input">
+            <input type="text">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"><span>Телефон</span></div>
+          <div class="checkout-field__input">
+            <input type="tel">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"> <span>Email</span></div>
+          <div class="checkout-field__input">
+            <input type="email">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"> <span>Пароль</span></div>
+          <div class="checkout-field__input">
+            <input type="password">
+          </div>
+        </div>
+      </div>
+      <p class="font-14 color-gray-300 text-center">Все поля обязательны к заполнению</p>
+      <div class="modal-register__terms text-center">
+        <label class="checkbox">
+          <input type="checkbox">
+          <div class="checkbox__box"></div>
+          <div class="checkbox__text font-13 font-condensed">Фактом регистрации вы соглашаетесь с <a class="color-blue-light text-underline">Пользовательским соглашением</a></div>
+        </label>
+      </div>
+      <div class="text-center">
+        <button class="btn-large bg-pink-main font-22" type="submit" data-action="close-modal">Зарегистрироваться</button>
+      </div>
+    </div>
+    <div class="modal-window modal-login prior-2" id="login">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header text-center"><span class="color-blue">Авторизация</span></div>
+      <div class="modal-login__fields">
+        <div class="checkout-field">
+          <div class="checkout-field__name"> <span>Email</span></div>
+          <div class="checkout-field__input">
+            <input type="email">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name"> <span>Пароль</span></div>
+          <div class="checkout-field__input">
+            <input type="password">
+          </div>
+        </div>
+        <div class="modal-login__restore"><a class="color-blue-light text-underline" href="">Забыли пароль?</a></div>
+        <div class="modal-login__remember">
+          <label class="checkbox checkbox--big">
+            <input type="checkbox">
+            <div class="checkbox__box"></div>
+            <div class="checkbox__text">Запомнить меня</div>
+          </label>
+        </div>
+        <div class="modal-login__submit">
+          <button class="btn-medium bg-pink-main" type="submit">Войти</button>
+        </div>
+        <div class="font-15"><span class="mr-5">Нет аккаунта?</span>
+          <button class="color-pink text-underline" type="button" data-modal data-action="register">Зарегистрируйтесь</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-window modal-restore prior-2">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header text-center"><span class="color-blue">Восстановить доступ</span></div>
+      <div class="modal-login__fields">
+        <div class="checkout-field">
+          <div class="checkout-field__name"> <span>Email</span></div>
+          <div class="checkout-field__input">
+            <input type="email">
+          </div>
+        </div>
+      </div>
+      <div class="text-center modal-restore__submit">
+        <button class="bg-pink-main btn-large" type="submit">Сменить пароль</button>
+      </div>
+      <div class="font-15"><span class="mr-5">Нет аккаунта?</span>
+        <button class="color-pink text-underline" type="button" data-modal data-action="register">Зарегистрируйтесь</button>
+      </div>
+    </div>
+    <div class="modal-window modal-product prior-3" id="product-prev">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <h2 class="product-page__title color-blue">Кофеварка CofeStaion-204m </h2>
+      <div class="product-page__header">
+        <div> <span class="color-gray-300 mr-5 font-15">Код товара:</span><span class="color-gray-335">835923</span></div>
+        <div class="color-blue weight-500 font-18">Есть в наличии</div>
+      </div>
+      <div class="product-body">
+        <div class="product-gallery">
+          <div class="product-gallery__main"><img src="./img/dummy-big.png" alt="">
+            <div class="product-gallery__scale">
+              <svg>
+                <use xlink:href="./img/sprites.svg#scale"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="product-body__center">
+          <div class="product-price">
+            <div class="product-price__header color-gray-300">Цена:</div>
+            <div class="product-price__body">
+              <div class="price-new weight-500">165 399 ₸</div>
+              <div class="price-old weight-500 color-gray-300 line-through line-through-pink">145 279 ₸</div>
+            </div>
+          </div>
+          <div class="product-quantity-wrap">
+            <div class="product-quantity">
+              <button class="color-gray-335" type="button">-</button>
+              <input class="color-blue" type="text">
+              <button class="color-gray-335" type="button">+</button>
+            </div>
+            <div class="product-in-stock"><span class="mr-5">В наличие:</span><span class="color-pink">1 шт.</span></div>
+          </div>
+          <div class="product-body__buttons">
+            <button class="btn-medium bg-blue-main font-20 font-condensed" type="button">В корзину</button>
+            <button class="btn-medium bg-pink-main font-18 font-condensed" type="button">Купить в 1 клик</button>
+          </div>
+          <div class="product-actions">
+            <button class="color-blue" type="button">
+              <svg class="fill-none mr-10">
+                <use xlink:href="./img/sprites.svg#like"></use>
+              </svg><span>В избранное</span>
+            </button>
+            <button class="color-blue" type="button">
+              <svg class="mr-10">
+                <use xlink:href="./img/sprites.svg#compare"></use>
+              </svg><span>Сравнение</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="product-about">
+        <div class="product-about__content">
+          <div class="product-about__tab-header color-pink weight-300">Описание</div>
+          <p class="weight-300 font-15 mb-50">Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить</p>
+        </div>
+      </div>
+      <div class="product-qualities">
+        <div class="product-qualities__header color-pink">Характеристики</div>
+        <div class="product-qualities__content">
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+        </div>
+      </div>
+      <div class="product-subscribtion weight-300 color-gray-300">Перед применением необходимо ознакомиться с инструкцией по применению (паспортом изделия) или получить консультацию специалиста</div>
+      <div class="text-right mt-15">
+        <button class="btn-medium font-19 weight-500 bg-pink-main" type="button" data-action="close-modal">Закрыть</button>
+      </div>
+    </div>
+    <div class="modal-window modal-basket prior-3" id="add-basket">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header mb-50">Товар добавлен в корзину!</div>
+      <div class="basket-table text-center">
+        <div class="basket-table__thead"> 
+          <div class="basket-table__trow color-blue font-18">
+            <div class="basket-table__th thumb">Фото</div>
+            <div class="basket-table__th name">Наименование товара</div>
+            <div class="basket-table__th model">Модель</div>
+            <div class="basket-table__th quantity">Кол-во</div>
+            <div class="basket-table__th price">Цена</div>
+          </div>
+        </div>
+        <div class="basket-table__body">
+              <div class="basket-table__trow color-gray-335">
+                <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""></div>
+                <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
+                <div class="basket-table__td model font-18 weight-300">835923</div>
+                <div class="basket-table__td quantity font-18 font-condensed">1</div>
+                <div class="basket-table__td price font-19">165 399 ₸</div>
+              </div>
+              <div class="basket-table__trow color-gray-335">
+                <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""></div>
+                <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
+                <div class="basket-table__td model font-18 weight-300">835923</div>
+                <div class="basket-table__td quantity font-18 font-condensed">1</div>
+                <div class="basket-table__td price font-19">165 399 ₸</div>
+              </div>
+              <div class="basket-table__trow color-gray-335">
+                <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""></div>
+                <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
+                <div class="basket-table__td model font-18 weight-300">835923</div>
+                <div class="basket-table__td quantity font-18 font-condensed">1</div>
+                <div class="basket-table__td price font-19">165 399 ₸</div>
+              </div>
+        </div>
+      </div>
+      <div class="modal-basket__buttons">
+        <button class="btn-large bg-pink-main" type="submit">Оформить заказ</button>
+        <button class="btn-large bg-blue-main" type="button" data-action="close-modal">Продолжить покупки</button>
+      </div>
+    </div>
+    <div class="modal-window modal-compare prior-3">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header mb-10"><span class="color-blue">Столы игровые</span></div>
+      <div class="compare-table-compact mb-15">
+        <div class="font-18 color-blue d-flex align-center text-center weight-300">
+          <div class="compare-table-compact__th compare-info"></div>
+          <div class="compare-table-compact__th">Артикул</div>
+          <div class="compare-table-compact__th">Бренд</div>
+          <div class="compare-table-compact__th">Артикул</div>
+          <div class="compare-table-compact__th">Бренд</div>
+          <div class="compare-table-compact__th">Артикул</div>
+          <div class="compare-table-compact__th">Бренд</div>
+          <div class="compare-table-compact__th">Артикул</div>
+        </div>
+            <div class="compare-table-compact__row d-flex font-14 weight-300">
+              <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+            </div>
+            <div class="compare-table-compact__row d-flex font-14 weight-300">
+              <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+            </div>
+            <div class="compare-table-compact__row d-flex font-14 weight-300">
+              <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+            </div>
+            <div class="compare-table-compact__row d-flex font-14 weight-300">
+              <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+            </div>
+      </div>
+      <div class="text-right">
+        <button class="btn-medium bg-pink-main font-19 weight-500" type="button" data-action="close-modal">Закрыть</button>
+      </div>
+    </div>
+    <div class="compare-alert" data-tip="item" data-template="tip">
+      <div class="container">
+        <div class="compare-alert__inner">
+          <div class="compare-alert__image"><img src="./img/dummy-small.png" alt=""></div>
+          <div class="compare-alert__content"> 
+            <div class="color-gray-335"><span class="color-blue font-20">Кофеварка CofeStaion-204m </span><span class="font-18 weight-300">добавлен к сравнению</span></div>
+            <div class="font-13 weight-300">Товар добавлен в список сравнения из категории Кресла гинекологические</div>
+          </div>
+          <button class="btn-medium bg-pink-main mr-15 font-19" type="button">Сравнить</button>
+          <button class="compare-alert__close" type="button" data-tip="close">
+            <svg class="icon-16">
+              <use xlink:href="./img/sprites.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="compare-alert-wrap prior-5" data-tip="wrap"></div>
+    <div class="overlay"></div>
+    <div class="shadow"></div>
+    <div class="content">
+      <header id="s-header">
+        <div class="header-top-wrap">
+          <div class="container">
+            <div class="header-top">
+              <ul class="top-menu">
+                <li><a class="color-blue" href="">О компании</a></li>
+                <li><a class="color-blue" href="">Доставка</a></li>
+                <li><a class="color-blue" href="">Оплата</a></li>
+                <li><a class="color-blue" href="">Документы</a></li>
+                <li><a class="color-blue" href="">Контакты</a></li>
+                <li><a class="color-blue" href="">Поставщикам</a></li>
+              </ul>
+              <div class="top-contacts"><a class="top-contacts__phone color-pink" href="">
+                  <svg>
+                    <use xlink:href="./img/sprites.svg#phone"></use>
+                  </svg><span>+7-800-555-35-35</span></a>
+                <button class="top-contacts__callback color-pink" type="button">Обратный звонок</button>
+              </div>
+              <div class="top-user">
+                <svg class="top-user__icon">
+                  <use xlink:href="./img/sprites.svg#user"></use>
+                </svg>
+                <button class="top-user__button color-blue" type="button" data-modal data-action="login">Вход</button>
+                <button class="top-user__button color-blue" type="button" data-modal data-action="register">Регистрация</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="middle-header-wrap">
+          <div class="container">
+            <div class="middle-header">
+              <div class="logo"><img src="./img/logo.svg" alt="Логотип"></div>
+              <form class="search-wrap">
+                <input type="search" placeholder="Поиск товара по каталогу">
+                <button class="search-wrap__button" type="submit"></button>
+              </form>
+              <div class="middle-options"><a class="middle-options__item color-blue" href="">
+                  <svg>
+                    <use xlink:href="./img/sprites.svg#compare"></use>
+                  </svg></a><a class="middle-options__item color-blue" href="">
+                  <svg class="fill-none">
+                    <use xlink:href="./img/sprites.svg#like"></use>
+                  </svg></a><a class="middle-options__item cart color-blue" href="">
+                  <div class="cart__badge">3</div>
+                  <svg>
+                    <use xlink:href="./img/sprites.svg#cart"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+        <nav class="main-menu-wrap">
+          <div class="container">
+            <ul class="main-menu">
+              <li data-dropdown="open-main"><a class="main-menu__link--headline main-menu__link" href="">
+                  <svg class="hamb-menu"> 
+                    <use xlink:href="./img/sprites.svg#hamb-menu"></use>
+                  </svg><span>Каталог по направлениям</span></a>
+                <div class="menu-dropdown" data-dropdown="body-main">
+                  <ul class="menu-dropdown__categories">
+                    <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                        <svg class="caret"> 
+                          <use xlink:href="./img/sprites.svg#caret"></use>
+                        </svg></a>
+                              <div class="menu-category" data-dropdown="body">
+                                <div class="menu-category__content">
+                                  <div class="menu-category__item"><a class="menu-category__title">dasdasdasdsa</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="menu-category__featured">
+                                          <div class="feature-tile">
+                                            <div class="feature-tile__inner">
+                                              <div class="stickers-wrap">
+                                                <div class="sticker">Акция</div>
+                                              </div>
+                                              <div class="feature-tile__actions"><a class="feature-tile__actions-item" href="">
+                                                  <svg class="fill-none">
+                                                    <use xlink:href="./img/sprites.svg#like"></use>
+                                                  </svg></a>
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <svg>
+                                                    <use xlink:href="./img/sprites.svg#compare"></use>
+                                                  </svg>
+                                                </button>
+                                              </div>
+                                              <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
+                                                <div class="feature-tile__image-panel">
+                                                  <button type="button" data-modal data-action="product-prev">
+                                                    <svg>
+                                                      <use xlink:href="./img/sprites.svg#hamb-quick"></use>
+                                                    </svg><span>Быстрый показ</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
+                                              <div class="feature-price">
+                                                <svg>
+                                                  <use xlink:href="./img/sprites.svg#fire"></use>
+                                                </svg>
+                                                <div class="feature-price__regular">165 399 ₸</div>
+                                                <div class="feature-price__old">145 279 ₸</div>
+                                              </div>
+                                              <div class="feature-tile__buttons">
+                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                </div>
+                              </div>
+                    </li>
+                    <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                        <svg class="caret"> 
+                          <use xlink:href="./img/sprites.svg#caret"></use>
+                        </svg></a>
+                              <div class="menu-category" data-dropdown="body">
+                                <div class="menu-category__content">
+                                  <div class="menu-category__item"><a class="menu-category__title">dsadasdas[ettt</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="menu-category__featured">
+                                          <div class="feature-tile">
+                                            <div class="feature-tile__inner">
+                                              <div class="stickers-wrap">
+                                                <div class="sticker">Акция</div>
+                                              </div>
+                                              <div class="feature-tile__actions"><a class="feature-tile__actions-item" href="">
+                                                  <svg class="fill-none">
+                                                    <use xlink:href="./img/sprites.svg#like"></use>
+                                                  </svg></a>
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <svg>
+                                                    <use xlink:href="./img/sprites.svg#compare"></use>
+                                                  </svg>
+                                                </button>
+                                              </div>
+                                              <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
+                                                <div class="feature-tile__image-panel">
+                                                  <button type="button" data-modal data-action="product-prev">
+                                                    <svg>
+                                                      <use xlink:href="./img/sprites.svg#hamb-quick"></use>
+                                                    </svg><span>Быстрый показ</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
+                                              <div class="feature-price">
+                                                <svg>
+                                                  <use xlink:href="./img/sprites.svg#fire"></use>
+                                                </svg>
+                                                <div class="feature-price__regular">165 399 ₸</div>
+                                                <div class="feature-price__old">145 279 ₸</div>
+                                              </div>
+                                              <div class="feature-tile__buttons">
+                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                </div>
+                              </div>
+                    </li>
+                    <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                        <svg class="caret"> 
+                          <use xlink:href="./img/sprites.svg#caret"></use>
+                        </svg></a>
+                              <div class="menu-category" data-dropdown="body">
+                                <div class="menu-category__content">
+                                  <div class="menu-category__item"><a class="menu-category__title">2121231321</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="menu-category__featured">
+                                          <div class="feature-tile">
+                                            <div class="feature-tile__inner">
+                                              <div class="stickers-wrap">
+                                                <div class="sticker">Акция</div>
+                                              </div>
+                                              <div class="feature-tile__actions"><a class="feature-tile__actions-item" href="">
+                                                  <svg class="fill-none">
+                                                    <use xlink:href="./img/sprites.svg#like"></use>
+                                                  </svg></a>
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <svg>
+                                                    <use xlink:href="./img/sprites.svg#compare"></use>
+                                                  </svg>
+                                                </button>
+                                              </div>
+                                              <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
+                                                <div class="feature-tile__image-panel">
+                                                  <button type="button" data-modal data-action="product-prev">
+                                                    <svg>
+                                                      <use xlink:href="./img/sprites.svg#hamb-quick"></use>
+                                                    </svg><span>Быстрый показ</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
+                                              <div class="feature-price">
+                                                <svg>
+                                                  <use xlink:href="./img/sprites.svg#fire"></use>
+                                                </svg>
+                                                <div class="feature-price__regular">165 399 ₸</div>
+                                                <div class="feature-price__old">145 279 ₸</div>
+                                              </div>
+                                              <div class="feature-tile__buttons">
+                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                </div>
+                              </div>
+                    </li>
+                    <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                        <svg class="caret"> 
+                          <use xlink:href="./img/sprites.svg#caret"></use>
+                        </svg></a>
+                              <div class="menu-category" data-dropdown="body">
+                                <div class="menu-category__content">
+                                  <div class="menu-category__item"><a class="menu-category__title">мррррррррррррр</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="menu-category__featured">
+                                          <div class="feature-tile">
+                                            <div class="feature-tile__inner">
+                                              <div class="stickers-wrap">
+                                                <div class="sticker">Акция</div>
+                                              </div>
+                                              <div class="feature-tile__actions"><a class="feature-tile__actions-item" href="">
+                                                  <svg class="fill-none">
+                                                    <use xlink:href="./img/sprites.svg#like"></use>
+                                                  </svg></a>
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <svg>
+                                                    <use xlink:href="./img/sprites.svg#compare"></use>
+                                                  </svg>
+                                                </button>
+                                              </div>
+                                              <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
+                                                <div class="feature-tile__image-panel">
+                                                  <button type="button" data-modal data-action="product-prev">
+                                                    <svg>
+                                                      <use xlink:href="./img/sprites.svg#hamb-quick"></use>
+                                                    </svg><span>Быстрый показ</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
+                                              <div class="feature-price">
+                                                <svg>
+                                                  <use xlink:href="./img/sprites.svg#fire"></use>
+                                                </svg>
+                                                <div class="feature-price__regular">165 399 ₸</div>
+                                                <div class="feature-price__old">145 279 ₸</div>
+                                              </div>
+                                              <div class="feature-tile__buttons">
+                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                </div>
+                              </div>
+                    </li>
+                    <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                        <svg class="caret"> 
+                          <use xlink:href="./img/sprites.svg#caret"></use>
+                        </svg></a>
+                              <div class="menu-category" data-dropdown="body">
+                                <div class="menu-category__content">
+                                  <div class="menu-category__item"><a class="menu-category__title">huuuuuuu</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="menu-category__featured">
+                                          <div class="feature-tile">
+                                            <div class="feature-tile__inner">
+                                              <div class="stickers-wrap">
+                                                <div class="sticker">Акция</div>
+                                              </div>
+                                              <div class="feature-tile__actions"><a class="feature-tile__actions-item" href="">
+                                                  <svg class="fill-none">
+                                                    <use xlink:href="./img/sprites.svg#like"></use>
+                                                  </svg></a>
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <svg>
+                                                    <use xlink:href="./img/sprites.svg#compare"></use>
+                                                  </svg>
+                                                </button>
+                                              </div>
+                                              <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
+                                                <div class="feature-tile__image-panel">
+                                                  <button type="button" data-modal data-action="product-prev">
+                                                    <svg>
+                                                      <use xlink:href="./img/sprites.svg#hamb-quick"></use>
+                                                    </svg><span>Быстрый показ</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
+                                              <div class="feature-price">
+                                                <svg>
+                                                  <use xlink:href="./img/sprites.svg#fire"></use>
+                                                </svg>
+                                                <div class="feature-price__regular">165 399 ₸</div>
+                                                <div class="feature-price__old">145 279 ₸</div>
+                                              </div>
+                                              <div class="feature-tile__buttons">
+                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                </div>
+                              </div>
+                    </li>
+                    <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                        <svg class="caret"> 
+                          <use xlink:href="./img/sprites.svg#caret"></use>
+                        </svg></a>
+                              <div class="menu-category" data-dropdown="body">
+                                <div class="menu-category__content">
+                                  <div class="menu-category__item"><a class="menu-category__title">mewwwww</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="menu-category__featured">
+                                          <div class="feature-tile">
+                                            <div class="feature-tile__inner">
+                                              <div class="stickers-wrap">
+                                                <div class="sticker">Акция</div>
+                                              </div>
+                                              <div class="feature-tile__actions"><a class="feature-tile__actions-item" href="">
+                                                  <svg class="fill-none">
+                                                    <use xlink:href="./img/sprites.svg#like"></use>
+                                                  </svg></a>
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <svg>
+                                                    <use xlink:href="./img/sprites.svg#compare"></use>
+                                                  </svg>
+                                                </button>
+                                              </div>
+                                              <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
+                                                <div class="feature-tile__image-panel">
+                                                  <button type="button" data-modal data-action="product-prev">
+                                                    <svg>
+                                                      <use xlink:href="./img/sprites.svg#hamb-quick"></use>
+                                                    </svg><span>Быстрый показ</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
+                                              <div class="feature-price">
+                                                <svg>
+                                                  <use xlink:href="./img/sprites.svg#fire"></use>
+                                                </svg>
+                                                <div class="feature-price__regular">165 399 ₸</div>
+                                                <div class="feature-price__old">145 279 ₸</div>
+                                              </div>
+                                              <div class="feature-tile__buttons">
+                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                </div>
+                              </div>
+                    </li>
+                    <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                        <svg class="caret"> 
+                          <use xlink:href="./img/sprites.svg#caret"></use>
+                        </svg></a>
+                              <div class="menu-category" data-dropdown="body">
+                                <div class="menu-category__content">
+                                  <div class="menu-category__item"><a class="menu-category__title">feeeee</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="menu-category__featured">
+                                          <div class="feature-tile">
+                                            <div class="feature-tile__inner">
+                                              <div class="stickers-wrap">
+                                                <div class="sticker">Акция</div>
+                                              </div>
+                                              <div class="feature-tile__actions"><a class="feature-tile__actions-item" href="">
+                                                  <svg class="fill-none">
+                                                    <use xlink:href="./img/sprites.svg#like"></use>
+                                                  </svg></a>
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <svg>
+                                                    <use xlink:href="./img/sprites.svg#compare"></use>
+                                                  </svg>
+                                                </button>
+                                              </div>
+                                              <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
+                                                <div class="feature-tile__image-panel">
+                                                  <button type="button" data-modal data-action="product-prev">
+                                                    <svg>
+                                                      <use xlink:href="./img/sprites.svg#hamb-quick"></use>
+                                                    </svg><span>Быстрый показ</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
+                                              <div class="feature-price">
+                                                <svg>
+                                                  <use xlink:href="./img/sprites.svg#fire"></use>
+                                                </svg>
+                                                <div class="feature-price__regular">165 399 ₸</div>
+                                                <div class="feature-price__old">145 279 ₸</div>
+                                              </div>
+                                              <div class="feature-tile__buttons">
+                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                </div>
+                              </div>
+                    </li>
+                    <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                        <svg class="caret"> 
+                          <use xlink:href="./img/sprites.svg#caret"></use>
+                        </svg></a>
+                              <div class="menu-category" data-dropdown="body">
+                                <div class="menu-category__content">
+                                  <div class="menu-category__item"><a class="menu-category__title">shhhh</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="menu-category__featured">
+                                          <div class="feature-tile">
+                                            <div class="feature-tile__inner">
+                                              <div class="stickers-wrap">
+                                                <div class="sticker">Акция</div>
+                                              </div>
+                                              <div class="feature-tile__actions"><a class="feature-tile__actions-item" href="">
+                                                  <svg class="fill-none">
+                                                    <use xlink:href="./img/sprites.svg#like"></use>
+                                                  </svg></a>
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <svg>
+                                                    <use xlink:href="./img/sprites.svg#compare"></use>
+                                                  </svg>
+                                                </button>
+                                              </div>
+                                              <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
+                                                <div class="feature-tile__image-panel">
+                                                  <button type="button" data-modal data-action="product-prev">
+                                                    <svg>
+                                                      <use xlink:href="./img/sprites.svg#hamb-quick"></use>
+                                                    </svg><span>Быстрый показ</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
+                                              <div class="feature-price">
+                                                <svg>
+                                                  <use xlink:href="./img/sprites.svg#fire"></use>
+                                                </svg>
+                                                <div class="feature-price__regular">165 399 ₸</div>
+                                                <div class="feature-price__old">145 279 ₸</div>
+                                              </div>
+                                              <div class="feature-tile__buttons">
+                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                </div>
+                              </div>
+                    </li>
+                    <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                        <svg class="caret"> 
+                          <use xlink:href="./img/sprites.svg#caret"></use>
+                        </svg></a>
+                              <div class="menu-category" data-dropdown="body">
+                                <div class="menu-category__content">
+                                  <div class="menu-category__item"><a class="menu-category__title">pfffff</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="menu-category__featured">
+                                          <div class="feature-tile">
+                                            <div class="feature-tile__inner">
+                                              <div class="stickers-wrap">
+                                                <div class="sticker">Акция</div>
+                                              </div>
+                                              <div class="feature-tile__actions"><a class="feature-tile__actions-item" href="">
+                                                  <svg class="fill-none">
+                                                    <use xlink:href="./img/sprites.svg#like"></use>
+                                                  </svg></a>
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <svg>
+                                                    <use xlink:href="./img/sprites.svg#compare"></use>
+                                                  </svg>
+                                                </button>
+                                              </div>
+                                              <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
+                                                <div class="feature-tile__image-panel">
+                                                  <button type="button" data-modal data-action="product-prev">
+                                                    <svg>
+                                                      <use xlink:href="./img/sprites.svg#hamb-quick"></use>
+                                                    </svg><span>Быстрый показ</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
+                                              <div class="feature-price">
+                                                <svg>
+                                                  <use xlink:href="./img/sprites.svg#fire"></use>
+                                                </svg>
+                                                <div class="feature-price__regular">165 399 ₸</div>
+                                                <div class="feature-price__old">145 279 ₸</div>
+                                              </div>
+                                              <div class="feature-tile__buttons">
+                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                </div>
+                              </div>
+                    </li>
+                    <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                        <svg class="caret"> 
+                          <use xlink:href="./img/sprites.svg#caret"></use>
+                        </svg></a>
+                              <div class="menu-category" data-dropdown="body">
+                                <div class="menu-category__content">
+                                  <div class="menu-category__item"><a class="menu-category__title">mou</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="menu-category__featured">
+                                          <div class="feature-tile">
+                                            <div class="feature-tile__inner">
+                                              <div class="stickers-wrap">
+                                                <div class="sticker">Акция</div>
+                                              </div>
+                                              <div class="feature-tile__actions"><a class="feature-tile__actions-item" href="">
+                                                  <svg class="fill-none">
+                                                    <use xlink:href="./img/sprites.svg#like"></use>
+                                                  </svg></a>
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <svg>
+                                                    <use xlink:href="./img/sprites.svg#compare"></use>
+                                                  </svg>
+                                                </button>
+                                              </div>
+                                              <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
+                                                <div class="feature-tile__image-panel">
+                                                  <button type="button" data-modal data-action="product-prev">
+                                                    <svg>
+                                                      <use xlink:href="./img/sprites.svg#hamb-quick"></use>
+                                                    </svg><span>Быстрый показ</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
+                                              <div class="feature-price">
+                                                <svg>
+                                                  <use xlink:href="./img/sprites.svg#fire"></use>
+                                                </svg>
+                                                <div class="feature-price__regular">165 399 ₸</div>
+                                                <div class="feature-price__old">145 279 ₸</div>
+                                              </div>
+                                              <div class="feature-tile__buttons">
+                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                </div>
+                              </div>
+                    </li>
+                    <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                        <svg class="caret"> 
+                          <use xlink:href="./img/sprites.svg#caret"></use>
+                        </svg></a>
+                              <div class="menu-category" data-dropdown="body">
+                                <div class="menu-category__content">
+                                  <div class="menu-category__item"><a class="menu-category__title">dsadsa</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="menu-category__featured">
+                                          <div class="feature-tile">
+                                            <div class="feature-tile__inner">
+                                              <div class="stickers-wrap">
+                                                <div class="sticker">Акция</div>
+                                              </div>
+                                              <div class="feature-tile__actions"><a class="feature-tile__actions-item" href="">
+                                                  <svg class="fill-none">
+                                                    <use xlink:href="./img/sprites.svg#like"></use>
+                                                  </svg></a>
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <svg>
+                                                    <use xlink:href="./img/sprites.svg#compare"></use>
+                                                  </svg>
+                                                </button>
+                                              </div>
+                                              <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
+                                                <div class="feature-tile__image-panel">
+                                                  <button type="button" data-modal data-action="product-prev">
+                                                    <svg>
+                                                      <use xlink:href="./img/sprites.svg#hamb-quick"></use>
+                                                    </svg><span>Быстрый показ</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
+                                              <div class="feature-price">
+                                                <svg>
+                                                  <use xlink:href="./img/sprites.svg#fire"></use>
+                                                </svg>
+                                                <div class="feature-price__regular">165 399 ₸</div>
+                                                <div class="feature-price__old">145 279 ₸</div>
+                                              </div>
+                                              <div class="feature-tile__buttons">
+                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                </div>
+                              </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Оборудование</span></a>
+                        <div class="menu-category-simple" data-dropdown="body-main">
+                          <div class="menu-category__content">
+                            <div class="menu-category__item"><a class="menu-category__title">dsadsadas</a>
+                              <ul class="menu-category-list">
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                              </ul>
+                            </div>
+                            <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                              <ul class="menu-category-list">
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                              </ul>
+                            </div>
+                            <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                              <ul class="menu-category-list">
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+              </li>
+              <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Мебель</span></a>
+                        <div class="menu-category-simple" data-dropdown="body-main">
+                          <div class="menu-category__content">
+                            <div class="menu-category__item"><a class="menu-category__title">dsadsadas</a>
+                              <ul class="menu-category-list">
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                              </ul>
+                            </div>
+                            <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                              <ul class="menu-category-list">
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                              </ul>
+                            </div>
+                            <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                              <ul class="menu-category-list">
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+              </li>
+              <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Скидки</span></a>
+                        <div class="menu-category-simple" data-dropdown="body-main">
+                          <div class="menu-category__content">
+                            <div class="menu-category__item"><a class="menu-category__title">dsadsadas</a>
+                              <ul class="menu-category-list">
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                              </ul>
+                            </div>
+                            <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                              <ul class="menu-category-list">
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                              </ul>
+                            </div>
+                            <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                              <ul class="menu-category-list">
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+              </li>
+              <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Прайс-лист</span></a>
+                        <div class="menu-category-simple" data-dropdown="body-main">
+                          <div class="menu-category__content">
+                            <div class="menu-category__item"><a class="menu-category__title">dsadsadas</a>
+                              <ul class="menu-category-list">
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                              </ul>
+                            </div>
+                            <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                              <ul class="menu-category-list">
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                              </ul>
+                            </div>
+                            <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                              <ul class="menu-category-list">
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+              </li>
+              <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Коммерческое предложение</span></a>
+                        <div class="menu-category-simple" data-dropdown="body-main">
+                          <div class="menu-category__content">
+                            <div class="menu-category__item"><a class="menu-category__title">dsadsadas</a>
+                              <ul class="menu-category-list">
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                              </ul>
+                            </div>
+                            <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                              <ul class="menu-category-list">
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                              </ul>
+                            </div>
+                            <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
+                              <ul class="menu-category-list">
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!--include ./parts/menu-sticky-->
+      </header>
+      <div class="container">
+            <div class="breadcrump"><a class="breadcrump__item font-condensed">Каталог</a><a class="breadcrump__item font-condensed">Кофеварки интэрэсные</a><a class="breadcrump__item font-condensed">Кофеварка CofeStaion-204m</a>
+            </div>
+        <div class="product-page">
+          <h1 class="product-page__title color-blue">Кофеварка CofeStaion-204m </h1>
+          <div class="product-page__header">
+            <div> <span class="color-gray-300 mr-5 font-15">Код товара:</span><span class="color-gray-335">835923</span></div>
+            <div class="color-blue weight-500 font-18">Есть в наличии</div>
+          </div>
+          <div class="product-body">
+            <div class="product-gallery">
+              <div class="product-gallery__main"><img src="./img/dummy-big.png" alt="">
+                <div class="product-gallery__scale">
+                  <svg>
+                    <use xlink:href="./img/sprites.svg#scale"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="product-gallery__items">
+                <div class="product-gallery__item"><img src="./img/dummy.png" alt=""></div>
+                <div class="product-gallery__item"><img src="./img/dummy.png" alt=""></div>
+                <div class="product-gallery__item"><img src="./img/dummy.png" alt=""></div>
+              </div>
+            </div>
+            <div class="product-body__center">
+              <div class="product-price">
+                <div class="product-price__header color-gray-300">Цена:</div>
+                <div class="product-price__body">
+                  <div class="price-new weight-500">165 399 ₸</div>
+                  <div class="price-old weight-500 color-gray-300 line-through line-through-pink">145 279 ₸</div>
+                </div>
+              </div>
+              <div class="product-quantity-wrap">
+                <div class="product-quantity">
+                  <button class="color-gray-335" type="button">-</button>
+                  <input class="color-blue" type="text">
+                  <button class="color-gray-335" type="button">+</button>
+                </div>
+                <div class="product-in-stock"><span class="mr-5">В наличие:</span><span class="color-pink">1 шт.</span></div>
+              </div>
+              <div class="product-body__buttons">
+                <button class="btn-medium bg-blue-main" type="button">В корзину</button>
+                <button class="btn-medium bg-pink-main" type="button">Купить в 1 клик</button>
+              </div>
+              <div class="product-actions">
+                <button class="color-blue" type="button">
+                  <svg class="fill-none mr-10">
+                    <use xlink:href="./img/sprites.svg#like"></use>
+                  </svg><span>В избранное</span>
+                </button>
+                <button class="color-blue" type="button">
+                  <svg class="mr-10">
+                    <use xlink:href="./img/sprites.svg#compare"></use>
+                  </svg><span>Сравнение</span>
+                </button>
+              </div>
+            </div>
+            <div class="product-body__right">
+              <div class="product__info">
+                <p><span class="color-gray-300 mr-5">Код производителя:</span><span class="color-gray-400">CSF204M</span></p>
+                <p><span class="color-gray-300 mr-5">Официальная гарантия CofeStaion:</span><span class="color-gray-400">1 год c/ц</span></p>
+              </div>
+              <div class="product-all">
+                <div class="product-all__title weight-500">CofeStaion</div><a class="product-all__text color-gray-300">Все товары CofeStaion</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-footer">
+            <div class="product-about">
+              <div class="product-about__tabs color-blue">
+                <button class="product-about__tab weight-500 active" type="button">Описание и характеристики</button>
+                <button class="product-about__tab weight-500" type="button">Данные для транспортировки</button>
+                <button class="product-about__tab weight-500" type="button">Комплектация</button>
+                <button class="product-about__tab weight-500" type="button">Документация</button>
+              </div>
+              <div class="product-about__content">
+                <div class="product-about__tab-content">
+                  <div class="product-about__tab-header color-pink">Описание</div>
+                  <p class="weight-300">Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-qualities">
+              <div class="product-qualities__header color-pink">Характеристики</div>
+              <div class="product-qualities__content">
+                        <div class="product-qualities__item"> 
+                          <div class="product-qualities__text">Длинна, мм</div>
+                          <div class="product-qualities__line"></div>
+                          <div class="product-qualities__text">640</div>
+                        </div>
+                        <div class="product-qualities__item"> 
+                          <div class="product-qualities__text">Ширина, мм</div>
+                          <div class="product-qualities__line"></div>
+                          <div class="product-qualities__text">53640</div>
+                        </div>
+                        <div class="product-qualities__item"> 
+                          <div class="product-qualities__text">Длинна, мм</div>
+                          <div class="product-qualities__line"></div>
+                          <div class="product-qualities__text">640</div>
+                        </div>
+                        <div class="product-qualities__item"> 
+                          <div class="product-qualities__text">Ширина, мм</div>
+                          <div class="product-qualities__line"></div>
+                          <div class="product-qualities__text">53640</div>
+                        </div>
+                        <div class="product-qualities__item"> 
+                          <div class="product-qualities__text">Длинна, мм</div>
+                          <div class="product-qualities__line"></div>
+                          <div class="product-qualities__text">640</div>
+                        </div>
+                        <div class="product-qualities__item"> 
+                          <div class="product-qualities__text">Ширина, мм</div>
+                          <div class="product-qualities__line"></div>
+                          <div class="product-qualities__text">53640</div>
+                        </div>
+                        <div class="product-qualities__item"> 
+                          <div class="product-qualities__text">Длинна, мм</div>
+                          <div class="product-qualities__line"></div>
+                          <div class="product-qualities__text">640</div>
+                        </div>
+                        <div class="product-qualities__item"> 
+                          <div class="product-qualities__text">Ширина, мм</div>
+                          <div class="product-qualities__line"></div>
+                          <div class="product-qualities__text">53640</div>
+                        </div>
+                        <div class="product-qualities__item"> 
+                          <div class="product-qualities__text">Длинна, мм</div>
+                          <div class="product-qualities__line"></div>
+                          <div class="product-qualities__text">640</div>
+                        </div>
+                        <div class="product-qualities__item"> 
+                          <div class="product-qualities__text">Ширина, мм</div>
+                          <div class="product-qualities__line"></div>
+                          <div class="product-qualities__text">53640</div>
+                        </div>
+                        <div class="product-qualities__item"> 
+                          <div class="product-qualities__text">Длинна, мм</div>
+                          <div class="product-qualities__line"></div>
+                          <div class="product-qualities__text">640</div>
+                        </div>
+                        <div class="product-qualities__item"> 
+                          <div class="product-qualities__text">Ширина, мм</div>
+                          <div class="product-qualities__line"></div>
+                          <div class="product-qualities__text">53640</div>
+                        </div>
+              </div>
+            </div>
+            <div class="product-subscribtion weight-300 color-gray-300">Перед применением необходимо ознакомиться с инструкцией по применению (паспортом изделия) или получить консультацию специалиста</div>
+          </div>
+        </div>
+        <div class="similar">
+          <h2 class="title-secondary weight-300 color-gray-335">Похожие товары</h2>
+          <div class="similar__content">
+                    <div class="feature-tile">
+                      <div class="feature-tile__inner">
+                        <div class="stickers-wrap">
+                          <div class="sticker">Акция</div>
+                        </div>
+                        <div class="feature-tile__actions"><a class="feature-tile__actions-item" href="">
+                            <svg class="fill-none">
+                              <use xlink:href="./img/sprites.svg#like"></use>
+                            </svg></a>
+                          <button class="feature-tile__actions-item" type="button" data-tip="add">
+                            <svg>
+                              <use xlink:href="./img/sprites.svg#compare"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
+                          <div class="feature-tile__image-panel">
+                            <button type="button" data-modal data-action="product-prev">
+                              <svg>
+                                <use xlink:href="./img/sprites.svg#hamb-quick"></use>
+                              </svg><span>Быстрый показ</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="feature-tile__state text-underline color-pink weight-500">Есть в наличии</div>
+                        <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
+                        <div class="feature-price">
+                          <svg>
+                            <use xlink:href="./img/sprites.svg#fire"></use>
+                          </svg>
+                          <div class="feature-price__regular">165 399 ₸</div>
+                          <div class="feature-price__old">145 279 ₸</div>
+                        </div>
+                        <div class="feature-tile__buttons">
+                          <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                          <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="feature-tile">
+                      <div class="feature-tile__inner">
+                        <div class="stickers-wrap">
+                          <div class="sticker">Акция</div>
+                        </div>
+                        <div class="feature-tile__actions"><a class="feature-tile__actions-item" href="">
+                            <svg class="fill-none">
+                              <use xlink:href="./img/sprites.svg#like"></use>
+                            </svg></a>
+                          <button class="feature-tile__actions-item" type="button" data-tip="add">
+                            <svg>
+                              <use xlink:href="./img/sprites.svg#compare"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
+                          <div class="feature-tile__image-panel">
+                            <button type="button" data-modal data-action="product-prev">
+                              <svg>
+                                <use xlink:href="./img/sprites.svg#hamb-quick"></use>
+                              </svg><span>Быстрый показ</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="feature-tile__state color-blue weight-500">Нет в наличие</div>
+                        <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
+                        <div class="feature-price">
+                          <svg>
+                            <use xlink:href="./img/sprites.svg#fire"></use>
+                          </svg>
+                          <div class="feature-price__regular">165 399 ₸</div>
+                          <div class="feature-price__old">145 279 ₸</div>
+                        </div>
+                        <div class="feature-tile__buttons">
+                          <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                          <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="feature-tile">
+                      <div class="feature-tile__inner">
+                        <div class="stickers-wrap">
+                          <div class="sticker">Акция</div>
+                        </div>
+                        <div class="feature-tile__actions"><a class="feature-tile__actions-item" href="">
+                            <svg class="fill-none">
+                              <use xlink:href="./img/sprites.svg#like"></use>
+                            </svg></a>
+                          <button class="feature-tile__actions-item" type="button" data-tip="add">
+                            <svg>
+                              <use xlink:href="./img/sprites.svg#compare"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
+                          <div class="feature-tile__image-panel">
+                            <button type="button" data-modal data-action="product-prev">
+                              <svg>
+                                <use xlink:href="./img/sprites.svg#hamb-quick"></use>
+                              </svg><span>Быстрый показ</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="feature-tile__state exist-order">Под заказ, 10 дней</div>
+                        <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
+                        <div class="feature-price">
+                          <svg>
+                            <use xlink:href="./img/sprites.svg#fire"></use>
+                          </svg>
+                          <div class="feature-price__regular">165 399 ₸</div>
+                          <div class="feature-price__old">145 279 ₸</div>
+                        </div>
+                        <div class="feature-tile__buttons">
+                          <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                          <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="feature-tile">
+                      <div class="feature-tile__inner">
+                        <div class="stickers-wrap">
+                          <div class="sticker">Акция</div>
+                        </div>
+                        <div class="feature-tile__actions"><a class="feature-tile__actions-item" href="">
+                            <svg class="fill-none">
+                              <use xlink:href="./img/sprites.svg#like"></use>
+                            </svg></a>
+                          <button class="feature-tile__actions-item" type="button" data-tip="add">
+                            <svg>
+                              <use xlink:href="./img/sprites.svg#compare"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
+                          <div class="feature-tile__image-panel">
+                            <button type="button" data-modal data-action="product-prev">
+                              <svg>
+                                <use xlink:href="./img/sprites.svg#hamb-quick"></use>
+                              </svg><span>Быстрый показ</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="feature-tile__state exist-end">Заканчивается</div>
+                        <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
+                        <div class="feature-price">
+                          <svg>
+                            <use xlink:href="./img/sprites.svg#fire"></use>
+                          </svg>
+                          <div class="feature-price__regular">165 399 ₸</div>
+                          <div class="feature-price__old">145 279 ₸</div>
+                        </div>
+                        <div class="feature-tile__buttons">
+                          <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                          <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
+                        </div>
+                      </div>
+                    </div>
+          </div>
+        </div>
+      </div>
+      <section id="s-subscribe">
+        <div class="container">
+          <div class="subscribe">
+            <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
+            <div class="subscribe__input">
+              <input type="email" placeholder="Ваш E-mail">
+              <div class="subscribe__input-description">Мы будем отправлять Вам лучшие предложения.</div>
+            </div>
+            <input class="btn-medium bg-pink-main" type="submit" value="Подписаться">
+          </div>
+        </div>
+      </section>
+      <footer id="s-footer">
+        <div class="container">
+          <div class="footer">
+            <div class="footer-menus">
+              <ul class="footer-menu color-blue">
+                <li><a href="">О компании</a></li>
+                <li><a href="">Документы</a></li>
+                <li><a href="">Контакты</a></li>
+                <li><a href="">Политика конфиденциальности</a></li>
+                <li><a href="">Пользовательское соглашение</a></li>
+              </ul>
+              <ul class="footer-menu color-gray-300">
+                <li><a href="">Оборудование</a></li>
+                <li><a href="">Мебель</a></li>
+                <li><a href="">Лабороторная мебель</a></li>
+                <li><a href="">Лабороторное оборудование</a></li>
+                <li><a href="">Новости</a></li>
+                <li><a href="">Статьи</a></li>
+              </ul>
+              <ul class="footer-menu color-gray-300">
+                <li><a href="">Оплата</a></li>
+                <li><a href="">Калькулятор доставки</a></li>
+                <li><a href="">Доставка</a></li>
+                <li><a href="">Статус доставки груза</a></li>
+                <li><a href="">Путь к успешной доставке груза</a></li>
+                <li><a href="">Памятка экспедитору</a></li>
+              </ul>
+              <ul class="footer-menu color-blue">
+                <li><a href="">Производители</a></li>
+                <li><a href="">КП прямо с сайта</a></li>
+                <li><a href="">Cкидки в открытом доступе</a></li>
+                <li><a href="">Часто задаваемые вопросы</a></li>
+                <li><a href="">Оформление претензий</a></li>
+              </ul>
+            </div>
+            <div class="footer-shipping">Быстро доставим в города: <span class="color-pink text-underline">Алматы, Улан-Батон, Алматы, Улан-Батон, Алматы, Улан-Батон, Алматы, Улан-Батон. Алматы, Улан-Батон, Алматы, Улан-Батон, Алматы, Улан-Батон, Алматы, Улан-Батон. Алматы, Улан-Батон, Алматы, Улан-Батон, Алматы, Улан-Батон, Алматы, Улан-Батон</span></div>
+            <div class="footer-links color-gray-300"><a class="footer-links__site text-underline">www.med-lab.com</a><a class="footer-links__phone">+7-800-555-35-35</a>
+              <div class="footer-links__socials text-underline"><a href="">facebook</a><a href="">VK</a><a href="">twitter</a><a href="">YouTube</a></div>
+              <div class="footer-links__desc">МедКомплекс А.В.К. © 1992-2020</div>
+            </div>
+            <div class="footer-info color-gray-300">
+              <p>Внимание! Размещение ООО «МедКомплекс «А.В.К.» технических характеристик товаров, макетов и графических копий документов (сертификатов и деклараций о соответствии, свидетельств об утверждении типа средств измерений, регистрационных удостоверений на медицинские изделия и т. д.) носит чисто информационный характер, не является обязательством и не может служить основанием для предъявления претензий.</p>
+              <p>Перед применением необходимо ознакомиться с инструкцией по применению (паспортом изделия) или получить консультацию специалиста.</p>
+              <p>Сайт использует файлы cookie. Они позволяют узнавать Вас и получать информацию о Вашем пользовательском опыте. Это нужно, чтобы улучшать сайт. Когда Вы посещаете страницы сайта, мы обрабатываем Ваши данные.</p>
+              <p>ООО «МедКомплекс «А.В.К.»           107241, г. Москва, Щёлковское шоссе, д. 23А, эт. 1, пом. 1, ком. 12      ОГРН 1027700268298</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="./libs/js/svg4everybody.min.js"></script>
+  <script src="./libs/js/nouislider.min.js"></script>
+  <script src="./js/main.js"></script>
+</html><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -469,6 +1908,466 @@
     <title>Сравнение2</title>
   </head>
   <body>
+    <div class="modal-window quick-order prior-1" id="quick-order">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header"> <span class="color-blue">Кофеварка CofeStaion-204m</span></div>
+      <div class="modal-window__body">
+        <div class="modal-window__product">
+          <div class="modal-window__thumb"><img src="./img/dummy-big.png" alt="">
+            <div class="modal-window__thumb-scale">
+              <svg> 
+                <use xlink:href="./img/sprites.svg#scale"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-window__content">
+            <div class="modal-window__code"><span class="color-gray-300 mr-5 font-15">Код товара:</span><span class="color-gray-335">835923</span></div>
+            <div class="product-price">
+              <div class="product-price__header color-gray-300"></div>
+              <div class="product-price__body">
+                <div class="price-new weight-500">165 399 ₸</div>
+                <div class="price-old weight-500 color-gray-300 line-through line-through-pink">145 279 ₸</div>
+              </div>
+            </div>
+            <div class="product-quantity">
+              <button class="color-gray-335" type="button">-</button>
+              <input class="color-blue" type="text">
+              <button class="color-gray-335" type="button">+</button>
+            </div>
+            <div class="product-total"><span>Итого:</span>
+              <div class="product-total__line"></div><span class="product-total__price color-blue weight-500">165 399 ₸</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-window__checkout">
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Email</span><span class="color-pink">*</span></div>
+            <div class="checkout-field__input">
+              <input type="email">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Телефон</span><span class="color-pink">*</span></div>
+            <div class="checkout-field__input">
+              <input type="tel">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Имя</span></div>
+            <div class="checkout-field__input">
+              <input type="text">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Комментарий</span></div>
+            <div class="checkout-field__input">
+              <input type="text">
+            </div>
+          </div>
+        </div>
+        <p class="checkout-tip">Нажмите «Оформить заказ», чтобы сделать запрос, и мы скоро свяжемся с вами(по будням с 10 до 18 часов)</p>
+        <p class="checkout-tip checkout-tip--success">Ваш заказ #27056 сформирован, мы скоро вам перезвоним</p>
+        <div class="modal-window__footer">
+          <button class="btn-large bg-pink-main" type="submit">Оформить заказ</button>
+          <button class="btn-large bg-green-dark" type="button" data-action="close-modal">Заказ отправлен</button>
+          <button class="color-gray-300" type="button" data-action="close-modal">Продолжить покупки</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-window modal-register prior-3" id="register">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header text-center"><span class="color-blue">Регистрация</span></div>
+      <div class="modal-register__radios">
+        <div class="color-pink font-17 text-center">Вы регистрируетесь как:</div>
+        <fieldset>
+          <label class="radio">
+            <input type="radio" name="register">
+            <div class="radio__box"></div>
+            <div class="radio__text font-14">Торгующая или иная организация</div>
+          </label>
+          <label class="radio">
+            <input type="radio" name="register">
+            <div class="radio__box"></div>
+            <div class="radio__text font-14">Конечный покупатель</div>
+          </label>
+        </fieldset>
+      </div>
+      <div class="modal-register__fields text-right">
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"><span>Наименование вашей организации</span></div>
+          <div class="checkout-field__input">
+            <input type="text">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"><span>ИНН вашей организации</span></div>
+          <div class="checkout-field__input">
+            <input type="text">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"> <span>Ваше имя</span></div>
+          <div class="checkout-field__input">
+            <input type="text">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"><span>Телефон</span></div>
+          <div class="checkout-field__input">
+            <input type="tel">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"> <span>Email</span></div>
+          <div class="checkout-field__input">
+            <input type="email">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"> <span>Пароль</span></div>
+          <div class="checkout-field__input">
+            <input type="password">
+          </div>
+        </div>
+      </div>
+      <p class="font-14 color-gray-300 text-center">Все поля обязательны к заполнению</p>
+      <div class="modal-register__terms text-center">
+        <label class="checkbox">
+          <input type="checkbox">
+          <div class="checkbox__box"></div>
+          <div class="checkbox__text font-13 font-condensed">Фактом регистрации вы соглашаетесь с <a class="color-blue-light text-underline">Пользовательским соглашением</a></div>
+        </label>
+      </div>
+      <div class="text-center">
+        <button class="btn-large bg-pink-main font-22" type="submit" data-action="close-modal">Зарегистрироваться</button>
+      </div>
+    </div>
+    <div class="modal-window modal-login prior-2" id="login">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header text-center"><span class="color-blue">Авторизация</span></div>
+      <div class="modal-login__fields">
+        <div class="checkout-field">
+          <div class="checkout-field__name"> <span>Email</span></div>
+          <div class="checkout-field__input">
+            <input type="email">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name"> <span>Пароль</span></div>
+          <div class="checkout-field__input">
+            <input type="password">
+          </div>
+        </div>
+        <div class="modal-login__restore"><a class="color-blue-light text-underline" href="">Забыли пароль?</a></div>
+        <div class="modal-login__remember">
+          <label class="checkbox checkbox--big">
+            <input type="checkbox">
+            <div class="checkbox__box"></div>
+            <div class="checkbox__text">Запомнить меня</div>
+          </label>
+        </div>
+        <div class="modal-login__submit">
+          <button class="btn-medium bg-pink-main" type="submit">Войти</button>
+        </div>
+        <div class="font-15"><span class="mr-5">Нет аккаунта?</span>
+          <button class="color-pink text-underline" type="button" data-modal data-action="register">Зарегистрируйтесь</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-window modal-restore prior-2">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header text-center"><span class="color-blue">Восстановить доступ</span></div>
+      <div class="modal-login__fields">
+        <div class="checkout-field">
+          <div class="checkout-field__name"> <span>Email</span></div>
+          <div class="checkout-field__input">
+            <input type="email">
+          </div>
+        </div>
+      </div>
+      <div class="text-center modal-restore__submit">
+        <button class="bg-pink-main btn-large" type="submit">Сменить пароль</button>
+      </div>
+      <div class="font-15"><span class="mr-5">Нет аккаунта?</span>
+        <button class="color-pink text-underline" type="button" data-modal data-action="register">Зарегистрируйтесь</button>
+      </div>
+    </div>
+    <div class="modal-window modal-product prior-3" id="product-prev">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <h2 class="product-page__title color-blue">Кофеварка CofeStaion-204m </h2>
+      <div class="product-page__header">
+        <div> <span class="color-gray-300 mr-5 font-15">Код товара:</span><span class="color-gray-335">835923</span></div>
+        <div class="color-blue weight-500 font-18">Есть в наличии</div>
+      </div>
+      <div class="product-body">
+        <div class="product-gallery">
+          <div class="product-gallery__main"><img src="./img/dummy-big.png" alt="">
+            <div class="product-gallery__scale">
+              <svg>
+                <use xlink:href="./img/sprites.svg#scale"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="product-body__center">
+          <div class="product-price">
+            <div class="product-price__header color-gray-300">Цена:</div>
+            <div class="product-price__body">
+              <div class="price-new weight-500">165 399 ₸</div>
+              <div class="price-old weight-500 color-gray-300 line-through line-through-pink">145 279 ₸</div>
+            </div>
+          </div>
+          <div class="product-quantity-wrap">
+            <div class="product-quantity">
+              <button class="color-gray-335" type="button">-</button>
+              <input class="color-blue" type="text">
+              <button class="color-gray-335" type="button">+</button>
+            </div>
+            <div class="product-in-stock"><span class="mr-5">В наличие:</span><span class="color-pink">1 шт.</span></div>
+          </div>
+          <div class="product-body__buttons">
+            <button class="btn-medium bg-blue-main font-20 font-condensed" type="button">В корзину</button>
+            <button class="btn-medium bg-pink-main font-18 font-condensed" type="button">Купить в 1 клик</button>
+          </div>
+          <div class="product-actions">
+            <button class="color-blue" type="button">
+              <svg class="fill-none mr-10">
+                <use xlink:href="./img/sprites.svg#like"></use>
+              </svg><span>В избранное</span>
+            </button>
+            <button class="color-blue" type="button">
+              <svg class="mr-10">
+                <use xlink:href="./img/sprites.svg#compare"></use>
+              </svg><span>Сравнение</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="product-about">
+        <div class="product-about__content">
+          <div class="product-about__tab-header color-pink weight-300">Описание</div>
+          <p class="weight-300 font-15 mb-50">Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить</p>
+        </div>
+      </div>
+      <div class="product-qualities">
+        <div class="product-qualities__header color-pink">Характеристики</div>
+        <div class="product-qualities__content">
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+        </div>
+      </div>
+      <div class="product-subscribtion weight-300 color-gray-300">Перед применением необходимо ознакомиться с инструкцией по применению (паспортом изделия) или получить консультацию специалиста</div>
+      <div class="text-right mt-15">
+        <button class="btn-medium font-19 weight-500 bg-pink-main" type="button" data-action="close-modal">Закрыть</button>
+      </div>
+    </div>
+    <div class="modal-window modal-basket prior-3" id="add-basket">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header mb-50">Товар добавлен в корзину!</div>
+      <div class="basket-table text-center">
+        <div class="basket-table__thead"> 
+          <div class="basket-table__trow color-blue font-18">
+            <div class="basket-table__th thumb">Фото</div>
+            <div class="basket-table__th name">Наименование товара</div>
+            <div class="basket-table__th model">Модель</div>
+            <div class="basket-table__th quantity">Кол-во</div>
+            <div class="basket-table__th price">Цена</div>
+          </div>
+        </div>
+        <div class="basket-table__body">
+              <div class="basket-table__trow color-gray-335">
+                <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""></div>
+                <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
+                <div class="basket-table__td model font-18 weight-300">835923</div>
+                <div class="basket-table__td quantity font-18 font-condensed">1</div>
+                <div class="basket-table__td price font-19">165 399 ₸</div>
+              </div>
+              <div class="basket-table__trow color-gray-335">
+                <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""></div>
+                <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
+                <div class="basket-table__td model font-18 weight-300">835923</div>
+                <div class="basket-table__td quantity font-18 font-condensed">1</div>
+                <div class="basket-table__td price font-19">165 399 ₸</div>
+              </div>
+              <div class="basket-table__trow color-gray-335">
+                <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""></div>
+                <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
+                <div class="basket-table__td model font-18 weight-300">835923</div>
+                <div class="basket-table__td quantity font-18 font-condensed">1</div>
+                <div class="basket-table__td price font-19">165 399 ₸</div>
+              </div>
+        </div>
+      </div>
+      <div class="modal-basket__buttons">
+        <button class="btn-large bg-pink-main" type="submit">Оформить заказ</button>
+        <button class="btn-large bg-blue-main" type="button" data-action="close-modal">Продолжить покупки</button>
+      </div>
+    </div>
+    <div class="modal-window modal-compare prior-3">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header mb-10"><span class="color-blue">Столы игровые</span></div>
+      <div class="compare-table-compact mb-15">
+        <div class="font-18 color-blue d-flex align-center text-center weight-300">
+          <div class="compare-table-compact__th compare-info"></div>
+          <div class="compare-table-compact__th">Артикул</div>
+          <div class="compare-table-compact__th">Бренд</div>
+          <div class="compare-table-compact__th">Артикул</div>
+          <div class="compare-table-compact__th">Бренд</div>
+          <div class="compare-table-compact__th">Артикул</div>
+          <div class="compare-table-compact__th">Бренд</div>
+          <div class="compare-table-compact__th">Артикул</div>
+        </div>
+            <div class="compare-table-compact__row d-flex font-14 weight-300">
+              <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+            </div>
+            <div class="compare-table-compact__row d-flex font-14 weight-300">
+              <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+            </div>
+            <div class="compare-table-compact__row d-flex font-14 weight-300">
+              <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+            </div>
+            <div class="compare-table-compact__row d-flex font-14 weight-300">
+              <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+            </div>
+      </div>
+      <div class="text-right">
+        <button class="btn-medium bg-pink-main font-19 weight-500" type="button" data-action="close-modal">Закрыть</button>
+      </div>
+    </div>
+    <div class="compare-alert" data-tip="item" data-template="tip">
+      <div class="container">
+        <div class="compare-alert__inner">
+          <div class="compare-alert__image"><img src="./img/dummy-small.png" alt=""></div>
+          <div class="compare-alert__content"> 
+            <div class="color-gray-335"><span class="color-blue font-20">Кофеварка CofeStaion-204m </span><span class="font-18 weight-300">добавлен к сравнению</span></div>
+            <div class="font-13 weight-300">Товар добавлен в список сравнения из категории Кресла гинекологические</div>
+          </div>
+          <button class="btn-medium bg-pink-main mr-15 font-19" type="button">Сравнить</button>
+          <button class="compare-alert__close" type="button" data-tip="close">
+            <svg class="icon-16">
+              <use xlink:href="./img/sprites.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="compare-alert-wrap prior-5" data-tip="wrap"></div>
+    <div class="overlay"></div>
+    <div class="shadow"></div>
     <div class="content">
       <header id="s-header">
         <div class="header-top-wrap">

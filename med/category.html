@@ -1,464 +1,4 @@
-
-<div class="modal-window quick-order prior-1" id="quick-order">
-  <button class="modal-window__close" type="button" data-action="close-modal">
-    <svg> 
-      <use xlink:href="./img/sprites.svg#close"></use>
-    </svg>
-  </button>
-  <div class="modal-window__header"> <span class="color-blue">Кофеварка CofeStaion-204m</span></div>
-  <div class="modal-window__body">
-    <div class="modal-window__product">
-      <div class="modal-window__thumb"><img src="./img/dummy-big.png" alt=""/>
-        <div class="modal-window__thumb-scale">
-          <svg> 
-            <use xlink:href="./img/sprites.svg#scale"></use>
-          </svg>
-        </div>
-      </div>
-      <div class="modal-window__content">
-        <div class="modal-window__code"><span class="color-gray-300 mr-5 font-15">Код товара:</span><span class="color-gray-335">835923</span></div>
-        <div class="product-price">
-          <div class="product-price__header color-gray-300"></div>
-          <div class="product-price__body">
-            <div class="price-new weight-500">165 399 ₸</div>
-            <div class="price-old weight-500 color-gray-300 line-through line-through-pink">145 279 ₸</div>
-          </div>
-        </div>
-        <div class="product-quantity">
-          <button class="color-gray-335" type="button">-</button>
-          <input class="color-blue" type="text"/>
-          <button class="color-gray-335" type="button">+</button>
-        </div>
-        <div class="product-total"><span>Итого:</span>
-          <div class="product-total__line"></div><span class="product-total__price color-blue weight-500">165 399 ₸</span>
-        </div>
-      </div>
-    </div>
-    <div class="modal-window__checkout">
-      <div class="checkout-field">
-        <div class="checkout-field__name"> <span>Email</span><span class="color-pink">*</span></div>
-        <div class="checkout-field__input">
-          <input type="email"/>
-        </div>
-      </div>
-      <div class="checkout-field">
-        <div class="checkout-field__name"> <span>Телефон</span><span class="color-pink">*</span></div>
-        <div class="checkout-field__input">
-          <input type="tel"/>
-        </div>
-      </div>
-      <div class="checkout-field">
-        <div class="checkout-field__name"> <span>Имя</span></div>
-        <div class="checkout-field__input">
-          <input type="text"/>
-        </div>
-      </div>
-      <div class="checkout-field">
-        <div class="checkout-field__name"> <span>Комментарий</span></div>
-        <div class="checkout-field__input">
-          <input type="text"/>
-        </div>
-      </div>
-    </div>
-    <p class="checkout-tip">Нажмите «Оформить заказ», чтобы сделать запрос, и мы скоро свяжемся с вами(по будням с 10 до 18 часов)</p>
-    <p class="checkout-tip checkout-tip--success">Ваш заказ #27056 сформирован, мы скоро вам перезвоним</p>
-    <div class="modal-window__footer">
-      <button class="btn-large bg-pink-main" type="submit">Оформить заказ</button>
-      <button class="btn-large bg-green-dark" type="button" data-action="close-modal">Заказ отправлен</button>
-      <button class="color-gray-300" type="button" data-action="close-modal">Продолжить покупки</button>
-    </div>
-  </div>
-</div>
-<div class="modal-window modal-register prior-3" id="register">
-  <button class="modal-window__close" type="button" data-action="close-modal">
-    <svg> 
-      <use xlink:href="./img/sprites.svg#close"></use>
-    </svg>
-  </button>
-  <div class="modal-window__header text-center"><span class="color-blue">Регистрация</span></div>
-  <div class="modal-register__radios">
-    <div class="color-pink font-17 text-center">Вы регистрируетесь как:</div>
-    <fieldset>
-      <label class="radio">
-        <input type="radio" name="register"/>
-        <div class="radio__box"></div>
-        <div class="radio__text font-14">Торгующая или иная организация</div>
-      </label>
-      <label class="radio">
-        <input type="radio" name="register"/>
-        <div class="radio__box"></div>
-        <div class="radio__text font-14">Конечный покупатель</div>
-      </label>
-    </fieldset>
-  </div>
-  <div class="modal-register__fields text-right">
-    <div class="checkout-field">
-      <div class="checkout-field__name font-15"><span>Наименование вашей организации</span></div>
-      <div class="checkout-field__input">
-        <input type="text"/>
-      </div>
-    </div>
-    <div class="checkout-field">
-      <div class="checkout-field__name font-15"><span>ИНН вашей организации</span></div>
-      <div class="checkout-field__input">
-        <input type="text"/>
-      </div>
-    </div>
-    <div class="checkout-field">
-      <div class="checkout-field__name font-15"> <span>Ваше имя</span></div>
-      <div class="checkout-field__input">
-        <input type="text"/>
-      </div>
-    </div>
-    <div class="checkout-field">
-      <div class="checkout-field__name font-15"><span>Телефон</span></div>
-      <div class="checkout-field__input">
-        <input type="tel"/>
-      </div>
-    </div>
-    <div class="checkout-field">
-      <div class="checkout-field__name font-15"> <span>Email</span></div>
-      <div class="checkout-field__input">
-        <input type="email"/>
-      </div>
-    </div>
-    <div class="checkout-field">
-      <div class="checkout-field__name font-15"> <span>Пароль</span></div>
-      <div class="checkout-field__input">
-        <input type="password"/>
-      </div>
-    </div>
-  </div>
-  <p class="font-14 color-gray-300 text-center">Все поля обязательны к заполнению</p>
-  <div class="modal-register__terms text-center">
-    <label class="checkbox">
-      <input type="checkbox"/>
-      <div class="checkbox__box"></div>
-      <div class="checkbox__text font-13 font-condensed">Фактом регистрации вы соглашаетесь с <a class="color-blue-light text-underline">Пользовательским соглашением</a></div>
-    </label>
-  </div>
-  <div class="text-center">
-    <button class="btn-large bg-pink-main font-22" type="submit" data-action="close-modal">Зарегистрироваться</button>
-  </div>
-</div>
-<div class="modal-window modal-login prior-2" id="login">
-  <button class="modal-window__close" type="button" data-action="close-modal">
-    <svg> 
-      <use xlink:href="./img/sprites.svg#close"></use>
-    </svg>
-  </button>
-  <div class="modal-window__header text-center"><span class="color-blue">Авторизация</span></div>
-  <div class="modal-login__fields">
-    <div class="checkout-field">
-      <div class="checkout-field__name"> <span>Email</span></div>
-      <div class="checkout-field__input">
-        <input type="email"/>
-      </div>
-    </div>
-    <div class="checkout-field">
-      <div class="checkout-field__name"> <span>Пароль</span></div>
-      <div class="checkout-field__input">
-        <input type="password"/>
-      </div>
-    </div>
-    <div class="modal-login__restore"><a class="color-blue-light text-underline" href="">Забыли пароль?</a></div>
-    <div class="modal-login__remember">
-      <label class="checkbox checkbox--big">
-        <input type="checkbox"/>
-        <div class="checkbox__box"></div>
-        <div class="checkbox__text">Запомнить меня</div>
-      </label>
-    </div>
-    <div class="modal-login__submit">
-      <button class="btn-medium bg-pink-main" type="submit">Войти</button>
-    </div>
-    <div class="font-15"><span class="mr-5">Нет аккаунта?</span>
-      <button class="color-pink text-underline" type="button" data-modal="data-modal" data-action="register">Зарегистрируйтесь</button>
-    </div>
-  </div>
-</div>
-<div class="modal-window modal-restore prior-2">
-  <button class="modal-window__close" type="button" data-action="close-modal">
-    <svg> 
-      <use xlink:href="./img/sprites.svg#close"></use>
-    </svg>
-  </button>
-  <div class="modal-window__header text-center"><span class="color-blue">Восстановить доступ</span></div>
-  <div class="modal-login__fields">
-    <div class="checkout-field">
-      <div class="checkout-field__name"> <span>Email</span></div>
-      <div class="checkout-field__input">
-        <input type="email"/>
-      </div>
-    </div>
-  </div>
-  <div class="text-center modal-restore__submit">
-    <button class="bg-pink-main btn-large" type="submit">Сменить пароль</button>
-  </div>
-  <div class="font-15"><span class="mr-5">Нет аккаунта?</span>
-    <button class="color-pink text-underline" type="button" data-modal="data-modal" data-action="register">Зарегистрируйтесь</button>
-  </div>
-</div>
-<div class="modal-window modal-product prior-3" id="product-prev">
-  <button class="modal-window__close" type="button" data-action="close-modal">
-    <svg> 
-      <use xlink:href="./img/sprites.svg#close"></use>
-    </svg>
-  </button>
-  <h2 class="product-page__title color-blue">Кофеварка CofeStaion-204m </h2>
-  <div class="product-page__header">
-    <div> <span class="color-gray-300 mr-5 font-15">Код товара:</span><span class="color-gray-335">835923</span></div>
-    <div class="color-blue weight-500 font-18">Есть в наличии</div>
-  </div>
-  <div class="product-body">
-    <div class="product-gallery">
-      <div class="product-gallery__main"><img src="./img/dummy-big.png" alt=""/>
-        <div class="product-gallery__scale">
-          <svg>
-            <use xlink:href="./img/sprites.svg#scale"></use>
-          </svg>
-        </div>
-      </div>
-    </div>
-    <div class="product-body__center">
-      <div class="product-price">
-        <div class="product-price__header color-gray-300">Цена:</div>
-        <div class="product-price__body">
-          <div class="price-new weight-500">165 399 ₸</div>
-          <div class="price-old weight-500 color-gray-300 line-through line-through-pink">145 279 ₸</div>
-        </div>
-      </div>
-      <div class="product-quantity-wrap">
-        <div class="product-quantity">
-          <button class="color-gray-335" type="button">-</button>
-          <input class="color-blue" type="text"/>
-          <button class="color-gray-335" type="button">+</button>
-        </div>
-        <div class="product-in-stock"><span class="mr-5">В наличие:</span><span class="color-pink">1 шт.</span></div>
-      </div>
-      <div class="product-body__buttons">
-        <button class="btn-medium bg-blue-main font-20 font-condensed" type="button">В корзину</button>
-        <button class="btn-medium bg-pink-main font-18 font-condensed" type="button">Купить в 1 клик</button>
-      </div>
-      <div class="product-actions">
-        <button class="color-blue" type="button">
-          <svg class="fill-none mr-10">
-            <use xlink:href="./img/sprites.svg#like"></use>
-          </svg><span>В избранное</span>
-        </button>
-        <button class="color-blue" type="button">
-          <svg class="mr-10">
-            <use xlink:href="./img/sprites.svg#compare"></use>
-          </svg><span>Сравнение</span>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="product-about">
-    <div class="product-about__content">
-      <div class="product-about__tab-header color-pink weight-300">Описание</div>
-      <p class="weight-300 font-15 mb-50">Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить</p>
-    </div>
-  </div>
-  <div class="product-qualities">
-    <div class="product-qualities__header color-pink">Характеристики</div>
-    <div class="product-qualities__content">
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Длинна, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Ширина, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">53640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Длинна, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Ширина, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">53640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Длинна, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Ширина, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">53640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Длинна, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Ширина, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">53640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Длинна, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Ширина, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">53640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Длинна, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">640</div>
-      </div>
-      <div class="product-qualities__item"> 
-        <div class="product-qualities__text">Ширина, мм</div>
-        <div class="product-qualities__line"></div>
-        <div class="product-qualities__text">53640</div>
-      </div>
-    </div>
-  </div>
-  <div class="product-subscribtion weight-300 color-gray-300">Перед применением необходимо ознакомиться с инструкцией по применению (паспортом изделия) или получить консультацию специалиста</div>
-  <div class="text-right mt-15">
-    <button class="btn-medium font-19 weight-500 bg-pink-main" type="button" data-action="close-modal">Закрыть</button>
-  </div>
-</div>
-<div class="modal-window modal-basket prior-3" id="add-basket">
-  <button class="modal-window__close" type="button" data-action="close-modal">
-    <svg> 
-      <use xlink:href="./img/sprites.svg#close"></use>
-    </svg>
-  </button>
-  <div class="modal-window__header mb-50">Товар добавлен в корзину!</div>
-  <div class="basket-table text-center">
-    <div class="basket-table__thead"> 
-      <div class="basket-table__trow color-blue font-18">
-        <div class="basket-table__th thumb">Фото</div>
-        <div class="basket-table__th name">Наименование товара</div>
-        <div class="basket-table__th model">Модель</div>
-        <div class="basket-table__th quantity">Кол-во</div>
-        <div class="basket-table__th price">Цена</div>
-      </div>
-    </div>
-    <div class="basket-table__body">
-      <div class="basket-table__trow color-gray-335">
-        <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""/></div>
-        <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
-        <div class="basket-table__td model font-18 weight-300">835923</div>
-        <div class="basket-table__td quantity font-18 font-condensed">1</div>
-        <div class="basket-table__td price font-19">165 399 ₸</div>
-      </div>
-      <div class="basket-table__trow color-gray-335">
-        <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""/></div>
-        <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
-        <div class="basket-table__td model font-18 weight-300">835923</div>
-        <div class="basket-table__td quantity font-18 font-condensed">1</div>
-        <div class="basket-table__td price font-19">165 399 ₸</div>
-      </div>
-      <div class="basket-table__trow color-gray-335">
-        <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""/></div>
-        <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
-        <div class="basket-table__td model font-18 weight-300">835923</div>
-        <div class="basket-table__td quantity font-18 font-condensed">1</div>
-        <div class="basket-table__td price font-19">165 399 ₸</div>
-      </div>
-    </div>
-  </div>
-  <div class="modal-basket__buttons">
-    <button class="btn-large bg-pink-main" type="submit">Оформить заказ</button>
-    <button class="btn-large bg-blue-main" type="button" data-action="close-modal">Продолжить покупки</button>
-  </div>
-</div>
-<div class="modal-window modal-compare prior-3">
-  <button class="modal-window__close" type="button" data-action="close-modal">
-    <svg> 
-      <use xlink:href="./img/sprites.svg#close"></use>
-    </svg>
-  </button>
-  <div class="modal-window__header mb-10"><span class="color-blue">Столы игровые</span></div>
-  <div class="compare-table-compact mb-15">
-    <div class="font-18 color-blue d-flex align-center text-center weight-300">
-      <div class="compare-table-compact__th compare-info"></div>
-      <div class="compare-table-compact__th">Артикул</div>
-      <div class="compare-table-compact__th">Бренд</div>
-      <div class="compare-table-compact__th">Артикул</div>
-      <div class="compare-table-compact__th">Бренд</div>
-      <div class="compare-table-compact__th">Артикул</div>
-      <div class="compare-table-compact__th">Бренд</div>
-      <div class="compare-table-compact__th">Артикул</div>
-    </div>
-    <div class="compare-table-compact__row d-flex font-14 weight-300">
-      <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""/><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-    </div>
-    <div class="compare-table-compact__row d-flex font-14 weight-300">
-      <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""/><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-    </div>
-    <div class="compare-table-compact__row d-flex font-14 weight-300">
-      <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""/><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-    </div>
-    <div class="compare-table-compact__row d-flex font-14 weight-300">
-      <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""/><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-      <div class="compare-table-compact__td">Шалтай-емалай</div>
-      <div class="compare-table-compact__td">835923</div>
-    </div>
-  </div>
-  <div class="text-right">
-    <button class="btn-medium bg-pink-main font-19 weight-500" type="button" data-action="close-modal">Закрыть</button>
-  </div>
-</div>
-<div class="compare-alert" data-tip="item" data-template="tip">
-  <div class="container">
-    <div class="compare-alert__inner">
-      <div class="compare-alert__image"><img src="./img/dummy-small.png" alt=""/></div>
-      <div class="compare-alert__content"> 
-        <div class="color-gray-335"><span class="color-blue font-20">Кофеварка CofeStaion-204m </span><span class="font-18 weight-300">добавлен к сравнению</span></div>
-        <div class="font-13 weight-300">Товар добавлен в список сравнения из категории Кресла гинекологические</div>
-      </div>
-      <button class="btn-medium bg-pink-main mr-15 font-19" type="button">Сравнить</button>
-      <button class="compare-alert__close" type="button" data-tip="close">
-        <svg class="icon-16">
-          <use xlink:href="./img/sprites.svg#close"></use>
-        </svg>
-      </button>
-    </div>
-  </div>
-</div>
-<div class="compare-alert-wrap prior-5" data-tip="wrap"></div>
-<div class="overlay"></div>
-<div class="shadow"></div><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -469,6 +9,466 @@
     <title>Категории</title>
   </head>
   <body>
+    <div class="modal-window quick-order prior-1" id="quick-order">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header"> <span class="color-blue">Кофеварка CofeStaion-204m</span></div>
+      <div class="modal-window__body">
+        <div class="modal-window__product">
+          <div class="modal-window__thumb"><img src="./img/dummy-big.png" alt="">
+            <div class="modal-window__thumb-scale">
+              <svg> 
+                <use xlink:href="./img/sprites.svg#scale"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-window__content">
+            <div class="modal-window__code"><span class="color-gray-300 mr-5 font-15">Код товара:</span><span class="color-gray-335">835923</span></div>
+            <div class="product-price">
+              <div class="product-price__header color-gray-300"></div>
+              <div class="product-price__body">
+                <div class="price-new weight-500">165 399 ₸</div>
+                <div class="price-old weight-500 color-gray-300 line-through line-through-pink">145 279 ₸</div>
+              </div>
+            </div>
+            <div class="product-quantity">
+              <button class="color-gray-335" type="button">-</button>
+              <input class="color-blue" type="text">
+              <button class="color-gray-335" type="button">+</button>
+            </div>
+            <div class="product-total"><span>Итого:</span>
+              <div class="product-total__line"></div><span class="product-total__price color-blue weight-500">165 399 ₸</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-window__checkout">
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Email</span><span class="color-pink">*</span></div>
+            <div class="checkout-field__input">
+              <input type="email">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Телефон</span><span class="color-pink">*</span></div>
+            <div class="checkout-field__input">
+              <input type="tel">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Имя</span></div>
+            <div class="checkout-field__input">
+              <input type="text">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Комментарий</span></div>
+            <div class="checkout-field__input">
+              <input type="text">
+            </div>
+          </div>
+        </div>
+        <p class="checkout-tip">Нажмите «Оформить заказ», чтобы сделать запрос, и мы скоро свяжемся с вами(по будням с 10 до 18 часов)</p>
+        <p class="checkout-tip checkout-tip--success">Ваш заказ #27056 сформирован, мы скоро вам перезвоним</p>
+        <div class="modal-window__footer">
+          <button class="btn-large bg-pink-main" type="submit">Оформить заказ</button>
+          <button class="btn-large bg-green-dark" type="button" data-action="close-modal">Заказ отправлен</button>
+          <button class="color-gray-300" type="button" data-action="close-modal">Продолжить покупки</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-window modal-register prior-3" id="register">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header text-center"><span class="color-blue">Регистрация</span></div>
+      <div class="modal-register__radios">
+        <div class="color-pink font-17 text-center">Вы регистрируетесь как:</div>
+        <fieldset>
+          <label class="radio">
+            <input type="radio" name="register">
+            <div class="radio__box"></div>
+            <div class="radio__text font-14">Торгующая или иная организация</div>
+          </label>
+          <label class="radio">
+            <input type="radio" name="register">
+            <div class="radio__box"></div>
+            <div class="radio__text font-14">Конечный покупатель</div>
+          </label>
+        </fieldset>
+      </div>
+      <div class="modal-register__fields text-right">
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"><span>Наименование вашей организации</span></div>
+          <div class="checkout-field__input">
+            <input type="text">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"><span>ИНН вашей организации</span></div>
+          <div class="checkout-field__input">
+            <input type="text">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"> <span>Ваше имя</span></div>
+          <div class="checkout-field__input">
+            <input type="text">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"><span>Телефон</span></div>
+          <div class="checkout-field__input">
+            <input type="tel">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"> <span>Email</span></div>
+          <div class="checkout-field__input">
+            <input type="email">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name font-15"> <span>Пароль</span></div>
+          <div class="checkout-field__input">
+            <input type="password">
+          </div>
+        </div>
+      </div>
+      <p class="font-14 color-gray-300 text-center">Все поля обязательны к заполнению</p>
+      <div class="modal-register__terms text-center">
+        <label class="checkbox">
+          <input type="checkbox">
+          <div class="checkbox__box"></div>
+          <div class="checkbox__text font-13 font-condensed">Фактом регистрации вы соглашаетесь с <a class="color-blue-light text-underline">Пользовательским соглашением</a></div>
+        </label>
+      </div>
+      <div class="text-center">
+        <button class="btn-large bg-pink-main font-22" type="submit" data-action="close-modal">Зарегистрироваться</button>
+      </div>
+    </div>
+    <div class="modal-window modal-login prior-2" id="login">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header text-center"><span class="color-blue">Авторизация</span></div>
+      <div class="modal-login__fields">
+        <div class="checkout-field">
+          <div class="checkout-field__name"> <span>Email</span></div>
+          <div class="checkout-field__input">
+            <input type="email">
+          </div>
+        </div>
+        <div class="checkout-field">
+          <div class="checkout-field__name"> <span>Пароль</span></div>
+          <div class="checkout-field__input">
+            <input type="password">
+          </div>
+        </div>
+        <div class="modal-login__restore"><a class="color-blue-light text-underline" href="">Забыли пароль?</a></div>
+        <div class="modal-login__remember">
+          <label class="checkbox checkbox--big">
+            <input type="checkbox">
+            <div class="checkbox__box"></div>
+            <div class="checkbox__text">Запомнить меня</div>
+          </label>
+        </div>
+        <div class="modal-login__submit">
+          <button class="btn-medium bg-pink-main" type="submit">Войти</button>
+        </div>
+        <div class="font-15"><span class="mr-5">Нет аккаунта?</span>
+          <button class="color-pink text-underline" type="button" data-modal data-action="register">Зарегистрируйтесь</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-window modal-restore prior-2">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header text-center"><span class="color-blue">Восстановить доступ</span></div>
+      <div class="modal-login__fields">
+        <div class="checkout-field">
+          <div class="checkout-field__name"> <span>Email</span></div>
+          <div class="checkout-field__input">
+            <input type="email">
+          </div>
+        </div>
+      </div>
+      <div class="text-center modal-restore__submit">
+        <button class="bg-pink-main btn-large" type="submit">Сменить пароль</button>
+      </div>
+      <div class="font-15"><span class="mr-5">Нет аккаунта?</span>
+        <button class="color-pink text-underline" type="button" data-modal data-action="register">Зарегистрируйтесь</button>
+      </div>
+    </div>
+    <div class="modal-window modal-product prior-3" id="product-prev">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <h2 class="product-page__title color-blue">Кофеварка CofeStaion-204m </h2>
+      <div class="product-page__header">
+        <div> <span class="color-gray-300 mr-5 font-15">Код товара:</span><span class="color-gray-335">835923</span></div>
+        <div class="color-blue weight-500 font-18">Есть в наличии</div>
+      </div>
+      <div class="product-body">
+        <div class="product-gallery">
+          <div class="product-gallery__main"><img src="./img/dummy-big.png" alt="">
+            <div class="product-gallery__scale">
+              <svg>
+                <use xlink:href="./img/sprites.svg#scale"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="product-body__center">
+          <div class="product-price">
+            <div class="product-price__header color-gray-300">Цена:</div>
+            <div class="product-price__body">
+              <div class="price-new weight-500">165 399 ₸</div>
+              <div class="price-old weight-500 color-gray-300 line-through line-through-pink">145 279 ₸</div>
+            </div>
+          </div>
+          <div class="product-quantity-wrap">
+            <div class="product-quantity">
+              <button class="color-gray-335" type="button">-</button>
+              <input class="color-blue" type="text">
+              <button class="color-gray-335" type="button">+</button>
+            </div>
+            <div class="product-in-stock"><span class="mr-5">В наличие:</span><span class="color-pink">1 шт.</span></div>
+          </div>
+          <div class="product-body__buttons">
+            <button class="btn-medium bg-blue-main font-20 font-condensed" type="button">В корзину</button>
+            <button class="btn-medium bg-pink-main font-18 font-condensed" type="button">Купить в 1 клик</button>
+          </div>
+          <div class="product-actions">
+            <button class="color-blue" type="button">
+              <svg class="fill-none mr-10">
+                <use xlink:href="./img/sprites.svg#like"></use>
+              </svg><span>В избранное</span>
+            </button>
+            <button class="color-blue" type="button">
+              <svg class="mr-10">
+                <use xlink:href="./img/sprites.svg#compare"></use>
+              </svg><span>Сравнение</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="product-about">
+        <div class="product-about__content">
+          <div class="product-about__tab-header color-pink weight-300">Описание</div>
+          <p class="weight-300 font-15 mb-50">Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить Какая то прикольная штука, умеет кофе варить. Какая то прикольная штука, умеет кофе варить</p>
+        </div>
+      </div>
+      <div class="product-qualities">
+        <div class="product-qualities__header color-pink">Характеристики</div>
+        <div class="product-qualities__content">
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Длинна, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">640</div>
+              </div>
+              <div class="product-qualities__item"> 
+                <div class="product-qualities__text">Ширина, мм</div>
+                <div class="product-qualities__line"></div>
+                <div class="product-qualities__text">53640</div>
+              </div>
+        </div>
+      </div>
+      <div class="product-subscribtion weight-300 color-gray-300">Перед применением необходимо ознакомиться с инструкцией по применению (паспортом изделия) или получить консультацию специалиста</div>
+      <div class="text-right mt-15">
+        <button class="btn-medium font-19 weight-500 bg-pink-main" type="button" data-action="close-modal">Закрыть</button>
+      </div>
+    </div>
+    <div class="modal-window modal-basket prior-3" id="add-basket">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header mb-50">Товар добавлен в корзину!</div>
+      <div class="basket-table text-center">
+        <div class="basket-table__thead"> 
+          <div class="basket-table__trow color-blue font-18">
+            <div class="basket-table__th thumb">Фото</div>
+            <div class="basket-table__th name">Наименование товара</div>
+            <div class="basket-table__th model">Модель</div>
+            <div class="basket-table__th quantity">Кол-во</div>
+            <div class="basket-table__th price">Цена</div>
+          </div>
+        </div>
+        <div class="basket-table__body">
+              <div class="basket-table__trow color-gray-335">
+                <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""></div>
+                <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
+                <div class="basket-table__td model font-18 weight-300">835923</div>
+                <div class="basket-table__td quantity font-18 font-condensed">1</div>
+                <div class="basket-table__td price font-19">165 399 ₸</div>
+              </div>
+              <div class="basket-table__trow color-gray-335">
+                <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""></div>
+                <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
+                <div class="basket-table__td model font-18 weight-300">835923</div>
+                <div class="basket-table__td quantity font-18 font-condensed">1</div>
+                <div class="basket-table__td price font-19">165 399 ₸</div>
+              </div>
+              <div class="basket-table__trow color-gray-335">
+                <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""></div>
+                <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
+                <div class="basket-table__td model font-18 weight-300">835923</div>
+                <div class="basket-table__td quantity font-18 font-condensed">1</div>
+                <div class="basket-table__td price font-19">165 399 ₸</div>
+              </div>
+        </div>
+      </div>
+      <div class="modal-basket__buttons">
+        <button class="btn-large bg-pink-main" type="submit">Оформить заказ</button>
+        <button class="btn-large bg-blue-main" type="button" data-action="close-modal">Продолжить покупки</button>
+      </div>
+    </div>
+    <div class="modal-window modal-compare prior-3">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header mb-10"><span class="color-blue">Столы игровые</span></div>
+      <div class="compare-table-compact mb-15">
+        <div class="font-18 color-blue d-flex align-center text-center weight-300">
+          <div class="compare-table-compact__th compare-info"></div>
+          <div class="compare-table-compact__th">Артикул</div>
+          <div class="compare-table-compact__th">Бренд</div>
+          <div class="compare-table-compact__th">Артикул</div>
+          <div class="compare-table-compact__th">Бренд</div>
+          <div class="compare-table-compact__th">Артикул</div>
+          <div class="compare-table-compact__th">Бренд</div>
+          <div class="compare-table-compact__th">Артикул</div>
+        </div>
+            <div class="compare-table-compact__row d-flex font-14 weight-300">
+              <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+            </div>
+            <div class="compare-table-compact__row d-flex font-14 weight-300">
+              <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+            </div>
+            <div class="compare-table-compact__row d-flex font-14 weight-300">
+              <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+            </div>
+            <div class="compare-table-compact__row d-flex font-14 weight-300">
+              <div class="compare-table-compact__td compare-info justify-space-between color-gray-335"> <img src="./img/dummy-small.png" alt=""><span class="compare-info__text text-center">Кофеварка CofeStaion-204m</span><span class="font-19">165 399 ₸</span></div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+              <div class="compare-table-compact__td">Шалтай-емалай</div>
+              <div class="compare-table-compact__td">835923</div>
+            </div>
+      </div>
+      <div class="text-right">
+        <button class="btn-medium bg-pink-main font-19 weight-500" type="button" data-action="close-modal">Закрыть</button>
+      </div>
+    </div>
+    <div class="compare-alert" data-tip="item" data-template="tip">
+      <div class="container">
+        <div class="compare-alert__inner">
+          <div class="compare-alert__image"><img src="./img/dummy-small.png" alt=""></div>
+          <div class="compare-alert__content"> 
+            <div class="color-gray-335"><span class="color-blue font-20">Кофеварка CofeStaion-204m </span><span class="font-18 weight-300">добавлен к сравнению</span></div>
+            <div class="font-13 weight-300">Товар добавлен в список сравнения из категории Кресла гинекологические</div>
+          </div>
+          <button class="btn-medium bg-pink-main mr-15 font-19" type="button">Сравнить</button>
+          <button class="compare-alert__close" type="button" data-tip="close">
+            <svg class="icon-16">
+              <use xlink:href="./img/sprites.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="compare-alert-wrap prior-5" data-tip="wrap"></div>
+    <div class="overlay"></div>
+    <div class="shadow"></div>
     <div class="content">
       <header id="s-header">
         <div class="header-top-wrap">
