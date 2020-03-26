@@ -21,6 +21,7 @@ var menuDropInit = {
         initiators.on('mouseenter', function(){
 
             var dropToOpen = $(this).children('[data-dropdown="body"]');
+            
 
             _this.openMenu(dropToOpen);
 
@@ -32,22 +33,28 @@ var menuDropInit = {
 
         openMain.on('mouseenter', function(){
 
+            openMain.removeClass('active');
+
+            $('[data-dropdown="body-main"]').hide();
+
             var dropToOpen = $(this).children('[data-dropdown="body-main"]');
 
-            _this.openMenu(dropToOpen);
+            if(dropToOpen.length > 0){
+                _this.openMenu(dropToOpen);
 
-            $(this)
-            .css('z-index', parseInt(overlay.css('z-index')) + 1)
-            .addClass('active');
-
-            var dropOffset = $(window).width() - (dropToOpen.offset().left + dropToOpen.width());
-            
-            //container width
-            if(dropOffset < 0){
-                dropToOpen.addClass('lefter');
+                $(this).addClass('active');
+    
+                var dropOffset = $(window).width() - (dropToOpen.offset().left + dropToOpen.width());
+                
+                //container width
+                if(dropOffset < 0){
+                    dropToOpen.addClass('lefter');
+                }
+    
+                overlay.fadeIn(0);
+            }else{
+                overlay.hide();
             }
-
-            overlay.fadeIn(0);
 
         })
 
@@ -57,9 +64,15 @@ var menuDropInit = {
             bodyMain.hide(0);
             $(this).hide(0);
 
-            openMain.css('z-index', 1)
-                    .removeClass('active');
+            openMain.removeClass('active');
             
+        })
+
+        $('.middle-header-wrap, .header-top-wrap').on('mouseenter', function(){
+            bodyMain.hide(0);
+            overlay.hide(0);
+
+            openMain.removeClass('active');
         })
     }
 }
@@ -322,9 +335,13 @@ var tipController = {
         var tipElement = $('[data-template="tip"]').clone(),
             container = $('[data-tip="wrap"]');
 
-            tipElement.removeAttr('data-template');
+        tipElement.removeAttr('data-template');
+
+        container.html('');
 
         container.append(tipElement);
+
+        tipElement.fadeIn(200);
 
         setTimeout(() => {
             tipController.close(tipElement)
@@ -332,7 +349,7 @@ var tipController = {
 
     },
     close: function(tip){
-        tip.fadeIn(200, function(){
+        tip.fadeOut(200, function(){
             tip.remove()
         })
     }
@@ -347,6 +364,50 @@ $(document).on('click', '[data-tip="close"]', function(){
 
     tipController.close(tipToClose);
 })
+
+// menu-adaptive Dropdown
+
+var menuDropdownMobile = {
+    openChild: function(drop){
+        drop.slideDown(200);
+    },
+    init: function(){
+
+        var initiators = $('[data-menu="open"]'),
+            _this = this;
+
+        initiators.on('click', function(e){
+
+            var dropToOpen = $(this).siblings('[data-menu="body"]');
+
+            if(dropToOpen.length > 0 && ! $(this).hasClass('active')){
+
+                $(this).addClass('active');
+                _this.openChild(dropToOpen);
+
+                e.preventDefault();
+                
+                
+            }
+        })
+    }
+}
+
+$('#hamb').on('click', function(){
+
+    $('#menu-adaptive').fadeIn(200);
+    $('body').addClass('hidden');
+
+})
+
+$('#menu-close').on('click', function(){
+
+    $('#menu-adaptive').fadeOut(200);
+    $('body').removeClass('hidden');
+
+})
+
+menuDropdownMobile.init();
 
 
 
