@@ -147,7 +147,7 @@
           <div class="checkbox__text font-13 font-condensed">Фактом регистрации вы соглашаетесь с <a class="color-blue-light text-underline">Пользовательским соглашением</a></div>
         </label>
       </div>
-      <div class="text-center text-xs-center">
+      <div class="text-center">
         <button class="btn-large bg-pink-main font-22" type="submit" data-action="close-modal">Зарегистрироваться</button>
       </div>
     </div>
@@ -1025,11 +1025,12 @@
           <div class="container">
             <div class="middle-header">
               <div class="logo"><img src="./img/logo.svg" alt="Логотип"></div>
-              <button class="open-search" type="button"></button>
-              <form class="search-wrap">
+              <button class="open-search" type="button" data-search="open"></button>
+              <form class="search-wrap" data-search="item">
                 <input type="search" placeholder="Поиск товара по каталогу">
                 <button class="search-wrap__button" type="submit"></button>
               </form>
+              <div class="search-overlay"></div>
               <div class="middle-options"><a class="middle-options__item color-blue" href="">
                   <svg>
                     <use xlink:href="./img/sprites.svg#compare"></use>
@@ -1041,7 +1042,7 @@
                   <svg>
                     <use xlink:href="./img/sprites.svg#cart"></use>
                   </svg></a></div>
-              <div class="hamb" id="hamb">
+              <div class="hamb" data-menu="open">
                 <svg> 
                   <use xlink:href="./img/sprites.svg#hamb-3"></use>
                 </svg>
@@ -1053,7 +1054,8 @@
                     <use xlink:href="./img/sprites.svg#phone"></use>
                   </svg><span>+7-800-555-35-35</span></a>
                 <button class="top-contacts__callback color-pink" type="button" data-modal data-action="callback">Обратный звонок</button>
-              </div><a class="middle-options__item cart color-blue" href="">
+              </div>
+              <button class="open-search" type="button" data-search="open"></button><a class="middle-options__item cart color-blue" href="">
                 <div class="cart__badge">3</div>
                 <svg>
                   <use xlink:href="./img/sprites.svg#cart"></use>
@@ -1068,8 +1070,14 @@
                   <svg class="hamb-menu"> 
                     <use xlink:href="./img/sprites.svg#hamb-menu"></use>
                   </svg><span>Каталог по направлениям</span></a>
-                <div class="menu-dropdown" data-dropdown="body-main">
-                  <ul class="menu-dropdown__categories">
+                <div class="menu-dropdown" data-dropdown="body-main" data-scroll="wrap">
+                  <ul class="menu-dropdown__categories" data-scroll="item">
+                    <li>
+                      <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
+                    </li>
+                    <li>
+                      <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                    </li>
                     <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
                         <svg class="caret"> 
                           <use xlink:href="./img/sprites.svg#caret"></use>
@@ -1921,64 +1929,75 @@
                 </div>
               </li>
               <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Оборудование</span></a>
-                        <div class="menu-category-simple" data-dropdown="body-main">
-                          <div class="menu-category__content">
-                            <div class="menu-category__item"><a class="menu-category__title">dsadsadas</a>
-                              <ul class="menu-category-list">
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                                <li><a href="">Аквадистилляторы</a></li>
-                              </ul>
-                            </div>
-                            <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
-                              <ul class="menu-category-list">
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                              </ul>
-                            </div>
-                            <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
-                              <ul class="menu-category-list">
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
+                <div class="menu-dropdown drop-simple" data-dropdown="body-main">
+                  <ul class="menu-dropdown__categories">
+                    <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                        <svg class="caret"> 
+                          <use xlink:href="./img/sprites.svg#caret"></use>
+                        </svg></a>
+                      <div class="menu-dropdown" data-dropdown="body">
+                        <ul class="menu-dropdown__categories">
+                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                              <svg class="caret"> 
+                                <use xlink:href="./img/sprites.svg#caret"></use>
+                              </svg></a>
+                                    <div class="menu-category-simple" data-dropdown="body">
+                                      <div class="menu-category__content">
+                                        <ul class="menu-category-list">
+                                          <li><a href="">Аквадистилляторы</a></li>
+                                          <li><a href="">Бани</a></li>
+                                          <li><a href="">Аквадистилляторы</a></li>
+                                          <li><a href="">Бани</a></li>
+                                          <li><a href="">Аквадистилляторы</a></li>
+                                          <li><a href="">Бани</a></li>
+                                          <li><a href="">Аквадистилляторы</a></li>
+                                          <li><a href="">Бани</a></li>
+                                          <li><a href="">Аквадистилляторы</a></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                          </li>
+                          <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                        <svg class="caret"> 
+                          <use xlink:href="./img/sprites.svg#caret"></use>
+                        </svg></a>
+                              <div class="menu-category-simple" data-dropdown="body">
+                                <div class="menu-category__content">
+                                  <ul class="menu-category-list">
+                                    <li><a href="">Аквадистилляторы</a></li>
+                                    <li><a href="">Бани</a></li>
+                                    <li><a href="">Аквадистилляторы</a></li>
+                                    <li><a href="">Бани</a></li>
+                                    <li><a href="">Аквадистилляторы</a></li>
+                                    <li><a href="">Бани</a></li>
+                                    <li><a href="">Аквадистилляторы</a></li>
+                                    <li><a href="">Бани</a></li>
+                                    <li><a href="">Аквадистилляторы</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Мебель</span></a>
-                        <div class="menu-category-simple" data-dropdown="body-main">
+                        <div class="menu-category-simple" data-dropdown="body">
                           <div class="menu-category__content">
-                            <div class="menu-category__item"><a class="menu-category__title">dsadsadas</a>
-                              <ul class="menu-category-list">
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                                <li><a href="">Аквадистилляторы</a></li>
-                              </ul>
-                            </div>
-                            <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
-                              <ul class="menu-category-list">
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                              </ul>
-                            </div>
-                            <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
-                              <ul class="menu-category-list">
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                              </ul>
-                            </div>
+                            <ul class="menu-category-list">
+                              <li><a href="">Аквадистилляторы</a></li>
+                              <li><a href="">Бани</a></li>
+                              <li><a href="">Аквадистилляторы</a></li>
+                              <li><a href="">Бани</a></li>
+                              <li><a href="">Аквадистилляторы</a></li>
+                              <li><a href="">Бани</a></li>
+                              <li><a href="">Аквадистилляторы</a></li>
+                              <li><a href="">Бани</a></li>
+                              <li><a href="">Аквадистилляторы</a></li>
+                            </ul>
                           </div>
                         </div>
               </li>
@@ -1988,7 +2007,7 @@
             </ul>
           </div>
         </nav>
-        <div class="menu-sticky">
+        <div class="menu-sticky menu-hidden" id="menu-sticky">
           <div class="container">
             <div class="menu-sticky__inner">
               <ul class="main-menu main-menu--white">
@@ -2849,68 +2868,46 @@
                   </div>
                 </li>
                 <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Оборудование</span></a>
-                          <div class="menu-category-simple" data-dropdown="body-main">
+                          <div class="menu-category-simple" data-dropdown="body">
                             <div class="menu-category__content">
-                              <div class="menu-category__item"><a class="menu-category__title">dsadsadas</a>
-                                <ul class="menu-category-list">
-                                  <li><a href="">Аквадистилляторы</a></li>
-                                  <li><a href="">Бани</a></li>
-                                  <li><a href="">Аквадистилляторы</a></li>
-                                  <li><a href="">Бани</a></li>
-                                  <li><a href="">Аквадистилляторы</a></li>
-                                  <li><a href="">Бани</a></li>
-                                  <li><a href="">Аквадистилляторы</a></li>
-                                  <li><a href="">Бани</a></li>
-                                  <li><a href="">Аквадистилляторы</a></li>
-                                </ul>
-                              </div>
-                              <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
-                                <ul class="menu-category-list">
-                                  <li><a href="">Аквадистилляторы</a></li>
-                                  <li><a href="">Бани</a></li>
-                                </ul>
-                              </div>
-                              <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
-                                <ul class="menu-category-list">
-                                  <li><a href="">Аквадистилляторы</a></li>
-                                  <li><a href="">Бани</a></li>
-                                </ul>
-                              </div>
+                              <ul class="menu-category-list">
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                              </ul>
                             </div>
                           </div>
                 </li>
                 <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Мебель</span></a>
-                          <div class="menu-category-simple" data-dropdown="body-main">
+                          <div class="menu-category-simple" data-dropdown="body">
                             <div class="menu-category__content">
-                              <div class="menu-category__item"><a class="menu-category__title">dsadsadas</a>
-                                <ul class="menu-category-list">
-                                  <li><a href="">Аквадистилляторы</a></li>
-                                  <li><a href="">Бани</a></li>
-                                  <li><a href="">Аквадистилляторы</a></li>
-                                  <li><a href="">Бани</a></li>
-                                  <li><a href="">Аквадистилляторы</a></li>
-                                  <li><a href="">Бани</a></li>
-                                  <li><a href="">Аквадистилляторы</a></li>
-                                  <li><a href="">Бани</a></li>
-                                  <li><a href="">Аквадистилляторы</a></li>
-                                </ul>
-                              </div>
-                              <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
-                                <ul class="menu-category-list">
-                                  <li><a href="">Аквадистилляторы</a></li>
-                                  <li><a href="">Бани</a></li>
-                                </ul>
-                              </div>
-                              <div class="menu-category__item"><a class="menu-category__title">Ещё какое то оборудование</a>
-                                <ul class="menu-category-list">
-                                  <li><a href="">Аквадистилляторы</a></li>
-                                  <li><a href="">Бани</a></li>
-                                </ul>
-                              </div>
+                              <ul class="menu-category-list">
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                                <li><a href="">Бани</a></li>
+                                <li><a href="">Аквадистилляторы</a></li>
+                              </ul>
                             </div>
                           </div>
                 </li>
               </ul>
+              <div class="hamb" data-menu="open">
+                <svg> 
+                  <use xlink:href="./img/sprites.svg#hamb-3"></use>
+                </svg>
+              </div>
+              <div class="logo"><img src="./img/logo.svg" alt="Логотип"></div>
               <div class="menu-sticky__search">
                 <input type="search" placeholder="Поиск товара по каталогу">
                 <button class="search-wrap__button" type="submit"></button>
@@ -2918,7 +2915,8 @@
               <div class="menu-sticky__contacts"><a class="top-contacts__phone color-pink font-condensed" href="">
                   <svg>
                     <use xlink:href="./img/sprites.svg#phone"></use>
-                  </svg><span>+7-800-555-35-35</span></a></div><a class="middle-options__item cart color-blue" href="">
+                  </svg><span>+7-800-555-35-35</span></a></div>
+              <button class="open-search" type="button" data-search="open"></button><a class="middle-options__item cart color-blue" href="">
                 <div class="cart__badge">3</div>
                 <svg>
                   <use xlink:href="./img/sprites.svg#cart"></use>
