@@ -36,7 +36,7 @@
             </div>
             <div class="product-quantity">
               <button class="color-gray-335" type="button">-</button>
-              <input class="color-blue" type="text">
+              <input class="color-blue" type="text" value="1">
               <button class="color-gray-335" type="button">+</button>
             </div>
             <div class="product-total"><span>Итого:</span>
@@ -48,25 +48,25 @@
           <div class="checkout-field">
             <div class="checkout-field__name"> <span>Email</span><span class="color-pink">*</span></div>
             <div class="checkout-field__input">
-              <input type="email">
+              <input type="email" placeholder="Введите Email">
             </div>
           </div>
           <div class="checkout-field">
             <div class="checkout-field__name"> <span>Телефон</span><span class="color-pink">*</span></div>
             <div class="checkout-field__input">
-              <input type="tel">
+              <input type="tel" placeholder="Введите Телефон">
             </div>
           </div>
           <div class="checkout-field">
             <div class="checkout-field__name"> <span>Имя</span></div>
             <div class="checkout-field__input">
-              <input type="text">
+              <input type="text" placeholder="Введите Имя">
             </div>
           </div>
           <div class="checkout-field">
             <div class="checkout-field__name"> <span>Комментарий</span></div>
             <div class="checkout-field__input">
-              <input type="text">
+              <input type="text" placeholder="Введите Комментарий">
             </div>
           </div>
         </div>
@@ -346,7 +346,7 @@
           <use xlink:href="./img/sprites.svg#close"></use>
         </svg>
       </button>
-      <div class="modal-window__header mb-50">Товар добавлен в корзину!</div>
+      <div class="modal-window__header mb-lg-50">Товар добавлен в корзину!</div>
       <div class="basket-table text-center">
         <div class="basket-table__thead"> 
           <div class="basket-table__trow color-blue font-18">
@@ -362,21 +362,39 @@
                 <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""></div>
                 <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
                 <div class="basket-table__td model font-18 weight-300">835923</div>
-                <div class="basket-table__td quantity font-18 font-condensed">1</div>
+                <div class="basket-table__td quantity font-18 font-condensed"> 
+                  <div class="checkout-quantity">
+                    <button type="button">-</button>
+                    <input type="text" value="1">
+                    <button type="button">+</button>
+                  </div>
+                </div>
                 <div class="basket-table__td price font-19">165 399 ₸</div>
               </div>
               <div class="basket-table__trow color-gray-335">
                 <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""></div>
                 <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
                 <div class="basket-table__td model font-18 weight-300">835923</div>
-                <div class="basket-table__td quantity font-18 font-condensed">1</div>
+                <div class="basket-table__td quantity font-18 font-condensed"> 
+                  <div class="checkout-quantity">
+                    <button type="button">-</button>
+                    <input type="text" value="1">
+                    <button type="button">+</button>
+                  </div>
+                </div>
                 <div class="basket-table__td price font-19">165 399 ₸</div>
               </div>
               <div class="basket-table__trow color-gray-335">
                 <div class="basket-table__td thumb"> <img src="./img/dummy-small.png" alt=""></div>
                 <div class="basket-table__td name font-19">Кофеварка CofeStaion-204m </div>
                 <div class="basket-table__td model font-18 weight-300">835923</div>
-                <div class="basket-table__td quantity font-18 font-condensed">1</div>
+                <div class="basket-table__td quantity font-18 font-condensed"> 
+                  <div class="checkout-quantity">
+                    <button type="button">-</button>
+                    <input type="text" value="1">
+                    <button type="button">+</button>
+                  </div>
+                </div>
                 <div class="basket-table__td price font-19">165 399 ₸</div>
               </div>
         </div>
@@ -479,25 +497,25 @@
           <div class="checkout-field">
             <div class="checkout-field__name"> <span>Email</span><span class="color-pink">*</span></div>
             <div class="checkout-field__input">
-              <input type="email">
+              <input type="email" placeholder="Введите email">
             </div>
           </div>
           <div class="checkout-field">
             <div class="checkout-field__name"> <span>Телефон</span><span class="color-pink">*</span></div>
             <div class="checkout-field__input">
-              <input type="tel">
+              <input type="tel" placeholder="Введите телефон">
             </div>
           </div>
           <div class="checkout-field">
             <div class="checkout-field__name"> <span>Имя</span></div>
             <div class="checkout-field__input">
-              <input type="text">
+              <input type="text" placeholder="Введите имя">
             </div>
           </div>
           <div class="checkout-field">
             <div class="checkout-field__name"> <span>Комментарий</span></div>
             <div class="checkout-field__input">
-              <input type="text">
+              <input type="text" placeholder="Введите комментарий">
             </div>
           </div>
         </div>
@@ -1037,11 +1055,14 @@
                   </svg></a><a class="middle-options__item color-blue" href="">
                   <svg class="fill-none">
                     <use xlink:href="./img/sprites.svg#like"></use>
-                  </svg></a><a class="middle-options__item cart color-blue" href="">
+                  </svg></a>
+                <button class="middle-options__item cart color-blue" type="button" data-modal data-action="add-basket">
                   <div class="cart__badge">3</div>
                   <svg>
                     <use xlink:href="./img/sprites.svg#cart"></use>
-                  </svg></a></div>
+                  </svg>
+                </button>
+              </div>
               <div class="hamb" data-menu="open">
                 <svg> 
                   <use xlink:href="./img/sprites.svg#hamb-3"></use>
@@ -1055,11 +1076,13 @@
                   </svg><span>+7-800-555-35-35</span></a>
                 <button class="top-contacts__callback color-pink" type="button" data-modal data-action="callback">Обратный звонок</button>
               </div>
-              <button class="open-search" type="button" data-search="open"></button><a class="middle-options__item cart color-blue" href="">
+              <button class="open-search" type="button" data-search="open"></button>
+              <button class="middle-options__item cart color-blue" type="button" data-modal data-action="add-basket">
                 <div class="cart__badge">3</div>
                 <svg>
                   <use xlink:href="./img/sprites.svg#cart"></use>
-                </svg></a>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -1114,7 +1137,6 @@
                                           <div class="feature-tile">
                                             <div class="feature-tile__inner">
                                               <div class="stickers-wrap">
-                                                <div class="sticker">Акция</div>
                                               </div>
                                               <div class="feature-tile__actions">
                                                 <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -1140,14 +1162,10 @@
                                               <div class="feature-tile__state exist-end">Заканчивается</div>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
-                                                <svg>
-                                                  <use xlink:href="./img/sprites.svg#fire"></use>
-                                                </svg>
                                                 <div class="feature-price__regular">165 399 ₸</div>
-                                                <div class="feature-price__old">145 279 ₸</div>
                                               </div>
                                               <div class="feature-tile__buttons">
-                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                 <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                               </div>
                                             </div>
@@ -1191,7 +1209,6 @@
                                           <div class="feature-tile">
                                             <div class="feature-tile__inner">
                                               <div class="stickers-wrap">
-                                                <div class="sticker">Акция</div>
                                               </div>
                                               <div class="feature-tile__actions">
                                                 <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -1217,14 +1234,10 @@
                                               <div class="feature-tile__state exist-end">Заканчивается</div>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
-                                                <svg>
-                                                  <use xlink:href="./img/sprites.svg#fire"></use>
-                                                </svg>
                                                 <div class="feature-price__regular">165 399 ₸</div>
-                                                <div class="feature-price__old">145 279 ₸</div>
                                               </div>
                                               <div class="feature-tile__buttons">
-                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                 <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                               </div>
                                             </div>
@@ -1268,7 +1281,6 @@
                                           <div class="feature-tile">
                                             <div class="feature-tile__inner">
                                               <div class="stickers-wrap">
-                                                <div class="sticker">Акция</div>
                                               </div>
                                               <div class="feature-tile__actions">
                                                 <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -1294,14 +1306,10 @@
                                               <div class="feature-tile__state exist-end">Заканчивается</div>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
-                                                <svg>
-                                                  <use xlink:href="./img/sprites.svg#fire"></use>
-                                                </svg>
                                                 <div class="feature-price__regular">165 399 ₸</div>
-                                                <div class="feature-price__old">145 279 ₸</div>
                                               </div>
                                               <div class="feature-tile__buttons">
-                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                 <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                               </div>
                                             </div>
@@ -1345,7 +1353,6 @@
                                           <div class="feature-tile">
                                             <div class="feature-tile__inner">
                                               <div class="stickers-wrap">
-                                                <div class="sticker">Акция</div>
                                               </div>
                                               <div class="feature-tile__actions">
                                                 <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -1371,14 +1378,10 @@
                                               <div class="feature-tile__state exist-end">Заканчивается</div>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
-                                                <svg>
-                                                  <use xlink:href="./img/sprites.svg#fire"></use>
-                                                </svg>
                                                 <div class="feature-price__regular">165 399 ₸</div>
-                                                <div class="feature-price__old">145 279 ₸</div>
                                               </div>
                                               <div class="feature-tile__buttons">
-                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                 <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                               </div>
                                             </div>
@@ -1422,7 +1425,6 @@
                                           <div class="feature-tile">
                                             <div class="feature-tile__inner">
                                               <div class="stickers-wrap">
-                                                <div class="sticker">Акция</div>
                                               </div>
                                               <div class="feature-tile__actions">
                                                 <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -1448,14 +1450,10 @@
                                               <div class="feature-tile__state exist-end">Заканчивается</div>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
-                                                <svg>
-                                                  <use xlink:href="./img/sprites.svg#fire"></use>
-                                                </svg>
                                                 <div class="feature-price__regular">165 399 ₸</div>
-                                                <div class="feature-price__old">145 279 ₸</div>
                                               </div>
                                               <div class="feature-tile__buttons">
-                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                 <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                               </div>
                                             </div>
@@ -1499,7 +1497,6 @@
                                           <div class="feature-tile">
                                             <div class="feature-tile__inner">
                                               <div class="stickers-wrap">
-                                                <div class="sticker">Акция</div>
                                               </div>
                                               <div class="feature-tile__actions">
                                                 <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -1525,14 +1522,10 @@
                                               <div class="feature-tile__state exist-end">Заканчивается</div>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
-                                                <svg>
-                                                  <use xlink:href="./img/sprites.svg#fire"></use>
-                                                </svg>
                                                 <div class="feature-price__regular">165 399 ₸</div>
-                                                <div class="feature-price__old">145 279 ₸</div>
                                               </div>
                                               <div class="feature-tile__buttons">
-                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                 <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                               </div>
                                             </div>
@@ -1576,7 +1569,6 @@
                                           <div class="feature-tile">
                                             <div class="feature-tile__inner">
                                               <div class="stickers-wrap">
-                                                <div class="sticker">Акция</div>
                                               </div>
                                               <div class="feature-tile__actions">
                                                 <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -1602,14 +1594,10 @@
                                               <div class="feature-tile__state exist-end">Заканчивается</div>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
-                                                <svg>
-                                                  <use xlink:href="./img/sprites.svg#fire"></use>
-                                                </svg>
                                                 <div class="feature-price__regular">165 399 ₸</div>
-                                                <div class="feature-price__old">145 279 ₸</div>
                                               </div>
                                               <div class="feature-tile__buttons">
-                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                 <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                               </div>
                                             </div>
@@ -1653,7 +1641,6 @@
                                           <div class="feature-tile">
                                             <div class="feature-tile__inner">
                                               <div class="stickers-wrap">
-                                                <div class="sticker">Акция</div>
                                               </div>
                                               <div class="feature-tile__actions">
                                                 <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -1679,14 +1666,10 @@
                                               <div class="feature-tile__state exist-end">Заканчивается</div>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
-                                                <svg>
-                                                  <use xlink:href="./img/sprites.svg#fire"></use>
-                                                </svg>
                                                 <div class="feature-price__regular">165 399 ₸</div>
-                                                <div class="feature-price__old">145 279 ₸</div>
                                               </div>
                                               <div class="feature-tile__buttons">
-                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                 <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                               </div>
                                             </div>
@@ -1730,7 +1713,6 @@
                                           <div class="feature-tile">
                                             <div class="feature-tile__inner">
                                               <div class="stickers-wrap">
-                                                <div class="sticker">Акция</div>
                                               </div>
                                               <div class="feature-tile__actions">
                                                 <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -1756,14 +1738,10 @@
                                               <div class="feature-tile__state exist-end">Заканчивается</div>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
-                                                <svg>
-                                                  <use xlink:href="./img/sprites.svg#fire"></use>
-                                                </svg>
                                                 <div class="feature-price__regular">165 399 ₸</div>
-                                                <div class="feature-price__old">145 279 ₸</div>
                                               </div>
                                               <div class="feature-tile__buttons">
-                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                 <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                               </div>
                                             </div>
@@ -1807,7 +1785,6 @@
                                           <div class="feature-tile">
                                             <div class="feature-tile__inner">
                                               <div class="stickers-wrap">
-                                                <div class="sticker">Акция</div>
                                               </div>
                                               <div class="feature-tile__actions">
                                                 <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -1833,14 +1810,10 @@
                                               <div class="feature-tile__state exist-end">Заканчивается</div>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
-                                                <svg>
-                                                  <use xlink:href="./img/sprites.svg#fire"></use>
-                                                </svg>
                                                 <div class="feature-price__regular">165 399 ₸</div>
-                                                <div class="feature-price__old">145 279 ₸</div>
                                               </div>
                                               <div class="feature-tile__buttons">
-                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                 <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                               </div>
                                             </div>
@@ -1884,7 +1857,6 @@
                                           <div class="feature-tile">
                                             <div class="feature-tile__inner">
                                               <div class="stickers-wrap">
-                                                <div class="sticker">Акция</div>
                                               </div>
                                               <div class="feature-tile__actions">
                                                 <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -1910,14 +1882,10 @@
                                               <div class="feature-tile__state exist-end">Заканчивается</div>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
-                                                <svg>
-                                                  <use xlink:href="./img/sprites.svg#fire"></use>
-                                                </svg>
                                                 <div class="feature-price__regular">165 399 ₸</div>
-                                                <div class="feature-price__old">145 279 ₸</div>
                                               </div>
                                               <div class="feature-tile__buttons">
-                                                <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                 <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                               </div>
                                             </div>
@@ -2015,8 +1983,14 @@
                     <svg class="hamb-menu"> 
                       <use xlink:href="./img/sprites.svg#hamb-menu"></use>
                     </svg><span>Каталог по направлениям</span></a>
-                  <div class="menu-dropdown" data-dropdown="body-main">
-                    <ul class="menu-dropdown__categories">
+                  <div class="menu-dropdown" data-dropdown="body-main" data-scroll="wrap">
+                    <ul class="menu-dropdown__categories" data-scroll="item">
+                      <li>
+                        <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
+                      </li>
+                      <li>
+                        <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                      </li>
                       <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
                           <svg class="caret"> 
                             <use xlink:href="./img/sprites.svg#caret"></use>
@@ -2053,7 +2027,6 @@
                                             <div class="feature-tile">
                                               <div class="feature-tile__inner">
                                                 <div class="stickers-wrap">
-                                                  <div class="sticker">Акция</div>
                                                 </div>
                                                 <div class="feature-tile__actions">
                                                   <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -2079,14 +2052,10 @@
                                                 <div class="feature-tile__state exist-end">Заканчивается</div>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
-                                                  <svg>
-                                                    <use xlink:href="./img/sprites.svg#fire"></use>
-                                                  </svg>
                                                   <div class="feature-price__regular">165 399 ₸</div>
-                                                  <div class="feature-price__old">145 279 ₸</div>
                                                 </div>
                                                 <div class="feature-tile__buttons">
-                                                  <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                  <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                   <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                                 </div>
                                               </div>
@@ -2130,7 +2099,6 @@
                                             <div class="feature-tile">
                                               <div class="feature-tile__inner">
                                                 <div class="stickers-wrap">
-                                                  <div class="sticker">Акция</div>
                                                 </div>
                                                 <div class="feature-tile__actions">
                                                   <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -2156,14 +2124,10 @@
                                                 <div class="feature-tile__state exist-end">Заканчивается</div>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
-                                                  <svg>
-                                                    <use xlink:href="./img/sprites.svg#fire"></use>
-                                                  </svg>
                                                   <div class="feature-price__regular">165 399 ₸</div>
-                                                  <div class="feature-price__old">145 279 ₸</div>
                                                 </div>
                                                 <div class="feature-tile__buttons">
-                                                  <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                  <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                   <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                                 </div>
                                               </div>
@@ -2207,7 +2171,6 @@
                                             <div class="feature-tile">
                                               <div class="feature-tile__inner">
                                                 <div class="stickers-wrap">
-                                                  <div class="sticker">Акция</div>
                                                 </div>
                                                 <div class="feature-tile__actions">
                                                   <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -2233,14 +2196,10 @@
                                                 <div class="feature-tile__state exist-end">Заканчивается</div>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
-                                                  <svg>
-                                                    <use xlink:href="./img/sprites.svg#fire"></use>
-                                                  </svg>
                                                   <div class="feature-price__regular">165 399 ₸</div>
-                                                  <div class="feature-price__old">145 279 ₸</div>
                                                 </div>
                                                 <div class="feature-tile__buttons">
-                                                  <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                  <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                   <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                                 </div>
                                               </div>
@@ -2284,7 +2243,6 @@
                                             <div class="feature-tile">
                                               <div class="feature-tile__inner">
                                                 <div class="stickers-wrap">
-                                                  <div class="sticker">Акция</div>
                                                 </div>
                                                 <div class="feature-tile__actions">
                                                   <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -2310,14 +2268,10 @@
                                                 <div class="feature-tile__state exist-end">Заканчивается</div>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
-                                                  <svg>
-                                                    <use xlink:href="./img/sprites.svg#fire"></use>
-                                                  </svg>
                                                   <div class="feature-price__regular">165 399 ₸</div>
-                                                  <div class="feature-price__old">145 279 ₸</div>
                                                 </div>
                                                 <div class="feature-tile__buttons">
-                                                  <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                  <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                   <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                                 </div>
                                               </div>
@@ -2361,7 +2315,6 @@
                                             <div class="feature-tile">
                                               <div class="feature-tile__inner">
                                                 <div class="stickers-wrap">
-                                                  <div class="sticker">Акция</div>
                                                 </div>
                                                 <div class="feature-tile__actions">
                                                   <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -2387,14 +2340,10 @@
                                                 <div class="feature-tile__state exist-end">Заканчивается</div>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
-                                                  <svg>
-                                                    <use xlink:href="./img/sprites.svg#fire"></use>
-                                                  </svg>
                                                   <div class="feature-price__regular">165 399 ₸</div>
-                                                  <div class="feature-price__old">145 279 ₸</div>
                                                 </div>
                                                 <div class="feature-tile__buttons">
-                                                  <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                  <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                   <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                                 </div>
                                               </div>
@@ -2438,7 +2387,6 @@
                                             <div class="feature-tile">
                                               <div class="feature-tile__inner">
                                                 <div class="stickers-wrap">
-                                                  <div class="sticker">Акция</div>
                                                 </div>
                                                 <div class="feature-tile__actions">
                                                   <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -2464,14 +2412,10 @@
                                                 <div class="feature-tile__state exist-end">Заканчивается</div>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
-                                                  <svg>
-                                                    <use xlink:href="./img/sprites.svg#fire"></use>
-                                                  </svg>
                                                   <div class="feature-price__regular">165 399 ₸</div>
-                                                  <div class="feature-price__old">145 279 ₸</div>
                                                 </div>
                                                 <div class="feature-tile__buttons">
-                                                  <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                  <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                   <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                                 </div>
                                               </div>
@@ -2515,7 +2459,6 @@
                                             <div class="feature-tile">
                                               <div class="feature-tile__inner">
                                                 <div class="stickers-wrap">
-                                                  <div class="sticker">Акция</div>
                                                 </div>
                                                 <div class="feature-tile__actions">
                                                   <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -2541,14 +2484,10 @@
                                                 <div class="feature-tile__state exist-end">Заканчивается</div>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
-                                                  <svg>
-                                                    <use xlink:href="./img/sprites.svg#fire"></use>
-                                                  </svg>
                                                   <div class="feature-price__regular">165 399 ₸</div>
-                                                  <div class="feature-price__old">145 279 ₸</div>
                                                 </div>
                                                 <div class="feature-tile__buttons">
-                                                  <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                  <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                   <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                                 </div>
                                               </div>
@@ -2592,7 +2531,6 @@
                                             <div class="feature-tile">
                                               <div class="feature-tile__inner">
                                                 <div class="stickers-wrap">
-                                                  <div class="sticker">Акция</div>
                                                 </div>
                                                 <div class="feature-tile__actions">
                                                   <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -2618,14 +2556,10 @@
                                                 <div class="feature-tile__state exist-end">Заканчивается</div>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
-                                                  <svg>
-                                                    <use xlink:href="./img/sprites.svg#fire"></use>
-                                                  </svg>
                                                   <div class="feature-price__regular">165 399 ₸</div>
-                                                  <div class="feature-price__old">145 279 ₸</div>
                                                 </div>
                                                 <div class="feature-tile__buttons">
-                                                  <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                  <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                   <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                                 </div>
                                               </div>
@@ -2669,7 +2603,6 @@
                                             <div class="feature-tile">
                                               <div class="feature-tile__inner">
                                                 <div class="stickers-wrap">
-                                                  <div class="sticker">Акция</div>
                                                 </div>
                                                 <div class="feature-tile__actions">
                                                   <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -2695,14 +2628,10 @@
                                                 <div class="feature-tile__state exist-end">Заканчивается</div>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
-                                                  <svg>
-                                                    <use xlink:href="./img/sprites.svg#fire"></use>
-                                                  </svg>
                                                   <div class="feature-price__regular">165 399 ₸</div>
-                                                  <div class="feature-price__old">145 279 ₸</div>
                                                 </div>
                                                 <div class="feature-tile__buttons">
-                                                  <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                  <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                   <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                                 </div>
                                               </div>
@@ -2746,7 +2675,6 @@
                                             <div class="feature-tile">
                                               <div class="feature-tile__inner">
                                                 <div class="stickers-wrap">
-                                                  <div class="sticker">Акция</div>
                                                 </div>
                                                 <div class="feature-tile__actions">
                                                   <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -2772,14 +2700,10 @@
                                                 <div class="feature-tile__state exist-end">Заканчивается</div>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
-                                                  <svg>
-                                                    <use xlink:href="./img/sprites.svg#fire"></use>
-                                                  </svg>
                                                   <div class="feature-price__regular">165 399 ₸</div>
-                                                  <div class="feature-price__old">145 279 ₸</div>
                                                 </div>
                                                 <div class="feature-tile__buttons">
-                                                  <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                  <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                   <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                                 </div>
                                               </div>
@@ -2823,7 +2747,6 @@
                                             <div class="feature-tile">
                                               <div class="feature-tile__inner">
                                                 <div class="stickers-wrap">
-                                                  <div class="sticker">Акция</div>
                                                 </div>
                                                 <div class="feature-tile__actions">
                                                   <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -2849,14 +2772,10 @@
                                                 <div class="feature-tile__state exist-end">Заканчивается</div>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
-                                                  <svg>
-                                                    <use xlink:href="./img/sprites.svg#fire"></use>
-                                                  </svg>
                                                   <div class="feature-price__regular">165 399 ₸</div>
-                                                  <div class="feature-price__old">145 279 ₸</div>
                                                 </div>
                                                 <div class="feature-tile__buttons">
-                                                  <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                                                  <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                                                   <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                                                 </div>
                                               </div>
@@ -2866,40 +2785,40 @@
                       </li>
                     </ul>
                   </div>
-                </li>
-                <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Оборудование</span></a>
-                          <div class="menu-category-simple" data-dropdown="body">
-                            <div class="menu-category__content">
-                              <ul class="menu-category-list">
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                                <li><a href="">Аквадистилляторы</a></li>
-                              </ul>
+                  <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Оборудование</span></a>
+                            <div class="menu-category-simple" data-dropdown="body">
+                              <div class="menu-category__content">
+                                <ul class="menu-category-list">
+                                  <li><a href="">Аквадистилляторы</a></li>
+                                  <li><a href="">Бани</a></li>
+                                  <li><a href="">Аквадистилляторы</a></li>
+                                  <li><a href="">Бани</a></li>
+                                  <li><a href="">Аквадистилляторы</a></li>
+                                  <li><a href="">Бани</a></li>
+                                  <li><a href="">Аквадистилляторы</a></li>
+                                  <li><a href="">Бани</a></li>
+                                  <li><a href="">Аквадистилляторы</a></li>
+                                </ul>
+                              </div>
                             </div>
-                          </div>
-                </li>
-                <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Мебель</span></a>
-                          <div class="menu-category-simple" data-dropdown="body">
-                            <div class="menu-category__content">
-                              <ul class="menu-category-list">
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                                <li><a href="">Аквадистилляторы</a></li>
-                                <li><a href="">Бани</a></li>
-                                <li><a href="">Аквадистилляторы</a></li>
-                              </ul>
+                  </li>
+                  <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Мебель</span></a>
+                            <div class="menu-category-simple" data-dropdown="body">
+                              <div class="menu-category__content">
+                                <ul class="menu-category-list">
+                                  <li><a href="">Аквадистилляторы</a></li>
+                                  <li><a href="">Бани</a></li>
+                                  <li><a href="">Аквадистилляторы</a></li>
+                                  <li><a href="">Бани</a></li>
+                                  <li><a href="">Аквадистилляторы</a></li>
+                                  <li><a href="">Бани</a></li>
+                                  <li><a href="">Аквадистилляторы</a></li>
+                                  <li><a href="">Бани</a></li>
+                                  <li><a href="">Аквадистилляторы</a></li>
+                                </ul>
+                              </div>
                             </div>
-                          </div>
+                  </li>
                 </li>
               </ul>
               <div class="hamb" data-menu="open">
@@ -2912,15 +2831,14 @@
                 <input type="search" placeholder="Поиск товара по каталогу">
                 <button class="search-wrap__button" type="submit"></button>
               </div>
-              <div class="menu-sticky__contacts"><a class="top-contacts__phone color-pink font-condensed" href="">
-                  <svg>
-                    <use xlink:href="./img/sprites.svg#phone"></use>
-                  </svg><span>+7-800-555-35-35</span></a></div>
-              <button class="open-search" type="button" data-search="open"></button><a class="middle-options__item cart color-blue" href="">
+              <div class="menu-sticky__contacts"><a class="top-contacts__phone color-pink font-condensed" href=""><span>+7-800-555-35-35</span></a></div>
+              <button class="open-search" type="button" data-search="open"></button>
+              <button class="middle-options__item cart color-blue" type="button" data-modal data-action="add-cart">
                 <div class="cart__badge">3</div>
                 <svg>
                   <use xlink:href="./img/sprites.svg#cart"></use>
-                </svg></a>
+                </svg>
+              </button>
               <div class="top-user">
                 <button class="top-user__button color-blue" type="button" data-modal data-action="login">Вход</button>
                 <button class="top-user__button color-blue" type="button" data-modal data-action="register">Регистрация</button>
@@ -3233,7 +3151,7 @@
                         <div class="feature-tile">
                           <div class="feature-tile__inner">
                             <div class="stickers-wrap">
-                              <div class="sticker">Акция</div>
+                              <div class="sticker green">Хит продаж</div>
                             </div>
                             <div class="feature-tile__actions">
                               <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -3259,22 +3177,19 @@
                             <div class="feature-tile__state text-underline color-pink weight-500">Есть в наличии</div>
                             <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                             <div class="feature-price">
-                              <svg>
-                                <use xlink:href="./img/sprites.svg#fire"></use>
-                              </svg>
                               <div class="feature-price__regular">165 399 ₸</div>
-                              <div class="feature-price__old">145 279 ₸</div>
                             </div>
                             <div class="feature-tile__buttons">
-                              <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                              <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                               <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                             </div>
                           </div>
                         </div>
-                        <div class="feature-tile">
+                        <div class="feature-tile feature-tile--off">
                           <div class="feature-tile__inner">
                             <div class="stickers-wrap">
-                              <div class="sticker">Акция</div>
+                              <div class="sticker green">Хит продаж</div>
+                              <div class="sticker red">Акция</div>
                             </div>
                             <div class="feature-tile__actions">
                               <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -3307,15 +3222,15 @@
                               <div class="feature-price__old">145 279 ₸</div>
                             </div>
                             <div class="feature-tile__buttons">
-                              <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                              <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                               <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                             </div>
                           </div>
                         </div>
-                        <div class="feature-tile">
+                        <div class="feature-tile feature-tile--off">
                           <div class="feature-tile__inner">
                             <div class="stickers-wrap">
-                              <div class="sticker">Акция</div>
+                              <div class="sticker red">Акция</div>
                             </div>
                             <div class="feature-tile__actions">
                               <button class="feature-tile__actions-item" type="button" data-tip="add">
@@ -3348,7 +3263,7 @@
                               <div class="feature-price__old">145 279 ₸</div>
                             </div>
                             <div class="feature-tile__buttons">
-                              <button class="bg-blue-main btn-small" type="button" data-modal data-action="add-basket">В корзину</button>
+                              <button class="bg-blue-main btn-small" type="button" data-type="add-basket">В корзину</button>
                               <button class="bg-pink-main btn-small" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                             </div>
                           </div>
@@ -3392,8 +3307,8 @@
                             </div>
                             <div class="font-16 text-underline color-pink weight-500 mb-15">Нет в наличие</div>
                             <div class="product-wide__buttons">
-                              <button class="btn-small bg-blue-main font-15" type="button">В корзину</button>
-                              <button class="btn-small bg-pink-main font-14" type="button">Купить в 1 клик</button>
+                              <button class="btn-small bg-blue-main font-15" type="button" data-type="add-basket">В корзину</button>
+                              <button class="btn-small bg-pink-main font-14" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                             </div>
                             <div class="product-wide__actions">
                               <button class="color-blue" type="button">
@@ -3446,8 +3361,8 @@
                             </div>
                             <div class="font-16 text-underline color-pink weight-500 mb-15">Нет в наличие</div>
                             <div class="product-wide__buttons">
-                              <button class="btn-small bg-blue-main font-15" type="button">В корзину</button>
-                              <button class="btn-small bg-pink-main font-14" type="button">Купить в 1 клик</button>
+                              <button class="btn-small bg-blue-main font-15" type="button" data-type="add-basket">В корзину</button>
+                              <button class="btn-small bg-pink-main font-14" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                             </div>
                             <div class="product-wide__actions">
                               <button class="color-blue" type="button">
@@ -3500,8 +3415,8 @@
                             </div>
                             <div class="font-16 text-underline color-pink weight-500 mb-15">Нет в наличие</div>
                             <div class="product-wide__buttons">
-                              <button class="btn-small bg-blue-main font-15" type="button">В корзину</button>
-                              <button class="btn-small bg-pink-main font-14" type="button">Купить в 1 клик</button>
+                              <button class="btn-small bg-blue-main font-15" type="button" data-type="add-basket">В корзину</button>
+                              <button class="btn-small bg-pink-main font-14" type="button" data-modal data-action="quick-order">Купить в 1 клик</button>
                             </div>
                             <div class="product-wide__actions">
                               <button class="color-blue" type="button">

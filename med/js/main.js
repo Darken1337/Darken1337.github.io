@@ -33,7 +33,7 @@ var menuDropInit = {
 
             openMain.removeClass('active');
 
-            $('[data-dropdown="body-main"]').hide();
+            $('[data-dropdown="body-main"]').hide(0);
 
             var dropToOpen = $(this).children('[data-dropdown="body-main"]');
 
@@ -425,6 +425,14 @@ function checkMenuSticky(){
 
     if(this.window.pageYOffset > headerHeight){
         $('#menu-sticky').removeClass('menu-hidden');
+        if($('#menu-sticky [data-dropdown="open-main"].active').length === 0){
+            $('[data-dropdown="body-main"]').hide(0);
+            $('.overlay').hide(0);
+    
+            $('[data-dropdown="open-main"]').removeClass('active');
+            $('[data-dropdown="open"]').removeClass('active');
+        }
+        
     }else{
         $('#menu-sticky').addClass('menu-hidden');
     }
@@ -440,144 +448,152 @@ $(window).on('scroll', function(){
 
 // tabs init
 
-var tabsController = {
-    lastTab: null,
-    firstTab: null,
-    slideRight: null,
-    slideLeft: null,
-    list: null,
-    wrap: null,
-    showMore: null,
-    step: 100,
-    getStep: function(){
-        return this.step;
-    },
-    slideRightAction: function(){
-        
-        var minus_left = this.getStep(),
-            _this = this;
-
-        if(this.list.width() + parseInt(this.list.css('left')) - this.wrap.width() < this.step){
-            minus_left = this.list.width() + parseInt(this.list.css('left')) - this.wrap.width();
-          }
-          if( this.wrap.width() < this.list.width() + parseInt(this.list.css('left'))){
-            this.list.animate({
-                left: parseInt(this.list.css('left')) - minus_left + 'px'
-            }, 200, function(){
-                if( _this.wrap.width() >= _this.list.width() + parseInt(_this.list.css('left'))){
-                    _this.container.removeClass('has-next');
-                  }
-                  if(parseInt(_this.list.css('left')) < 0){
-                    _this.container.addClass('has-prev');
-                  }
-            })
-          }else{
-            if( this.wrap.width() >= this.list.width() + parseInt(this.list.css('left'))){
-                this.container.removeClass('has-next');
+var tabsController = function(){
+    return {
+        lastTab: null,
+        firstTab: null,
+        slideRight: null,
+        slideLeft: null,
+        list: null,
+        wrap: null,
+        showMore: null,
+        step: 100,
+        getStep: function(){
+            return this.step;
+        },
+        slideRightAction: function(){
+            
+            var minus_left = this.getStep(),
+                _this = this;
+    
+            if(this.list.width() + parseInt(this.list.css('left')) - this.wrap.width() < this.step){
+                minus_left = this.list.width() + parseInt(this.list.css('left')) - this.wrap.width();
               }
-              if(parseInt(this.list.css('left')) < 0){
-                this.container.addClass('has-prev');
+              if( this.wrap.width() < this.list.width() + parseInt(this.list.css('left'))){
+                this.list.animate({
+                    left: parseInt(this.list.css('left')) - minus_left + 'px'
+                }, 200, function(){
+                    if( _this.wrap.width() >= _this.list.width() + parseInt(_this.list.css('left'))){
+                        _this.container.removeClass('has-next');
+                      }
+                      if(parseInt(_this.list.css('left')) < 0){
+                        _this.container.addClass('has-prev');
+                      }
+                })
+              }else{
+                if( this.wrap.width() >= this.list.width() + parseInt(this.list.css('left'))){
+                    this.container.removeClass('has-next');
+                  }
+                  if(parseInt(this.list.css('left')) < 0){
+                    this.container.addClass('has-prev');
+                  }
               }
-          }
-          
-
-    },
-    slideLeftAction: function(){
-
-        var minus_left = -this.getStep(),
-            _this = this;
-
-        if(parseInt(this.list.css('left')) > -this.step){
-            minus_left = parseInt(this.list.css('left'));
-          }
-
-        if(parseInt(this.list.css('left')) < 0){
-            this.list.animate({
-                left: parseInt(this.list.css('left')) - minus_left + 'px'
-            }, 200, function(){
-                _this.container.addClass('has-next');
-                if(parseInt(_this.list.css('left')) >= 0){
-                    _this.container.removeClass('has-prev');
+              
+    
+        },
+        slideLeftAction: function(){
+    
+            var minus_left = -this.getStep(),
+                _this = this;
+    
+            if(parseInt(this.list.css('left')) > -this.step){
+                minus_left = parseInt(this.list.css('left'));
+              }
+    
+            if(parseInt(this.list.css('left')) < 0){
+                this.list.animate({
+                    left: parseInt(this.list.css('left')) - minus_left + 'px'
+                }, 200, function(){
                     _this.container.addClass('has-next');
-                }
-            })
-        }else{
-            if(parseInt(this.list.css('left')) >= 0){
-                this.container.removeClass('has-prev');
-                this.container.addClass('has-next');
-            }
-        }
-        
-    },
-    showMoreAction: function(){
-        if(this.container.attr('data-slides') === 'marks'){
-            this.container.attr('data-slides', '')
-                .addClass('show-all');
-            this.list.css('left','0');
-            this.container.removeClass('has-prev')
-                .removeClass('has-next');
-            this.showMore.html('Скрыть все');
-
-          }else{
-            this.container.attr('data-slides', 'marks')
-                .removeClass('show-all');
-            this.showMore.html('Показать все')
-            if(this.list.width() > this.wrap.width()){
-                this.container.addClass('has-next');
-            }
-          }
-    },
-    init: function(container, step){
-
-        var _this = this;
-
-        this.container = container;
-
-        this.list = container.find('[data-slides="list"]');
-        this.wrap = container.find('[data-slides="wrap"]')
-
-        this.slideRight = container.find('[data-slides="slide-right"]');
-        this.slideLeft = container.find('[data-slides="slide-left"]');
-        this.showMore = container.find('[data-slides="show-more"]');
-
-        if(this.list.width() > this.wrap.width()){
-            this.container.addClass('has-next');
-        }
-
-        if(this.showMore.length > 0){
-            if(this.list.width() > this.wrap.width()){
-                this.showMore.show();
+                    if(parseInt(_this.list.css('left')) >= 0){
+                        _this.container.removeClass('has-prev');
+                        _this.container.addClass('has-next');
+                    }
+                })
             }else{
-                this.showMore.hide();
+                if(parseInt(this.list.css('left')) >= 0){
+                    this.container.removeClass('has-prev');
+                    this.container.addClass('has-next');
+                }
             }
+            
+        },
+        showMoreAction: function(){
+            if(this.container.attr('data-slides') === 'marks'){
+                this.container.attr('data-slides', '')
+                    .addClass('show-all');
+                this.list.css('left','0');
+                this.container.removeClass('has-prev')
+                    .removeClass('has-next');
+                this.showMore.html('Скрыть все');
+    
+              }else{
+                this.container.attr('data-slides', 'marks')
+                    .removeClass('show-all');
+                this.showMore.html('Показать все')
+                if(this.list.width() > this.wrap.width()){
+                    this.container.addClass('has-next');
+                }
+              }
+        },
+        init: function(container, step){
+    
+            var _this = this;
+    
+            this.container = container;
+    
+            this.list = container.find('[data-slides="list"]');
+            this.wrap = container.find('[data-slides="wrap"]')
+    
+            this.slideRight = container.find('[data-slides="slide-right"]');
+            this.slideLeft = container.find('[data-slides="slide-left"]');
+            this.showMore = container.find('[data-slides="show-more"]');
+    
+            if(this.list.width() > this.wrap.width()){
+                this.container.addClass('has-next');
+            }
+
+            if(step){
+                this.step = step;
+            }
+    
+            if(this.showMore.length > 0){
+                if(this.list.width() > this.wrap.width()){
+                    this.showMore.show();
+                }else{
+                    this.showMore.hide();
+                }
+            }
+    
+            this.slideRight.on('click', function(){
+    
+                _this.slideRightAction();
+                
+            })
+    
+            this.slideLeft.on('click', function(){
+    
+                _this.slideLeftAction();
+                
+            })
+    
+            this.showMore.on('click', function(){
+    
+                _this.showMoreAction();
+                
+            })
         }
-
-        if(step){
-            this.step = step;
-        }
-
-        this.slideRight.on('click', function(){
-
-            _this.slideRightAction();
-            
-        })
-
-        this.slideLeft.on('click', function(){
-
-            _this.slideLeftAction();
-            
-        })
-
-        this.showMore.on('click', function(){
-
-            _this.showMoreAction();
-            
-        })
     }
 }
+
+
 $(document).ready(function(){
-    tabsController.init($('[data-slides="marks"]'), 100);
-    tabsController.init($('[data-slides="imgs"]'), 113);
+    var tagsSlider = new tabsController();
+    var imgSlider = new tabsController();
+
+    imgSlider.init($('[data-slides="imgs"]'), 113)
+
+    tagsSlider.init($('[data-slides="marks"]'), 100)
 })
 
 $('[data-search="open"]').on('click', function(){
@@ -606,59 +622,67 @@ $('#close-filter').on('click', function(){
 
 })
 //Scrollable menu
-var menu = $('[data-scroll="item"]'),
-    wrap = menu.parents('[data-scroll="wrap"]'),
-    scrollTop = menu.find('[data-scroll="top"]'),
-    scrollBottom = menu.find('[data-scroll="bottom"]');
+var menu = $('[data-scroll="item"]');
 
-scrollTop.on('click', function(){
+menu.each(function(){
 
-    var scrolledTop = menu.scrollTop();
+    var el = $(this);
 
-    menu.animate({
-        scrollTop: scrolledTop - 39
+    var wrap = el.parents('[data-scroll="wrap"]'),
+        scrollTop = el.find('[data-scroll="top"]'),
+        scrollBottom = el.find('[data-scroll="bottom"]');
+
+    scrollTop.on('click', function(){
+
+        var scrolledTop = el.scrollTop();
+
+        el.animate({
+            scrollTop: scrolledTop - 39
+        })
+
+        checkScroll()
+        
     })
 
-    checkScroll()
-    
-})
-
-menu.on('scroll', function(){
-    checkScroll()
-})
-
-scrollBottom.on('click', function(){
-
-    var scrolledTop = menu.scrollTop();
-
-    menu.animate({
-        scrollTop: scrolledTop + 39
+    el.on('scroll', function(){
+        checkScroll()
     })
-    
+
+    scrollBottom.on('click', function(){
+
+        var scrolledTop = el.scrollTop();
+
+        el.animate({
+            scrollTop: scrolledTop + 39
+        })
+        
+        checkScroll()
+        
+    })
+
+
     checkScroll()
-    
+
+    function checkScroll(){
+        var scrolled = el.scrollTop();
+
+        if(scrolled === 0){
+            scrollTop.hide()
+        }else{
+            scrollTop.show()
+        }
+        
+        if(wrap.height() + scrolled === el.prop('scrollHeight')){
+            scrollBottom.hide()
+        }else{
+            scrollBottom.show()
+        }
+    }
+
 })
-
-
-checkScroll()
-
-function checkScroll(){
-    var scrolled = menu.scrollTop();
-
-    if(scrolled === 0){
-        scrollTop.hide()
-    }else{
-        scrollTop.show()
-    }
     
-    if(wrap.height() + scrolled === menu.prop('scrollHeight')){
-        scrollBottom.hide()
-    }else{
-        scrollBottom.show()
-    }
-}
 
-$('[data-action="add-basket"]').on('click', function(){
+$('[data-type="add-basket"]').on('click', function(){
 
     if($(this).hasClass('active')){
         $(this).removeClass('active');
