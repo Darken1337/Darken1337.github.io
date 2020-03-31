@@ -79,61 +79,215 @@
                     </svg><span>Тесты</span></a></li>
               </ul>
             </div>
-                <div class="post-single">
-                  <div class="post-single__header">
-                    <div class="post-category">
-                      <svg>
-                        <use xlink:href="./img/sprites.svg#news"></use>
-                      </svg><span>Новости</span>
-                    </div>
-                    <div class="post-author">
-                      <div class="post-author__img"><img src="./img/author-1.png" alt=""></div>
-                      <div class="post-author__name">Павел П.</div>
-                    </div>
-                    <div class="post-date">
-                      <time>Сегодня в 11:47</time>
-                    </div>
-                    <div class="watch">
-                      <svg>
-                        <use xlink:href="./img/sprites.svg#eye"></use>
-                      </svg><span>72</span>
-                    </div>
-                    <div class="post-tags">
-                      <div class="post-tags__item">
+            <div class="latest">
+              <div class="latest__header"> 
+                <div class="latest__date"> 
+                  <time>10 марта, вторник</time>
+                </div>
+                <button class="latest__close active" type="button" id="show-latest">
+                  <svg>
+                    <use xlink:href="./img/sprites.svg#arrow-top"></use>
+                  </svg><span>свернуть</span>
+                </button>
+              </div>
+              <div class="latest__body" id="latest-body">
+                            <div class="post-prev">
+                              <div class="post-prev__time">
+                                <time>11:35</time>
+                              </div>
+                              <div class="post-prev__title"> <span>Онлайн-кинотеатр Premier открыл бесплатный доступ к собственному контенту на фоне массового карантина</span><a class="comments" href="">
+                                  <svg>
+                                    <use xlink:href="./img/sprites.svg#comment"></use>
+                                  </svg><span>12</span></a></div>
+                            </div>
+                            <div class="post-prev">
+                              <div class="post-prev__time">
+                                <time>11:35</time>
+                              </div>
+                              <div class="post-prev__title"> <span>Американец скупил 17700 санитайзеров, хотел заработать на панике и получил бан от Amazon за спекуляцию</span><a class="comments" href="">
+                                  <svg>
+                                    <use xlink:href="./img/sprites.svg#comment"></use>
+                                  </svg><span>188</span></a></div>
+                            </div>
+                            <div class="post-prev">
+                              <div class="post-prev__time">
+                                <time>11:35</time>
+                              </div>
+                              <div class="post-prev__title"> <span>«Додо пицца» пообещала доставлять санитайзеры по себестоимости — после того, как найдёт поставщика</span><a class="comments" href="">
+                                  <svg>
+                                    <use xlink:href="./img/sprites.svg#comment"></use>
+                                  </svg><span>55</span></a></div>
+                            </div>
+                            <div class="post-prev">
+                              <div class="post-prev__time">
+                                <time>11:35</time>
+                              </div>
+                              <div class="post-prev__title"> <span>WABetaInfo: WhatsApp запустит автоматическое удаление сообщений</span><a class="comments" href="">
+                                  <svg>
+                                    <use xlink:href="./img/sprites.svg#comment"></use>
+                                  </svg><span>26</span></a></div>
+                            </div>
+                <button class="more-latest" type="button"><span>Показать еще</span>
+                  <svg>
+                    <use xlink:href="./img/sprites.svg#arrow-top"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="banner">
+              <div class="banner__image"><img src="./img/banner-img.png" alt=""></div>
+              <div class="banner__content">
+                <h2 class="title-2">Бесплатный мини курс по инвестированию</h2>
+                <p class="banner__text">Напиши кодовое слово “Хочу курс” в удобный мессенджер и получи 1-ый урок абсолютно бесплатно</p>
+                <ul class="banner__socials">
+                  <li><a href=""><img src="./img/svg/telegram.svg" alt=""></a></li>
+                  <li><a href=""><img src="./img/svg/whatsapp.svg" alt=""></a></li>
+                  <li><a href=""><img src="./img/svg/vk.svg" alt=""></a></li>
+                  <li><a href=""><img src="./img/svg/facebook.svg" alt=""></a></li>
+                  <li><a href=""><img src="./img/svg/viber.svg" alt=""></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="newsfeed">
+                  <div class="post-tile">
+                    <div class="post-tile__header">
+                      <div class="post-date">
+                        <time>Сегодня в 11:47</time>
+                      </div>
+                      <div class="watch">
                         <svg>
-                          <use xlink:href="./img/sprites.svg#hash"></use>
-                        </svg><span>коронавирус</span>
+                          <use xlink:href="./img/sprites.svg#eye"></use>
+                        </svg><span>72</span>
+                      </div>
+                      <div class="post-tags">
+                        <div class="post-tags__item">
+                          <svg>
+                            <use xlink:href="./img/sprites.svg#hash"></use>
+                          </svg><span>коронавирус</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post-tile__body">
+                      <h2 class="title-2">Что из-за коронавируса сделать работодателю. И на сколько оштрафуют, если не сделать</h2>
+                      <div class="post-tile__img"><img src="./img/post-1.png" alt=""></div>
+                      <div class="post-tile__text">
+                        <p>Давайте по некоторым сланцевым вопросам еще раз тезисно сформулируем.</p>
+                      </div>
+                    </div>
+                    <div class="post-tile__footer">
+                      <div class="comments">
+                        <svg>
+                          <use xlink:href="./img/sprites.svg#comment"></use>
+                        </svg><span>Комментировать</span>
                       </div>
                     </div>
                   </div>
-                  <div class="post-single__body">
-                    <h2 class="title-2">Что из-за коронавируса сделать работодателю. И на сколько оштрафуют, если не сделать</h2>
-                    <div class="post-single__img"><img src="./img/post-1.png" alt=""></div>
-                    <div class="post-single__text">
-                      <p><b>Как распознать коронавирус у сотрудника. Какие меры рекомендует <br>(сильно рекомендует) Роспотребнадзор и какими санкциями он грозит.</b></p>
-                      <p>&nbsp;</p>
-                      <p>Минздрав предупреждает, что специфические средства профилактики коронавируса не разработаны. Но в целях воспрепятствования передачи возбудителя инфекции рекомендуется мыть руки, надевать медицинские маски, проводить дезинфекцию, обеззараживать воздух. Также сотрудники компаний могут орошать слизистые носа изотоническим раствором хлорида натрия, использовать лекарства для местного применения, имеющие барьерные функции.</p>
-                      <p>&nbsp;</p>
-                      <p class="title-2">Как проводить дезинфекцию</p>
-                      <p>&nbsp;</p>
-                      <p>По данным Роспотребнадзора, коронавирусы имеют низкую устойчивость <br>к дезинфицирующим средствам. Поэтому для профилактики и борьбы <br>с инфекциями следует проводить профилактическую и очаговую (текущую, заключительную) дезинфекцию. Использовать можно хлорактивные, кислородактивные (перекись водорода в концентрации не менее 3,0 процента), катионные поверхностно-активные вещества (КПАВ) (в концентрации не менее 0,5 процента), третичные амины (в концентрации не менее 0,05 процента), полимерные производные гуанидина (в концентрации не менее 0,2 процента), <br>а также спиртовые кожные антисептики и дезинфицирующие средства</p>
-                      <p>&nbsp;</p>
-                      <p><b>Обеззараживать нужно все поверхности в помещениях, предназначенных <br>для пребывания людей.</b></p>
-                      <p>&nbsp;</p>
-                      <p>Профилактическую дезинфекцию следует проводить немедленно, как только появилась угроза заболевания. Она включает личную гигиену — частое мытье рук с мылом или протирание их кожными антисептиками, регулярное проветривание помещений, влажную уборку. Прекращать такие мероприятия рекомендуется только через 5 дней после ликвидации угрозы.</p>
+                  <div class="post-tile">
+                    <div class="post-tile__header">
+                      <div class="post-author">
+                        <div class="post-author__img"><img src="./img/author-1.png" alt=""></div>
+                        <div class="post-author__name">Павел П.</div>
+                      </div>
+                      <div class="post-date">
+                        <time>Сегодня в 11:47</time>
+                      </div>
+                      <div class="watch">
+                        <svg>
+                          <use xlink:href="./img/sprites.svg#eye"></use>
+                        </svg><span>72</span>
+                      </div>
+                      <div class="post-tags">
+                        <div class="post-tags__item">
+                          <svg>
+                            <use xlink:href="./img/sprites.svg#hash"></use>
+                          </svg><span>коронавирус</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post-tile__body">
+                      <h2 class="title-2">Как сланцевая нефтедобычи влияет на финансовый рынок. 7 тезисов</h2>
+                      <div class="post-tile__img"><img src="./img/post-2.png" alt=""></div>
+                      <div class="post-tile__text">
+                        <p>Давайте по некоторым сланцевым вопросам еще раз тезисно сформулируем.</p>
+                      </div>
+                    </div>
+                    <div class="post-tile__footer">
+                      <div class="comments">
+                        <svg>
+                          <use xlink:href="./img/sprites.svg#comment"></use>
+                        </svg><span>Комментировать</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="post-single__footer">
-                    <ul class="socials">
-                      <li><a href=""><img src="./img/svg/telegram.svg" alt=""></a></li>
-                      <li><a href=""><img src="./img/svg/whatsapp.svg" alt=""></a></li>
-                      <li><a href=""><img src="./img/svg/vk.svg" alt=""></a></li>
-                      <li><a href=""><img src="./img/svg/facebook.svg" alt=""></a></li>
-                      <li><a href=""><img src="./img/svg/viber.svg" alt=""></a></li>
-                      <li class="share"><a href=""><img src="./img/svg/share.svg" alt=""></a></li>
-                    </ul>
+              <div class="event-wrap">
+                <div class="event-upper">
+                  <svg>
+                    <use xlink:href="./img/sprites.svg#clip"></use>
+                  </svg><span>Реклама</span>
+                </div>
+                <div class="event" style="background-image: url(./img/event-bg.png)">
+                  <div class="event__date">
+                    <time>16 Март 2020</time>
                   </div>
-                </div><img src="./img/dummy.png" alt="">
+                  <div class="event__tag">
+                    <svg>
+                      <use xlink:href="./img/sprites.svg#hash"></use>
+                    </svg><span>семинары</span>
+                  </div>
+                  <h2 class="title-2">Новые эффективные методики для защиты активов <br>предприятия в обстановке внутренних<br> и внешних угроз</h2>
+                  <div class="event__info">
+                    <div class="event__geo">
+                      <svg>
+                        <use xlink:href="./img/sprites.svg#geo"></use>
+                      </svg><span>Москва</span>
+                    </div>
+                    <time class="event__time">
+                      <svg>
+                        <use xlink:href="./img/sprites.svg#time"></use>
+                      </svg><span>С 10:00 до 17:00</span>
+                    </time>
+                  </div>
+                  <button class="event__button" type="button">Оставить заявку</button>
+                </div>
+              </div>
+                  <div class="post-tile">
+                    <div class="post-tile__header">
+                      <div class="post-author">
+                        <div class="post-author__img"><img src="./img/author-2.png" alt=""></div>
+                        <div class="post-author__name">Мультибухгалтер</div>
+                      </div>
+                      <div class="post-date">
+                        <time>Сегодня в 11:47</time>
+                      </div>
+                      <div class="watch">
+                        <svg>
+                          <use xlink:href="./img/sprites.svg#eye"></use>
+                        </svg><span>72</span>
+                      </div>
+                      <div class="post-tags">
+                        <div class="post-tags__item">
+                          <svg>
+                            <use xlink:href="./img/sprites.svg#hash"></use>
+                          </svg><span>отмена ЕНВД</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post-tile__body">
+                      <h2 class="title-2">Как жить после отмены ЕНВД. Завтра вы об этом узнаете</h2>
+                      <div class="post-tile__img"><img src="./img/post-2.png" alt=""></div>
+                      <div class="post-tile__text">
+                        <p>Давайте по некоторым сланцевым вопросам еще раз тезисно сформулируем.</p>
+                      </div>
+                    </div>
+                    <div class="post-tile__footer">
+                      <div class="comments">
+                        <svg>
+                          <use xlink:href="./img/sprites.svg#comment"></use>
+                        </svg><span>Комментировать</span>
+                      </div>
+                    </div>
+                  </div>
+            </div>
           </main>
           <aside class="aside">
             <div class="movement" style="background-image: url(../img/movement.png)">

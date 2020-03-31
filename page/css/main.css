@@ -469,8 +469,10 @@ img {
     -ms-flex-align: center;
     align-items: center;
     overflow: auto;
-    -ms-overflow-style: none;
-    margin-right: 52px; }
+    -ms-overflow-style: none; }
+    @media (max-width: 1024px) {
+      .menu-category__list {
+        margin-right: 52px; } }
     .menu-category__list::-webkit-scrollbar {
       display: none; }
     .menu-category__list > *:not(:last-child) {

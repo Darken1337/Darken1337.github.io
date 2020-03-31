@@ -62,5 +62,18 @@ jQuery(document).ready(function($){
             })
         
     })
+
+    var iframe = document.querySelector('.podcast iframe');
+
+    iframe.querySelector('.container_J7uAK').style.display = 'none !important'
+
+    
+    /* .container_J7uAK{
+        display: none !important;
+    }
+    
+    .list_2GPby{
+        display: none !important;
+    } */
 })
 
