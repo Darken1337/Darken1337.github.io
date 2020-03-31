@@ -564,8 +564,9 @@ input[type="submit"].bg-pink-main:active {
         display: block; }
   .radio__box {
     border: 1px solid #808080;
-    border-radius: 7px;
+    border-radius: 50%;
     width: 16px;
+    min-width: 16px;
     height: 16px;
     margin-right: 14px;
     position: relative;
