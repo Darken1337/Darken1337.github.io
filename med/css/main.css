@@ -3586,12 +3586,13 @@ input[type="submit"].bg-pink-main:active {
     .checkout-radios {
       padding-left: 0; }
       .checkout-radios .radio__text {
-        font-size: 14px;
-        max-width: 40%; }
+        font-size: 14px; }
       .checkout-radios .radio__price {
         font-size: 14px; }
         .checkout-radios .radio__price.active {
           font-size: 16px; } }
+  .checkout-radios--shipping .radio__text {
+    max-width: 40%; }
   .checkout-radios > *:not(:last-child) {
     margin-bottom: 18px; }
 
