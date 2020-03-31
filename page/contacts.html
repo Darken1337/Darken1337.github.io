@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700|Fira+Sans+Condensed|Fira+Mono:500&display=swap&subset=cyrillic" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Контакты</title>
+  </head>
+  <body>
+    <div class="content">
+      <header id="s-header">
+        <div class="container">
+          <nav class="navigation">
+            <div class="logo"><img src="./img/svg/logo.svg" alt="Логотип"></div>
+            <ul class="menu-main" id="menu-main">
+              <li><a href="">Платные курсы</a></li>
+              <li><a href="">Книга</a></li>
+              <li><a href="">Контакты</a></li>
+            </ul>
+            <button class="hamburger" type="button" id="open-menu"><span></span><span></span><span></span></button>
+            <button class="search-icon" type="button" id="open-search">
+              <svg>
+                <use xlink:href="./img/sprites.svg#search"></use>
+              </svg>
+            </button>
+            <div class="search-window" id="search-block">
+              <div class="search-window__input">
+                <input type="search" placeholder="Найти...">
+                <div class="search-window__icon">
+                  <svg>
+                    <use xlink:href="./img/sprites.svg#search"></use>
+                  </svg>
+                </div>
+              </div>
+              <input class="search-window__button button-white" type="submit" value="Найти">
+              <button class="search-window__close" type="button" id="close-search">
+                <svg>
+                  <use xlink:href="./img/sprites.svg#cross"></use>
+                </svg>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div class="container">
+        <div class="content__inner">
+          <main class="main">
+            <div class="menu-category" id="menu-category">
+              <button class="menu-category__button" type="button" id="scroll-left">
+                <svg>
+                  <use xlink:href="./img/sprites.svg#control"></use>
+                </svg>
+              </button>
+              <ul class="menu-category__list" id="menu-category-list">
+                <li><a class="menu-category__link active" href="">
+                    <svg>
+                      <use xlink:href="./img/sprites.svg#news"></use>
+                    </svg><span>Новости</span></a></li>
+                <li><a class="menu-category__link" href="">
+                    <svg>
+                      <use xlink:href="./img/sprites.svg#interview"></use>
+                    </svg><span>Интервью</span></a></li>
+                <li><a class="menu-category__link" href="">
+                    <svg>
+                      <use xlink:href="./img/sprites.svg#opinion"></use>
+                    </svg><span>Экспертное мнение</span></a></li>
+                <li><a class="menu-category__link" href="">
+                    <svg>
+                      <use xlink:href="./img/sprites.svg#video"></use>
+                    </svg><span>Видео</span></a></li>
+                <li><a class="menu-category__link" href="">
+                    <svg>
+                      <use xlink:href="./img/sprites.svg#story"></use>
+                    </svg><span>Сторис</span></a></li>
+                <li><a class="menu-category__link" href="">
+                    <svg>
+                      <use xlink:href="./img/sprites.svg#test"></use>
+                    </svg><span>Тесты</span></a></li>
+              </ul>
+            </div>
+            <div class="contacts">
+              <h2 class="title-2">
+                <svg>
+                  <use xlink:href="./img/sprites.svg#phone"></use>
+                </svg><span>Контакты</span>
+              </h2>
+              <div class="contacts__text"> 
+                <p>Я открыт к сотрудничеству. Люблю общаться с людьми и перенимать их опыт. Интересно брать интервью у обычных людей и узнавать их секреты инвестирования. Если вам интересно поделиться своей историей и увидеть ее на канале — буду рад пообщаться.</p>
+              </div>
+              <div class="contacts__text">
+                <p class="contacts__text-title"><b>Так же можете мне писать по вопросам, связанных с этим сайтом:</b></p>
+                <p>&nbsp;</p>
+                <p>— Нашли ошибку и она вас раздражает ? Пишите — исправлю</p>
+                <p>— Есть предложения по развитию сайта ? Пишите — обсудим</p>
+                <p>— Хотите оказать мне любую помощь ?  Пишите — поработаем вместе   </p>
+              </div>
+              <div class="contacts__text email">
+                <p>Пишите на почту: <a href="mailto:admin@lemonfortea.ru"><b>admin@lemonfortea.ru</b></a></p>
+              </div>
+              <div class="contacts__text">
+                <p>Ну и конечно подписывайтесь на мой канал в телеграмме: </p>
+                <p><a><u>«Лимон на чай»</u></a>. Стараюсь делать только качественный контент.</p>
+              </div>
+              <div class="contacts-info">
+                <div class="contacts-info__title"><b>Юридическая информация</b></div>
+                <div class="contacts-info__text">ИП Матвеев Дмитрий Вадимович</div>
+                <div class="contacts-info__item">ИНН 470422184305</div>
+                <div class="contacts-info__item">ОГРН 319470400079579</div>
+              </div><a class="contacts__link" href="">Договор оферты</a>
+              <div class="contacts__price">
+                <div class="contacts__price-title">Стоимость курсов</div>
+                <p>Курс с годовой поддержкой стоит <b>от 30 000 до 70 000 рублей</b>,в зависимости от персонального бонуса участника. Цена согласовывается перед оплатой</p>
+              </div>
+            </div>
+          </main>
+          <aside class="aside">
+            <div class="movement" style="background-image: url(../img/movement.png)">
+              <div class="movement__inner">
+                <div class="movement__title">Движение «Лимон на чай» — инвестирование для каждого</div><a class="movement__button" href=""><span>Подробнее</span>
+                  <svg>
+                    <use xlink:href="./img/sprites.svg#arrow-right-long"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <div class="popular-posts">
+              <div class="popular-posts__header">
+                <svg>
+                  <use xlink:href="./img/sprites.svg#star"></use>
+                </svg><span>Популярные публикации</span>
+              </div>
+              <div class="popular-posts__body">
+                            <div class="popular-post">
+                              <h2 class="popular-post__title">Всё. Малому бизнесу хана. Пессимистичный, но честный прогноз</h2>
+                              <div class="popular-post__footer">
+                                <div class="comments">
+                                  <svg>
+                                    <use xlink:href="./img/sprites.svg#comment"></use>
+                                  </svg><span>55</span>
+                                </div>
+                                <div class="watch">
+                                  <svg>
+                                    <use xlink:href="./img/sprites.svg#eye"></use>
+                                  </svg><span>72</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="popular-post">
+                              <h2 class="popular-post__title">Всё. Малому бизнесу хана. Пессимистичный, но честный прогноз</h2>
+                              <div class="popular-post__footer">
+                                <div class="comments">
+                                  <svg>
+                                    <use xlink:href="./img/sprites.svg#comment"></use>
+                                  </svg><span>55</span>
+                                </div>
+                                <div class="watch">
+                                  <svg>
+                                    <use xlink:href="./img/sprites.svg#eye"></use>
+                                  </svg><span>72</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="popular-post">
+                              <h2 class="popular-post__title">Всё. Малому бизнесу хана. Пессимистичный, но честный прогноз</h2>
+                              <div class="popular-post__footer">
+                                <div class="comments">
+                                  <svg>
+                                    <use xlink:href="./img/sprites.svg#comment"></use>
+                                  </svg><span>55</span>
+                                </div>
+                                <div class="watch">
+                                  <svg>
+                                    <use xlink:href="./img/sprites.svg#eye"></use>
+                                  </svg><span>72</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="popular-post">
+                              <h2 class="popular-post__title">Всё. Малому бизнесу хана. Пессимистичный, но честный прогноз</h2>
+                              <div class="popular-post__footer">
+                                <div class="comments">
+                                  <svg>
+                                    <use xlink:href="./img/sprites.svg#comment"></use>
+                                  </svg><span>55</span>
+                                </div>
+                                <div class="watch">
+                                  <svg>
+                                    <use xlink:href="./img/sprites.svg#eye"></use>
+                                  </svg><span>72</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="popular-post">
+                              <h2 class="popular-post__title">Всё. Малому бизнесу хана. Пессимистичный, но честный прогноз</h2>
+                              <div class="popular-post__footer">
+                                <div class="comments">
+                                  <svg>
+                                    <use xlink:href="./img/sprites.svg#comment"></use>
+                                  </svg><span>55</span>
+                                </div>
+                                <div class="watch">
+                                  <svg>
+                                    <use xlink:href="./img/sprites.svg#eye"></use>
+                                  </svg><span>72</span>
+                                </div>
+                              </div>
+                            </div>
+              </div>
+            </div>
+            <div class="podcast">
+              <div class="podcast__header"><img src="./img/svg/podcast.svg" alt="Подкаст"><span>Наш подкаст</span></div>
+              <div class="podcast__body">
+                            <div class="audio">
+                              <div class="audio__prev" style="background-image: url(./img/podcast.png)">
+                                <div class="audio__controls">
+                                  <div class="audio-icon play">
+                                    <svg>
+                                      <use xlink:href="./img/sprites.svg#play"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="audio__content">
+                                <div class="audio__title">UNO</div>
+                                <div class="audio__info">
+                                  <div class="audio__author">Little big</div>
+                                  <div class="autdio__time">2:40</div>
+                                </div>
+                                <div class="audio-progress">
+                                  <button class="audio-progress__button" type="button"></button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="audio">
+                              <div class="audio__prev" style="background-image: url(./img/podcast.png)">
+                                <div class="audio__controls">
+                                  <div class="audio-icon play">
+                                    <svg>
+                                      <use xlink:href="./img/sprites.svg#play"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="audio__content">
+                                <div class="audio__title">UNO</div>
+                                <div class="audio__info">
+                                  <div class="audio__author">Little big</div>
+                                  <div class="autdio__time">2:40</div>
+                                </div>
+                                <div class="audio-progress">
+                                  <button class="audio-progress__button" type="button"></button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="audio">
+                              <div class="audio__prev" style="background-image: url(./img/podcast.png)">
+                                <div class="audio__controls">
+                                  <div class="audio-icon play">
+                                    <svg>
+                                      <use xlink:href="./img/sprites.svg#play"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="audio__content">
+                                <div class="audio__title">UNO</div>
+                                <div class="audio__info">
+                                  <div class="audio__author">Little big</div>
+                                  <div class="autdio__time">2:40</div>
+                                </div>
+                                <div class="audio-progress">
+                                  <button class="audio-progress__button" type="button"></button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="audio">
+                              <div class="audio__prev" style="background-image: url(./img/podcast.png)">
+                                <div class="audio__controls">
+                                  <div class="audio-icon play">
+                                    <svg>
+                                      <use xlink:href="./img/sprites.svg#play"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="audio__content">
+                                <div class="audio__title">UNO</div>
+                                <div class="audio__info">
+                                  <div class="audio__author">Little big</div>
+                                  <div class="autdio__time">2:40</div>
+                                </div>
+                                <div class="audio-progress">
+                                  <button class="audio-progress__button" type="button"></button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="audio">
+                              <div class="audio__prev" style="background-image: url(./img/podcast.png)">
+                                <div class="audio__controls">
+                                  <div class="audio-icon play">
+                                    <svg>
+                                      <use xlink:href="./img/sprites.svg#play"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="audio__content">
+                                <div class="audio__title">UNO</div>
+                                <div class="audio__info">
+                                  <div class="audio__author">Little big</div>
+                                  <div class="autdio__time">2:40</div>
+                                </div>
+                                <div class="audio-progress">
+                                  <button class="audio-progress__button" type="button"></button>
+                                </div>
+                              </div>
+                            </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <footer class="footer--black" id="s-footer">
+        <div class="container">
+          <div class="footer">
+                  <div class="footer-menu">
+                    <div class="title-2">Лимон на чай</div>
+                    <ul class="footer-menu__list">
+                      <li><a href="#">О движении</a></li>
+                      <li><a href="#">Интервью</a></li>
+                      <li><a href="#">Экспертное мнение</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-menu">
+                    <div class="title-2">Информация</div>
+                    <ul class="footer-menu__list">
+                      <li><a href="#">Блог</a></li>
+                      <li><a href="#">Новости</a></li>
+                      <li><a href="#">Видео</a></li>
+                      <li><a href="#">Сторис</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-menu">
+                    <div class="title-2">Развлечения</div>
+                    <ul class="footer-menu__list">
+                      <li><a href="#">Наш подскаст</a></li>
+                      <li><a href="#">Тесты</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-menu">
+                    <div class="title-2">Реклама</div>
+                    <ul class="footer-menu__list">
+                      <li><a href="#">Семинары</a></li>
+                      <li><a href="#">Вебинары</a></li>
+                      <li><a href="#">Курсы</a></li>
+                    </ul>
+                  </div>
+            <div class="footer-menu">
+              <div class="title-2">Яндекс метрика</div>
+              <div class="footer-menu__img"><img src="./img/yandex.png" alt="Яндекс метрика"></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="./libs/js/svg4everybody.min.js"></script>
+  <script src="./js/main.js"></script>
+</html>
