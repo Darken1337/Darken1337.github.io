@@ -1028,6 +1028,9 @@ img {
     padding: 33px 0; }
     @media (max-width: 767px) {
       .banner__content {
+        padding: 0 } }
+    @media (max-width: 767px) {
+      .banner__content {
         margin-left: 125px; } }
     .banner__content .title-2 {
       margin-bottom: 10px; }
