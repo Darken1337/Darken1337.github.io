@@ -3589,7 +3589,8 @@ input[type="submit"].bg-pink-main:active {
       .checkout-radios .radio__text {
         font-size: 14px; }
       .checkout-radios .radio__price {
-        font-size: 14px; }
+        font-size: 14px;
+        white-space: nowrap; }
         .checkout-radios .radio__price.active {
           font-size: 16px; } }
   .checkout-radios--shipping .radio__text {
