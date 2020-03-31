@@ -133,7 +133,8 @@
                       <li class="share"><a href=""><img src="./img/svg/share.svg" alt=""></a></li>
                     </ul>
                   </div>
-                </div><img src="./img/dummy.png" alt="">
+                </div>
+            <div class="tolstoycomments-feed"></div>
           </main>
           <aside class="aside">
             <div class="movement" style="background-image: url(./img/movement.png)">
@@ -278,9 +279,17 @@
         </div>
       </div>
     </footer>
+    <script>!(function(w,d,s,l,x){w[l]=w[l]||[];var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=!0;j.src='//web.tolstoycomments.com/sitejs/app.js?i='+l+'&x='+x+'&t='+(new Date().getTime());f.parentNode.insertBefore(j,f)})(window,document,'script','tolstoycomments','1556'); window.tolstoycomments.config = { main: true }; </script>
+
+    <script>
+      window.tolstoycomments.config = {
+        comment_class: 'tolstoycomments-cc',
+        desktop_class: 'tolstoycomments-feed',
+      };
+    </script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./libs/js/svg4everybody.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
-  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="./libs/js/svg4everybody.min.js"></script>
-  <script src="./js/main.js"></script>
 </html>

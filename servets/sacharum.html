@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700|Fira+Sans+Condensed|Fira+Mono:500&display=swap&subset=cyrillic" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Сахар в стиках с Вашим логотипом</title>
+  </head>
+  <body>
+    <div class="modal-window product-prev-wrap">
+      <button class="modal-window__close" type="button">
+        <svg>
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__body">
+        <div class="modal-window__row modal-window__row--info">
+          <div class="product-gallery">
+            <div class="product-gallery__main"><img src="./img/category.png" alt=""></div>
+            <div class="product-gallery__items">
+              <div class="product-gallery__tab active"><img src="./img/category.png" alt=""></div>
+              <div class="product-gallery__tab"><img src="./img/category.png" alt=""></div>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-info__title">Влажная салфетка в индивидуальной упаковке 60*60 мм, запах клубника</h3>
+            <div class="product-info__text">Цены указаны с учетом НДС</div>
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th class="price-table__th">Фасовка 100 шт./уп.(1500 шт./кор.)</th>
+                  <th class="price-table__th">Цена за 1 шт.</th>
+                  <th class="price-table__th">Фасовка 2000 шт./кор.</th>
+                  <th class="price-table__th">Цена за 1 шт.</th>
+                </tr>
+              </thead>
+              <tbody class="price-table__body">
+                <tr class="price-table__row">
+                  <td class="price-table__td">от 1 500 до 4 500</td>
+                  <td class="price-table__td">1,08 руб./шт.</td>
+                  <td class="price-table__td">от 2 000 шт</td>
+                  <td class="price-table__td">1 руб./шт.</td>
+                </tr>
+                <tr class="price-table__row">
+                  <td class="price-table__td">от 1 500 до 4 500</td>
+                  <td class="price-table__td">1,08 руб./шт.</td>
+                  <td class="price-table__td">от 2 000 шт</td>
+                  <td class="price-table__td">1 руб./шт.</td>
+                </tr>
+                <tr class="price-table__row">
+                  <td class="price-table__td">от 1 500 до 4 500</td>
+                  <td class="price-table__td">1,08 руб./шт.</td>
+                  <td class="price-table__td">от 2 000 шт</td>
+                  <td class="price-table__td">1 руб./шт.</td>
+                </tr>
+                <tr class="price-table__row">
+                  <td class="price-table__td">от 1 500 до 4 500</td>
+                  <td class="price-table__td">1,08 руб./шт.</td>
+                  <td class="price-table__td">от 2 000 шт</td>
+                  <td class="price-table__td">1 руб./шт.</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="product-order">
+              <fieldset class="product-order__options">
+                <div class="product-order__title">Фасовка:</div>
+                <div class="product-option">
+                  <div class="product-option__content">
+                    <label class="checkbox"><span class="checkbox__text">100 шт./уп. (1500 шт./кор.)</span>
+                      <input type="radio" name="quantity"><span class="checkbox__box">
+                        <svg>
+                          <use xlink:href="./img/sprites.svg#check-icon"></use>
+                        </svg></span>
+                    </label>
+                    <div class="product-quantity"> 
+                      <button class="product-quantity__minus" data-count="minus"><span></span></button>
+                      <input type="text" onkeyup="this.style.width = ((this.value.length + 1) * 8) + 'px';" value="1" data-count="input">
+                      <button class="product-quantity__plus" data-count="plus"><span></span><span></span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-option" data-count="wrap">
+                  <div class="product-option__content">
+                    <label class="checkbox"><span class="checkbox__text">2000 шт./кор.</span>
+                      <input type="radio" name="quantity"><span class="checkbox__box">
+                        <svg>
+                          <use xlink:href="./img/sprites.svg#check-icon"></use>
+                        </svg></span>
+                    </label>
+                    <div class="product-quantity"> 
+                      <button class="product-quantity__minus" data-count="minus"><span></span></button>
+                      <input type="text" onkeyup="this.style.width = ((this.value.length + 1) * 8) + 'px';" value="1" data-count="input">
+                      <button class="product-quantity__plus" data-count="plus"><span></span><span></span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-order__info">Минимальный заказ: 1 коробка</div>
+              </fieldset>
+              <div class="product-cart">
+                <button class="tile__button" type="button"><span>В корзину</span>
+                  <svg class="icon-33">
+                    <use xlink:href="./img/sprites.svg#cart"></use>
+                  </svg>
+                </button>
+                <div class="product-cart__text"> 
+                  <p>Цена: <span class="weight-600 font-montserat">1,08</span> руб./шт.</p>
+                </div>
+                <div class="product-cart__text"> 
+                  <p>Общая стоимость:<span class="weight-600 font-montserat">1620</span> руб</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-window__row modal-window__row--about">
+          <div class="product-about">
+            <div class="product-about__title">ХАРАКТЕРИСТИКИ</div>
+            <div class="product-about__table">
+              <div class="product-about__table-row"><span class="product-about__headliner">Размер упаковки:</span><span>60*60 мм</span></div>
+              <div class="product-about__table-row"><span class="product-about__headliner">Материал упаковки:</span><span>Триплекс</span></div>
+              <div class="product-about__table-row"><span class="product-about__headliner">Размер вложения (салфетка):</span><span>135*135 мм</span></div>
+              <div class="product-about__table-row"><span class="product-about__headliner">Материал вложения (упаковки):</span><span>Спанлейс</span></div>
+              <div class="product-about__table-row"><span class="product-about__headliner">Вес коробки:</span></div>
+              <div class="product-about__table-row"><span class="product-about__headliner">Габариты</span></div>
+              <div class="product-about__table-row"><span class="product-about__headliner">Особенности:</span></div>
+              <div class="product-about__table-row"><span class="product-about__headliner">Срок годности:</span></div>
+            </div>
+          </div>
+          <div class="product-desc">
+            <div class="product-desc__title">ОПИСАНИЕ</div>
+            <p class="product-desc__text">Для производства влажных салфеток в индивидуальной упаковке используется только качественное сырье. Упаковка саше изготовлена из трехслойного материала - триплекса. Данный материал не пропускает влагу и не рвется, что способствует сохранению  заявленных качеств влажной салфетки на протяжении всего срока годности. Материал салфетки - спанлейс. Это нетканный текстилеподобный материал, очень приятный на ощупь,  в сочетании с пропитывающей композицией очень хорошо удаляет загрязнения с кожи тела.</p>
+          </div>
+        </div>
+        <div class="modal-window__row">
+          <div class="recommended">
+            <h3 class="title-tertiary">Возможно Вас так же заинтересует</h3>
+            <div class="recommended__items">
+                  <div class="recommended-tile">
+                    <div class="recommended-tile__img"><img src="./img/sachar.png" alt=""></div>
+                    <h3 class="recommended-tile__title">Влажные салфетки в индивидуальной упаковке для снятия макияжа во «флоу-пак», 5 шт./уп.</h3><a class="recommended-tile__button" href="">Перейти</a>
+                  </div>
+                  <div class="recommended-tile">
+                    <div class="recommended-tile__img"><img src="./img/sachar.png" alt=""></div>
+                    <h3 class="recommended-tile__title">Сахар в стике Крафт 5 г.</h3><a class="recommended-tile__button" href="">Перейти</a>
+                  </div>
+                  <div class="recommended-tile">
+                    <div class="recommended-tile__img"><img src="./img/sachar.png" alt=""></div>
+                    <h3 class="recommended-tile__title">Влажные салфетки в боксе для оптики, 60*60 мм, 30 шт./кор.</h3><a class="recommended-tile__button" href="">Перейти</a>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-window cart-order-wrap">
+      <button class="modal-window__close" type="button">
+        <svg>
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__body cart-order">
+        <div class="cart-order__title">Оформите заказ и мы свяжемся с Вами в течение 10 минут!</div>
+        <div class="cart-order__fields">
+          <div class="checkout-field">
+            <div class="checkout-field__input checkout-field__input--large">
+              <input type="text" placeholder="Имя">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__input checkout-field__input--large">
+              <input type="text" placeholder="Телефон">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__input checkout-field__input--large">
+              <input type="text" placeholder="E-mail">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__name">Доставка</div>
+            <div class="checkout-field__input">
+              <input type="text" placeholder="Введите город">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__name">Организация</div>
+            <div class="checkout-field__input">
+              <input type="text" placeholder="Введите название огранизации">
+            </div>
+          </div>
+          <input class="cart-order__button button-violet" type="submit" value="Оформить заказ">
+        </div>
+      </div>
+    </div>
+    <div class="shadow"></div>
+    <div class="content">
+      <div class="overlay-delivery"></div>
+      <div class="menu-overlay"></div>
+      <header id="s-header">
+        <div class="nav-top-wrap">
+          <div class="container">
+            <div class="nav-top">
+              <div class="logo"><img src="./img/svg/logo.svg" alt=""></div>
+              <button class="hamburger" type="button" id="open-menu"><span></span><span></span><span></span></button>
+              <ul class="nav-top__menu">
+                <li><a href="">Все товары</a></li>
+                <li>
+                  <button type="button" id="open-delivery">Доставка</button>
+                  <div class="delivery-modal" id="modal-delivery">
+                    <button class="delivery-modal__close" type="button" id="close-delivery">
+                      <svg>
+                        <use xlink:href="./img/sprites.svg#close"></use>
+                      </svg>
+                    </button>
+                    <div class="delivery-modal__prices">
+                      <div class="delivery-price">
+                        <div class="delivery-price__title">При заказе ДО 15 000 руб.</div>
+                        <ul class="delivery-price__list">
+                          <li>доставка по Москве <span class="font-montserat weight-600">600</span> руб.</li>
+                          <li>доставка до транспортной компании <span class="font-montserat weight-600">300</span> руб.</li>
+                        </ul>
+                      </div>
+                      <div class="delivery-price">
+                        <div class="delivery-price__title">При заказе ОТ 15 000 руб.</div>
+                        <ul class="delivery-price__list">
+                          <li>доставка по Москве  <span class="font-montserat weight-600">БЕСПЛАТНО</span></li>
+                          <li>доставка до транспортной компании <span class="font-montserat weight-600">БЕСПЛАТНО</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="delivery-modal__text">Стоимость печатной формы не учитывается в стоимость заказа</div>
+                    <div class="delivery-modal__partners">
+                      <div class="delivery-modal__partners-img"><img src="./img/shipping.png" alt=""></div>
+                      <div class="delivery-modal__partners-img"><img src="./img/shipping_2.png" alt=""></div>
+                      <div class="delivery-modal__partners-img"><img src="./img/shipping_3.png" alt=""></div>
+                      <div class="delivery-modal__partners-img"><img src="./img/shipping_4.png" alt=""></div>
+                    </div>
+                    <div class="delivery-modal__footer">Остальные транспортные компании по запросу</div>
+                  </div>
+                </li>
+                <li class="show-tablet contacts-overlay-wrap"><a href="">Контакты</a></li>
+              </ul>
+              <ul class="nav-top__contacts">
+                <li><a href="tel:8(499) 390-04-47">8(499) 390-04-47</a></li>
+                <li><a href="mailto:loftkom@mail.ru">loftkom@mail.ru</a></li>
+              </ul><a class="nav-top__cart">
+                <svg class="icon-33">
+                  <use xlink:href="./img/sprites.svg#cart"></use>
+                </svg></a>
+              <form class="search" action="#">
+                <div class="search__input">
+                  <input class="input" placeholder="Поиск по сайту" type="search">
+                  <div class="search__icon"><img src="./img/svg/search.svg" alt="Поиск"></div>
+                </div>
+                <button class="search__button" type="submit">Поиск</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="menu-main-wrap" id="menu-main">
+          <div class="container">
+            <ul class="menu-main">
+              <li><a class="menu-main__link" href="#" data-menu="open"><span>Влажные салфетки</span>
+                  <svg>
+                    <use xlink:href="./img/sprites.svg#arrow-down"></use>
+                  </svg></a>
+                        <ul class="menu-dropdown" data-menu="body">
+                          <li><a class="menu-dropdown__link">Влажные  салфетки в индивидуальной упаковке со стандартным дизайном</a></li>
+                          <li><a class="menu-dropdown__link">Специализированные влажные салфетки</a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в упаковке «флоу-пак» </a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в боксе</a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в индивидуальной упаковке с логотипом</a></li>
+                        </ul>
+              </li>
+              <li><a class="menu-main__link" href="#" data-menu="open"><span>Наборы одноразовых приборов</span>
+                  <svg>
+                    <use xlink:href="./img/sprites.svg#arrow-down"></use>
+                  </svg></a>
+                        <ul class="menu-dropdown" data-menu="body">
+                          <li><a class="menu-dropdown__link">Влажные  салфетки в индивидуальной упаковке со стандартным дизайном</a></li>
+                          <li><a class="menu-dropdown__link">Специализированные влажные салфетки</a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в упаковке «флоу-пак» </a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в боксе</a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в индивидуальной упаковке с логотипом</a></li>
+                        </ul>
+              </li>
+              <li><a class="menu-main__link" href="#" data-menu="open"><span>Сахар в стиках</span>
+                  <svg>
+                    <use xlink:href="./img/sprites.svg#arrow-down"></use>
+                  </svg></a>
+                        <ul class="menu-dropdown" data-menu="body">
+                          <li><a class="menu-dropdown__link">Влажные  салфетки в индивидуальной упаковке со стандартным дизайном</a></li>
+                          <li><a class="menu-dropdown__link">Специализированные влажные салфетки</a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в упаковке «флоу-пак» </a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в боксе</a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в индивидуальной упаковке с логотипом</a></li>
+                        </ul>
+              </li>
+              <li><a class="menu-main__link" href="#" data-menu="open"><span>Картонная продукция</span>
+                  <svg>
+                    <use xlink:href="./img/sprites.svg#arrow-down"></use>
+                  </svg></a>
+                        <ul class="menu-dropdown" data-menu="body">
+                          <li><a class="menu-dropdown__link">Влажные  салфетки в индивидуальной упаковке со стандартным дизайном</a></li>
+                          <li><a class="menu-dropdown__link">Специализированные влажные салфетки</a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в упаковке «флоу-пак» </a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в боксе</a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в индивидуальной упаковке с логотипом</a></li>
+                        </ul>
+              </li>
+              <li><a class="menu-main__link" href="#" data-menu="open"><span>Одноразовая посуда</span>
+                  <svg>
+                    <use xlink:href="./img/sprites.svg#arrow-down"></use>
+                  </svg></a>
+                        <ul class="menu-dropdown" data-menu="body">
+                          <li><a class="menu-dropdown__link">Влажные  салфетки в индивидуальной упаковке со стандартным дизайном</a></li>
+                          <li><a class="menu-dropdown__link">Специализированные влажные салфетки</a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в упаковке «флоу-пак» </a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в боксе</a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в индивидуальной упаковке с логотипом</a></li>
+                        </ul>
+              </li>
+              <li><a class="menu-main__link" href="#" data-menu="open"><span>Продукция с логотипом</span>
+                  <svg>
+                    <use xlink:href="./img/sprites.svg#arrow-down"></use>
+                  </svg></a>
+                        <ul class="menu-dropdown" data-menu="body">
+                          <li><a class="menu-dropdown__link">Влажные  салфетки в индивидуальной упаковке со стандартным дизайном</a></li>
+                          <li><a class="menu-dropdown__link">Специализированные влажные салфетки</a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в упаковке «флоу-пак» </a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в боксе</a></li>
+                          <li><a class="menu-dropdown__link">Влажные салфетки в индивидуальной упаковке с логотипом</a></li>
+                        </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="content-w-sidebar">
+        <div class="sidebar">
+                  <div class="sidebar-item">
+                    <div class="sidebar-item__title">Влажные салфетки</div>
+                    <ul class="sidebar-item__list">
+                      <li><a>Влажные  салфетки в индивидуальной упаковке со стандартным дизайном</a></li>
+                      <li><a>Специализированные влажные салфетки</a></li>
+                      <li><a>Влажные салфетки в упаковке «флоу-пак» </a></li>
+                      <li><a>Влажные салфетки в боксе</a></li>
+                      <li><a>Влажные салфетки в индивидуальной упаковке с логотипом</a></li>
+                    </ul>
+                  </div>
+                  <div class="sidebar-item">
+                    <div class="sidebar-item__title">Наборы одноразовых приборов</div>
+                    <ul class="sidebar-item__list">
+                      <li><a>Готовые наборы одноразовых приборов</a></li>
+                      <li><a>Наборы одноразовых приборов под заказ</a></li>
+                    </ul>
+                  </div>
+                  <div class="sidebar-item">
+                    <div class="sidebar-item__title">Сахар в стиках</div>
+                    <ul class="sidebar-item__list">
+                      <li><a>Сахар в стиках со стандартным дизайном</a></li>
+                      <li><a>Сахар в стиках в боксе</a></li>
+                      <li><a>Сахар в стиках с логотипом</a></li>
+                    </ul>
+                  </div>
+                  <div class="sidebar-item">
+                    <div class="sidebar-item__title">Картонная продукция</div>
+                    <ul class="sidebar-item__list">
+                      <li><a>Ланч-боксы</a></li>
+                      <li><a>Подарочные коробки</a></li>
+                      <li><a>Картонные коробки на заказ</a></li>
+                    </ul>
+                  </div>
+                  <div class="sidebar-item">
+                    <div class="sidebar-item__title">Одноразовая посуда</div>
+                    <ul class="sidebar-item__list">
+                      <li><a>Одноразовые столовые приборы</a></li>
+                      <li><a>Бумажные салфетки</a></li>
+                      <li><a>Зубочистки</a></li>
+                    </ul>
+                  </div>
+                  <div class="sidebar-item">
+                    <div class="sidebar-item__title">Продукция с логотипом</div>
+                    <ul class="sidebar-item__list">
+                      <li><a>Влажная салфетка в индивидуальной упаковке</a></li>
+                      <li><a>Сахар в стиках</a></li>
+                      <li><a>Наборы одноразовых приборов</a></li>
+                      <li><a>Магниты</a></li>
+                    </ul>
+                  </div>
+        </div>
+        <main class="main-w-sidebar">
+          <div class="checkout">
+            <h1 class="title-secondary">Сахар в стиках с Вашим логотипом</h1>
+            <div class="checkout__content">
+              <p style="font-weight: 600; font-family: 'Montserrat Alternates'">Наша компания производит сахар в стиках с логотипом любой сложности.</p>
+              <p>&nbsp;</p>
+              <p style="font-weight: 600; font-family: 'Montserrat Alternates'">Причины заказать именно у нас:</p>
+              <p>&nbsp;</p>
+              <p>· Печать логотипа выполняется FOOD-красками</p>
+              <p>&nbsp;</p>
+              <p>· Используемый нами сахар белый свекловичный изготовлен по ГОСТу</p>
+              <p>&nbsp;</p>
+              <p>· Для изготовления стиков мы используем высококачественную бумагу</p>
+              <p>&nbsp;</p>
+              <p>· Бесплатная разработка макета</p>
+              <p>&nbsp;</p>
+              <p>· Предлагаем фасовку в боксы собственного производства по 100 стиков</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p style="font-weight: 600; font-family: 'Montserrat Alternates'"><span style="color: #3B065B">Размер готового стика:</span>  &nbsp;&nbsp;105*17 мм</p>
+              <p>&nbsp;</p>
+              <p style="font-weight: 600; font-family: 'Montserrat Alternates'"><span style="color: #3B065B">Масса стика:</span>  &nbsp;&nbsp; 5 г.</p>
+              <p>&nbsp;</p>
+              <p style="font-weight: 600; font-family: 'Montserrat Alternates'"><span style="color: #3B065B">Минимальный тираж:</span>  &nbsp;&nbsp;от 4000 шт. (20 кг.)</p>
+              <p>&nbsp;</p>
+              <p style="font-weight: 600; font-family: 'Montserrat Alternates'"><span style="color: #3B065B">Сроки изготовления:  </span>&nbsp;&nbsp; от 14 дней</p>
+            </div>
+            <div class="cart-default">
+              <div class="cart-default__img"><img src="./img/sachar.png"></div>
+              <div class="cart-default__content">
+                <div class="cart-default__text">Вы можете приобрести сахар в стиках<br> со <span class="weight-900">СТАНДАРТНЫМ</span> дизайном от <span class="weight-900">0,44</span> руб./шт.</div><a class="cart-default__button"><span>Перейти</span>
+                  <svg>
+                    <use xlink:href="./img/sprites.svg#arrow-right"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <div class="checkout-form checkout-form--sugar">
+              <div class="title-secondary">Форма расчета</div>
+              <div class="checkout__group checkout-form__info">
+                <div class="checkout__fields checkout__fields--small">
+                  <div class="checkout-field">
+                    <div class="checkout-field__name">Тираж</div>
+                    <div class="checkout-field__input">
+                      <input type="text" placeholder="100">
+                    </div>
+                  </div>
+                  <div class="checkout-field">
+                    <div class="checkout-field__name">Цветность печати</div>
+                    <div class="checkout-field__input checkout-field__input--w-caution">
+                      <input type="text" placeholder="60мм*60мм*60мм">
+                      <div class="caution-icon"><img src="./img/svg/caution.svg"></div>
+                      <div class="caution">* белый цвет является основой Данный цвет не берется в расчет</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkout-attachment">
+                  <div class="checkout-attachment__title"> 
+                    <p><span class="font-montserat weight-600">Логотип:</span></p>
+                    <p>прикрепите файл Вашего логотипа</p>
+                    <p>в формате <span class="font-montserat weight-600">AI. / PDF. / PNG.</span> или <span class="font-montserat weight-600">JPG</span>.</p>
+                  </div>
+                  <div class="checkout-attachment__action">
+                    <div class="checkout-attachment__button"> <span>Прикрепить</span>
+                      <div class="checkout-attachment__button-plus">+</div>
+                    </div>
+                    <div class="checkout-attachment__subscription">*до 10 мб</div>
+                  </div>
+                </div>
+              </div>
+              <div class="checkout__fields">
+                <div class="checkout-field">
+                  <div class="checkout-field__name">Контактное лицо</div>
+                  <div class="checkout-field__input">
+                    <input type="text" placeholder="Иванов Иван Иванович">
+                  </div>
+                </div>
+                <div class="checkout-field">
+                  <div class="checkout-field__name">Номер телефона</div>
+                  <div class="checkout-field__input">
+                    <input type="text" placeholder="Введите номер">
+                  </div>
+                </div>
+                <div class="checkout-field">
+                  <div class="checkout-field__name">Электронная почта</div>
+                  <div class="checkout-field__input">
+                    <input type="text" placeholder="Введите E-mail">
+                  </div>
+                </div>
+                <div class="checkout-field">
+                  <div class="checkout-field__name"> </div>
+                  <div class="checkout-field__textarea">
+                    <textarea placeholder="Оставьте комментарий"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="checkout__submit">
+                <input type="submit" value="Рассчитать">
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer id="s-footer">
+        <div class="container">
+          <div class="footer">
+            <div class="footer__map"><img src="./img/map-dummy.png" alt=""></div>
+            <div class="footer__content">
+              <p>ООО "ЛофтКом"</p>
+              <p>ИНН 5027271335</p>
+              <p>140415, Московская обл.,</p>
+              <p>г. Коломна, ул. Л.Толстого, д.1г</p>
+              <p>тел.: <a href="tel:+7 (499) 390-04-47">+7 (499) 390-04-47</a></p>
+              <p>эл.почта: <a href="mailto:loftkom@mail.ru">loftkom@mail.ru</a></p>
+              <p>Режим работы: Пн-Пт: 9:00-19:00</p>
+              <p>Заявки онлайн принимаются круглосуточно</p>
+              <p>7 дней в неделю.</p>
+            </div>
+            <ul class="footer__socials">
+              <li><a href="">
+                  <svg class="icon-36">
+                    <use xlink:href="./img/sprites.svg#vk"> </use>
+                  </svg></a></li>
+              <li><a href="">
+                  <svg class="icon-36">
+                    <use xlink:href="./img/sprites.svg#instagram"> </use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script><script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./libs/js/svg4everybody.min.js"></script>
+  <script src="./js/main.js"></script>
+</html>
