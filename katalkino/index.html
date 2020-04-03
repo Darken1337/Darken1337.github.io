@@ -9,7 +9,12 @@
     <title>Главная</title>
   </head>
   <body>
-    <div class="modal-window checkout prior-2" id="quick-order">
+    <div class="modal-window checkout prior-2" id="order">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
       <h2 class="title-secondary">Оформление заказа</h2>
       <div class="checkout-cart">
         <div class="checkout-cart__thead">
@@ -274,6 +279,116 @@
         <button class="modal-compare__button btn-green" type="button" data-action="close-modal">Закрыть</button>
       </div>
     </div>
+    <div class="modal-window quick-order prior-1" id="callback">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header"> <span class="color-blue">Обратный звонок</span></div>
+      <div class="modal-window__body">
+        <div class="modal-window__checkout">
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Email</span><span class="color-pink">*</span></div>
+            <div class="checkout-field__input">
+              <input type="email" placeholder="Введите email">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Телефон</span><span class="color-pink">*</span></div>
+            <div class="checkout-field__input">
+              <input type="tel" placeholder="Введите телефон">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Имя</span></div>
+            <div class="checkout-field__input">
+              <input type="text" placeholder="Введите имя">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Комментарий</span></div>
+            <div class="checkout-field__input">
+              <input type="text" placeholder="Введите комментарий">
+            </div>
+          </div>
+        </div>
+        <div class="modal-window__footer">
+          <button class="btn-green callback__button" type="submit">Заказать звонок</button>
+          <button class="color-gray-300" type="button" data-action="close-modal">Продолжить покупки</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-window quick-order prior-1" id="quick-order">
+      <button class="modal-window__close" type="button" data-action="close-modal">
+        <svg> 
+          <use xlink:href="./img/sprites.svg#close"></use>
+        </svg>
+      </button>
+      <div class="modal-window__header"> <span class="color-blue">Кофеварка CofeStaion-204m</span></div>
+      <div class="modal-window__body">
+        <div class="modal-window__product">
+          <div class="modal-window__thumb"><img src="./img/product-big.png" alt="">
+            <div class="modal-window__thumb-scale">
+              <svg> 
+                <use xlink:href="./img/sprites.svg#scale"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-window__content">
+            <div class="modal-window__code"><span class="color-gray-300 mr-5 font-15">Код товара:</span><span class="color-gray-335">835923</span></div>
+            <div class="product-price">
+              <div class="product-price__header color-gray-300"></div>
+              <div class="product-price__body">
+                <div class="price-new weight-500">165 399 ₸</div>
+                <div class="price-old weight-500 color-gray-300 line-through line-through-pink">145 279 ₸</div>
+              </div>
+            </div>
+            <div class="product-quantity">
+              <button type="button"><span>-</span></button>
+              <input class="color-blue" type="text" value="1">
+              <button type="button"><span> +</span></button>
+            </div>
+            <div class="product-total"><span>Итого:</span>
+              <div class="product-total__line"></div><span class="product-total__price color-blue weight-500">165 399 ₸</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-window__checkout">
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Email</span><span class="color-pink">*</span></div>
+            <div class="checkout-field__input">
+              <input type="email" placeholder="Введите Email">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Телефон</span><span class="color-pink">*</span></div>
+            <div class="checkout-field__input">
+              <input type="tel" placeholder="Введите Телефон">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Имя</span></div>
+            <div class="checkout-field__input">
+              <input type="text" placeholder="Введите Имя">
+            </div>
+          </div>
+          <div class="checkout-field">
+            <div class="checkout-field__name"> <span>Комментарий</span></div>
+            <div class="checkout-field__input">
+              <input type="text" placeholder="Введите Комментарий">
+            </div>
+          </div>
+        </div>
+        <p class="checkout-tip">Нажмите «Оформить заказ», чтобы сделать запрос, и мы скоро свяжемся с вами(по будням с 10 до 18 часов)</p>
+        <p class="checkout-tip checkout-tip--success">Ваш заказ #27056 сформирован, мы скоро вам перезвоним</p>
+        <div class="modal-window__footer">
+          <button class="quick-order__button btn-blue" type="submit">Оформить заказ</button>
+          <button class="quick-order__button btn-green" type="button" data-action="close-modal">Заказ отправлен</button>
+          <button class="color-gray-300" type="button" data-action="close-modal">Продолжить покупки</button>
+        </div>
+      </div>
+    </div>
     <div class="overlay"></div>
     <div class="shadow"></div>
     <div class="content">
@@ -282,14 +397,30 @@
           <nav class="navigation">
             <div class="logo"><img src="./img/svg/logo.svg" alt="Логотип"></div>
             <div class="catalogue">
-              <button class="catalogue__button btn-green" type="button" id="open-catalogue"><span>Каталог товаров</span>
-                <svg>
+              <button class="catalogue__button btn-green" type="button" id="open-catalogue"><span class="show-desktop">Каталог товаров</span>
+                <svg class="show-desktop">
                   <use xlink:href="./img/sprites.svg#arrow-bottom"></use>
+                </svg>
+                <svg class="show-tablet">
+                  <use xlink:href="./img/sprites.svg#hamb-3"></use>
                 </svg>
               </button>
               <div class="menu-dropdown" id="catalogue-body">
+                <div class="menu-dropdown__header">
+                  <div class="logo"><img src="./img/svg/logo.svg" alt="Логотип"></div>
+                  <div class="menu-dropdown__header-close">
+                    <button type="button" data-catalogue="close">
+                      <svg>
+                        <use xlink:href="./img/sprites.svg#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
                 <ul class="menu-dropdown__list">
-                  <li><a class="menu-dropdown__link">Каталки</a>
+                  <li><a class="menu-dropdown__link"> <span>Каталки</span>
+                      <svg>
+                        <use xlink:href="./img/sprites.svg#arrow-bottom"></use>
+                      </svg></a>
                           <div class="menu-dropdown__child">
                             <ul class="menu-dropdown__list">
                               <li><a class="menu-dropdown__link" href="">Каталки</a></li>
@@ -308,7 +439,10 @@
                             </div>
                           </div>
                   </li>
-                  <li><a class="menu-dropdown__link">Каталки</a>
+                  <li><a class="menu-dropdown__link"> <span>Каталки</span>
+                      <svg>
+                        <use xlink:href="./img/sprites.svg#arrow-bottom"></use>
+                      </svg></a>
                           <div class="menu-dropdown__child">
                             <ul class="menu-dropdown__list">
                               <li><a class="menu-dropdown__link" href="">Каталки</a></li>
@@ -327,7 +461,10 @@
                             </div>
                           </div>
                   </li>
-                  <li><a class="menu-dropdown__link">Каталки</a>
+                  <li><a class="menu-dropdown__link"><span>Каталки</span>
+                      <svg>
+                        <use xlink:href="./img/sprites.svg#arrow-bottom"></use>
+                      </svg></a>
                           <div class="menu-dropdown__child">
                             <ul class="menu-dropdown__list">
                               <li><a class="menu-dropdown__link" href="">Каталки</a></li>
@@ -346,7 +483,10 @@
                             </div>
                           </div>
                   </li>
-                  <li><a class="menu-dropdown__link">Каталки</a>
+                  <li><a class="menu-dropdown__link" href=""><span>Каталки</span>
+                      <svg>
+                        <use xlink:href="./img/sprites.svg#arrow-bottom"></use>
+                      </svg></a>
                           <div class="menu-dropdown__child">
                             <ul class="menu-dropdown__list">
                               <li><a class="menu-dropdown__link" href="">Каталки</a></li>
@@ -377,7 +517,7 @@
               </svg><span>Караганда</span>
             </div>
             <div class="cart">
-              <button type="button" id="open-cart">
+              <button type="button" data-cart="open">
                 <svg>
                   <use xlink:href="./img/sprites.svg#cart"></use>
                 </svg>
@@ -386,10 +526,10 @@
                   <div class="cart-info__price">165.399 ₸</div>
                 </div>
               </button>
-              <div class="cart__drop" id="cart-body">
+              <div class="cart__drop" data-cart="body">
                 <div class="cart__header">
                   <div class="cart__title">В корзине: <span class="cart__number">3 товара</span></div>
-                  <button class="cart__close" type="button">
+                  <button class="cart__close" type="button" data-cart="close">
                     <svg>
                       <use xlink:href="./img/sprites.svg#close"></use>
                     </svg>
@@ -419,11 +559,65 @@
                 </div>
                 <div class="cart__footer">
                   <div class="cart__total"><span>Итог:</span><span class="cart__total-price">165.399 ₸</span></div>
-                  <button class="btn-green cart__footer-button" type="button">Купить</button>
+                  <button class="btn-green cart__footer-button" type="button" data-modal data-action="order">Купить</button>
                 </div>
               </div>
             </div>
           </nav>
+          <div class="nav-mobile">
+            <div class="nav-mobile__contacts"><a class="phone" href="tel:+7 (800) 555 35 35">+7 (800) 555 35 35</a>
+              <button class="btn-green btn-callback" type="button" data-modal data-action="callback">Обратный звонок</button>
+            </div>
+            <div class="nav-mobile__cart">
+              <div class="cart">
+                <button type="button" data-cart="open">
+                  <svg>
+                    <use xlink:href="./img/sprites.svg#cart"></use>
+                  </svg>
+                  <div class="cart-info">
+                    <div class="cart-info__number">3 товара</div>
+                    <div class="cart-info__price">165.399 ₸</div>
+                  </div>
+                </button>
+                <div class="cart__drop" data-cart="body">
+                  <div class="cart__header">
+                    <div class="cart__title">В корзине: <span class="cart__number">3 товара</span></div>
+                    <button class="cart__close" type="button" data-cart="close">
+                      <svg>
+                        <use xlink:href="./img/sprites.svg#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="cart__list">
+                    <div class="product-prev">
+                      <div class="product-prev__thumb"><img src="./img/dummy-extra-small.png" alt=""></div>
+                      <div class="product-prev__content">
+                        <div class="product-prev__text">Кресло-коляска Армед H 003 Кресло-коляска Армед H 003 (размер: 18)</div>
+                        <div class="product-prev__info">
+                          <div class="product-prev__price">165.399 ₸</div>
+                          <div class="product-quantity product-quantity--small">
+                            <button class="product-quantity__minus" type="button"> <span>-</span></button>
+                            <input type="text" value="1">
+                            <button class="product-quantity__plus" type="button"> <span>+</span></button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-prev__delete">
+                        <svg>
+                          <use xlink:href="./img/sprites.svg#trash"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="cart-empty">Корзина пуста</div>
+                  </div>
+                  <div class="cart__footer">
+                    <div class="cart__total"><span>Итог:</span><span class="cart__total-price">165.399 ₸</span></div>
+                    <button class="btn-green cart__footer-button" type="button" data-modal data-action="order">Купить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
       <section id="s-category">
@@ -456,7 +650,7 @@
       <div class="container">
         <div class="content__inner content-category">
           <div class="filter-wrap">
-            <div class="filter" id="filter">
+            <div class="filter">
               <div class="filter__title">Фильтр</div>
               <button class="filter__close" type="button" id="close-filter">
                 <svg> 
@@ -511,6 +705,10 @@
                 <div class="filter-drop">
                   <div class="filter-drop__header" data-accordeon="open"><span>Цена</span><span class="caret-inline"></span></div>
                   <div class="filter-price filter-drop__content-wrap" data-accordeon="body">
+                    <div class="filter-price__hint">
+                      <div class="filter-price__hint-text">Товаров: 241</div>
+                      <button class="filter-price__hint-button" type="button">Показать</button>
+                    </div>
                     <div class="filter-price__row">
                       <input type="text" value="30000" id="start-price"><span>-</span>
                       <input type="text" value="100000" id="end-price">
@@ -721,6 +919,24 @@
                       <use xlink:href="./img/sprites.svg#arrow-bottom"></use>
                     </svg>
                   </button>
+                </div>
+                <div class="option-panel__right">
+                  <button type="button">
+                    <svg>
+                      <use xlink:href="./img/sprites.svg#tile-3"></use>
+                    </svg>
+                  </button>
+                  <button class="active" type="button">
+                    <svg>
+                      <use xlink:href="./img/sprites.svg#tile-4"></use>
+                    </svg>
+                  </button>
+                  <button type="button" id="open-filter">
+                    <svg>
+                      <use xlink:href="./img/sprites.svg#filter"></use>
+                    </svg>
+                  </button>
+                  <button class="option-panel__button" type="button">Cравнить всё</button>
                 </div>
               </div>
             </div>

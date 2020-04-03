@@ -1,5 +1,10 @@
 
-<div class="modal-window checkout prior-2" id="quick-order">
+<div class="modal-window checkout prior-2" id="order">
+  <button class="modal-window__close" type="button" data-action="close-modal">
+    <svg> 
+      <use xlink:href="./img/sprites.svg#close"></use>
+    </svg>
+  </button>
   <h2 class="title-secondary">Оформление заказа</h2>
   <div class="checkout-cart">
     <div class="checkout-cart__thead">
@@ -262,6 +267,116 @@
   </div>
   <div class="text-center">
     <button class="modal-compare__button btn-green" type="button" data-action="close-modal">Закрыть</button>
+  </div>
+</div>
+<div class="modal-window quick-order prior-1" id="callback">
+  <button class="modal-window__close" type="button" data-action="close-modal">
+    <svg> 
+      <use xlink:href="./img/sprites.svg#close"></use>
+    </svg>
+  </button>
+  <div class="modal-window__header"> <span class="color-blue">Обратный звонок</span></div>
+  <div class="modal-window__body">
+    <div class="modal-window__checkout">
+      <div class="checkout-field">
+        <div class="checkout-field__name"> <span>Email</span><span class="color-pink">*</span></div>
+        <div class="checkout-field__input">
+          <input type="email" placeholder="Введите email"/>
+        </div>
+      </div>
+      <div class="checkout-field">
+        <div class="checkout-field__name"> <span>Телефон</span><span class="color-pink">*</span></div>
+        <div class="checkout-field__input">
+          <input type="tel" placeholder="Введите телефон"/>
+        </div>
+      </div>
+      <div class="checkout-field">
+        <div class="checkout-field__name"> <span>Имя</span></div>
+        <div class="checkout-field__input">
+          <input type="text" placeholder="Введите имя"/>
+        </div>
+      </div>
+      <div class="checkout-field">
+        <div class="checkout-field__name"> <span>Комментарий</span></div>
+        <div class="checkout-field__input">
+          <input type="text" placeholder="Введите комментарий"/>
+        </div>
+      </div>
+    </div>
+    <div class="modal-window__footer">
+      <button class="btn-green callback__button" type="submit">Заказать звонок</button>
+      <button class="color-gray-300" type="button" data-action="close-modal">Продолжить покупки</button>
+    </div>
+  </div>
+</div>
+<div class="modal-window quick-order prior-1" id="quick-order">
+  <button class="modal-window__close" type="button" data-action="close-modal">
+    <svg> 
+      <use xlink:href="./img/sprites.svg#close"></use>
+    </svg>
+  </button>
+  <div class="modal-window__header"> <span class="color-blue">Кофеварка CofeStaion-204m</span></div>
+  <div class="modal-window__body">
+    <div class="modal-window__product">
+      <div class="modal-window__thumb"><img src="./img/product-big.png" alt=""/>
+        <div class="modal-window__thumb-scale">
+          <svg> 
+            <use xlink:href="./img/sprites.svg#scale"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="modal-window__content">
+        <div class="modal-window__code"><span class="color-gray-300 mr-5 font-15">Код товара:</span><span class="color-gray-335">835923</span></div>
+        <div class="product-price">
+          <div class="product-price__header color-gray-300"></div>
+          <div class="product-price__body">
+            <div class="price-new weight-500">165 399 ₸</div>
+            <div class="price-old weight-500 color-gray-300 line-through line-through-pink">145 279 ₸</div>
+          </div>
+        </div>
+        <div class="product-quantity">
+          <button type="button"><span>-</span></button>
+          <input class="color-blue" type="text" value="1"/>
+          <button type="button"><span> +</span></button>
+        </div>
+        <div class="product-total"><span>Итого:</span>
+          <div class="product-total__line"></div><span class="product-total__price color-blue weight-500">165 399 ₸</span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-window__checkout">
+      <div class="checkout-field">
+        <div class="checkout-field__name"> <span>Email</span><span class="color-pink">*</span></div>
+        <div class="checkout-field__input">
+          <input type="email" placeholder="Введите Email"/>
+        </div>
+      </div>
+      <div class="checkout-field">
+        <div class="checkout-field__name"> <span>Телефон</span><span class="color-pink">*</span></div>
+        <div class="checkout-field__input">
+          <input type="tel" placeholder="Введите Телефон"/>
+        </div>
+      </div>
+      <div class="checkout-field">
+        <div class="checkout-field__name"> <span>Имя</span></div>
+        <div class="checkout-field__input">
+          <input type="text" placeholder="Введите Имя"/>
+        </div>
+      </div>
+      <div class="checkout-field">
+        <div class="checkout-field__name"> <span>Комментарий</span></div>
+        <div class="checkout-field__input">
+          <input type="text" placeholder="Введите Комментарий"/>
+        </div>
+      </div>
+    </div>
+    <p class="checkout-tip">Нажмите «Оформить заказ», чтобы сделать запрос, и мы скоро свяжемся с вами(по будням с 10 до 18 часов)</p>
+    <p class="checkout-tip checkout-tip--success">Ваш заказ #27056 сформирован, мы скоро вам перезвоним</p>
+    <div class="modal-window__footer">
+      <button class="quick-order__button btn-blue" type="submit">Оформить заказ</button>
+      <button class="quick-order__button btn-green" type="button" data-action="close-modal">Заказ отправлен</button>
+      <button class="color-gray-300" type="button" data-action="close-modal">Продолжить покупки</button>
+    </div>
   </div>
 </div>
 <div class="overlay"></div>
