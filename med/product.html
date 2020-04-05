@@ -404,7 +404,7 @@
         <button class="btn-large bg-blue-main" type="button" data-action="close-modal">Продолжить покупки</button>
       </div>
     </div>
-    <div class="modal-window modal-compare prior-3">
+    <div class="modal-window modal-compare prior-3" id="modal-compare">
       <button class="modal-window__close" type="button" data-action="close-modal">
         <svg> 
           <use xlink:href="./img/sprites.svg#close"></use>
@@ -1049,7 +1049,7 @@
                 <button class="search-wrap__button" type="submit"></button>
               </form>
               <div class="search-overlay"></div>
-              <div class="middle-options"><a class="middle-options__item color-blue" href="">
+              <div class="middle-options"><a class="middle-options__item color-blue" href="" data-modal data-action="modal-compare">
                   <svg>
                     <use xlink:href="./img/sprites.svg#compare"></use>
                   </svg></a><a class="middle-options__item color-blue" href="">
@@ -1088,7 +1088,7 @@
         </div>
         <nav class="main-menu-wrap">
           <div class="container">
-            <ul class="main-menu">
+            <ul class="main-menu pos-relative">
               <li data-dropdown="open-main" data-open="true"><a class="main-menu__link--headline main-menu__link" href="">
                   <svg class="hamb-menu"> 
                     <use xlink:href="./img/sprites.svg#hamb-menu"></use>
@@ -1918,128 +1918,132 @@
                   </ul>
                 </div>
               </li>
-              <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Оборудование</span></a>
+              <li class="pos-static" data-dropdown="open-main"><a class="main-menu__link" href=""><span>Оборудование</span></a>
                 <div class="menu-dropdown drop-simple" data-dropdown="body-main">
-                  <ul class="menu-dropdown__categories">
-                    <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                        <svg class="caret"> 
-                          <use xlink:href="./img/sprites.svg#caret"></use>
-                        </svg></a>
-                      <div class="menu-dropdown" data-dropdown="body">
-                        <ul class="menu-dropdown__categories">
-                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                              <svg class="caret"> 
-                                <use xlink:href="./img/sprites.svg#caret"></use>
-                              </svg></a>
-                                    <div class="menu-dropdown" data-dropdown="body">
-                                      <ul class="menu-dropdown__categories">
-                                        <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                            <svg class="caret"> 
-                                              <use xlink:href="./img/sprites.svg#caret"></use>
-                                            </svg></a></li>
-                                        <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                        <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                            <svg class="caret"> 
-                                              <use xlink:href="./img/sprites.svg#caret"></use>
-                                            </svg></a></li>
-                                      </ul>
-                                    </div>
-                          </li>
-                          <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
-                                    <div class="menu-dropdown" data-dropdown="body">
-                                      <ul class="menu-dropdown__categories">
-                                        <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                            <svg class="caret"> 
-                                              <use xlink:href="./img/sprites.svg#caret"></use>
-                                            </svg></a></li>
-                                        <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                        <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                            <svg class="caret"> 
-                                              <use xlink:href="./img/sprites.svg#caret"></use>
-                                            </svg></a></li>
-                                      </ul>
-                                    </div>
-                          </li>
-                          <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                              <svg class="caret"> 
-                                <use xlink:href="./img/sprites.svg#caret"></use>
-                              </svg></a></li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                        <svg class="caret"> 
-                          <use xlink:href="./img/sprites.svg#caret"></use>
-                        </svg></a>
-                              <div class="menu-category-simple" data-dropdown="body">
-                                <div class="menu-category__content">
-                                  <ul class="menu-category-list">
-                                    <li><a href="">Аквадистилляторы</a></li>
-                                    <li><a href="">Бани</a></li>
-                                    <li><a href="">Аквадистилляторы</a></li>
-                                    <li><a href="">Бани</a></li>
-                                    <li><a href="">Аквадистилляторы</a></li>
-                                    <li><a href="">Бани</a></li>
-                                    <li><a href="">Аквадистилляторы</a></li>
-                                    <li><a href="">Бани</a></li>
-                                    <li><a href="">Аквадистилляторы</a></li>
-                                  </ul>
+                  <div class="menu-dropdown__inner">
+                    <ul class="menu-dropdown__categories">
+                      <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                          <svg class="caret"> 
+                            <use xlink:href="./img/sprites.svg#caret"></use>
+                          </svg></a>
+                        <div class="menu-dropdown" data-dropdown="body">
+                          <ul class="menu-dropdown__categories">
+                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                <svg class="caret"> 
+                                  <use xlink:href="./img/sprites.svg#caret"></use>
+                                </svg></a>
+                                      <div class="menu-dropdown" data-dropdown="body">
+                                        <ul class="menu-dropdown__categories">
+                                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                              <svg class="caret"> 
+                                                <use xlink:href="./img/sprites.svg#caret"></use>
+                                              </svg></a></li>
+                                          <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                          <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                              <svg class="caret"> 
+                                                <use xlink:href="./img/sprites.svg#caret"></use>
+                                              </svg></a></li>
+                                        </ul>
+                                      </div>
+                            </li>
+                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                      <div class="menu-dropdown" data-dropdown="body">
+                                        <ul class="menu-dropdown__categories">
+                                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                              <svg class="caret"> 
+                                                <use xlink:href="./img/sprites.svg#caret"></use>
+                                              </svg></a></li>
+                                          <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                          <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                              <svg class="caret"> 
+                                                <use xlink:href="./img/sprites.svg#caret"></use>
+                                              </svg></a></li>
+                                        </ul>
+                                      </div>
+                            </li>
+                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                <svg class="caret"> 
+                                  <use xlink:href="./img/sprites.svg#caret"></use>
+                                </svg></a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                          <svg class="caret"> 
+                            <use xlink:href="./img/sprites.svg#caret"></use>
+                          </svg></a>
+                                <div class="menu-category-simple" data-dropdown="body">
+                                  <div class="menu-category__content">
+                                    <ul class="menu-category-list">
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                      <li><a href="">Бани</a></li>
+                                      <li><a href="">Аквадистилляторы</a></li>
+                                    </ul>
+                                  </div>
                                 </div>
-                              </div>
-                    </li>
-                  </ul>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </li>
-              <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Мебель</span></a>
+              <li class="pos-static" data-dropdown="open-main"><a class="main-menu__link" href=""><span>Мебель</span></a>
                 <div class="menu-dropdown drop-simple" data-dropdown="body-main">
-                  <ul class="menu-dropdown__categories">
-                    <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                        <svg class="caret"> 
-                          <use xlink:href="./img/sprites.svg#caret"></use>
-                        </svg></a>
-                      <div class="menu-dropdown" data-dropdown="body">
-                        <ul class="menu-dropdown__categories">
-                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                              <svg class="caret"> 
-                                <use xlink:href="./img/sprites.svg#caret"></use>
-                              </svg></a>
-                                    <div class="menu-dropdown" data-dropdown="body">
-                                      <ul class="menu-dropdown__categories">
-                                        <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                            <svg class="caret"> 
-                                              <use xlink:href="./img/sprites.svg#caret"></use>
-                                            </svg></a></li>
-                                        <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                        <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                            <svg class="caret"> 
-                                              <use xlink:href="./img/sprites.svg#caret"></use>
-                                            </svg></a></li>
-                                      </ul>
-                                    </div>
-                          </li>
-                          <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
-                                    <div class="menu-dropdown" data-dropdown="body">
-                                      <ul class="menu-dropdown__categories">
-                                        <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                            <svg class="caret"> 
-                                              <use xlink:href="./img/sprites.svg#caret"></use>
-                                            </svg></a></li>
-                                        <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                        <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                            <svg class="caret"> 
-                                              <use xlink:href="./img/sprites.svg#caret"></use>
-                                            </svg></a></li>
-                                      </ul>
-                                    </div>
-                          </li>
-                          <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                              <svg class="caret"> 
-                                <use xlink:href="./img/sprites.svg#caret"></use>
-                              </svg></a></li>
-                        </ul>
-                      </div>
-                    </li>
-                  </ul>
+                  <div class="menu-dropdown__inner">
+                    <ul class="menu-dropdown__categories">
+                      <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                          <svg class="caret"> 
+                            <use xlink:href="./img/sprites.svg#caret"></use>
+                          </svg></a>
+                        <div class="menu-dropdown" data-dropdown="body">
+                          <ul class="menu-dropdown__categories">
+                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                <svg class="caret"> 
+                                  <use xlink:href="./img/sprites.svg#caret"></use>
+                                </svg></a>
+                                      <div class="menu-dropdown" data-dropdown="body">
+                                        <ul class="menu-dropdown__categories">
+                                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                              <svg class="caret"> 
+                                                <use xlink:href="./img/sprites.svg#caret"></use>
+                                              </svg></a></li>
+                                          <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                          <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                              <svg class="caret"> 
+                                                <use xlink:href="./img/sprites.svg#caret"></use>
+                                              </svg></a></li>
+                                        </ul>
+                                      </div>
+                            </li>
+                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                      <div class="menu-dropdown" data-dropdown="body">
+                                        <ul class="menu-dropdown__categories">
+                                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                              <svg class="caret"> 
+                                                <use xlink:href="./img/sprites.svg#caret"></use>
+                                              </svg></a></li>
+                                          <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                          <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                              <svg class="caret"> 
+                                                <use xlink:href="./img/sprites.svg#caret"></use>
+                                              </svg></a></li>
+                                        </ul>
+                                      </div>
+                            </li>
+                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                <svg class="caret"> 
+                                  <use xlink:href="./img/sprites.svg#caret"></use>
+                                </svg></a></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </li>
               <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Скидки</span></a></li>
@@ -2050,7 +2054,7 @@
         </nav>
         <div class="menu-sticky menu-hidden" id="menu-sticky">
           <div class="container">
-            <div class="menu-sticky__inner">
+            <div class="menu-sticky__inner pos-relative">
               <ul class="main-menu main-menu--white">
                 <li data-dropdown="open-main" data-open="true"><a class="main-menu__link--headline main-menu__link" href="">
                     <svg class="hamb-menu"> 
@@ -2880,621 +2884,1064 @@
                       </li>
                     </ul>
                   </div>
-                  <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Оборудование</span></a>
+                  <li class="pos-static" data-dropdown="open-main"><a class="main-menu__link" href=""><span>Оборудование</span></a>
                     <div class="menu-dropdown drop-simple" data-dropdown="body-main">
-                      <ul class="menu-dropdown__categories">
-                        <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                            <svg class="caret"> 
-                              <use xlink:href="./img/sprites.svg#caret"></use>
-                            </svg></a>
-                          <div class="menu-dropdown" data-dropdown="body">
-                            <ul class="menu-dropdown__categories">
-                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a></li>
-                            </ul>
-                          </div>
-                        </li>
-                      </ul>
+                      <div class="menu-dropdown__inner">
+                        <ul class="menu-dropdown__categories">
+                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                              <svg class="caret"> 
+                                <use xlink:href="./img/sprites.svg#caret"></use>
+                              </svg></a>
+                            <div class="menu-dropdown" data-dropdown="body">
+                              <ul class="menu-dropdown__categories">
+                                <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </li>
-                  <li data-dropdown="open-main"><a class="main-menu__link" href=""><span>Мебель</span></a>
+                  <li class="pos-static" data-dropdown="open-main"><a class="main-menu__link" href=""><span>Мебель</span></a>
                     <div class="menu-dropdown drop-simple" data-dropdown="body-main" data-scroll="wrap">
-                      <ul class="menu-dropdown__categories" data-scroll="item">
-                        <li>
-                          <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                        </li>
-                        <li>
-                          <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
-                        </li>
-                        <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                            <svg class="caret"> 
-                              <use xlink:href="./img/sprites.svg#caret"></use>
-                            </svg></a>
-                          <div class="menu-dropdown" data-dropdown="body">
-                            <ul class="menu-dropdown__categories">
-                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                            <svg class="caret"> 
-                              <use xlink:href="./img/sprites.svg#caret"></use>
-                            </svg></a>
-                          <div class="menu-dropdown" data-dropdown="body">
-                            <ul class="menu-dropdown__categories">
-                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                            <svg class="caret"> 
-                              <use xlink:href="./img/sprites.svg#caret"></use>
-                            </svg></a>
-                          <div class="menu-dropdown" data-dropdown="body">
-                            <ul class="menu-dropdown__categories">
-                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                            <svg class="caret"> 
-                              <use xlink:href="./img/sprites.svg#caret"></use>
-                            </svg></a>
-                          <div class="menu-dropdown" data-dropdown="body">
-                            <ul class="menu-dropdown__categories">
-                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                            <svg class="caret"> 
-                              <use xlink:href="./img/sprites.svg#caret"></use>
-                            </svg></a>
-                          <div class="menu-dropdown" data-dropdown="body">
-                            <ul class="menu-dropdown__categories">
-                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                            <svg class="caret"> 
-                              <use xlink:href="./img/sprites.svg#caret"></use>
-                            </svg></a>
-                          <div class="menu-dropdown" data-dropdown="body">
-                            <ul class="menu-dropdown__categories">
-                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                            <svg class="caret"> 
-                              <use xlink:href="./img/sprites.svg#caret"></use>
-                            </svg></a>
-                          <div class="menu-dropdown" data-dropdown="body">
-                            <ul class="menu-dropdown__categories">
-                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                            <svg class="caret"> 
-                              <use xlink:href="./img/sprites.svg#caret"></use>
-                            </svg></a>
-                          <div class="menu-dropdown" data-dropdown="body">
-                            <ul class="menu-dropdown__categories">
-                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                            <svg class="caret"> 
-                              <use xlink:href="./img/sprites.svg#caret"></use>
-                            </svg></a>
-                          <div class="menu-dropdown" data-dropdown="body">
-                            <ul class="menu-dropdown__categories">
-                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                            <svg class="caret"> 
-                              <use xlink:href="./img/sprites.svg#caret"></use>
-                            </svg></a>
-                          <div class="menu-dropdown" data-dropdown="body">
-                            <ul class="menu-dropdown__categories">
-                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                            <svg class="caret"> 
-                              <use xlink:href="./img/sprites.svg#caret"></use>
-                            </svg></a>
-                          <div class="menu-dropdown" data-dropdown="body">
-                            <ul class="menu-dropdown__categories">
-                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                            <svg class="caret"> 
-                              <use xlink:href="./img/sprites.svg#caret"></use>
-                            </svg></a>
-                          <div class="menu-dropdown" data-dropdown="body">
-                            <ul class="menu-dropdown__categories">
-                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
-                                        <div class="menu-dropdown" data-dropdown="body">
-                                          <ul class="menu-dropdown__categories">
-                                            <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                                            <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                                <svg class="caret"> 
-                                                  <use xlink:href="./img/sprites.svg#caret"></use>
-                                                </svg></a></li>
-                                          </ul>
-                                        </div>
-                              </li>
-                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
-                                  <svg class="caret"> 
-                                    <use xlink:href="./img/sprites.svg#caret"></use>
-                                  </svg></a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
-                      </ul>
+                      <div class="menu-dropdown__inner">
+                        <ul class="menu-dropdown__categories" data-scroll="item">
+                          <li>
+                            <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
+                          </li>
+                          <li>
+                            <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                          </li>
+                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                              <svg class="caret"> 
+                                <use xlink:href="./img/sprites.svg#caret"></use>
+                              </svg></a>
+                            <div class="menu-dropdown" data-dropdown="body" data-scroll="wrap">
+                              <ul class="menu-dropdown__categories" data-scroll="item">
+                                <li>
+                                  <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
+                                </li>
+                                <li>
+                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                              <svg class="caret"> 
+                                <use xlink:href="./img/sprites.svg#caret"></use>
+                              </svg></a>
+                            <div class="menu-dropdown" data-dropdown="body" data-scroll="wrap">
+                              <ul class="menu-dropdown__categories" data-scroll="item">
+                                <li>
+                                  <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
+                                </li>
+                                <li>
+                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a></li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                              <svg class="caret"> 
+                                <use xlink:href="./img/sprites.svg#caret"></use>
+                              </svg></a>
+                            <div class="menu-dropdown" data-dropdown="body">
+                              <ul class="menu-dropdown__categories">
+                                <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                              <svg class="caret"> 
+                                <use xlink:href="./img/sprites.svg#caret"></use>
+                              </svg></a>
+                            <div class="menu-dropdown" data-dropdown="body">
+                              <ul class="menu-dropdown__categories">
+                                <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                              <svg class="caret"> 
+                                <use xlink:href="./img/sprites.svg#caret"></use>
+                              </svg></a>
+                            <div class="menu-dropdown" data-dropdown="body">
+                              <ul class="menu-dropdown__categories">
+                                <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                              <svg class="caret"> 
+                                <use xlink:href="./img/sprites.svg#caret"></use>
+                              </svg></a>
+                            <div class="menu-dropdown" data-dropdown="body">
+                              <ul class="menu-dropdown__categories">
+                                <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                              <svg class="caret"> 
+                                <use xlink:href="./img/sprites.svg#caret"></use>
+                              </svg></a>
+                            <div class="menu-dropdown" data-dropdown="body">
+                              <ul class="menu-dropdown__categories">
+                                <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                              <svg class="caret"> 
+                                <use xlink:href="./img/sprites.svg#caret"></use>
+                              </svg></a>
+                            <div class="menu-dropdown" data-dropdown="body">
+                              <ul class="menu-dropdown__categories">
+                                <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                              <svg class="caret"> 
+                                <use xlink:href="./img/sprites.svg#caret"></use>
+                              </svg></a>
+                            <div class="menu-dropdown" data-dropdown="body">
+                              <ul class="menu-dropdown__categories">
+                                <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                              <svg class="caret"> 
+                                <use xlink:href="./img/sprites.svg#caret"></use>
+                              </svg></a>
+                            <div class="menu-dropdown" data-dropdown="body">
+                              <ul class="menu-dropdown__categories">
+                                <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                              <svg class="caret"> 
+                                <use xlink:href="./img/sprites.svg#caret"></use>
+                              </svg></a>
+                            <div class="menu-dropdown" data-dropdown="body">
+                              <ul class="menu-dropdown__categories">
+                                <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                              <svg class="caret"> 
+                                <use xlink:href="./img/sprites.svg#caret"></use>
+                              </svg></a>
+                            <div class="menu-dropdown" data-dropdown="body">
+                              <ul class="menu-dropdown__categories">
+                                <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a>
+                                          <div class="menu-dropdown" data-dropdown="body">
+                                            <ul class="menu-dropdown__categories">
+                                              <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                                              <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                                  <svg class="caret"> 
+                                                    <use xlink:href="./img/sprites.svg#caret"></use>
+                                                  </svg></a></li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span>
+                                    <svg class="caret"> 
+                                      <use xlink:href="./img/sprites.svg#caret"></use>
+                                    </svg></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li data-dropdown="open"><a class="menu-dropdown__link" href=""> <span>Каталки</span></a></li>
+                        </ul>
+                      </div>
                     </div>
                   </li>
                 </li>
@@ -3511,7 +3958,7 @@
               </div>
               <div class="menu-sticky__contacts"><a class="top-contacts__phone color-pink font-condensed" href=""><span>+7-800-555-35-35</span></a></div>
               <button class="open-search" type="button" data-search="open"></button>
-              <button class="middle-options__item cart color-blue" type="button" data-modal data-action="add-cart">
+              <button class="middle-options__item cart color-blue" type="button" data-modal data-action="add-basket">
                 <div class="cart__badge">3</div>
                 <svg>
                   <use xlink:href="./img/sprites.svg#cart"></use>
