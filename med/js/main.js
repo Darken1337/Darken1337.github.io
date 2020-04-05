@@ -43,12 +43,13 @@ var menuDropInit = {
 
                 _this.openMenu(dropToOpen);
 
-                var firstEl = dropToOpen.find('[data-dropdown="open"]').eq(0);
+                if($(this).attr('data-open')){
+                    var firstEl = dropToOpen.find('[data-dropdown="open"]').eq(0);
 
-                firstEl.addClass('active');
-
-                firstEl.children('[data-dropdown="body"]').show();
-                
+                    firstEl.addClass('active');
+    
+                    firstEl.children('[data-dropdown="body"]').show();
+                }
 
                 $(this).addClass('active');
     
@@ -628,36 +629,59 @@ menu.each(function(){
 
     var el = $(this);
 
-    var wrap = el.parents('[data-scroll="wrap"]'),
-        scrollTop = el.find('[data-scroll="top"]'),
-        scrollBottom = el.find('[data-scroll="bottom"]');
+    var wrap = el.parents('[data-scroll="wrap"]').eq(0),
+        scrollTop = el.find('[data-scroll="top"]').eq(0),
+        scrollBottom = el.find('[data-scroll="bottom"]').eq(0),
+        interval = null;
 
-    scrollTop.on('click', function(){
+    scrollTop.on('mouseenter', function(){
 
-        var scrolledTop = el.scrollTop();
+        interval = setInterval(function(){
 
-        el.animate({
-            scrollTop: scrolledTop - 39
-        })
+            var scrolledTop = el.scrollTop();
 
-        checkScroll()
+            el.animate({
+                scrollTop: scrolledTop - 39
+            }, 200)
+    
+            checkScroll();
+            setTimeout(() => {
+                checkInterval();
+            }, 200);
+        }, 200)
         
+    })
+
+    scrollTop.on('mouseleave', function(){
+        clearInterval(interval);
     })
 
     el.on('scroll', function(){
         checkScroll()
     })
 
-    scrollBottom.on('click', function(){
+    scrollBottom.on('mouseenter', function(){
 
-        var scrolledTop = el.scrollTop();
+        interval = setInterval(function(){
 
-        el.animate({
-            scrollTop: scrolledTop + 39
-        })
+            var scrolledTop = el.scrollTop();
+            
+
+            el.animate({
+                scrollTop: scrolledTop + 39
+            }, 200)
+            
+            checkScroll()
+
+            setTimeout(() => {
+                checkInterval();
+            }, 200);
+        }, 200)
         
-        checkScroll()
-        
+    })
+
+    scrollBottom.on('mouseleave', function(){
+        clearInterval(interval);
     })
 
 
@@ -667,15 +691,27 @@ menu.each(function(){
         var scrolled = el.scrollTop();
 
         if(scrolled === 0){
-            scrollTop.hide()
+            scrollTop.hide();
         }else{
             scrollTop.show()
         }
         
         if(wrap.height() + scrolled === el.prop('scrollHeight')){
-            scrollBottom.hide()
+            scrollBottom.hide();
         }else{
-            scrollBottom.show()
+            scrollBottom.show();
+        }
+    }
+
+    function checkInterval(){
+        var scrolled = el.scrollTop();
+
+        if(scrolled === 0){
+            clearInterval(interval);
+        }
+        
+        if(wrap.height() + scrolled === el.prop('scrollHeight')){
+            clearInterval(interval);
         }
     }
 
