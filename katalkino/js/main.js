@@ -265,45 +265,6 @@ if(slider){
 
 }
 
-
-// Tips
-
-var tipController = {
-    add: function(){
-
-        var tipElement = $('[data-template="tip"]').clone(),
-            container = $('[data-tip="wrap"]');
-
-        tipElement.removeAttr('data-template');
-
-        container.html('');
-
-        container.append(tipElement);
-
-        tipElement.fadeIn(200);
-
-        setTimeout(() => {
-            tipController.close(tipElement)
-        }, 3000);
-
-    },
-    close: function(tip){
-        tip.fadeOut(200, function(){
-            tip.remove()
-        })
-    }
-}
-
-$(document).on('click', '[data-tip="add"]',function(){
-    tipController.add();
-})
-
-$(document).on('click', '[data-tip="close"]', function(){
-    var tipToClose = $(this).parents('[data-tip="item"]');
-
-    tipController.close(tipToClose);
-})
-
 // menu-adaptive Dropdown
 
 var menuDropdownMobile = {
@@ -350,31 +311,31 @@ menuDropdownMobile.init();
 
 // Menu sticky init
 
-function checkMenuSticky(){
-    var headerHeight = $('#s-header').outerHeight();
+// function checkMenuSticky(){
+//     var headerHeight = $('#s-header').outerHeight();
 
-    if(this.window.pageYOffset > headerHeight){
-        $('#menu-sticky').removeClass('menu-hidden');
-        if($('#menu-sticky [data-dropdown="open-main"].active').length === 0){
-            $('[data-dropdown="body-main"]').hide(0);
-            $('.overlay').hide(0);
+//     if(this.window.pageYOffset > headerHeight){
+//         $('#menu-sticky').removeClass('menu-hidden');
+//         if($('#menu-sticky [data-dropdown="open-main"].active').length === 0){
+//             $('[data-dropdown="body-main"]').hide(0);
+//             $('.overlay').hide(0);
     
-            $('[data-dropdown="open-main"]').removeClass('active');
-            $('[data-dropdown="open"]').removeClass('active');
-        }
+//             $('[data-dropdown="open-main"]').removeClass('active');
+//             $('[data-dropdown="open"]').removeClass('active');
+//         }
         
-    }else{
-        $('#menu-sticky').addClass('menu-hidden');
-    }
-}
+//     }else{
+//         $('#menu-sticky').addClass('menu-hidden');
+//     }
+// }
 
-checkMenuSticky();
+// checkMenuSticky();
 
-$(window).on('scroll', function(){
+// $(window).on('scroll', function(){
 
-    checkMenuSticky();
+//     checkMenuSticky();
 
-})
+// })
 
 // tabs init
 
@@ -660,3 +621,14 @@ if($(window).width() < 1025){
         
     })
 }
+
+$('[data-action="add-basket"]').on('click', function(){
+
+    if($(this).hasClass('active')){
+        $(this).text('В корзину')
+    }else{
+        $(this).text('В корзине')
+    }
+    $(this).toggleClass('active');
+
+})
