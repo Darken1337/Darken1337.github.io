@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -161,9 +162,9 @@ textarea {
 @media screen and (min-width: 100px) {
   .text-center {
     text-align: center; }
-  .textleft {
+  .tex-left {
     text-align: left; }
-  .textright {
+  .text-right {
     text-align: right; } }
 
 @media screen and (min-width: 1025px) {
@@ -1550,9 +1551,21 @@ input[type="submit"].bg-pink-main:active {
   z-index: 1000;
   display: none;
   background: #fff;
-  height: 395px; }
+  height: 395px;
+  border-left: 1px solid #c2c2c2; }
   .menu-dropdown.drop-simple {
     width: 1210px; }
+    .menu-dropdown.drop-simple::after {
+      content: 'Выберите категорию слева';
+      position: absolute;
+      top: 40%;
+      left: 45%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      font-size: 35px;
+      opacity: .6;
+      color: #808080; }
   .menu-dropdown[data-scroll="wrap"] .menu-dropdown__categories {
     overflow: auto;
     max-height: 395px;
@@ -1567,7 +1580,6 @@ input[type="submit"].bg-pink-main:active {
     position: relative; }
   .menu-dropdown__categories {
     width: 284px;
-    border-right: 1px solid #c2c2c2;
     background-color: #FFFFFF;
     height: 100%; }
     .menu-dropdown__categories > li.active > a {
@@ -1983,7 +1995,7 @@ input[type="submit"].bg-pink-main:active {
   border-radius: 10px;
   padding: 17px 22px 15px;
   margin-bottom: 8px;
-  min-height: 71px; }
+  min-height: 73px; }
   .category-tags-wrap.has-prev .category-tags__control.prev {
     display: block; }
   .category-tags-wrap.has-prev .category-tags::before {
@@ -2054,7 +2066,7 @@ input[type="submit"].bg-pink-main:active {
   .category-tags__inner {
     overflow: hidden;
     position: relative;
-    min-height: 37px; }
+    min-height: 38px; }
   .category-tags__list {
     position: absolute;
     top: 0;
@@ -2465,7 +2477,7 @@ input[type="submit"].bg-pink-main:active {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        font-weight: 600;
+        font-weight: 400;
         font-size: 16px;
         letter-spacing: 0.1em;
         font-family: "Fira Sans Condensed", sans-serif;

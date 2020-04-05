@@ -436,6 +436,11 @@ function checkMenuSticky(){
         
     }else{
         $('#menu-sticky').addClass('menu-hidden');
+        $('[data-dropdown="body-main"]').hide(0);
+        $('.overlay').hide(0);
+
+        $('[data-dropdown="open-main"]').removeClass('active');
+        $('[data-dropdown="open"]').removeClass('active');
     }
 }
 
