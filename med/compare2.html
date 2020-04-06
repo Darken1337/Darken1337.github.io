@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css?family=Fira+Sans:300:400,500,700|Fira+Sans+Condensed:300,400,500|Fira+Mono:500&display=swap&subset=cyrillic" rel="stylesheet">
@@ -90,14 +90,10 @@
         <div class="color-pink font-17 text-center">Вы регистрируетесь как:</div>
         <fieldset>
           <label class="radio">
-            <input type="radio" name="register" checked>
-            <div class="radio__box"></div>
-            <div class="radio__text font-14">Торгующая или иная организация</div>
+            <input type="radio" name="register" checked><span class="radio__box"></span><span class="radio__text font-14">Торгующая или иная организация</span>
           </label>
           <label class="radio">
-            <input type="radio" name="register">
-            <div class="radio__box"></div>
-            <div class="radio__text font-14">Конечный покупатель</div>
+            <input type="radio" name="register"><span class="radio__box"></span><span class="radio__text font-14">Конечный покупатель</span>
           </label>
         </fieldset>
       </div>
@@ -142,9 +138,7 @@
       <p class="font-14 color-gray-300 text-center">Все поля обязательны к заполнению</p>
       <div class="modal-register__terms text-center">
         <label class="checkbox">
-          <input type="checkbox">
-          <div class="checkbox__box"></div>
-          <div class="checkbox__text font-13 font-condensed">Фактом регистрации вы соглашаетесь с <a class="color-blue-light text-underline">Пользовательским соглашением</a></div>
+          <input type="checkbox"><span class="checkbox__box"></span><span class="checkbox__text font-13 font-condensed">Фактом регистрации вы соглашаетесь с <a class="color-blue-light text-underline">Пользовательским соглашением</a></span>
         </label>
       </div>
       <div class="text-center">
@@ -174,9 +168,7 @@
         <div class="modal-login__restore"><a class="color-blue-light text-underline" href="">Забыли пароль?</a></div>
         <div class="modal-login__remember">
           <label class="checkbox checkbox--big">
-            <input type="checkbox">
-            <div class="checkbox__box"></div>
-            <div class="checkbox__text">Запомнить меня</div>
+            <input type="checkbox"><span class="checkbox__box"></span><span class="checkbox__text">Запомнить меня</span>
           </label>
         </div>
         <div class="modal-login__submit">
@@ -251,12 +243,12 @@
             <button class="btn-medium bg-pink-main font-18 font-condensed" type="button">Купить в 1 клик</button>
           </div>
           <div class="product-actions">
-            <button class="color-blue" type="button">
+            <button class="color-blue" type="button" data-type="like">
               <svg class="fill-none mr-10">
                 <use xlink:href="./img/sprites.svg#like"></use>
               </svg><span>В избранное</span>
             </button>
-            <button class="color-blue" type="button">
+            <button class="color-blue" type="button" data-type="compare">
               <svg class="mr-10">
                 <use xlink:href="./img/sprites.svg#compare"></use>
               </svg><span>Сравнение</span>
@@ -540,7 +532,7 @@
                 <li><a class="color-blue" href="">Контакты</a></li>
                 <li><a class="color-blue" href="">Поставщикам</a></li>
               </ul>
-              <div class="top-contacts"><a class="top-contacts__phone color-pink" href="">
+              <div class="top-contacts"><a class="top-contacts__phone color-pink" href="tel:+7-800-555-35-35">
                   <svg>
                     <use xlink:href="./img/sprites.svg#phone"></use>
                   </svg><span>+7-800-555-35-35</span></a>
@@ -1042,43 +1034,42 @@
         <div class="middle-header-wrap">
           <div class="container">
             <div class="middle-header">
-              <div class="logo"><img src="./img/logo.svg" alt="Логотип"></div>
-              <button class="open-search" type="button" data-search="open"></button>
+              <div class="logo"><img src="./img/logo.svg" alt="Логотип" title="Medical"></div>
+              <button class="open-search" type="button" data-search="open" title="Открыть поиск"></button>
               <form class="search-wrap" data-search="item">
                 <input type="search" placeholder="Поиск товара по каталогу">
                 <button class="search-wrap__button" type="submit"></button>
               </form>
               <div class="search-overlay"></div>
-              <div class="middle-options"><a class="middle-options__item color-blue" href="" data-modal data-action="modal-compare">
+              <div class="middle-options"><a class="middle-options__item color-blue" href="" data-modal data-action="modal-compare" title="Открыть список сравнений">
                   <svg>
                     <use xlink:href="./img/sprites.svg#compare"></use>
-                  </svg></a><a class="middle-options__item color-blue" href="">
+                  </svg></a><a class="middle-options__item color-blue" href="" title="Открыть список избранных">
                   <svg class="fill-none">
                     <use xlink:href="./img/sprites.svg#like"></use>
                   </svg></a>
-                <button class="middle-options__item cart color-blue" type="button" data-modal data-action="add-basket">
+                <button class="middle-options__item cart color-blue" type="button" title="Корзина" data-modal data-action="add-basket">
                   <div class="cart__badge">3</div>
                   <svg>
                     <use xlink:href="./img/sprites.svg#cart"></use>
                   </svg>
                 </button>
               </div>
-              <div class="hamb" data-menu="open">
+              <div class="hamb" data-menu="open" title="Открыть меню">
                 <svg> 
                   <use xlink:href="./img/sprites.svg#hamb-3"></use>
                 </svg>
               </div>
             </div>
             <div class="middle-header-mobile">
-              <div class="top-contacts"><a class="top-contacts__phone color-pink" href="">
+              <div class="top-contacts"><a class="top-contacts__phone color-pink" href="tel:+7-800-555-35-35">
                   <svg>
                     <use xlink:href="./img/sprites.svg#phone"></use>
                   </svg><span>+7-800-555-35-35</span></a>
                 <button class="top-contacts__callback color-pink" type="button" data-modal data-action="callback">Обратный звонок</button>
               </div>
               <button class="open-search" type="button" data-search="open"></button>
-              <button class="middle-options__item cart color-blue" type="button" data-modal data-action="add-basket">
-                <div class="cart__badge">3</div>
+              <button class="middle-options__item cart color-blue" type="button" data-modal data-action="add-basket"><span class="cart__badge">3</span>
                 <svg>
                   <use xlink:href="./img/sprites.svg#cart"></use>
                 </svg>
@@ -1096,10 +1087,10 @@
                 <div class="menu-dropdown" data-dropdown="body-main" data-scroll="wrap">
                   <ul class="menu-dropdown__categories" data-scroll="item">
                     <li>
-                      <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
+                      <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
                     </li>
                     <li>
-                      <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                      <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                     </li>
                     <li data-dropdown="open"><a class="menu-dropdown__link active" href=""><span>Каталки</span>
                         <svg class="caret"> 
@@ -1107,8 +1098,8 @@
                         </svg></a>
                               <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                 <div class="menu-category__content" data-scroll="item">
-                                  <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                   <div class="menu-category__item"><a class="menu-category__title">dasdasdasdsa</a>
                                     <ul class="menu-category-list">
                                       <li><a href="">Аквадистилляторы</a></li>
@@ -1141,12 +1132,12 @@
                                               <div class="stickers-wrap">
                                               </div>
                                               <div class="feature-tile__actions">
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                   <svg class="fill-none">
                                                     <use xlink:href="./img/sprites.svg#like"></use>
                                                   </svg>
                                                 </button>
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                   <svg>
                                                     <use xlink:href="./img/sprites.svg#compare"></use>
                                                   </svg>
@@ -1154,14 +1145,14 @@
                                               </div>
                                               <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                 <div class="feature-tile__image-panel">
-                                                  <button type="button" data-modal data-action="product-prev">
+                                                  <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                     </svg><span>Быстрый показ</span>
                                                   </button>
                                                 </div>
                                               </div>
-                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
                                                 <div class="feature-price__regular">165 399 ₸</div>
@@ -1181,8 +1172,8 @@
                         </svg></a>
                               <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                 <div class="menu-category__content" data-scroll="item">
-                                  <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                   <div class="menu-category__item"><a class="menu-category__title">dsadasdas[ettt</a>
                                     <ul class="menu-category-list">
                                       <li><a href="">Аквадистилляторы</a></li>
@@ -1215,12 +1206,12 @@
                                               <div class="stickers-wrap">
                                               </div>
                                               <div class="feature-tile__actions">
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                   <svg class="fill-none">
                                                     <use xlink:href="./img/sprites.svg#like"></use>
                                                   </svg>
                                                 </button>
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                   <svg>
                                                     <use xlink:href="./img/sprites.svg#compare"></use>
                                                   </svg>
@@ -1228,14 +1219,14 @@
                                               </div>
                                               <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                 <div class="feature-tile__image-panel">
-                                                  <button type="button" data-modal data-action="product-prev">
+                                                  <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                     </svg><span>Быстрый показ</span>
                                                   </button>
                                                 </div>
                                               </div>
-                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
                                                 <div class="feature-price__regular">165 399 ₸</div>
@@ -1255,8 +1246,8 @@
                         </svg></a>
                               <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                 <div class="menu-category__content" data-scroll="item">
-                                  <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                   <div class="menu-category__item"><a class="menu-category__title">2121231321</a>
                                     <ul class="menu-category-list">
                                       <li><a href="">Аквадистилляторы</a></li>
@@ -1289,12 +1280,12 @@
                                               <div class="stickers-wrap">
                                               </div>
                                               <div class="feature-tile__actions">
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                   <svg class="fill-none">
                                                     <use xlink:href="./img/sprites.svg#like"></use>
                                                   </svg>
                                                 </button>
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                   <svg>
                                                     <use xlink:href="./img/sprites.svg#compare"></use>
                                                   </svg>
@@ -1302,14 +1293,14 @@
                                               </div>
                                               <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                 <div class="feature-tile__image-panel">
-                                                  <button type="button" data-modal data-action="product-prev">
+                                                  <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                     </svg><span>Быстрый показ</span>
                                                   </button>
                                                 </div>
                                               </div>
-                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
                                                 <div class="feature-price__regular">165 399 ₸</div>
@@ -1329,8 +1320,8 @@
                         </svg></a>
                               <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                 <div class="menu-category__content" data-scroll="item">
-                                  <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                   <div class="menu-category__item"><a class="menu-category__title">мррррррррррррр</a>
                                     <ul class="menu-category-list">
                                       <li><a href="">Аквадистилляторы</a></li>
@@ -1363,12 +1354,12 @@
                                               <div class="stickers-wrap">
                                               </div>
                                               <div class="feature-tile__actions">
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                   <svg class="fill-none">
                                                     <use xlink:href="./img/sprites.svg#like"></use>
                                                   </svg>
                                                 </button>
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                   <svg>
                                                     <use xlink:href="./img/sprites.svg#compare"></use>
                                                   </svg>
@@ -1376,14 +1367,14 @@
                                               </div>
                                               <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                 <div class="feature-tile__image-panel">
-                                                  <button type="button" data-modal data-action="product-prev">
+                                                  <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                     </svg><span>Быстрый показ</span>
                                                   </button>
                                                 </div>
                                               </div>
-                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
                                                 <div class="feature-price__regular">165 399 ₸</div>
@@ -1403,8 +1394,8 @@
                         </svg></a>
                               <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                 <div class="menu-category__content" data-scroll="item">
-                                  <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                   <div class="menu-category__item"><a class="menu-category__title">huuuuuuu</a>
                                     <ul class="menu-category-list">
                                       <li><a href="">Аквадистилляторы</a></li>
@@ -1437,12 +1428,12 @@
                                               <div class="stickers-wrap">
                                               </div>
                                               <div class="feature-tile__actions">
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                   <svg class="fill-none">
                                                     <use xlink:href="./img/sprites.svg#like"></use>
                                                   </svg>
                                                 </button>
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                   <svg>
                                                     <use xlink:href="./img/sprites.svg#compare"></use>
                                                   </svg>
@@ -1450,14 +1441,14 @@
                                               </div>
                                               <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                 <div class="feature-tile__image-panel">
-                                                  <button type="button" data-modal data-action="product-prev">
+                                                  <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                     </svg><span>Быстрый показ</span>
                                                   </button>
                                                 </div>
                                               </div>
-                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
                                                 <div class="feature-price__regular">165 399 ₸</div>
@@ -1477,8 +1468,8 @@
                         </svg></a>
                               <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                 <div class="menu-category__content" data-scroll="item">
-                                  <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                   <div class="menu-category__item"><a class="menu-category__title">mewwwww</a>
                                     <ul class="menu-category-list">
                                       <li><a href="">Аквадистилляторы</a></li>
@@ -1511,12 +1502,12 @@
                                               <div class="stickers-wrap">
                                               </div>
                                               <div class="feature-tile__actions">
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                   <svg class="fill-none">
                                                     <use xlink:href="./img/sprites.svg#like"></use>
                                                   </svg>
                                                 </button>
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                   <svg>
                                                     <use xlink:href="./img/sprites.svg#compare"></use>
                                                   </svg>
@@ -1524,14 +1515,14 @@
                                               </div>
                                               <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                 <div class="feature-tile__image-panel">
-                                                  <button type="button" data-modal data-action="product-prev">
+                                                  <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                     </svg><span>Быстрый показ</span>
                                                   </button>
                                                 </div>
                                               </div>
-                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
                                                 <div class="feature-price__regular">165 399 ₸</div>
@@ -1551,8 +1542,8 @@
                         </svg></a>
                               <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                 <div class="menu-category__content" data-scroll="item">
-                                  <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                   <div class="menu-category__item"><a class="menu-category__title">feeeee</a>
                                     <ul class="menu-category-list">
                                       <li><a href="">Аквадистилляторы</a></li>
@@ -1585,12 +1576,12 @@
                                               <div class="stickers-wrap">
                                               </div>
                                               <div class="feature-tile__actions">
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                   <svg class="fill-none">
                                                     <use xlink:href="./img/sprites.svg#like"></use>
                                                   </svg>
                                                 </button>
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                   <svg>
                                                     <use xlink:href="./img/sprites.svg#compare"></use>
                                                   </svg>
@@ -1598,14 +1589,14 @@
                                               </div>
                                               <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                 <div class="feature-tile__image-panel">
-                                                  <button type="button" data-modal data-action="product-prev">
+                                                  <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                     </svg><span>Быстрый показ</span>
                                                   </button>
                                                 </div>
                                               </div>
-                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
                                                 <div class="feature-price__regular">165 399 ₸</div>
@@ -1625,8 +1616,8 @@
                         </svg></a>
                               <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                 <div class="menu-category__content" data-scroll="item">
-                                  <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                   <div class="menu-category__item"><a class="menu-category__title">shhhh</a>
                                     <ul class="menu-category-list">
                                       <li><a href="">Аквадистилляторы</a></li>
@@ -1659,12 +1650,12 @@
                                               <div class="stickers-wrap">
                                               </div>
                                               <div class="feature-tile__actions">
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                   <svg class="fill-none">
                                                     <use xlink:href="./img/sprites.svg#like"></use>
                                                   </svg>
                                                 </button>
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                   <svg>
                                                     <use xlink:href="./img/sprites.svg#compare"></use>
                                                   </svg>
@@ -1672,14 +1663,14 @@
                                               </div>
                                               <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                 <div class="feature-tile__image-panel">
-                                                  <button type="button" data-modal data-action="product-prev">
+                                                  <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                     </svg><span>Быстрый показ</span>
                                                   </button>
                                                 </div>
                                               </div>
-                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
                                                 <div class="feature-price__regular">165 399 ₸</div>
@@ -1699,8 +1690,8 @@
                         </svg></a>
                               <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                 <div class="menu-category__content" data-scroll="item">
-                                  <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                   <div class="menu-category__item"><a class="menu-category__title">pfffff</a>
                                     <ul class="menu-category-list">
                                       <li><a href="">Аквадистилляторы</a></li>
@@ -1733,12 +1724,12 @@
                                               <div class="stickers-wrap">
                                               </div>
                                               <div class="feature-tile__actions">
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                   <svg class="fill-none">
                                                     <use xlink:href="./img/sprites.svg#like"></use>
                                                   </svg>
                                                 </button>
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                   <svg>
                                                     <use xlink:href="./img/sprites.svg#compare"></use>
                                                   </svg>
@@ -1746,14 +1737,14 @@
                                               </div>
                                               <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                 <div class="feature-tile__image-panel">
-                                                  <button type="button" data-modal data-action="product-prev">
+                                                  <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                     </svg><span>Быстрый показ</span>
                                                   </button>
                                                 </div>
                                               </div>
-                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
                                                 <div class="feature-price__regular">165 399 ₸</div>
@@ -1773,8 +1764,8 @@
                         </svg></a>
                               <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                 <div class="menu-category__content" data-scroll="item">
-                                  <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                   <div class="menu-category__item"><a class="menu-category__title">mou</a>
                                     <ul class="menu-category-list">
                                       <li><a href="">Аквадистилляторы</a></li>
@@ -1807,12 +1798,12 @@
                                               <div class="stickers-wrap">
                                               </div>
                                               <div class="feature-tile__actions">
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                   <svg class="fill-none">
                                                     <use xlink:href="./img/sprites.svg#like"></use>
                                                   </svg>
                                                 </button>
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                   <svg>
                                                     <use xlink:href="./img/sprites.svg#compare"></use>
                                                   </svg>
@@ -1820,14 +1811,14 @@
                                               </div>
                                               <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                 <div class="feature-tile__image-panel">
-                                                  <button type="button" data-modal data-action="product-prev">
+                                                  <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                     </svg><span>Быстрый показ</span>
                                                   </button>
                                                 </div>
                                               </div>
-                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
                                                 <div class="feature-price__regular">165 399 ₸</div>
@@ -1847,8 +1838,8 @@
                         </svg></a>
                               <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                 <div class="menu-category__content" data-scroll="item">
-                                  <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                  <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                   <div class="menu-category__item"><a class="menu-category__title">dsadsa</a>
                                     <ul class="menu-category-list">
                                       <li><a href="">Аквадистилляторы</a></li>
@@ -1881,12 +1872,12 @@
                                               <div class="stickers-wrap">
                                               </div>
                                               <div class="feature-tile__actions">
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                   <svg class="fill-none">
                                                     <use xlink:href="./img/sprites.svg#like"></use>
                                                   </svg>
                                                 </button>
-                                                <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                   <svg>
                                                     <use xlink:href="./img/sprites.svg#compare"></use>
                                                   </svg>
@@ -1894,14 +1885,14 @@
                                               </div>
                                               <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                 <div class="feature-tile__image-panel">
-                                                  <button type="button" data-modal data-action="product-prev">
+                                                  <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                     </svg><span>Быстрый показ</span>
                                                   </button>
                                                 </div>
                                               </div>
-                                              <div class="feature-tile__state exist-end">Заканчивается</div>
+                                              <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                               <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                               <div class="feature-price">
                                                 <div class="feature-price__regular">165 399 ₸</div>
@@ -2074,8 +2065,8 @@
                           </svg></a>
                                 <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                   <div class="menu-category__content" data-scroll="item">
-                                    <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                     <div class="menu-category__item"><a class="menu-category__title">dasdasdasdsa</a>
                                       <ul class="menu-category-list">
                                         <li><a href="">Аквадистилляторы</a></li>
@@ -2108,12 +2099,12 @@
                                                 <div class="stickers-wrap">
                                                 </div>
                                                 <div class="feature-tile__actions">
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                     <svg class="fill-none">
                                                       <use xlink:href="./img/sprites.svg#like"></use>
                                                     </svg>
                                                   </button>
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#compare"></use>
                                                     </svg>
@@ -2121,14 +2112,14 @@
                                                 </div>
                                                 <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                   <div class="feature-tile__image-panel">
-                                                    <button type="button" data-modal data-action="product-prev">
+                                                    <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                       <svg>
                                                         <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                       </svg><span>Быстрый показ</span>
                                                     </button>
                                                   </div>
                                                 </div>
-                                                <div class="feature-tile__state exist-end">Заканчивается</div>
+                                                <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
                                                   <div class="feature-price__regular">165 399 ₸</div>
@@ -2148,8 +2139,8 @@
                           </svg></a>
                                 <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                   <div class="menu-category__content" data-scroll="item">
-                                    <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                     <div class="menu-category__item"><a class="menu-category__title">dsadasdas[ettt</a>
                                       <ul class="menu-category-list">
                                         <li><a href="">Аквадистилляторы</a></li>
@@ -2182,12 +2173,12 @@
                                                 <div class="stickers-wrap">
                                                 </div>
                                                 <div class="feature-tile__actions">
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                     <svg class="fill-none">
                                                       <use xlink:href="./img/sprites.svg#like"></use>
                                                     </svg>
                                                   </button>
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#compare"></use>
                                                     </svg>
@@ -2195,14 +2186,14 @@
                                                 </div>
                                                 <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                   <div class="feature-tile__image-panel">
-                                                    <button type="button" data-modal data-action="product-prev">
+                                                    <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                       <svg>
                                                         <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                       </svg><span>Быстрый показ</span>
                                                     </button>
                                                   </div>
                                                 </div>
-                                                <div class="feature-tile__state exist-end">Заканчивается</div>
+                                                <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
                                                   <div class="feature-price__regular">165 399 ₸</div>
@@ -2222,8 +2213,8 @@
                           </svg></a>
                                 <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                   <div class="menu-category__content" data-scroll="item">
-                                    <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                     <div class="menu-category__item"><a class="menu-category__title">2121231321</a>
                                       <ul class="menu-category-list">
                                         <li><a href="">Аквадистилляторы</a></li>
@@ -2256,12 +2247,12 @@
                                                 <div class="stickers-wrap">
                                                 </div>
                                                 <div class="feature-tile__actions">
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                     <svg class="fill-none">
                                                       <use xlink:href="./img/sprites.svg#like"></use>
                                                     </svg>
                                                   </button>
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#compare"></use>
                                                     </svg>
@@ -2269,14 +2260,14 @@
                                                 </div>
                                                 <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                   <div class="feature-tile__image-panel">
-                                                    <button type="button" data-modal data-action="product-prev">
+                                                    <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                       <svg>
                                                         <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                       </svg><span>Быстрый показ</span>
                                                     </button>
                                                   </div>
                                                 </div>
-                                                <div class="feature-tile__state exist-end">Заканчивается</div>
+                                                <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
                                                   <div class="feature-price__regular">165 399 ₸</div>
@@ -2296,8 +2287,8 @@
                           </svg></a>
                                 <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                   <div class="menu-category__content" data-scroll="item">
-                                    <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                     <div class="menu-category__item"><a class="menu-category__title">мррррррррррррр</a>
                                       <ul class="menu-category-list">
                                         <li><a href="">Аквадистилляторы</a></li>
@@ -2330,12 +2321,12 @@
                                                 <div class="stickers-wrap">
                                                 </div>
                                                 <div class="feature-tile__actions">
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                     <svg class="fill-none">
                                                       <use xlink:href="./img/sprites.svg#like"></use>
                                                     </svg>
                                                   </button>
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#compare"></use>
                                                     </svg>
@@ -2343,14 +2334,14 @@
                                                 </div>
                                                 <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                   <div class="feature-tile__image-panel">
-                                                    <button type="button" data-modal data-action="product-prev">
+                                                    <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                       <svg>
                                                         <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                       </svg><span>Быстрый показ</span>
                                                     </button>
                                                   </div>
                                                 </div>
-                                                <div class="feature-tile__state exist-end">Заканчивается</div>
+                                                <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
                                                   <div class="feature-price__regular">165 399 ₸</div>
@@ -2370,8 +2361,8 @@
                           </svg></a>
                                 <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                   <div class="menu-category__content" data-scroll="item">
-                                    <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                     <div class="menu-category__item"><a class="menu-category__title">huuuuuuu</a>
                                       <ul class="menu-category-list">
                                         <li><a href="">Аквадистилляторы</a></li>
@@ -2404,12 +2395,12 @@
                                                 <div class="stickers-wrap">
                                                 </div>
                                                 <div class="feature-tile__actions">
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                     <svg class="fill-none">
                                                       <use xlink:href="./img/sprites.svg#like"></use>
                                                     </svg>
                                                   </button>
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#compare"></use>
                                                     </svg>
@@ -2417,14 +2408,14 @@
                                                 </div>
                                                 <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                   <div class="feature-tile__image-panel">
-                                                    <button type="button" data-modal data-action="product-prev">
+                                                    <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                       <svg>
                                                         <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                       </svg><span>Быстрый показ</span>
                                                     </button>
                                                   </div>
                                                 </div>
-                                                <div class="feature-tile__state exist-end">Заканчивается</div>
+                                                <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
                                                   <div class="feature-price__regular">165 399 ₸</div>
@@ -2444,8 +2435,8 @@
                           </svg></a>
                                 <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                   <div class="menu-category__content" data-scroll="item">
-                                    <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                     <div class="menu-category__item"><a class="menu-category__title">mewwwww</a>
                                       <ul class="menu-category-list">
                                         <li><a href="">Аквадистилляторы</a></li>
@@ -2478,12 +2469,12 @@
                                                 <div class="stickers-wrap">
                                                 </div>
                                                 <div class="feature-tile__actions">
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                     <svg class="fill-none">
                                                       <use xlink:href="./img/sprites.svg#like"></use>
                                                     </svg>
                                                   </button>
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#compare"></use>
                                                     </svg>
@@ -2491,14 +2482,14 @@
                                                 </div>
                                                 <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                   <div class="feature-tile__image-panel">
-                                                    <button type="button" data-modal data-action="product-prev">
+                                                    <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                       <svg>
                                                         <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                       </svg><span>Быстрый показ</span>
                                                     </button>
                                                   </div>
                                                 </div>
-                                                <div class="feature-tile__state exist-end">Заканчивается</div>
+                                                <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
                                                   <div class="feature-price__regular">165 399 ₸</div>
@@ -2518,8 +2509,8 @@
                           </svg></a>
                                 <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                   <div class="menu-category__content" data-scroll="item">
-                                    <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                     <div class="menu-category__item"><a class="menu-category__title">feeeee</a>
                                       <ul class="menu-category-list">
                                         <li><a href="">Аквадистилляторы</a></li>
@@ -2552,12 +2543,12 @@
                                                 <div class="stickers-wrap">
                                                 </div>
                                                 <div class="feature-tile__actions">
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                     <svg class="fill-none">
                                                       <use xlink:href="./img/sprites.svg#like"></use>
                                                     </svg>
                                                   </button>
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#compare"></use>
                                                     </svg>
@@ -2565,14 +2556,14 @@
                                                 </div>
                                                 <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                   <div class="feature-tile__image-panel">
-                                                    <button type="button" data-modal data-action="product-prev">
+                                                    <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                       <svg>
                                                         <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                       </svg><span>Быстрый показ</span>
                                                     </button>
                                                   </div>
                                                 </div>
-                                                <div class="feature-tile__state exist-end">Заканчивается</div>
+                                                <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
                                                   <div class="feature-price__regular">165 399 ₸</div>
@@ -2592,8 +2583,8 @@
                           </svg></a>
                                 <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                   <div class="menu-category__content" data-scroll="item">
-                                    <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                     <div class="menu-category__item"><a class="menu-category__title">shhhh</a>
                                       <ul class="menu-category-list">
                                         <li><a href="">Аквадистилляторы</a></li>
@@ -2626,12 +2617,12 @@
                                                 <div class="stickers-wrap">
                                                 </div>
                                                 <div class="feature-tile__actions">
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                     <svg class="fill-none">
                                                       <use xlink:href="./img/sprites.svg#like"></use>
                                                     </svg>
                                                   </button>
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#compare"></use>
                                                     </svg>
@@ -2639,14 +2630,14 @@
                                                 </div>
                                                 <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                   <div class="feature-tile__image-panel">
-                                                    <button type="button" data-modal data-action="product-prev">
+                                                    <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                       <svg>
                                                         <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                       </svg><span>Быстрый показ</span>
                                                     </button>
                                                   </div>
                                                 </div>
-                                                <div class="feature-tile__state exist-end">Заканчивается</div>
+                                                <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
                                                   <div class="feature-price__regular">165 399 ₸</div>
@@ -2666,8 +2657,8 @@
                           </svg></a>
                                 <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                   <div class="menu-category__content" data-scroll="item">
-                                    <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                     <div class="menu-category__item"><a class="menu-category__title">pfffff</a>
                                       <ul class="menu-category-list">
                                         <li><a href="">Аквадистилляторы</a></li>
@@ -2700,12 +2691,12 @@
                                                 <div class="stickers-wrap">
                                                 </div>
                                                 <div class="feature-tile__actions">
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                     <svg class="fill-none">
                                                       <use xlink:href="./img/sprites.svg#like"></use>
                                                     </svg>
                                                   </button>
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#compare"></use>
                                                     </svg>
@@ -2713,14 +2704,14 @@
                                                 </div>
                                                 <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                   <div class="feature-tile__image-panel">
-                                                    <button type="button" data-modal data-action="product-prev">
+                                                    <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                       <svg>
                                                         <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                       </svg><span>Быстрый показ</span>
                                                     </button>
                                                   </div>
                                                 </div>
-                                                <div class="feature-tile__state exist-end">Заканчивается</div>
+                                                <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
                                                   <div class="feature-price__regular">165 399 ₸</div>
@@ -2740,8 +2731,8 @@
                           </svg></a>
                                 <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                   <div class="menu-category__content" data-scroll="item">
-                                    <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                     <div class="menu-category__item"><a class="menu-category__title">mou</a>
                                       <ul class="menu-category-list">
                                         <li><a href="">Аквадистилляторы</a></li>
@@ -2774,12 +2765,12 @@
                                                 <div class="stickers-wrap">
                                                 </div>
                                                 <div class="feature-tile__actions">
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                     <svg class="fill-none">
                                                       <use xlink:href="./img/sprites.svg#like"></use>
                                                     </svg>
                                                   </button>
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#compare"></use>
                                                     </svg>
@@ -2787,14 +2778,14 @@
                                                 </div>
                                                 <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                   <div class="feature-tile__image-panel">
-                                                    <button type="button" data-modal data-action="product-prev">
+                                                    <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                       <svg>
                                                         <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                       </svg><span>Быстрый показ</span>
                                                     </button>
                                                   </div>
                                                 </div>
-                                                <div class="feature-tile__state exist-end">Заканчивается</div>
+                                                <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
                                                   <div class="feature-price__regular">165 399 ₸</div>
@@ -2814,8 +2805,8 @@
                           </svg></a>
                                 <div class="menu-category" data-dropdown="body" data-scroll="wrap">
                                   <div class="menu-category__content" data-scroll="item">
-                                    <button class="menu-dropdown__control up" type="button" data-scroll="top"> <span>&#94;</span></button>
-                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control up" type="button" data-scroll="top" title="Скроллить вверх"> <span>&#94;</span></button>
+                                    <button class="menu-dropdown__control down" type="button" data-scroll="bottom" title="Скроллить вниз"> <span>&#94;</span></button>
                                     <div class="menu-category__item"><a class="menu-category__title">dsadsa</a>
                                       <ul class="menu-category-list">
                                         <li><a href="">Аквадистилляторы</a></li>
@@ -2848,12 +2839,12 @@
                                                 <div class="stickers-wrap">
                                                 </div>
                                                 <div class="feature-tile__actions">
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в избранное">
                                                     <svg class="fill-none">
                                                       <use xlink:href="./img/sprites.svg#like"></use>
                                                     </svg>
                                                   </button>
-                                                  <button class="feature-tile__actions-item" type="button" data-tip="add">
+                                                  <button class="feature-tile__actions-item" type="button" data-tip="add" title="Добавить в сравнение">
                                                     <svg>
                                                       <use xlink:href="./img/sprites.svg#compare"></use>
                                                     </svg>
@@ -2861,14 +2852,14 @@
                                                 </div>
                                                 <div class="feature-tile__image"><img src="./img/dummy.png" alt="">
                                                   <div class="feature-tile__image-panel">
-                                                    <button type="button" data-modal data-action="product-prev">
+                                                    <button type="button" data-modal data-action="product-prev" title="Быстрый показ">
                                                       <svg>
                                                         <use xlink:href="./img/sprites.svg#hamb-quick"></use>
                                                       </svg><span>Быстрый показ</span>
                                                     </button>
                                                   </div>
                                                 </div>
-                                                <div class="feature-tile__state exist-end">Заканчивается</div>
+                                                <div class="feature-tile__state exist-end">Заканчивается</div><a class="feature-tile__link" href="#" title="Кофеварка"></a>
                                                 <p class="feature-tile__description">Какая то прикольная штука, умеет кофе варить</p>
                                                 <div class="feature-price">
                                                   <div class="feature-price__regular">165 399 ₸</div>
@@ -3956,10 +3947,9 @@
                 <input type="search" placeholder="Поиск товара по каталогу">
                 <button class="search-wrap__button" type="submit"></button>
               </div>
-              <div class="menu-sticky__contacts"><a class="top-contacts__phone color-pink font-condensed" href=""><span>+7-800-555-35-35</span></a></div>
+              <div class="menu-sticky__contacts"><a class="top-contacts__phone color-pink font-condensed" href="tel:+7-800-555-35-35"><span>+7-800-555-35-35</span></a></div>
               <button class="open-search" type="button" data-search="open"></button>
-              <button class="middle-options__item cart color-blue" type="button" data-modal data-action="add-basket">
-                <div class="cart__badge">3</div>
+              <button class="middle-options__item cart color-blue" type="button" data-modal data-action="add-basket"><span class="cart__badge">3</span>
                 <svg>
                   <use xlink:href="./img/sprites.svg#cart"></use>
                 </svg>
@@ -3987,9 +3977,7 @@
                   </svg><span class="font-14 weight-300">Удалить все товары</span>
                 </button>
                 <label class="checkbox">
-                  <input type="checkbox">
-                  <div class="checkbox__box mr-10"></div>
-                  <div class="checkbox__text text-center font-14 weight-300">Скрыть одинаковые параметры</div>
+                  <input type="checkbox"><span class="checkbox__box mr-10"></span><span class="checkbox__text text-center font-14 weight-300">Скрыть одинаковые параметры</span>
                 </label>
               </div>
                       <div class="compare-table__th">Артикул</div>
@@ -4176,10 +4164,10 @@
         </div>
       </footer>
     </div>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./libs/js/svg4everybody.min.js"></script>
+    <script src="./libs/js/nouislider.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
-  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="./libs/js/svg4everybody.min.js"></script>
-  <script src="./libs/js/nouislider.min.js"></script>
-  <script src="./js/main.js"></script>
 </html>

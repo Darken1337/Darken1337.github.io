@@ -80,14 +80,10 @@
     <div class="color-pink font-17 text-center">Вы регистрируетесь как:</div>
     <fieldset>
       <label class="radio">
-        <input type="radio" name="register" checked="checked"/>
-        <div class="radio__box"></div>
-        <div class="radio__text font-14">Торгующая или иная организация</div>
+        <input type="radio" name="register" checked="checked"/><span class="radio__box"></span><span class="radio__text font-14">Торгующая или иная организация</span>
       </label>
       <label class="radio">
-        <input type="radio" name="register"/>
-        <div class="radio__box"></div>
-        <div class="radio__text font-14">Конечный покупатель</div>
+        <input type="radio" name="register"/><span class="radio__box"></span><span class="radio__text font-14">Конечный покупатель</span>
       </label>
     </fieldset>
   </div>
@@ -132,9 +128,7 @@
   <p class="font-14 color-gray-300 text-center">Все поля обязательны к заполнению</p>
   <div class="modal-register__terms text-center">
     <label class="checkbox">
-      <input type="checkbox"/>
-      <div class="checkbox__box"></div>
-      <div class="checkbox__text font-13 font-condensed">Фактом регистрации вы соглашаетесь с <a class="color-blue-light text-underline">Пользовательским соглашением</a></div>
+      <input type="checkbox"/><span class="checkbox__box"></span><span class="checkbox__text font-13 font-condensed">Фактом регистрации вы соглашаетесь с <a class="color-blue-light text-underline">Пользовательским соглашением</a></span>
     </label>
   </div>
   <div class="text-center">
@@ -164,9 +158,7 @@
     <div class="modal-login__restore"><a class="color-blue-light text-underline" href="">Забыли пароль?</a></div>
     <div class="modal-login__remember">
       <label class="checkbox checkbox--big">
-        <input type="checkbox"/>
-        <div class="checkbox__box"></div>
-        <div class="checkbox__text">Запомнить меня</div>
+        <input type="checkbox"/><span class="checkbox__box"></span><span class="checkbox__text">Запомнить меня</span>
       </label>
     </div>
     <div class="modal-login__submit">
@@ -241,12 +233,12 @@
         <button class="btn-medium bg-pink-main font-18 font-condensed" type="button">Купить в 1 клик</button>
       </div>
       <div class="product-actions">
-        <button class="color-blue" type="button">
+        <button class="color-blue" type="button" data-type="like">
           <svg class="fill-none mr-10">
             <use xlink:href="./img/sprites.svg#like"></use>
           </svg><span>В избранное</span>
         </button>
-        <button class="color-blue" type="button">
+        <button class="color-blue" type="button" data-type="compare">
           <svg class="mr-10">
             <use xlink:href="./img/sprites.svg#compare"></use>
           </svg><span>Сравнение</span>

@@ -95,7 +95,6 @@ var dropdownInit = {
     toggleItem: function(item){
 
         item.slideToggle(200);
-        item.toggleClass('active');
 
     },
     init: function(){
@@ -106,6 +105,8 @@ var dropdownInit = {
         dropInitButtons.on('click', function(){
 
             var dropToToggle = $(this).siblings('[data-accordeon="body"]');
+
+            $(this).toggleClass('active');
 
             _this.toggleItem(dropToToggle);
 
@@ -618,12 +619,14 @@ $('.search-overlay').on('click', function(){
 
 $('#open-filter').on('click', function(){
 
+    $(this).toggleClass('active');
     $('#filter').toggleClass('visible');
 
 })
 
 $('#close-filter').on('click', function(){
 
+    $('#open-filter').removeClass('active');
     $('#filter').removeClass('visible');
 
 })
@@ -731,6 +734,32 @@ $('[data-type="add-basket"]').on('click', function(){
     }else{
         $(this).addClass('active');
         $(this).text('В корзине');
+    }
+
+})
+$('[data-type="like"]').on('click', function(){
+
+    var text = $(this).find('span');
+
+    if($(this).hasClass('active')){
+        $(this).removeClass('active');
+        text.text('В избранное');
+    }else{
+        $(this).addClass('active');
+        text.text('Убрать из избранного');
+    }
+
+})
+$('[data-type="compare"]').on('click', function(){
+
+    var text = $(this).find('span');
+
+    if($(this).hasClass('active')){
+        $(this).removeClass('active');
+        text.text('В сравнение');
+    }else{
+        $(this).addClass('active');
+        text.text('Убрать из сравнения');
     }
 
 })
