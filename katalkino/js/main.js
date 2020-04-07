@@ -5,17 +5,44 @@ $('#open-catalogue').on('click', function(){
 
     $('#catalogue-body').toggle();
     $('.overlay').toggle();
+    $(this).toggleClass('active');
 
 })
 
-$('.overlay').on('mouseenter', function(){
+$('[data-dropdown="open"]').on('mouseenter', function(){
+
+    var dropToOpen = $(this).children('[data-dropdown="body"]'),
+        nesting = $(this).parents('[data-dropdown="open"]').length + 2;
+
+    $(this).siblings('.active').removeClass('active');
+    $(this).siblings('[data-dropdown="open"]').find('[data-dropdown="open"].active').removeClass('active');
+
+    $(this).siblings('[data-dropdown="open"]').find('[data-dropdown="body"]').hide(0);
+
+    
+
+    if(dropToOpen.length > 0){
+
+        dropToOpen.show(0);
+        $(this).addClass('active');
+    }else{
+        nesting--;
+    }
+
+    $('#catalogue-body .menu-dropdown__close').css('left', 'calc(' + (nesting * 100) + '%' + ' - (' + (nesting * 2) + 'px))')
+
+})
+
+$('.overlay').on('click', function(){
     $('#catalogue-body').hide();
     $('.overlay').hide();
+    $('#open-catalogue').removeClass('active');
 })
 
 $('[data-catalogue="close"]').on('click', function(){
     $('#catalogue-body').hide();
     $('.overlay').hide();
+    $('#open-catalogue').removeClass('active');
 
 })
 //filter drop init

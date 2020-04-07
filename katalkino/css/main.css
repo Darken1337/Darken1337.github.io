@@ -1268,6 +1268,10 @@ textarea {
         border-radius: 0;
         color: #3f3f3f;
         line-height: 0; } }
+    .catalogue__button.active {
+      color: #44955B;
+      background-color: #FFFFFF;
+      border: 2px solid #44955B; }
     .catalogue__button svg {
       width: 8px;
       height: 8px;
@@ -1291,11 +1295,9 @@ textarea {
   top: 100%;
   left: -238px;
   background-color: #FFFFFF;
-  width: 1210px;
   display: none;
   height: 560px;
-  max-height: calc(100vh - 60px);
-  border: 1px solid #C2C2C2; }
+  max-height: calc(100vh - 60px); }
   @media (max-width: 1024px) {
     .menu-dropdown {
       position: fixed;
@@ -1332,14 +1334,15 @@ textarea {
     height: 100%;
     border-top: 0;
     border-bottom: 0;
+    background-color: #FFFFFF;
     position: relative; }
     @media (max-width: 1024px) {
       .menu-dropdown__list {
         border: 0;
         width: 100%; } }
-  @media screen and (min-width: 1025px) {
-    .menu-dropdown li:hover > .menu-dropdown__child {
-      display: block; } }
+  .menu-dropdown li.active > a {
+    background-color: #44955B;
+    color: #FFFFFF; }
   @media (max-width: 1024px) {
     .menu-dropdown li:not(:last-child) .menu-dropdown__link {
       border-bottom: 1px solid #C2C2C2; } }
@@ -1385,7 +1388,7 @@ textarea {
     height: 100%;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 100%;
     background-color: #FFFFFF;
     border: 1px solid #C2C2C2; }
     @media (max-width: 1024px) {
@@ -3125,7 +3128,7 @@ textarea {
     padding: 7px 23px; }
     .filter__button--show {
       font-size: 19px;
-      color: #E5E5E5;
+      color: #FFFFFF;
       border-radius: 2px; }
     .filter__button--reset {
       font-size: 16px;
@@ -3267,7 +3270,7 @@ textarea {
     font-weight: 300;
     font-size: 22px;
     letter-spacing: -0.05em;
-    color: #E5E5E5;
+    color: #FFFFFF;
     width: 42px;
     height: 30px;
     display: -webkit-box;
