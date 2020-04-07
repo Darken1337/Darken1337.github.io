@@ -206,7 +206,7 @@
     <button class="modal-basket__button basket-close" type="button" data-action="close-modal">Продолжить покупки</button>
   </div>
 </div>
-<div class="modal-window modal-compare prior-1">
+<div class="modal-window modal-compare prior-1" id="modal-compare">
   <button class="modal-window__close" type="button" data-action="close-modal">
     <svg> 
       <use xlink:href="./img/sprites.svg#close"></use>
@@ -216,132 +216,144 @@
   <div class="compare-table-compact mb-15">
     <div class="font-15 color-green d-flex align-center text-center weight-300">
       <div class="compare-table-compact__th compare-info"></div>
-      <div class="compare-table-compact__th">Артикул</div>
-      <div class="compare-table-compact__th">Бренд</div>
-      <div class="compare-table-compact__th">Артикул</div>
-      <div class="compare-table-compact__th">Бренд</div>
-      <div class="compare-table-compact__th">Артикул</div>
-      <div class="compare-table-compact__th">Бренд</div>
-      <div class="compare-table-compact__th">Артикул</div>
-    </div>
-    <div class="compare-table-compact__row d-flex font-14 weight-300">
-      <div class="compare-table-compact__td compare-info color-gray-335"><a class="compare-info__link" href=""><img src="./img/dummy-extra-small.png" alt=""/><span class="compare-info__text text-center font-14">Кофеварка CofeStaion-204m</span></a>
-        <div class="font-20 compare-info__price">165 399 ₸</div>
-        <div class="compare-table-compact__buttons text-center">
-          <button class="btn-green feature-tile__button" type="button" data-action="add-basket" data-modal="data-modal">В корзину</button>
-          <button class="color-violet font-14 text-underline" type="button" data-modal="data-modal" data-action="quick-order">Купить в 1 клик</button>
-        </div>
-      </div>
-      <div class="compare-table-compact__td"> 
-        <div class="compare-table-compact__td-inner">835923</div>
-      </div>
-      <div class="compare-table-compact__td font-14">
-        <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
-      </div>
-      <div class="compare-table-compact__td"> 
-        <div class="compare-table-compact__td-inner">835923</div>
-      </div>
-      <div class="compare-table-compact__td font-14"> 
-        <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
-      </div>
-      <div class="compare-table-compact__td"> 
-        <div class="compare-table-compact__td-inner">835923</div>
-      </div>
-      <div class="compare-table-compact__td"> 
-        <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
-      </div>
-      <div class="compare-table-compact__td">
-        <div class="compare-table-compact__td-inner">835923</div>
+      <div class="compare-table-compact__items" id="compare-products">
+        <div class="compare-table-compact__th">Артикул</div>
+        <div class="compare-table-compact__th">Бренд</div>
+        <div class="compare-table-compact__th">Артикул</div>
+        <div class="compare-table-compact__th">Бренд</div>
+        <div class="compare-table-compact__th">Артикул</div>
+        <div class="compare-table-compact__th">Бренд</div>
+        <div class="compare-table-compact__th">Артикул</div>
       </div>
     </div>
-    <div class="compare-table-compact__row d-flex font-14 weight-300">
-      <div class="compare-table-compact__td compare-info color-gray-335"><a class="compare-info__link" href=""><img src="./img/dummy-extra-small.png" alt=""/><span class="compare-info__text text-center font-14">Кофеварка CofeStaion-204m</span></a>
-        <div class="font-20 compare-info__price">165 399 ₸</div>
-        <div class="compare-table-compact__buttons text-center">
-          <button class="btn-green feature-tile__button" type="button" data-action="add-basket" data-modal="data-modal">В корзину</button>
-          <button class="color-violet font-14 text-underline" type="button" data-modal="data-modal" data-action="quick-order">Купить в 1 клик</button>
+    <div class="compare-table-compact__body">
+      <div class="compare-table-compact__row d-flex font-14 weight-300">
+        <div class="compare-table-compact__td compare-info color-gray-335"><a class="compare-info__link" href=""><img src="./img/dummy-extra-small.png" alt=""/><span class="compare-info__text text-center font-14">Кофеварка CofeStaion-204m</span></a>
+          <div class="font-20 compare-info__price">165 399 ₸</div>
+          <div class="compare-table-compact__buttons text-center">
+            <button class="btn-green feature-tile__button" type="button" data-action="add-basket" data-modal="data-modal">В корзину</button>
+            <button class="color-violet font-14 text-underline" type="button" data-modal="data-modal" data-action="quick-order">Купить в 1 клик</button>
+          </div>
+        </div>
+        <div class="compare-table-compact__items" data-scroll="compare-sync">
+          <div class="compare-table-compact__td"> 
+            <div class="compare-table-compact__td-inner">835923</div>
+          </div>
+          <div class="compare-table-compact__td font-14">
+            <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
+          </div>
+          <div class="compare-table-compact__td"> 
+            <div class="compare-table-compact__td-inner">835923</div>
+          </div>
+          <div class="compare-table-compact__td font-14"> 
+            <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
+          </div>
+          <div class="compare-table-compact__td"> 
+            <div class="compare-table-compact__td-inner">835923</div>
+          </div>
+          <div class="compare-table-compact__td"> 
+            <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
+          </div>
+          <div class="compare-table-compact__td">
+            <div class="compare-table-compact__td-inner">835923</div>
+          </div>
         </div>
       </div>
-      <div class="compare-table-compact__td"> 
-        <div class="compare-table-compact__td-inner">835923</div>
-      </div>
-      <div class="compare-table-compact__td font-14">
-        <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
-      </div>
-      <div class="compare-table-compact__td"> 
-        <div class="compare-table-compact__td-inner">835923</div>
-      </div>
-      <div class="compare-table-compact__td font-14"> 
-        <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
-      </div>
-      <div class="compare-table-compact__td"> 
-        <div class="compare-table-compact__td-inner">835923</div>
-      </div>
-      <div class="compare-table-compact__td"> 
-        <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
-      </div>
-      <div class="compare-table-compact__td">
-        <div class="compare-table-compact__td-inner">835923</div>
-      </div>
-    </div>
-    <div class="compare-table-compact__row d-flex font-14 weight-300">
-      <div class="compare-table-compact__td compare-info color-gray-335"><a class="compare-info__link" href=""><img src="./img/dummy-extra-small.png" alt=""/><span class="compare-info__text text-center font-14">Кофеварка CofeStaion-204m</span></a>
-        <div class="font-20 compare-info__price">165 399 ₸</div>
-        <div class="compare-table-compact__buttons text-center">
-          <button class="btn-green feature-tile__button" type="button" data-action="add-basket" data-modal="data-modal">В корзину</button>
-          <button class="color-violet font-14 text-underline" type="button" data-modal="data-modal" data-action="quick-order">Купить в 1 клик</button>
+      <div class="compare-table-compact__row d-flex font-14 weight-300">
+        <div class="compare-table-compact__td compare-info color-gray-335"><a class="compare-info__link" href=""><img src="./img/dummy-extra-small.png" alt=""/><span class="compare-info__text text-center font-14">Кофеварка CofeStaion-204m</span></a>
+          <div class="font-20 compare-info__price">165 399 ₸</div>
+          <div class="compare-table-compact__buttons text-center">
+            <button class="btn-green feature-tile__button" type="button" data-action="add-basket" data-modal="data-modal">В корзину</button>
+            <button class="color-violet font-14 text-underline" type="button" data-modal="data-modal" data-action="quick-order">Купить в 1 клик</button>
+          </div>
+        </div>
+        <div class="compare-table-compact__items" data-scroll="compare-sync">
+          <div class="compare-table-compact__td"> 
+            <div class="compare-table-compact__td-inner">835923</div>
+          </div>
+          <div class="compare-table-compact__td font-14">
+            <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
+          </div>
+          <div class="compare-table-compact__td"> 
+            <div class="compare-table-compact__td-inner">835923</div>
+          </div>
+          <div class="compare-table-compact__td font-14"> 
+            <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
+          </div>
+          <div class="compare-table-compact__td"> 
+            <div class="compare-table-compact__td-inner">835923</div>
+          </div>
+          <div class="compare-table-compact__td"> 
+            <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
+          </div>
+          <div class="compare-table-compact__td">
+            <div class="compare-table-compact__td-inner">835923</div>
+          </div>
         </div>
       </div>
-      <div class="compare-table-compact__td"> 
-        <div class="compare-table-compact__td-inner">835923</div>
-      </div>
-      <div class="compare-table-compact__td font-14">
-        <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
-      </div>
-      <div class="compare-table-compact__td"> 
-        <div class="compare-table-compact__td-inner">835923</div>
-      </div>
-      <div class="compare-table-compact__td font-14"> 
-        <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
-      </div>
-      <div class="compare-table-compact__td"> 
-        <div class="compare-table-compact__td-inner">835923</div>
-      </div>
-      <div class="compare-table-compact__td"> 
-        <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
-      </div>
-      <div class="compare-table-compact__td">
-        <div class="compare-table-compact__td-inner">835923</div>
-      </div>
-    </div>
-    <div class="compare-table-compact__row d-flex font-14 weight-300">
-      <div class="compare-table-compact__td compare-info color-gray-335"><a class="compare-info__link" href=""><img src="./img/dummy-extra-small.png" alt=""/><span class="compare-info__text text-center font-14">Кофеварка CofeStaion-204m</span></a>
-        <div class="font-20 compare-info__price">165 399 ₸</div>
-        <div class="compare-table-compact__buttons text-center">
-          <button class="btn-green feature-tile__button" type="button" data-action="add-basket" data-modal="data-modal">В корзину</button>
-          <button class="color-violet font-14 text-underline" type="button" data-modal="data-modal" data-action="quick-order">Купить в 1 клик</button>
+      <div class="compare-table-compact__row d-flex font-14 weight-300">
+        <div class="compare-table-compact__td compare-info color-gray-335"><a class="compare-info__link" href=""><img src="./img/dummy-extra-small.png" alt=""/><span class="compare-info__text text-center font-14">Кофеварка CofeStaion-204m</span></a>
+          <div class="font-20 compare-info__price">165 399 ₸</div>
+          <div class="compare-table-compact__buttons text-center">
+            <button class="btn-green feature-tile__button" type="button" data-action="add-basket" data-modal="data-modal">В корзину</button>
+            <button class="color-violet font-14 text-underline" type="button" data-modal="data-modal" data-action="quick-order">Купить в 1 клик</button>
+          </div>
+        </div>
+        <div class="compare-table-compact__items" data-scroll="compare-sync">
+          <div class="compare-table-compact__td"> 
+            <div class="compare-table-compact__td-inner">835923</div>
+          </div>
+          <div class="compare-table-compact__td font-14">
+            <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
+          </div>
+          <div class="compare-table-compact__td"> 
+            <div class="compare-table-compact__td-inner">835923</div>
+          </div>
+          <div class="compare-table-compact__td font-14"> 
+            <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
+          </div>
+          <div class="compare-table-compact__td"> 
+            <div class="compare-table-compact__td-inner">835923</div>
+          </div>
+          <div class="compare-table-compact__td"> 
+            <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
+          </div>
+          <div class="compare-table-compact__td">
+            <div class="compare-table-compact__td-inner">835923</div>
+          </div>
         </div>
       </div>
-      <div class="compare-table-compact__td"> 
-        <div class="compare-table-compact__td-inner">835923</div>
-      </div>
-      <div class="compare-table-compact__td font-14">
-        <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
-      </div>
-      <div class="compare-table-compact__td"> 
-        <div class="compare-table-compact__td-inner">835923</div>
-      </div>
-      <div class="compare-table-compact__td font-14"> 
-        <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
-      </div>
-      <div class="compare-table-compact__td"> 
-        <div class="compare-table-compact__td-inner">835923</div>
-      </div>
-      <div class="compare-table-compact__td"> 
-        <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
-      </div>
-      <div class="compare-table-compact__td">
-        <div class="compare-table-compact__td-inner">835923</div>
+      <div class="compare-table-compact__row d-flex font-14 weight-300">
+        <div class="compare-table-compact__td compare-info color-gray-335"><a class="compare-info__link" href=""><img src="./img/dummy-extra-small.png" alt=""/><span class="compare-info__text text-center font-14">Кофеварка CofeStaion-204m</span></a>
+          <div class="font-20 compare-info__price">165 399 ₸</div>
+          <div class="compare-table-compact__buttons text-center">
+            <button class="btn-green feature-tile__button" type="button" data-action="add-basket" data-modal="data-modal">В корзину</button>
+            <button class="color-violet font-14 text-underline" type="button" data-modal="data-modal" data-action="quick-order">Купить в 1 клик</button>
+          </div>
+        </div>
+        <div class="compare-table-compact__items" data-scroll="compare-sync">
+          <div class="compare-table-compact__td"> 
+            <div class="compare-table-compact__td-inner">835923</div>
+          </div>
+          <div class="compare-table-compact__td font-14">
+            <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
+          </div>
+          <div class="compare-table-compact__td"> 
+            <div class="compare-table-compact__td-inner">835923</div>
+          </div>
+          <div class="compare-table-compact__td font-14"> 
+            <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
+          </div>
+          <div class="compare-table-compact__td"> 
+            <div class="compare-table-compact__td-inner">835923</div>
+          </div>
+          <div class="compare-table-compact__td"> 
+            <div class="compare-table-compact__td-inner">Шалтай-емалай</div>
+          </div>
+          <div class="compare-table-compact__td">
+            <div class="compare-table-compact__td-inner">835923</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

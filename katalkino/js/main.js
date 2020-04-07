@@ -24,7 +24,6 @@ var dropdownInit = {
     toggleItem: function(item){
 
         item.slideToggle(200);
-        item.toggleClass('active');
 
     },
     init: function(){
@@ -35,6 +34,8 @@ var dropdownInit = {
         dropInitButtons.on('click', function(){
 
             var dropToToggle = $(this).siblings('[data-accordeon="body"]');
+
+            $(this).toggleClass('active');
 
             _this.toggleItem(dropToToggle);
 
@@ -170,7 +171,7 @@ modalsInitGlobal.init();
 var slider = document.getElementById('price-picker');
 
 if(slider){
-    noUiSlider.create(slider, {
+    var sliderObj = noUiSlider.create(slider, {
         start: [+$('#start-price').val(), +$('#end-price').val()],
         step: 1,
         behaviour: 'drag',
@@ -578,9 +579,11 @@ $('[data-type="add-basket"]').on('click', function(){
     if($(this).hasClass('active')){
         $(this).removeClass('active');
         $(this).text('В корзину');
+        $(this).attr('title', 'В корзину');
     }else{
         $(this).addClass('active');
         $(this).text('В корзине');
+        $(this).attr('title', 'Убрать из корзины');
     }
 
 })
@@ -626,9 +629,38 @@ $('[data-action="add-basket"]').on('click', function(){
 
     if($(this).hasClass('active')){
         $(this).text('В корзину')
+        $(this).attr('title', 'В корзину')
     }else{
-        $(this).text('В корзине')
+        $(this).text('В корзине');
+        $(this).attr('title', 'Убрать из корзины')
     }
     $(this).toggleClass('active');
 
+})
+
+if(document.getElementById('compare-products')){
+    var simpleBarCompareThumbs = new SimpleBar(document.getElementById('compare-products'),{
+        autoHide: false
+    });
+    
+    simpleBarCompareThumbs.getScrollElement().addEventListener('scroll', function(){
+    
+        $('[data-scroll="compare-sync"]').scrollLeft(this.scrollLeft);
+    
+    });
+}
+
+$('#filter input').on('change', function(){
+
+    var offsetTop = $(this).offset().top - $('#filter').offset().top;
+
+    $('#filter-tip').css('top', offsetTop).show();
+
+})
+
+sliderObj.on('update', function(){
+    
+    var offsetTop = $(sliderObj.target).offset().top - $('#filter').offset().top;
+
+    $('#filter-tip').css('top', offsetTop).show();
 })
