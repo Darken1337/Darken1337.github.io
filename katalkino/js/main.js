@@ -3,7 +3,8 @@ svg4everybody();
 
 $('#open-catalogue').on('click', function(){
 
-    $('#catalogue-body').toggle();
+    $('#catalogue-body').show();
+    $('#catalogue-body > [data-dropdown="body"]').show();
     $('.overlay').toggle();
     $(this).toggleClass('active');
 
@@ -690,4 +691,101 @@ sliderObj.on('update', function(){
     var offsetTop = $(sliderObj.target).offset().top - $('#filter').offset().top;
 
     $('#filter-tip').css('top', offsetTop).show();
+})
+
+//Scrollable menu
+var menu = $('[data-scroll="item"]');
+
+menu.each(function(){
+
+    var el = $(this);
+
+    var wrap = el.parents('[data-scroll="wrap"]').eq(0),
+        scrollTop = el.find('[data-scroll="top"]').eq(0),
+        scrollBottom = el.find('[data-scroll="bottom"]').eq(0),
+        interval = null;
+
+    scrollTop.on('mouseenter', function(){
+
+        interval = setInterval(function(){
+
+            var scrolledTop = el.scrollTop();
+
+            el.animate({
+                scrollTop: scrolledTop - 39
+            }, 200)
+    
+            checkScroll();
+            setTimeout(() => {
+                checkInterval();
+            }, 200);
+        }, 200)
+        
+    })
+
+    scrollTop.on('mouseleave', function(){
+        clearInterval(interval);
+    })
+
+    el.on('scroll', function(){
+        checkScroll()
+    })
+
+    scrollBottom.on('mouseenter', function(){
+
+        interval = setInterval(function(){
+
+            var scrolledTop = el.scrollTop();
+            
+
+            el.animate({
+                scrollTop: scrolledTop + 39
+            }, 200)
+            
+            checkScroll()
+
+            setTimeout(() => {
+                checkInterval();
+            }, 200);
+        }, 200)
+        
+    })
+
+    scrollBottom.on('mouseleave', function(){
+        clearInterval(interval);
+    })
+
+    $('#open-catalogue').on('click', function(){
+        checkScroll()
+    })
+   
+
+    function checkScroll(){
+        var scrolled = el.scrollTop();
+
+        if(scrolled === 0){
+            scrollTop.hide();
+        }else{
+            scrollTop.show()
+        }
+        
+        if(wrap.height() + scrolled === el.prop('scrollHeight')){
+            scrollBottom.hide();
+        }else{
+            scrollBottom.show();
+        }
+    }
+
+    function checkInterval(){
+        var scrolled = el.scrollTop();
+
+        if(scrolled === 0){
+            clearInterval(interval);
+        }
+        
+        if(wrap.height() + scrolled === el.prop('scrollHeight')){
+            clearInterval(interval);
+        }
+    }
+
 })
