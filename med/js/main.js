@@ -23,8 +23,8 @@ var menuDropInit = {
             if(dropToOpen.length > 0){
                 _this.openMenu(dropToOpen);
             }
-            initiators.removeClass('active');
-
+            $(this).siblings('[data-dropdown="open"]').removeClass('active');
+            $(this).siblings('[data-dropdown="open"]').find('[data-dropdown="open"]').removeClass('active');
             $(this).addClass('active');
 
         })
@@ -242,7 +242,7 @@ modalsInitGlobal.init();
 var slider = document.getElementById('price-picker');
 
 if(slider){
-    noUiSlider.create(slider, {
+    var sliderObj = noUiSlider.create(slider, {
         start: [+$('#start-price').val(), +$('#end-price').val()],
         step: 1,
         behaviour: 'drag',
@@ -744,9 +744,11 @@ $('[data-type="add-basket"]').on('click', function(){
     if($(this).hasClass('active')){
         $(this).removeClass('active');
         $(this).text('В корзину');
+        $(this).attr('title', 'Добавить в корзину');
     }else{
         $(this).addClass('active');
         $(this).text('В корзине');
+        $(this).attr('title', 'Убрать из корзины');
     }
 
 })
@@ -776,4 +778,82 @@ $('[data-type="compare"]').on('click', function(){
     }
 
 })
+
+if(document.getElementById('compare-scroll')){
+
+    var simpleBar = new SimpleBar(document.getElementById('compare-scroll'),{
+        autoHide: false
+    });
+
+    simpleBar.getScrollElement().addEventListener('scroll', function(){
+
+        $('[data-scroll="body"]').scrollLeft(this.scrollLeft);
+
+    });
+
+}
+
+if(document.getElementById('compare-product-thumbs')){
+    var simpleBarCompareThumbs = new SimpleBar(document.getElementById('compare-product-thumbs'),{
+        autoHide: false
+    });
+    
+    simpleBarCompareThumbs.getScrollElement().addEventListener('scroll', function(){
+    
+        $('[data-scroll="compare-sync"]').scrollLeft(this.scrollLeft);
+    
+    });
+}
+
+
+
+var isActive = true;
+
+$(document).on('scroll', function(){
+
+    checkStickyCompare();
+    
+})
+
+checkStickyCompare();
+    
+function checkStickyCompare(){
+    if(isActive &&  $('#compare-fixed-start').length > 0){
+        var fixedOffset = $('#compare-fixed-start').offset().top + $('#compare-fixed').height(),
+        compareFixedHeight = $('#compare-fixed').outerHeight(),
+        maxOffset = $('#compare-fixed-start').offset().top + $('#compare-fixed-start').outerHeight() - compareFixedHeight*1.7;
+        
+        if(fixedOffset < window.pageYOffset && maxOffset > window.pageYOffset){
+            $('#compare-fixed').addClass('is-fixed');
+            $('#compare-body').css('margin-top', compareFixedHeight);
+
+        }else{
+            $('#compare-fixed').removeClass('is-fixed');
+            $('#compare-body').css('margin-top', 0);
+        }
+
+        isActive = false;
+
+        setTimeout(() => {
+            isActive = true;
+        }, 200);
+    }
+}
+
+
+$('#filter input').on('change', function(){
+
+    var offsetTop = $(this).offset().top - $('#filter').offset().top;
+
+    $('#filter-tip').css('top', offsetTop).show();
+
+})
+
+sliderObj.on('update', function(){
+    
+    var offsetTop = $(sliderObj.target).offset().top - $('#filter').offset().top;
+
+    $('#filter-tip').css('top', offsetTop).show();
+})
+
 
