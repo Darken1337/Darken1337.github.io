@@ -1599,6 +1599,8 @@ input[type="submit"].bg-pink-main:active {
   display: none;
   background: #fff;
   height: 395px;
+  -webkit-box-shadow: 0 1px 0 #c2c2c2 inset;
+  box-shadow: 0 1px 0 #c2c2c2 inset;
   border-left: 1px solid #c2c2c2; }
   .menu-dropdown.drop-simple {
     width: 1210px; }
