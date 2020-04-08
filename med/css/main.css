@@ -1629,6 +1629,8 @@ input[type="submit"].bg-pink-main:active {
     width: 284px;
     background-color: #FFFFFF;
     height: 100%; }
+    .menu-dropdown__categories > li:first-child {
+      border-top: 1px solid #c2c2c2; }
     .menu-dropdown__categories > li.active > a {
       border-left: 2px solid #CC5E7B;
       color: #CC5E7B; }
@@ -1780,13 +1782,11 @@ input[type="submit"].bg-pink-main:active {
     -ms-transform: translateY(-100%);
     transform: translateY(-100%); }
 
-.drop-simple {
-  border-top: 1px solid #c2c2c2; }
-  .drop-simple .menu-dropdown {
-    left: 100%;
-    top: 0; }
-    .drop-simple .menu-dropdown__categories {
-      padding: 0; }
+.drop-simple .menu-dropdown {
+  left: 100%;
+  top: 0; }
+  .drop-simple .menu-dropdown__categories {
+    padding: 0; }
 
 .menu-category-simple {
   position: absolute;
