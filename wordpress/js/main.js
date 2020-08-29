@@ -99,7 +99,6 @@ var scrollInit = {
     toggleAnimation(rootEl){
         var elements = rootEl.querySelectorAll('[data-animation]');
         elements.forEach(function(el){
-            console.log(el);
             if(! el.classList.contains('animate__animated')){
                 animateCSS(el, $(el).attr('data-animation'));
             }else{
@@ -149,14 +148,18 @@ var preloader = {
                 $('.preloader').css('background-color', 'transparent');
                 $('.preloader__logo').addClass('is-animated');
                 
-                document.querySelector('[data-video="1"]').play();
+                if($('[data-section]').length > 0 && $(window).width() > 768){
+                    document.querySelector('[data-video="1"]').play();
+                }
 
                 setTimeout(function(){
 
                     if(isDesktop){
-                        $('[data-animation]').removeClass('pre-animate');
-                        scrollInit.toggleAnimation(document.querySelector('#header'));
-                        scrollInit.toggleAnimation(document.querySelector('[data-section="0"]'));
+                        if($('[data-section]').length > 0){
+                            $('[data-animation]').removeClass('pre-animate');
+                            scrollInit.toggleAnimation(document.querySelector('#header'));
+                            scrollInit.toggleAnimation(document.querySelector('[data-section="0"]'));
+                        }
                     }
             
                     $('.nav__logo').css('visibility', 'visible')
@@ -169,11 +172,13 @@ var preloader = {
     }
 };
 $(document).ready(function(){
-    if(isDesktop){
+    if(isDesktop && $('[data-section]').length > 0){
         $('[data-animation]').addClass('pre-animate');
     }
     preloader.start();
-    scrollInit.init();
+    if($('[data-section]').length > 0){
+        scrollInit.init();
+    }
 })
 
 if(!isDesktop){
