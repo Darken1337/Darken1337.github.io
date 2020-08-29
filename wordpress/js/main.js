@@ -114,18 +114,20 @@ var scrollInit = {
         if(Math.abs(this.direction) !== 1) this.direction = -1;
     },
     init: function(){
-        var _this = this;
-        var timeout = null;
-        this.sections[0].classList.add('is-current');
-        $(this.slider).bind('mousewheel', function(e){
-            if(timeout === null){
-                _this.direction = e.deltaY;
-                _this.scroll();
-                timeout = setTimeout(function(){
-                    timeout = null;
-                }, 1000);
-            }
-        })
+        if($(window).width() > 1024){
+            var _this = this;
+            var timeout = null;
+            this.sections[0].classList.add('is-current');
+            $(this.slider).bind('mousewheel', function(e){
+                if(timeout === null){
+                    _this.direction = e.deltaY;
+                    _this.scroll();
+                    timeout = setTimeout(function(){
+                        timeout = null;
+                    }, 1000);
+                }
+            })
+        }
     }
 }
 
