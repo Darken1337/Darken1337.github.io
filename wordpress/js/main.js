@@ -43,6 +43,7 @@ var animateCSS = function(node, animation){
     // node.addEventListener('animationend', handleAnimationEnd);
 }
 
+var isDesktop = $(window).width() > 1024;
 
 var scrollInit = {
     current: 0,
@@ -114,7 +115,7 @@ var scrollInit = {
         if(Math.abs(this.direction) !== 1) this.direction = -1;
     },
     init: function(){
-        if($(window).width() > 1024){
+        if(isDesktop){
             var _this = this;
             var timeout = null;
             this.sections[0].classList.add('is-current');
@@ -151,11 +152,13 @@ var preloader = {
                 document.querySelector('[data-video="1"]').play();
 
                 setTimeout(function(){
-                    $('[data-animation]').removeClass('pre-animate');
 
-                    scrollInit.toggleAnimation(document.querySelector('#header'));
-                    scrollInit.toggleAnimation(document.querySelector('[data-section="0"]'));
-                
+                    if(isDesktop){
+                        $('[data-animation]').removeClass('pre-animate');
+                        scrollInit.toggleAnimation(document.querySelector('#header'));
+                        scrollInit.toggleAnimation(document.querySelector('[data-section="0"]'));
+                    }
+            
                     $('.nav__logo').css('visibility', 'visible')
                     $('.preloader').hide(0);
                 }, 500);
@@ -166,7 +169,40 @@ var preloader = {
     }
 };
 $(document).ready(function(){
-    $('[data-animation]').addClass('pre-animate');
+    if(isDesktop){
+        $('[data-animation]').addClass('pre-animate');
+    }
     preloader.start();
     scrollInit.init();
 })
+
+if(!isDesktop){
+    $(document).on('scroll', function(){
+
+        if(window.pageYOffset > 100){
+            $('#header').addClass('is-active')
+        }else if(! $('#header').hasClass('is-active')){
+            $('#header').removeClass('is-active')
+        }
+        checkVideo();
+    })
+}
+
+function checkVideo(){
+    var media = $('video').not("[autoplay='autoplay']");
+    var tolerancePixel = 40;
+    // Get current browser top and bottom
+    var scrollTop = $(window).scrollTop() + tolerancePixel;
+    var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
+
+    media.each(function(index, el) {
+        var yTopMedia = $(this).offset().top;
+        var yBottomMedia = $(this).height() + yTopMedia;
+
+        if(scrollTop < yBottomMedia && scrollBottom > yTopMedia){ //view explaination in `In brief` section above
+            $(this).get(0).play();
+        } else {
+            $(this).get(0).pause();
+        }
+    });
+}
