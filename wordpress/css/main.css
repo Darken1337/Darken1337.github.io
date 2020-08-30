@@ -58,7 +58,7 @@ button {
     outline: 0; }
 
 a:hover {
-  opacity: .75; }
+  opacity: .75 !important; }
 
 a,
 button,
