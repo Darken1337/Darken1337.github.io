@@ -248,6 +248,12 @@ img {
           display: block; } }
     .header--additional.is-active {
       background-color: #F9E5C5; }
+      .header--additional.is-active .logo-violet {
+        display: block; }
+      .header--additional.is-active .logo-cream {
+        display: none; }
+      .header--additional.is-active .hamburger span {
+        background-color: #272155; }
 
 .nav {
   display: -webkit-box;
@@ -892,7 +898,7 @@ img {
       .contact-address__text, .contact-address__phone {
         font-size: 16px; } }
 
-@media screen and (max-height: 1200px) {
+@media screen and (min-width: 1025) and (max-height: 1200px) {
   .home-slider .contact-address__text, .home-slider .contact-address__phone {
     font-size: 2.2vh; }
   .home-slider .addresses {

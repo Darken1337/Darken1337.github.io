@@ -187,7 +187,7 @@ $(document).ready(function(){
 
         if(window.pageYOffset > 100){
             $('#header').addClass('is-active')
-        }else if(! $('#header').hasClass('is-active')){
+        }else if($('#header').hasClass('is-active')){
             $('#header').removeClass('is-active')
         }
         if(!isDesktop){
