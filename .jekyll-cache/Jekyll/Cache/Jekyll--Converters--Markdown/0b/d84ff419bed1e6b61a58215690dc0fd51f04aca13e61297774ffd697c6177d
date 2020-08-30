@@ -1,0 +1,438 @@
+I"A<h1 id="зачем-вам-это"><strong>Зачем вам это</strong></h1>
+
+<p>У вас уже запущена таргетированная реклама, но вы хотите получить больше трафика через дополнительные каналы продвижения? Возможно, вы уже имели успешный опыт работы в соцсетях и хотите его повторить? В любом случае,таргетированная реклама через соцсети приведёт целевых клиентов на ваш продукт.</p>
+
+<h1 id="что-входит"><strong>Что входит</strong></h1>
+
+<ul>
+  <li>Подключение метрики на ваш сайт</li>
+  <li>Подбор целевых аудиторий, сегментирование</li>
+  <li>Разработка текстов рекламных объявлений и баннеров</li>
+  <li>Проведение сплит-тестирования аудиторий, текстов и баннеров</li>
+  <li>Подробный отчёт о результатах тестирования</li>
+  <li>Ведение рекламы с целью поддержания полученного объёма трафика и цены заявки</li>
+</ul>
+
+<h1 id="сколько-стоит"><strong>Сколько стоит</strong></h1>
+
+<h2 id="фейсбук--инстаграм">Фейсбук + Инстаграм</h2>
+
+<p>Тестовая рекламная кампания в Фейсбук + Инстаграм, цена не включает + рекламный бюджет</p>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $1050</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "1050",
+      productName = "Тестовая рекламная кампания в Фейсбук + Инстаграм под ключ",
+      productId = "target-start-fb-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-target-start-fb-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-target-start-fb-turnkey').length > 1) {
+    alert('Duplicate product ID: target-start-fb-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-target-start-fb-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $1050" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $700</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "700",
+      productName = "Тестовая рекламная кампания в Фейсбук + Инстаграм для партнёра",
+      productId = "target-start-fb-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-target-start-fb-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-target-start-fb-partner').length > 1) {
+    alert('Duplicate product ID: target-start-fb-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-target-start-fb-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $700" />
+</form>
+    </div>
+  </div>
+
+<hr />
+
+<p>Дальнейшее ведение рекламы в Фейсбук + Инстаграм, цена не включает рекламный бюджет</p>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $1275</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "1275",
+      productName = "4 недели ведения рекламной кампании в Фейсбук + Инстаграм под ключ",
+      productId = "target-monthly-fb-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-target-monthly-fb-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-target-monthly-fb-turnkey').length > 1) {
+    alert('Duplicate product ID: target-monthly-fb-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-target-monthly-fb-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $1275" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $850</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "850",
+      productName = "4 недели ведения рекламной кампании в Фейсбук + Инстаграм для партнёра",
+      productId = "target-monthly-fb-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-target-monthly-fb-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-target-monthly-fb-partner').length > 1) {
+    alert('Duplicate product ID: target-monthly-fb-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-target-monthly-fb-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $850" />
+</form>
+    </div>
+  </div>
+
+<h2 id="вконтакте">ВКонтакте</h2>
+
+<p>Тестовая рекламная кампания во ВКонтакте, цена не включает рекламный бюджет</p>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $1050</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "1050",
+      productName = "Тестовая рекламная кампания во ВКонтакте под ключ",
+      productId = "target-start-vk-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-target-start-vk-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-target-start-vk-turnkey').length > 1) {
+    alert('Duplicate product ID: target-start-vk-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-target-start-vk-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $1050" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $700</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "700",
+      productName = "Тестовая рекламная кампания во ВКонтакте для партнёра",
+      productId = "target-start-vk-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-target-start-vk-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-target-start-vk-partner').length > 1) {
+    alert('Duplicate product ID: target-start-vk-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-target-start-vk-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $700" />
+</form>
+    </div>
+  </div>
+
+<hr />
+
+<p>Дальнейшее ведение рекламы во ВКонтакте, цена не включает рекламный бюджет</p>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $1275</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "1275",
+      productName = "4 недели ведения рекламной кампании во ВКонтакте под ключ",
+      productId = "target-monthly-vk-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-target-monthly-vk-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-target-monthly-vk-turnkey').length > 1) {
+    alert('Duplicate product ID: target-monthly-vk-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-target-monthly-vk-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $1275" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $850</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "850",
+      productName = "4 недели ведения рекламной кампании во ВКонтакте для партнёра",
+      productId = "target-monthly-vk-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-target-monthly-vk-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-target-monthly-vk-partner').length > 1) {
+    alert('Duplicate product ID: target-monthly-vk-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-target-monthly-vk-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $850" />
+</form>
+    </div>
+  </div>
+
+<h2 id="фейсбук--инстаграм--вконтакте">Фейсбук + Инстаграм + ВКонтакте</h2>
+
+<p>Тестовая рекламная кампания — $850, цена не включает рекламный бюджет</p>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $1275</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "1275",
+      productName = "Тестовая рекламная кампания под ключ",
+      productId = "target-start-all-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-target-start-all-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-target-start-all-turnkey').length > 1) {
+    alert('Duplicate product ID: target-start-all-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-target-start-all-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $1275" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $850</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "850",
+      productName = "Тестовая рекламная кампания для партнёра",
+      productId = "target-start-all-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-target-start-all-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-target-start-all-partner').length > 1) {
+    alert('Duplicate product ID: target-start-all-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-target-start-all-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $850" />
+</form>
+    </div>
+  </div>
+
+<hr />
+
+<p>Дальнейшее ведение рекламы – $1250 + рекламный бюджет</p>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $1875</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "1875",
+      productName = "4 недели ведения рекламной кампании под ключ",
+      productId = "target-monthly-all-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-target-monthly-all-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-target-monthly-all-turnkey').length > 1) {
+    alert('Duplicate product ID: target-monthly-all-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-target-monthly-all-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $1875" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $1250</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "1250",
+      productName = "4 недели ведения рекламной кампании для партнёра",
+      productId = "target-monthly-all-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-target-monthly-all-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-target-monthly-all-partner').length > 1) {
+    alert('Duplicate product ID: target-monthly-all-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-target-monthly-all-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $1250" />
+</form>
+    </div>
+  </div>
+
+:ET

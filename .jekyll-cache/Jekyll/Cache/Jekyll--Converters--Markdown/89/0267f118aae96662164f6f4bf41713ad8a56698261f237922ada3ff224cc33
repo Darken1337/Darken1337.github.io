@@ -1,0 +1,474 @@
+I"XF<h1 id="зачем-вам-это"><strong>Зачем вам это</strong></h1>
+
+<p>Вместо того, чтобы сразу предлагать основной продукт, дающий полное решение всех проблем за полную стоимость, откалываем от продукта небольшой осколок, дающий быстрое решение всего одной проблемы, и продаём за смешные деньги.</p>
+
+<p>Решиться купить трипваер гораздо проще, чем основной продукт — цена меньше, воспринимаемый риск гораздо ниже. А когда клиент уже купил трипваер и решил одну проблему, решиться купить основной продукт становится просто. Теперь он понимает, что получил большую пользу за несоизмеримо маленькие деньги. Он уже точно знает, что вам можно доверять — обещали помочь, значит поможете. Потому что убедился на собственном опыте.</p>
+
+<h1 id="только-лендинг">Только лендинг</h1>
+
+<p>Минимальный набор инструментов для проектов, когда трипваер уже готов либо является услугой, не требующей упаковки.</p>
+
+<h2 id="что-входит">Что входит</h2>
+
+<ul>
+  <li>Интервью с маркетологом для выбора темы продукта, названия и стоимости</li>
+  <li>Создание продающего лендинга</li>
+  <li>Подключение оплаты на лендинг</li>
+  <li>Настройка трафика (ретаргет) на лендинг трипваера</li>
+  <li>Рассылка продающего текста чат-ботом (опционально)</li>
+</ul>
+
+<h2 id="сколько-стоит"><strong>Сколько стоит</strong></h2>
+
+<h3 id="без-дизайна-стандартный-шаблон">Без дизайна (стандартный шаблон)</h3>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $975</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "975",
+      productName = "Трипваер под ключ",
+      productId = "tw-lp-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-tw-lp-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-tw-lp-turnkey').length > 1) {
+    alert('Duplicate product ID: tw-lp-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-tw-lp-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $975" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $650</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "650",
+      productName = "Трипваер для партнёра",
+      productId = "tw-lp-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-tw-lp-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-tw-lp-partner').length > 1) {
+    alert('Duplicate product ID: tw-lp-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-tw-lp-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $650" />
+</form>
+    </div>
+  </div>
+
+<hr />
+
+<h3 id="с-индивидуальным-дизайном">С индивидуальным дизайном</h3>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $2250</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "2250",
+      productName = "Трипваер под ключ",
+      productId = "tw-lp-design-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-tw-lp-design-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-tw-lp-design-turnkey').length > 1) {
+    alert('Duplicate product ID: tw-lp-design-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-tw-lp-design-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $2250" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $1500</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "1500",
+      productName = "Трипваер для партнёра",
+      productId = "tw-lp-design-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-tw-lp-design-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-tw-lp-design-partner').length > 1) {
+    alert('Duplicate product ID: tw-lp-design-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-tw-lp-design-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $1500" />
+</form>
+    </div>
+  </div>
+
+<hr />
+
+<h1 id="текстовый-трипваер">Текстовый трипваер</h1>
+
+<p>Создание не только посадочной страницы для продажи, но и самого трипваера в текстовом формате (брошюра, методичка, чек-лист и пр).</p>
+
+<h2 id="что-входит-1">Что входит</h2>
+
+<ul>
+  <li>Интервью с маркетологом для выбора темы продукта, названия и стоимости</li>
+  <li>Создание текста трипваера, редакторская вычитка</li>
+  <li>Верстка документа в pdf-формате</li>
+  <li>Создание продающего лендинга</li>
+  <li>Подключение оплаты на лендинг</li>
+  <li>Настройка трафика (ретаргет) на лендинг трипваера</li>
+  <li>Рассылка продающего текста чат-ботом (опционально)</li>
+</ul>
+
+<h2 id="сколько-стоит-1"><strong>Сколько стоит</strong></h2>
+
+<h3 id="без-дизайна-стандартный-шаблон-1">Без дизайна (стандартный шаблон)</h3>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $2400</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "2400",
+      productName = "Трипваер под ключ",
+      productId = "tw-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-tw-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-tw-turnkey').length > 1) {
+    alert('Duplicate product ID: tw-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-tw-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $2400" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $1600</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "1600",
+      productName = "Трипваер для партнёра",
+      productId = "tw-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-tw-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-tw-partner').length > 1) {
+    alert('Duplicate product ID: tw-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-tw-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $1600" />
+</form>
+    </div>
+  </div>
+
+<hr />
+
+<h3 id="с-индивидуальным-дизайном-1">С индивидуальным дизайном</h3>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $3900</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "3900",
+      productName = "Трипваер под ключ",
+      productId = "tw-design-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-tw-design-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-tw-design-turnkey').length > 1) {
+    alert('Duplicate product ID: tw-design-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-tw-design-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $3900" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $2600</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "2600",
+      productName = "Трипваер для партнёра",
+      productId = "tw-design-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-tw-design-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-tw-design-partner').length > 1) {
+    alert('Duplicate product ID: tw-design-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-tw-design-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $2600" />
+</form>
+    </div>
+  </div>
+
+<h1 id="видеоаудио-трипваер">Видео/аудио трипваер</h1>
+
+<p>Создание не только посадочной страницы для продажи, но и самого трипваера в формате аудио- или видеоматериалов (подкаст, видеоурок, запись мастер-класса и пр).</p>
+
+<h2 id="что-входит-2">Что входит</h2>
+
+<ul>
+  <li>Интервью с маркетологом для выбора темы продукта, названия и стоимости</li>
+  <li>Монтаж видео/аудиоматериала</li>
+  <li>Создание продающего лендинга</li>
+  <li>Подключение оплаты на лендинг</li>
+  <li>Настройка трафика (ретаргет) на лендинг трипваера</li>
+  <li>Рассылка продающего текста чат-ботом (опционально)</li>
+</ul>
+
+<h2 id="сколько-стоит-2"><strong>Сколько стоит</strong></h2>
+
+<h3 id="без-дизайна-стандартный-шаблон-2">Без дизайна (стандартный шаблон)</h3>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $1125</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "1125",
+      productName = "Трипваер под ключ",
+      productId = "tw-av-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-tw-av-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-tw-av-turnkey').length > 1) {
+    alert('Duplicate product ID: tw-av-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-tw-av-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $1125" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $750</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "750",
+      productName = "Трипваер для партнёра",
+      productId = "tw-av-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-tw-av-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-tw-av-partner').length > 1) {
+    alert('Duplicate product ID: tw-av-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-tw-av-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $750" />
+</form>
+    </div>
+  </div>
+
+<hr />
+
+<h3 id="с-индивидуальным-дизайном-2">С индивидуальным дизайном</h3>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $3750</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "3750",
+      productName = "Трипваер под ключ",
+      productId = "tw-av-design-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-tw-av-design-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-tw-av-design-turnkey').length > 1) {
+    alert('Duplicate product ID: tw-av-design-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-tw-av-design-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $3750" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $2500</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "2500",
+      productName = "Трипваер для партнёра",
+      productId = "tw-av-design-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-tw-av-design-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-tw-av-design-partner').length > 1) {
+    alert('Duplicate product ID: tw-av-design-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-tw-av-design-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $2500" />
+</form>
+    </div>
+  </div>
+
+:ET

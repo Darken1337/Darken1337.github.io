@@ -1,0 +1,31 @@
+---
+layout: base
+title: pages.form.page_title
+lead: pages.form.lead
+permalink: /form/
+---
+
+<form method="post" action="http://bot.nickvorobiov.com/order.php" data-toggle="validator">
+  <input type="hidden" name="trello-list-id" id="input-trello-list-id" value="5888b41358732f79b0783322" />
+  <input type="hidden" name="redirect" id="input-redirect" value="https://icoach.io/ok" />
+  <input type="hidden" name="project" id="input-project" value="iCoach" />
+  <input type="hidden" name="offer" id="input-offer" value="Заказать стратегию продвижения за $390" />
+  <input type="hidden" name="traffic_source" />
+  <input type="hidden" name="roistat" />
+  <div class="help-block with-errors"></div>
+  <div class="form-group">
+    <label for="input-name" class="control-label">Имя</label>
+    <input id="input-name" required="required" name="name" type="text" class="form-control" placeholder="Иван Иванов">
+    <div class="help-block with-errors"></div>
+  </div>
+  <div class="form-group">
+    <label for="input-phone" class="control-label">Телефон</label>
+    <input id="input-phone" required="required" name="phone" type="text" class="form-control" placeholder="+7 921 765-43-21">
+    <div class="help-block with-errors"></div>
+  </div>
+  <button type="submit" class="btn btn-large">Заказать</button>
+  <label class="agreement_label p-t">
+    <input name="privacy" checked="checked" id="confirm-agreement" type="checkbox" required="required" >
+    Согласен(-нa) с <a href="/privacy/" target="_blank">условиями</a> обработки персональных данных
+  </label>
+</form>

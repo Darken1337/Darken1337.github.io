@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/static/img/favicon.png" type="image/png" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/css/main.css">
+  <title></title>
+</head>
+<body>
+  <header id="header">
+    <div class="container">
+        <nav class="navigation">
+            <button class="hamburger" type="button" id="toggle-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="logo"><img src="/static/img/logo.png" alt="Icoach"></div>
+            <div class="menu-main-wrap" id="menu-main">
+                <ul class="menu-main">
+                    <li>
+                        <a class="menu-main__link" href="#s-results">Кейсы</a>
+                    </li>
+                    <li>
+                        <a class="menu-main__link" href="#s-income">Партнерство</a>
+                    </li>
+                    <li>
+                        <a class="menu-main__link" href="#s-specialization">Гарантия</a>
+                    </li>
+                    <li>
+                        <a class="menu-main__link" href="#s-strategy">Разработка стратегии</a>
+                    </li>
+                    <li>
+                        <a class="menu-main__link" href="#s-testimonials">Отзывы</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation__phones">
+                <a href="tel:+74991124733">+7&nbsp;499&nbsp;112 47 33</a>
+                <a href="tel:+442080892847">+44 20 8089 2847</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+  <style type="text/css">
+.page-content h1, .page-content h2, .page-content h3 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}  
+</style>
+
+<div class="section bg-brown">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h1 class="title-w-circle circle-brown color-white"><span>Продающий видеоролик</span></h1>
+        
+          <p class="color-white">Видеоролик с вашим участием для лендинга</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="block py-5 page-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h1 id="зачем-вам-это"><strong>Зачем вам это</strong></h1>
+
+<p>Об услуге лучше всего узнавать от самого эксперта. Мы разработаем сценарий, который сделает эту презентацию короткой и чёткой, и будет составлен по продающей структуре, быстро и последовательно подводящей посетителя лендинга к решению совершить ключевое действие — заказать ваши услуги.</p>
+
+<h1 id="что-входит">Что входит</h1>
+
+<ul>
+  <li>Разработка и согласование сути сообщений</li>
+  <li>Разработка сценария видео</li>
+  <li>Выдача рекомендаций по записи видео</li>
+  <li>Обратная связь на снятое вами видео от маркетолога</li>
+  <li>Монтаж готового видео</li>
+</ul>
+
+<h1 id="сколько-стоит">Сколько стоит</h1>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $525</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "525",
+      productName = "Продающий видеоролик под ключ",
+      productId = "video-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-video-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-video-turnkey').length > 1) {
+    alert('Duplicate product ID: video-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-video-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $525" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $350</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "350",
+      productName = "Продающий видеоролик для партнёра",
+      productId = "video-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-video-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-video-partner').length > 1) {
+    alert('Duplicate product ID: video-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-video-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $350" />
+</form>
+    </div>
+  </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+  <footer id="footer">
+  <div class="container">
+    <div class="footer">
+      <div class="footer__description">
+        <div class="footer__center">
+          <h3 class="font-bold footer__name">ICOACH.</h3>
+          <p class="text">Продюсерский центр для тренеров, коучей и&nbsp;экспертов.</p>
+        </div>
+        <div class="footer__create">Упакуем продукт и&nbsp;создадим стабильный и&nbsp;управляемый поток целевых клиентов, пока вы&nbsp;будете заниматься другими делами.</div>
+      </div>
+      <div class="footer__right">
+        <ul class="footer-menu">
+          <li><a href="/"></a></li>
+          <li><a href="/reviews/"></a></li>
+          <li><a href="/shop/"></a></li>
+        </ul>
+        <div class="footer__contacts">
+          <div class="font-bold footer__contacts-title">Служба поддержки клиентов</div>
+          <div class="red footer__contacts-mail">mail@icoach.ge</div>
+          <a href="tel:+74991124733">+7&nbsp;499&nbsp;112 47 33</a>
+          <a href="tel:+442080892847">+44&nbsp;20&nbsp;8089&nbsp;2847</a>
+          <div class="rights rights-desktop">Все права защищены.</div>
+        </div>
+      </div>
+      <div class="rights rights-mobile">Все права защищены.</div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="/static/libs/lazy-load.min.js"></script>
+  <script src="/static/libs/Drift.min.js"></script>
+  <script src="/static/js/main.js"></script>
+</body>
+
+</html>

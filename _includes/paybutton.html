@@ -1,0 +1,30 @@
+<script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "{{ include.amount }}",
+      productName = "{{ include.name }}",
+      productId = "{{ include.id }}";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-{{ include.id }}').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-{{ include.id }}').length > 1) {
+    alert('Duplicate product ID: {{ include.id }}');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-{{ include.id }}" style="display:flex;flex-direction:column;">
+  {% if include.title %}
+    {% assign title = include.title %}
+  {% else %}
+    {% assign title = 'Купить за $' | append: include.amount %}
+  {% endif %}
+  <input class="btn card-link btn-primary" type="submit" value="{{ title }}">
+</form>

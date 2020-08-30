@@ -1,0 +1,170 @@
+I"<h1 id="зачем-вам-это"><strong>Зачем вам это</strong></h1>
+
+<p>По популярности вашего Инстаграма целевые клиенты поймут, что ваши услуги востребованы, а значит и будут покупать охотнее</p>
+
+<h1 id="техническая-прокачка">Техническая прокачка</h1>
+
+<p>Если аккаунт постоянно залетает в бан, вовлечение подписчиков упало, а регулярные посты не дают никакого развития профиля — есть смысл для начала привести аккаунт в порядок</p>
+
+<h2 id="что-входит">Что входит</h2>
+
+<ul>
+  <li>Аудит аккаунта, выявление проблем</li>
+  <li>Инструкция для технически правильного ведения профиля</li>
+  <li>Выключение масфоловинг/маслайкинг инструментов, чистка ботов</li>
+  <li>Подборка хештегов, шопинг-тегов</li>
+  <li>Оформление описания в шапке профиля</li>
+</ul>
+
+<h2 id="сколько-стоит">Сколько стоит</h2>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $712</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "712",
+      productName = "Прокачка Instagram под ключ",
+      productId = "instagram-pump-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-instagram-pump-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-instagram-pump-turnkey').length > 1) {
+    alert('Duplicate product ID: instagram-pump-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-instagram-pump-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $712" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $475</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "475",
+      productName = "Прокачка Instagram для партнёра",
+      productId = "instagram-pump-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-instagram-pump-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-instagram-pump-partner').length > 1) {
+    alert('Duplicate product ID: instagram-pump-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-instagram-pump-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $475" />
+</form>
+    </div>
+  </div>
+
+<hr />
+
+<h1 id="продвижение-instagram">Продвижение Instagram</h1>
+
+<p>Если посты идут регулярно, все сделано технически грамотно, осталось только добавить продвижение и рекламы</p>
+
+<h2 id="что-входит-1">Что входит</h2>
+
+<ul>
+  <li>Составление концепции продвижения, подбор целевых аудиторий</li>
+  <li>Таргетированная реклама для продвижения постов</li>
+  <li>Проведение коллабораций с блогерами (кросспостинг, гивы, челленджи, флешмобы и прочие инструменты)</li>
+  <li>Отчет по эффективности</li>
+</ul>
+
+<h2 id="сколько-стоит-1">Сколько стоит</h2>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $1425</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "1425",
+      productName = "Прокачка Instagram под ключ",
+      productId = "instagram-push-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-instagram-push-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-instagram-push-turnkey').length > 1) {
+    alert('Duplicate product ID: instagram-push-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-instagram-push-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $1425" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $950</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "950",
+      productName = "Прокачка Instagram для партнёра",
+      productId = "instagram-push-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-instagram-push-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-instagram-push-partner').length > 1) {
+    alert('Duplicate product ID: instagram-push-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-instagram-push-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $950" />
+</form>
+    </div>
+  </div>
+
+:ET

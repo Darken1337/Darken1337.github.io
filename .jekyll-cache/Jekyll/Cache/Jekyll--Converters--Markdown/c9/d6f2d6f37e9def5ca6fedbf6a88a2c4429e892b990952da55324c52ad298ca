@@ -1,0 +1,47 @@
+I"F
+<h1 id="зачем-вам-это"><strong>Зачем вам это</strong></h1>
+
+<p>Если вы отличный эксперт, но продажи идут слабо, тема не цепляет аудиторию, и вы хотите большего. Научитесь правильно подавать себя и ​свою экспертность, почувствуете уверенность в своей теме и продаже, и начнёте конвертировать потенциальных клиентов в действующих легко и естественно.</p>
+
+<h1 id="что-входит"><strong>Что входит</strong></h1>
+
+<ul>
+  <li>3 индивидуальные онлайн-встречи с экспертом</li>
+  <li>Разработка позиционирования и наполнения продукта, которое будет отражать вашу личность</li>
+  <li>Выявление особенностей личности и продукта и выдача рекомендаций</li>
+  <li>Выработка нового конгруэнтного позиционирования и ключевых элементов для подачи нового позиционирования</li>
+  <li>Анализ, доработка и настройка продукта в части подачи клиенту</li>
+  <li>Анализ и рекомендации по улучшению компоновки и проведения вебинара/мастер-класса</li>
+</ul>
+
+<h1 id="сколько-стоит"><strong>Сколько стоит</strong></h1>
+
+<script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "720",
+      productName = "Проработка конгруэнтности и правильной подачи",
+      productId = "auth";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-auth').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-auth').length > 1) {
+    alert('Duplicate product ID: auth');
+  }
+})
+</script>
+
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-auth" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $720" />
+</form>
+
+:ET

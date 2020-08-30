@@ -1,0 +1,390 @@
+I"�;<h1 id="зачем-вам-это"><strong>Зачем вам это</strong></h1>
+
+<p>Выстройте отношения с клиентами в соцсетях, станьте экспертом, которому доверяют, и забудьте о возражениях при продаже</p>
+
+<h1 id="уровень-старт"><strong>Уровень Старт</strong></h1>
+
+<p>Необходимый минимум для ваших соц сетей, если вы хотите бренд личности</p>
+
+<ul>
+  <li>Интервью с маркетологом</li>
+  <li>Определение с автором ведущего типа/типов контента лично для него</li>
+  <li>Построение стратегии позиционирования, создание целостного медийного образа</li>
+  <li>Определение соц сетей для продвижения, частоты публикаций и их формата</li>
+  <li>Создание имиджевого стиля, текстовой подачи</li>
+</ul>
+
+<h1 id="сколько-стоит"><strong>Сколько стоит</strong></h1>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $525</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "525",
+      productName = "Брендинг Старт под ключ",
+      productId = "branding-start-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-branding-start-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-branding-start-turnkey').length > 1) {
+    alert('Duplicate product ID: branding-start-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-branding-start-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $525" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $350</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "350",
+      productName = "Брендинг Старт для партнёра",
+      productId = "branding-start-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-branding-start-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-branding-start-partner').length > 1) {
+    alert('Duplicate product ID: branding-start-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-branding-start-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $350" />
+</form>
+    </div>
+  </div>
+
+<hr />
+
+<h1 id="уровень-оптимальный"><strong>Уровень Оптимальный</strong></h1>
+
+<p>Оптимальный набор функций для того, чтобы не просто появиться в медиапространстве, но и начинать сбор плодов своего труда</p>
+
+<ul>
+  <li>Уровень Старт</li>
+  <li>Анализ аудитории, конкурентов и предложений в нише</li>
+  <li>Наброски тематик постов на ближайший месяц</li>
+  <li>Инструктаж по технической части публикаций (хештеги, геометки и тд)</li>
+  <li>Наброски идей интерактива и коллабораций с другими аккаунтами и компаниями</li>
+</ul>
+
+<h1 id="сколько-стоит-1"><strong>Сколько стоит</strong></h1>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $675</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "675",
+      productName = "Брендинг Оптимальный под ключ",
+      productId = "branding-optimal-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-branding-optimal-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-branding-optimal-turnkey').length > 1) {
+    alert('Duplicate product ID: branding-optimal-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-branding-optimal-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $675" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $450</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "450",
+      productName = "Брендинг Оптимальный для партнёра",
+      productId = "branding-optimal-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-branding-optimal-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-branding-optimal-partner').length > 1) {
+    alert('Duplicate product ID: branding-optimal-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-branding-optimal-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $450" />
+</form>
+    </div>
+  </div>
+
+<hr />
+
+<h1 id="уровень-премиум"><strong>Уровень Премиум</strong></h1>
+
+<p>Если вы хотите получить из соц сетей максимум и готовы платить за высший разряд</p>
+
+<ul>
+  <li>Уровень Оптимальный</li>
+  <li>Контент-стратегия на 6 месяцев</li>
+  <li>Создание постов, публикация</li>
+  <li>Решение технической части публикаций (хештеги, геометки и тд)</li>
+  <li>Помощь в монтаже (фото, видео), дизайнерский контент</li>
+  <li>Создание фирстиля и шаблонов визуального оформления</li>
+  <li>Организация и проведение интерактивов и коллабораций с другими аккаунтами и компаниями</li>
+  <li>Отчетность по эффективности ведения соц сетей ежемесячно</li>
+</ul>
+
+<h1 id="сколько-стоит-2"><strong>Сколько стоит</strong></h1>
+
+<h2 id="уровень-премиум-полный-пакет-6-мес">Уровень Премиум, полный пакет (6 мес)</h2>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $18750</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "18750",
+      productName = "Брендинг Премиум, 6 мес под ключ",
+      productId = "branding-premium-full-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-branding-premium-full-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-branding-premium-full-turnkey').length > 1) {
+    alert('Duplicate product ID: branding-premium-full-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-branding-premium-full-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $18750" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $12500</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "12500",
+      productName = "Брендинг Премиум, 6 мес для партнёра",
+      productId = "branding-premium-full-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-branding-premium-full-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-branding-premium-full-partner').length > 1) {
+    alert('Duplicate product ID: branding-premium-full-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-branding-premium-full-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $12500" />
+</form>
+    </div>
+  </div>
+
+<h2 id="уровень-премиум-настройка-и-1-й-месяц">Уровень Премиум, настройка и 1-й месяц</h2>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $5250</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "5250",
+      productName = "Брендинг Премиум, первый месяц под ключ",
+      productId = "branding-premium-first-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-branding-premium-first-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-branding-premium-first-turnkey').length > 1) {
+    alert('Duplicate product ID: branding-premium-first-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-branding-premium-first-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $5250" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $3500</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "3500",
+      productName = "Брендинг Премиум, первый месяц для партнёра",
+      productId = "branding-premium-first-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-branding-premium-first-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-branding-premium-first-partner').length > 1) {
+    alert('Duplicate product ID: branding-premium-first-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-branding-premium-first-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $3500" />
+</form>
+    </div>
+  </div>
+
+<h2 id="уровень-премиум-ежемесячно">Уровень Премиум, ежемесячно</h2>
+
+<div class="row">
+    <div class="col">
+      
+      <p>Полная цена $3375</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "3375",
+      productName = "Брендинг Премиум, ежемесячно под ключ",
+      productId = "branding-premium-next-turnkey";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-branding-premium-next-turnkey').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-branding-premium-next-turnkey').length > 1) {
+    alert('Duplicate product ID: branding-premium-next-turnkey');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-branding-premium-next-turnkey" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $3375" />
+</form>
+    </div>
+    <div class="col">
+      <p>Для партнёров iCoach $2250</p>
+      
+      
+      <script>
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+
+  function price() {
+    let  
+      amount = "2250",
+      productName = "Брендинг Премиум, ежемесячно для партнёра",
+      productId = "branding-premium-next-partner";
+    $.getJSON('https://bot.icoach.io/wayforpay-sign.php?amount=' + amount + '&currency=USD&productName=' + productName + '&productId=' + productId, function (data) {
+      $.each(data, function (key, val) {
+        $('.paybutton-branding-premium-next-partner').append('<input type="hidden" value="' + val + '"' + 'name="' + key + '">');
+      });
+    });
+  }
+  price();
+
+  if ($('.paybutton-branding-premium-next-partner').length > 1) {
+    alert('Duplicate product ID: branding-premium-next-partner');
+  }
+})
+</script>
+<form method="POST" action="https://secure.wayforpay.com/pay" class="paybutton-branding-premium-next-partner" style="display:flex;flex-direction:column;">
+  
+  <input class="btn card-link btn-primary" type="submit" value="Купить за $2250" />
+</form>
+    </div>
+  </div>
+
+:ET
