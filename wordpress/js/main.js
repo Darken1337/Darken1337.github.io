@@ -66,7 +66,6 @@ var scrollInit = {
                 this.toggleVideo(prevVideo);
             }
         }
-        console.log(currentSlide);
         this.toggleAnimation(currentSlide);
         currentSlide.classList.add('is-current');
         
@@ -93,8 +92,8 @@ var scrollInit = {
     },
     scroll: function(){
         this.current -= this.direction;
-        this.validateDirection();
-        this.validateCurrent();
+        if(! this.validateDirection()) return;
+        if(! this.validateCurrent()) return;
         this.animate();
     },
     toggleAnimation(rootEl){
@@ -108,11 +107,22 @@ var scrollInit = {
         }) 
     },
     validateCurrent: function(){
-        if(this.current < 0) this.current = 0;
-        if(this.current > this.max) this.current = this.max;
+        if(this.current < 0) {
+            this.current = 0
+            return false;
+        };
+        if(this.current > this.max) {
+            this.current = this.max;
+            return false;
+        };
+        return true;
     },
     validateDirection: function(){
-        if(Math.abs(this.direction) !== 1) this.direction = -1;
+        if(Math.abs(this.direction) !== 1){
+            this.direction = -1;
+            return false;
+        }
+        return true
     },
     init: function(){
         if(isDesktop){
