@@ -25,13 +25,14 @@ $('[data-tab-open]').on('click', function(){
 $('.js-partners-slider').slick({
     slidesToShow: 1,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
     dots: true,
     appendDots: $('.partners__dots')
 })
 
 var animateCSS = function(node, animation){
     const animationName = 'animate__' + animation;
-    console.log(node);
 
     node.classList.add('animate__animated', animationName);
 
@@ -167,7 +168,7 @@ var preloader = {
                 }, 500);
 
 
-            }, 3000);
+            }, 1500);
         }, 1);
     }
 };
