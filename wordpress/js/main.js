@@ -182,7 +182,7 @@ $(document).ready(function(){
     }
 })
 
-if(!isDesktop){
+
     $(document).on('scroll', function(){
 
         if(window.pageYOffset > 100){
@@ -190,9 +190,11 @@ if(!isDesktop){
         }else if(! $('#header').hasClass('is-active')){
             $('#header').removeClass('is-active')
         }
-        checkVideo();
+        if(!isDesktop){
+            checkVideo();
+        }
     })
-}
+
 
 function checkVideo(){
     var media = $('video').not("[autoplay='autoplay']");
