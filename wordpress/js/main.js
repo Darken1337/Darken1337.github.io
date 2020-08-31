@@ -119,7 +119,7 @@ if($(window).width() > 1024){
         offset : 0,
         scrollbars: true,
         setHeights: true,
-        overflowScroll: true,
+        overflowScroll: false,
         updateHash: true,
         touchScroll:true,
         before:function(next,sections) {
