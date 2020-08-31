@@ -115,7 +115,7 @@ if($(window).width() > 1024){
         sectionName : "section-name",
         interstitialSection : "",
         easing: "swing",
-        scrollSpeed: 3000,
+        scrollSpeed: 2000,
         offset : 0,
         scrollbars: true,
         setHeights: true,
