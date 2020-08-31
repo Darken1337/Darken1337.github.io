@@ -66,6 +66,7 @@ var scrollInit = {
                 this.toggleVideo(prevVideo);
             }
         }
+
         this.toggleAnimation(currentSlide);
         currentSlide.classList.add('is-current');
         
@@ -81,7 +82,6 @@ var scrollInit = {
     },
     toggleVideo: function(video){
         if(! video) return;
-
         if (video.paused) video.play(); 
         else {
             setTimeout(function(){
@@ -186,7 +186,15 @@ $(document).ready(function(){
     if(isDesktop && $('[data-section]').length > 0){
         $('[data-animation]').addClass('pre-animate');
     }
-    preloader.start();
+    if(isDesktop){
+        var video = document.querySelector('[data-video="1"]');
+        video.load();
+        video.addEventListener('canplay', function(){
+            preloader.start();
+        })
+    }else{
+        preloader.start();
+    }
     if($('[data-section]').length > 0){
         scrollInit.init();
     }
