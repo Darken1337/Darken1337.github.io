@@ -190,20 +190,28 @@ $(document).ready(function(){
     if($('[data-section]').length > 0){
         scrollInit.init();
     }
+    // if(isDesktop){
+    //     $("video.js-delay source").each(function() {
+    //         var sourceFile = $(this).attr("data-src");
+    //         $(this).attr("src", sourceFile);
+    //         var video = this.parentElement;
+    //         video.load();
+    //     });
+    // }
 })
 
 
-    $(document).on('scroll', function(){
+$(document).on('scroll', function(){
 
-        if(window.pageYOffset > 100){
-            $('#header').addClass('is-active')
-        }else if($('#header').hasClass('is-active')){
-            $('#header').removeClass('is-active')
-        }
-        if(!isDesktop){
-            checkVideo();
-        }
-    })
+    if(window.pageYOffset > 100){
+        $('#header').addClass('is-active')
+    }else if($('#header').hasClass('is-active')){
+        $('#header').removeClass('is-active')
+    }
+    if(!isDesktop){
+        checkVideo();
+    }
+})
 
 
 function checkVideo(){

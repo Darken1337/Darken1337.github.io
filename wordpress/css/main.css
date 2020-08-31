@@ -1548,8 +1548,7 @@ img {
 .dropdown {
   border-right: 1px solid #F9E5C5;
   border-left: 1px solid #F9E5C5;
-  border-bottom: 1px solid #F9E5C5;
-  margin: 0 -16px; }
+  border-bottom: 1px solid #F9E5C5; }
   @media (max-width: 767px) {
     .dropdown {
       margin: 0 -21px; } }
