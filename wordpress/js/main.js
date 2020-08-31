@@ -114,7 +114,7 @@ if($(window).width() > 1024){
         section : "[data-section]",
         sectionName : "section-name",
         interstitialSection : "",
-        easing: "easeIn",
+        easing: "swing",
         scrollSpeed: 3000,
         offset : 0,
         scrollbars: true,
