@@ -34,7 +34,7 @@ $('.js-partners-slider').slick({
 var animateCSS = function(node, animation){
     const animationName = 'animate__' + animation;
 
-    node.classList.add('animate__animated', animationName);
+    
 
     // function handleAnimationEnd() {
     //   node.classList.remove('animate__animated', animationName);
@@ -46,100 +46,24 @@ var animateCSS = function(node, animation){
 
 var isDesktop = $(window).width() > 1024;
 
-var scrollInit = {
-    current: 0,
-    direction: null,
-    sections: $('[data-section]'),
-    max: $('[data-section]').length - 1,
-    slider: $('.home-slider'),
-    animate: function(){
-        var prev = null;
-        var currentSlide = this.sections[this.current];
-        if(this.direction)prev = this.sections[this.current + this.direction];
-        var currentVideo = currentSlide.querySelector('[data-video]');
-        
-        if(prev){
-            var prevVideo = prev.querySelector('[data-video]');
-            this.toggleAnimation(prev);
-            prev.classList.remove('is-current');
-            if(prevVideo){
-                this.toggleVideo(prevVideo);
-            }
-        }
-
-        this.toggleAnimation(currentSlide);
-        currentSlide.classList.add('is-current');
-        
-        if(currentVideo){
-            this.toggleVideo(currentVideo);
-        }
-
-        if(this.current === 0){
-            $('#header').removeClass('is-active');
-        }else{
-            $('#header').addClass('is-active');
-        }
-    },
-    toggleVideo: function(video){
-        if(! video) return;
-        if (video.paused) video.play(); 
-        else {
-            setTimeout(function(){
-                video.pause();
-                video.currentTime = 0;
-            }, 1000);
-        }
-    },
-    scroll: function(){
-        this.current -= this.direction;
-        if(! this.validateDirection()) return;
-        if(! this.validateCurrent()) return;
-        this.animate();
-    },
-    toggleAnimation(rootEl){
-        var elements = rootEl.querySelectorAll('[data-animation]');
-        elements.forEach(function(el){
-            if(! el.classList.contains('animate__animated')){
-                animateCSS(el, $(el).attr('data-animation'));
-            }else{
-                el.classList.remove('animate__animated', 'animate__' + $(el).attr('data-animation'));
-            }
-        }) 
-    },
-    validateCurrent: function(){
-        if(this.current < 0) {
-            this.current = 0
-            return false;
-        };
-        if(this.current > this.max) {
-            this.current = this.max;
-            return false;
-        };
-        return true;
-    },
-    validateDirection: function(){
-        if(Math.abs(this.direction) !== 1){
-            this.direction = -1;
-            return false;
-        }
-        return true
-    },
-    init: function(){
-        if(isDesktop){
-            var _this = this;
-            var timeout = null;
-            this.sections[0].classList.add('is-current');
-            $(this.slider).bind('mousewheel', function(e){
-                if(timeout === null){
-                    _this.direction = e.deltaY;
-                    _this.scroll();
-                    timeout = setTimeout(function(){
-                        timeout = null;
-                    }, 1000);
-                }
-            })
-        }
+function toggleVideo(video){
+    if(! video) return;
+    if (video.paused) video.play(); 
+    else {
+        setTimeout(function(){
+            video.pause();
+            video.currentTime = 0;
+        }, 1000);
     }
+}
+
+function toggleAnimation(rootEl){
+    var elements = rootEl.find('[data-animation]');
+    console.log(elements);
+    elements.each(function(){
+
+        $(this).toggleClass('animate__animated animate__' + $(this).attr('data-animation'));
+    }) 
 }
 
 var preloader = {
@@ -152,7 +76,7 @@ var preloader = {
             "strokeColor":"#272155",
             "strokeCap":"butt"
         }); 
-        
+        console.log(1);
         setTimeout(() => {
             myAnimation.paint();  
             setTimeout(function(){
@@ -168,8 +92,8 @@ var preloader = {
                     if(isDesktop){
                         if($('[data-section]').length > 0){
                             $('[data-animation]').removeClass('pre-animate');
-                            scrollInit.toggleAnimation(document.querySelector('#header'));
-                            scrollInit.toggleAnimation(document.querySelector('[data-section="0"]'));
+                            toggleAnimation($('[data-section="0"]'))
+                            toggleAnimation($('#header'))
                         }
                     }
             
@@ -182,6 +106,55 @@ var preloader = {
         }, 1);
     }
 };
+
+if($(window).width() > 1024){
+    var prev = 0;
+
+    var scrollify = $.scrollify({
+        section : "[data-section]",
+        sectionName : "section-name",
+        interstitialSection : "",
+        easing: "easeOutExpo",
+        scrollSpeed: 1200,
+        offset : 0,
+        scrollbars: true,
+        setHeights: true,
+        overflowScroll: true,
+        updateHash: true,
+        touchScroll:true,
+        before:function(next,sections) {
+            var nextEl = sections[next];
+            var nextVideo = nextEl.find('[data-video]');
+
+            var prevEl = sections[prev];
+            var prevVideo = prevEl.find('[data-video]');
+
+            prevVideo.removeClass('is-current');
+            nextEl.addClass('is-current');
+            console.log(`prev: ${prev} next: ${next}`);
+            if(prev !== 0 && prevEl.length !== 0) toggleAnimation(prevEl)
+            if(next !== 0 && nextEl.length !== 0) toggleAnimation(nextEl);
+
+            console.log(nextVideo);
+            if(nextVideo.length > 0){
+                toggleVideo(nextVideo[0]);
+            }
+            if(prevVideo.length > 0){
+                toggleVideo(prevVideo[0]);
+            }
+
+            if(next === 0){
+                $('#header').removeClass('is-active');
+            }else{
+                $('#header').addClass('is-active');
+            }
+        },
+        after:function(next, sections) {
+            prev = next;
+        }
+    });
+}
+
 $(document).ready(function(){
     if(isDesktop && $('[data-section]').length > 0){
         $('[data-animation]').addClass('pre-animate');
@@ -189,14 +162,12 @@ $(document).ready(function(){
     if(isDesktop){
         var video = document.querySelector('[data-video="1"]');
         video.load();
-        video.addEventListener('canplay', function(){
+        video.oncanplay = function(){
             preloader.start();
-        })
+            video.oncanplay = null;
+        }
     }else{
         preloader.start();
-    }
-    if($('[data-section]').length > 0){
-        scrollInit.init();
     }
     // if(isDesktop){
     //     $("video.js-delay source").each(function() {
