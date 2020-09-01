@@ -496,7 +496,7 @@ img {
       display: flex; } }
   .hamburger span {
     display: block;
-    width: 100%;
+    width: 36px;
     height: 4px;
     background-color: #272155; }
   .hamburger.is-active span {
