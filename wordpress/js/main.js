@@ -36,7 +36,7 @@ var isDesktop = $(window).width() > 1024;
 
 function toggleVideo(video){
     if(! video) return;
-    if (video.paused) video.play();
+    if (video.paused) video.play(); 
     else {
         setTimeout(function(){
             video.pause();
@@ -48,53 +48,16 @@ function toggleVideo(video){
 function toggleAnimation(rootEl){
     if(rootEl.length === 0) return;
     var elements = rootEl[0].querySelectorAll('[data-animation]');
-
+    
     elements.forEach(function(el){
-        console.log(el.getAttribute('data-animation'));
-        el.classList.toggle('animate__animated','animate__' + el.getAttribute('data-animation'));
-    })
+        if(el.classList.contains('animate__animated')){
+            el.classList.remove('animate__animated','animate__' + el.getAttribute('data-animation'));
+        }else{
+            el.classList.add('animate__animated','animate__' + el.getAttribute('data-animation'));
+        }
+        
+    }) 
 }
-
-var preloader = {
-    start: function(){
-        var el = document.querySelector('#logo');
-        var myAnimation = new LazyLinePainter(el, {
-            "ease":"easeLinear",
-            "strokeWidth":90,
-            "strokeOpacity":1,
-            "strokeColor":"#272155",
-            "strokeCap":"butt"
-        });
-        console.log(1);
-        setTimeout(() => {
-            myAnimation.paint();
-            setTimeout(function(){
-                $('.preloader').css('background-color', 'transparent');
-                $('.preloader__logo').addClass('is-animated');
-
-                if($('[data-section]').length > 0 && $(window).width() > 768){
-                    // document.querySelector('[data-video="1"]').play();
-                }
-
-                setTimeout(function(){
-
-                    if(isDesktop){
-                        if($('[data-section]').length > 0){
-                            $('[data-animation]').removeClass('pre-animate');
-                            toggleAnimation($('[data-section="0"]'))
-                            toggleAnimation($('#header'))
-                        }
-                    }
-
-                    $('.nav__logo').css('visibility', 'visible')
-                    $('.preloader').hide(0);
-                }, 500);
-
-
-            }, 1500);
-        }, 1);
-    }
-};
 
 if($(window).width() > 1024){
     var prev = 0;
@@ -140,26 +103,56 @@ if($(window).width() > 1024){
         after:function(next, sections) {
             prev = next;
         },
-        afterRender(){
+        afterRender: function(){
             var currentEl = $.scrollify.current();
             prev = parseInt(currentEl.attr('data-section'))
             var currentVideo = currentEl.find('[data-video]');
 
+            toggleAnimation($('#header'));
             toggleAnimation(currentEl);
 
             if(currentVideo.length > 0){
                 toggleVideo(currentVideo[0]);
             }
+            
 
             if(prev === 0){
                 $('#header').removeClass('is-active');
             }else{
                 $('#header').addClass('is-active');
             }
-
         }
     });
 }
+
+var preloader = {
+    start: function(){
+        var el = document.querySelector('#logo');
+        var myAnimation = new LazyLinePainter(el, {
+            "ease":"easeLinear",
+            "strokeWidth":90,
+            "strokeOpacity":1,
+            "strokeColor":"#272155",
+            "strokeCap":"butt"
+        }); 
+        setTimeout(() => {
+            myAnimation.paint();  
+            setTimeout(function(){
+                $('.preloader').css('background-color', 'transparent');
+                $('.preloader__logo').addClass('is-animated');
+
+                setTimeout(function(){
+                    $('[data-animation]').removeClass('pre-animate');
+            
+                    $('.nav__logo').css('visibility', 'visible')
+                    $('.preloader').hide(0);
+                }, 500);
+
+
+            }, 1500);
+        }, 1);
+    }
+};
 
 $(document).ready(function(){
     if(isDesktop && $('[data-section]').length > 0){
