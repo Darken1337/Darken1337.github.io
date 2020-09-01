@@ -26,23 +26,11 @@ $('.js-partners-slider').slick({
     slidesToShow: 1,
     arrows: false,
     autoplay: true,
+    adaptiveHeight: true,
     autoplaySpeed: 5000,
     dots: true,
     appendDots: $('.partners__dots')
 })
-
-var animateCSS = function(node, animation){
-    const animationName = 'animate__' + animation;
-
-    
-
-    // function handleAnimationEnd() {
-    //   node.classList.remove('animate__animated', animationName);
-    //   node.removeEventListener('animationend', handleAnimationEnd);
-    // }
-
-    // node.addEventListener('animationend', handleAnimationEnd);
-}
 
 var isDesktop = $(window).width() > 1024;
 
@@ -114,13 +102,13 @@ if($(window).width() > 1024){
         section : "[data-section]",
         sectionName : "section-name",
         interstitialSection : "",
-        easing: "easeIn",
-        scrollSpeed: 3000,
+        easing: "swing",
+        scrollSpeed: 1500,
         offset : 0,
         scrollbars: true,
         setHeights: true,
-        overflowScroll: true,
-        updateHash: true,
+        overflowScroll: false,
+        updateHash: false,
         touchScroll:true,
         before:function(next,sections) {
             var nextEl = sections[next];
@@ -131,11 +119,11 @@ if($(window).width() > 1024){
 
             prevVideo.removeClass('is-current');
             nextEl.addClass('is-current');
-            console.log(`prev: ${prev} next: ${next}`);
+
+            console.log(`prev - ${prev}, current = ${next}`);
             if(prev !== 0 && prevEl.length !== 0) toggleAnimation(prevEl)
             if(next !== 0 && nextEl.length !== 0) toggleAnimation(nextEl);
 
-            console.log(nextVideo);
             if(nextVideo.length > 0){
                 toggleVideo(nextVideo[0]);
             }
@@ -151,6 +139,18 @@ if($(window).width() > 1024){
         },
         after:function(next, sections) {
             prev = next;
+        },
+        afterRender(){
+            var currentEl = $.scrollify.current();
+            prev = parseInt(currentEl.attr('data-section'))
+            var currentVideo = currentEl.find('[data-video]');
+
+            toggleAnimation(currentEl);
+
+            if(currentVideo.length > 0){
+                toggleVideo(currentVideo[0]);
+            }
+
         }
     });
 }
