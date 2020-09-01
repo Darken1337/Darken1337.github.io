@@ -52,7 +52,7 @@ function toggleAnimation(rootEl){
     if(rootEl.length === 0) return;
     var elements = rootEl[0].querySelectorAll('[data-animation]');
     
-    for(var i = 0; i < elements.length - 1; i++){
+    for(var i = 0; i < elements.length; i++){
         var el = elements[i];
         if(el.classList.contains('animate__animated')){
             el.classList.remove('animate__animated','animate__' + el.getAttribute('data-animation'));
@@ -83,7 +83,8 @@ if($(window).width() > 1024){
             var prevEl = sections[prev];
             var prevVideo = prevEl.find('[data-video]');
 
-            prevVideo.removeClass('is-current');
+            // prevVideo.removeClass('is-current')
+            $('[data-section].is-current').removeClass('is-current');
             nextEl.addClass('is-current');
             console.log(`prev: ${prev}: current: ${next}`);
 
@@ -130,12 +131,15 @@ var preloader = {
                     $('[data-animation]').removeClass('pre-animate');
 
                     var currentEl = $.scrollify.current();
-                    if(currentEl){
+                    if(currentEl && currentEl.length > 0){
                         prev = parseInt(currentEl.attr('data-section'));
                         var currentVideo = currentEl.find('[data-video]');
 
                         toggleAnimation($('#header'));
                         toggleAnimation(currentEl);
+
+                        $('[data-section].is-current').removeClass('is-current');
+                        currentEl.addClass('is-current')
 
                         if(currentVideo.length > 0){
                             playVideo(currentVideo[0]);
