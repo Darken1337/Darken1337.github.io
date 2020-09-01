@@ -34,10 +34,13 @@ $('.js-partners-slider').slick({
 
 var isDesktop = $(window).width() > 1024;
 
-function toggleVideo(video){
+function playVideo(video){
     if(! video) return;
     if (video.paused) video.play(); 
-    else {
+}
+
+function pauseVideo(video){
+    if( ! video.paused) {
         setTimeout(function(){
             video.pause();
             video.currentTime = 0;
@@ -64,16 +67,15 @@ if($(window).width() > 1024){
 
     var scrollify = $.scrollify({
         section : "[data-section]",
-        sectionName : "section-name",
         interstitialSection : "",
-        easing: "easeInQuad",
+        easing: "linear",
         scrollSpeed: 1000,
         offset : 0,
         scrollbars: true,
-        setHeights: true,
+        setHeights: false,
         overflowScroll: false,
         updateHash: false,
-        touchScroll:false,
+        touchScroll:true,
         before:function(next,sections) {
             var nextEl = sections[next];
             var nextVideo = nextEl.find('[data-video]');
@@ -83,15 +85,16 @@ if($(window).width() > 1024){
 
             prevVideo.removeClass('is-current');
             nextEl.addClass('is-current');
+            console.log(`prev: ${prev}: current: ${next}`);
 
             if(prev !== 0 && prevEl.length !== 0) toggleAnimation(prevEl)
             if(next !== 0 && nextEl.length !== 0) toggleAnimation(nextEl);
 
             if(nextVideo.length > 0){
-                toggleVideo(nextVideo[0]);
+                playVideo(nextVideo[0]);
             }
             if(prevVideo.length > 0){
-                toggleVideo(prevVideo[0]);
+                pauseVideo(prevVideo[0]);
             }
 
             if(next === 0){
@@ -102,25 +105,6 @@ if($(window).width() > 1024){
         },
         after:function(next, sections) {
             prev = next;
-        },
-        afterRender: function(){
-            var currentEl = $.scrollify.current();
-            prev = parseInt(currentEl.attr('data-section'))
-            var currentVideo = currentEl.find('[data-video]');
-
-            toggleAnimation($('#header'));
-            toggleAnimation(currentEl);
-
-            if(currentVideo.length > 0){
-                toggleVideo(currentVideo[0]);
-            }
-            
-
-            if(prev === 0){
-                $('#header').removeClass('is-active');
-            }else{
-                $('#header').addClass('is-active');
-            }
         }
     });
 }
@@ -143,12 +127,28 @@ var preloader = {
 
                 setTimeout(function(){
                     $('[data-animation]').removeClass('pre-animate');
-            
+
+                    var currentEl = $.scrollify.current();
+                    prev = parseInt(currentEl.attr('data-section'))
+                    var currentVideo = currentEl.find('[data-video]');
+
+                    toggleAnimation($('#header'));
+                    toggleAnimation(currentEl);
+
+                    if(currentVideo.length > 0){
+                        playVideo(currentVideo[0]);
+                    }
+                    
                     $('.nav__logo').css('visibility', 'visible')
                     $('.preloader').hide(0);
+                    console.log(prev);
+                    if(prev > 0){
+                        $('#header').addClass('is-active')
+                    }else if($('#header').hasClass('is-active')){
+                        $('#header').removeClass('is-active')
+                    }
+
                 }, 500);
-
-
             }, 1500);
         }, 1);
     }
@@ -190,7 +190,6 @@ $(document).on('scroll', function(){
         checkVideo();
     }
 })
-
 
 function checkVideo(){
     var media = $('video').not("[autoplay='autoplay']");

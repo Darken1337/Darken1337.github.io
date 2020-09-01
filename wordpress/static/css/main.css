@@ -240,71 +240,97 @@ img {
 .color-violet {
   color: #272155; }
 
-/* line 5, ../src/onepage-scroll.scss */
-html.onepage-scroll-enabled,
-body.onepage-scroll-enabled {
-  margin: 0;
+/*!
+ * fullView 1.0.9
+ * https://github.com/seeratawan01/fullview.js
+ *
+ * @license GPLv3 for open source use only
+ *
+ * Copyright (C) 2020 https://github.com/seeratawan01/fullview.js/blob/master/LICENSE
+ */
+* {
   padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%; }
+
+*, :after, :before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+body {
   overflow: hidden;
-  position: static;
-  display: block;
-  width: 100%;
   height: 100%; }
 
-/* line 16, ../src/onepage-scroll.scss */
-.onepage-wrapper {
+#fullview > * {
   display: block;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  position: relative;
-  -webkit-transform-style: preserve-3d; }
+  height: 100vh !important;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  overflow: hidden; }
 
-/* line 23, ../src/onepage-scroll.scss */
-.onepage-wrapper .section {
-  width: 100%;
-  height: 100%; }
-
-/* line 30, ../src/onepage-scroll.scss */
-.onepage-pagination {
-  position: absolute;
-  right: 10px;
+#fv-dots {
+  position: fixed;
   top: 50%;
-  z-index: 5;
-  list-style: none;
-  margin: 0;
-  padding: 0; }
+  left: 96%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
-/* line 38, ../src/onepage-scroll.scss */
-.onepage-pagination li {
-  padding: 0;
-  text-align: center; }
+#fv-dots ul {
+  display: block;
+  list-style: none; }
 
-/* line 41, ../src/onepage-scroll.scss */
-.onepage-pagination li a {
-  padding: 10px;
-  width: 4px;
-  height: 4px;
-  display: block; }
+#fv-dots ul li {
+  padding: 10px; }
 
-/* line 46, ../src/onepage-scroll.scss */
-.onepage-pagination li a:before {
-  content: '';
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: rgba(0, 0, 0, 0.85);
-  border-radius: 10px; }
-
-/* line 54, ../src/onepage-scroll.scss */
-.onepage-pagination li a.active:before {
+#fv-dots ul li a {
+  display: block;
+  margin: auto;
   width: 10px;
   height: 10px;
-  background: none;
-  border: 1px solid black;
-  margin-top: -4px;
-  left: 8px; }
+  text-align: center; }
 
+#fv-dots ul li a span {
+  display: block;
+  z-index: 1;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #1c85e1;
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 7px;
+  height: 7px;
+  -webkit-transition: .1s ease all;
+  -o-transition: .1s ease all;
+  transition: .1s ease all; }
+
+#fv-dots ul a.active span {
+  width: 9px;
+  height: 9px;
+  background-color: #01427a; }
+
+#fv-dots ul a:hover span {
+  width: 9px;
+  height: 9px; }
 .header {
   -webkit-transition: background-color 1s;
   -o-transition: background-color 1s;
@@ -1138,6 +1164,10 @@ body.onepage-scroll-enabled {
     width: 162px;
     height: 100px;
     visibility: hidden; } }
+
+@media screen and (min-width: 1025px) {
+  .home-slider [data-section] {
+    height: 100vh !important; } }
 
 .p-relative {
   position: relative; }
