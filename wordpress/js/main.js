@@ -36,7 +36,7 @@ var isDesktop = $(window).width() > 1024;
 
 function toggleVideo(video){
     if(! video) return;
-    if (video.paused) video.play(); 
+    if (video.paused) video.play();
     else {
         setTimeout(function(){
             video.pause();
@@ -48,11 +48,11 @@ function toggleVideo(video){
 function toggleAnimation(rootEl){
     if(rootEl.length === 0) return;
     var elements = rootEl[0].querySelectorAll('[data-animation]');
-    
+
     elements.forEach(function(el){
         console.log(el.getAttribute('data-animation'));
         el.classList.toggle('animate__animated','animate__' + el.getAttribute('data-animation'));
-    }) 
+    })
 }
 
 var preloader = {
@@ -64,14 +64,14 @@ var preloader = {
             "strokeOpacity":1,
             "strokeColor":"#272155",
             "strokeCap":"butt"
-        }); 
+        });
         console.log(1);
         setTimeout(() => {
-            myAnimation.paint();  
+            myAnimation.paint();
             setTimeout(function(){
                 $('.preloader').css('background-color', 'transparent');
                 $('.preloader__logo').addClass('is-animated');
-                
+
                 if($('[data-section]').length > 0 && $(window).width() > 768){
                     // document.querySelector('[data-video="1"]').play();
                 }
@@ -85,7 +85,7 @@ var preloader = {
                             toggleAnimation($('#header'))
                         }
                     }
-            
+
                     $('.nav__logo').css('visibility', 'visible')
                     $('.preloader').hide(0);
                 }, 500);
