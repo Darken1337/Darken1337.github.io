@@ -47,7 +47,7 @@ function toggleVideo(video){
 
 function toggleAnimation(rootEl){
     if(rootEl.length === 0)
-    var elements = rootEl[].querySelectorAll('[data-animation]');
+    var elements = rootEl[0].querySelectorAll('[data-animation]');
     
     elements.forEach(function(){
         this.classList.toggle('animate__animated animate__' + $(this).attr('data-animation'));
