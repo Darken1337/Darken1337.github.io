@@ -46,11 +46,12 @@ function toggleVideo(video){
 }
 
 function toggleAnimation(rootEl){
-    var elements = rootEl.find('[data-animation]');
-    console.log(elements);
-    elements.each(function(){
-
-        $(this).toggleClass('animate__animated animate__' + $(this).attr('data-animation'));
+    if(rootEl.length === 0) return;
+    var elements = rootEl[0].querySelectorAll('[data-animation]');
+    
+    elements.forEach(function(el){
+        console.log(el.getAttribute('data-animation'));
+        el.classList.toggle('animate__animated','animate__' + el.getAttribute('data-animation'));
     }) 
 }
 
