@@ -313,7 +313,8 @@ img {
       background-color: #272155;
       display: none;
       padding: 18px 20px;
-      overflow: auto; } }
+      overflow-y: auto;
+      overflow-x: hidden; } }
 
 .menu-logo {
   display: none;
@@ -456,10 +457,17 @@ img {
     flex-wrap: wrap;
     margin-right: -55px;
     margin-bottom: 21px; }
+    @media (max-width: 567px) {
+      .menu-phones__inner {
+        margin-right: -15px; } }
     .menu-phones__inner > * {
       width: calc(100%/2 - 55px);
       margin-right: 55px;
       margin-bottom: 21px; }
+      @media (max-width: 567px) {
+        .menu-phones__inner > * {
+          width: calc(100%/2 - 15px);
+          margin-right: 15px; } }
   .menu-phones__item {
     font-weight: 600;
     font-size: 16px;
@@ -940,6 +948,9 @@ img {
     @media (max-width: 767px) {
       .contact-address .title-3 {
         margin-bottom: 15px; } }
+    @media (max-width: 567px) {
+      .contact-address .title-3 {
+        font-size: 22px; } }
   .contact-address__text {
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
@@ -950,6 +961,9 @@ img {
     @media (max-width: 767px) {
       .contact-address__text {
         font-size: 16px; } }
+    @media (max-width: 567px) {
+      .contact-address__text {
+        font-size: 14px; } }
   .contact-address__link {
     position: absolute;
     top: 0;
@@ -1035,9 +1049,13 @@ img {
   height: 100%;
   background-color: #F9E5C5;
   z-index: 100;
-  -webkit-transition: background-color, .5s;
-  -o-transition: background-color, .5s;
-  transition: background-color, .5s; }
+  visibility: visible;
+  -webkit-transition: visibility, opacity .5s;
+  -o-transition: visibility, opacity .5s;
+  transition: visibility, opacity .5s; }
+  .preloader.is-hidden {
+    visibility: hidden;
+    opacity: 0; }
   .preloader .container {
     position: relative;
     height: 100%; }
