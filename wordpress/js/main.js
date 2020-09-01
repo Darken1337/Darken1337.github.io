@@ -72,7 +72,7 @@ var preloader = {
                 $('.preloader__logo').addClass('is-animated');
                 
                 if($('[data-section]').length > 0 && $(window).width() > 768){
-                    document.querySelector('[data-video="1"]').play();
+                    // document.querySelector('[data-video="1"]').play();
                 }
 
                 setTimeout(function(){
@@ -102,14 +102,14 @@ if($(window).width() > 1024){
         section : "[data-section]",
         sectionName : "section-name",
         interstitialSection : "",
-        easing: "swing",
-        scrollSpeed: 1500,
+        easing: "easeInQuad",
+        scrollSpeed: 1000,
         offset : 0,
         scrollbars: true,
         setHeights: true,
         overflowScroll: false,
         updateHash: false,
-        touchScroll:true,
+        touchScroll:false,
         before:function(next,sections) {
             var nextEl = sections[next];
             var nextVideo = nextEl.find('[data-video]');
@@ -120,7 +120,6 @@ if($(window).width() > 1024){
             prevVideo.removeClass('is-current');
             nextEl.addClass('is-current');
 
-            console.log(`prev - ${prev}, current = ${next}`);
             if(prev !== 0 && prevEl.length !== 0) toggleAnimation(prevEl)
             if(next !== 0 && nextEl.length !== 0) toggleAnimation(nextEl);
 
@@ -149,6 +148,12 @@ if($(window).width() > 1024){
 
             if(currentVideo.length > 0){
                 toggleVideo(currentVideo[0]);
+            }
+
+            if(prev === 0){
+                $('#header').removeClass('is-active');
+            }else{
+                $('#header').addClass('is-active');
             }
 
         }
