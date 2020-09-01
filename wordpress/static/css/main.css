@@ -1097,9 +1097,18 @@ img {
     height: 100px;
     visibility: hidden; } }
 
-@media screen and (min-width: 1025px) {
-  .home-slider [data-section] {
-    height: 100vh !important; } }
+.home-slider [data-section] {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 2s, opacity 2s;
+  -o-transition: visibility 2s, opacity 2s;
+  transition: visibility 2s, opacity 2s; }
+  @media screen and (min-width: 1025px) {
+    .home-slider [data-section] {
+      height: 100vh !important; } }
+  .home-slider [data-section].is-current {
+    opacity: 1;
+    visibility: visible; }
 
 .p-relative {
   position: relative; }
