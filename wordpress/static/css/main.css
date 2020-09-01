@@ -190,7 +190,9 @@ img {
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; } }
+    justify-content: center; }
+    #s-partners .container {
+      height: auto; } }
 
 .title-1 {
   font-weight: 600;
@@ -240,97 +242,6 @@ img {
 .color-violet {
   color: #272155; }
 
-/*!
- * fullView 1.0.9
- * https://github.com/seeratawan01/fullview.js
- *
- * @license GPLv3 for open source use only
- *
- * Copyright (C) 2020 https://github.com/seeratawan01/fullview.js/blob/master/LICENSE
- */
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-html {
-  scroll-behavior: smooth;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: transparent;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  height: 100%; }
-
-*, :after, :before {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit; }
-
-body {
-  overflow: hidden;
-  height: 100%; }
-
-#fullview > * {
-  display: block;
-  height: 100vh !important;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  perspective: 1000;
-  overflow: hidden; }
-
-#fv-dots {
-  position: fixed;
-  top: 50%;
-  left: 96%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
-
-#fv-dots ul {
-  display: block;
-  list-style: none; }
-
-#fv-dots ul li {
-  padding: 10px; }
-
-#fv-dots ul li a {
-  display: block;
-  margin: auto;
-  width: 10px;
-  height: 10px;
-  text-align: center; }
-
-#fv-dots ul li a span {
-  display: block;
-  z-index: 1;
-  cursor: pointer;
-  text-decoration: none;
-  background-color: #1c85e1;
-  border-radius: 50%;
-  margin: 0 auto;
-  width: 7px;
-  height: 7px;
-  -webkit-transition: .1s ease all;
-  -o-transition: .1s ease all;
-  transition: .1s ease all; }
-
-#fv-dots ul a.active span {
-  width: 9px;
-  height: 9px;
-  background-color: #01427a; }
-
-#fv-dots ul a:hover span {
-  width: 9px;
-  height: 9px; }
 .header {
   -webkit-transition: background-color 1s;
   -o-transition: background-color 1s;
@@ -783,7 +694,10 @@ body {
 
 .service {
   text-align: center;
-  position: relative; }
+  position: relative;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s; }
   .service:hover {
     opacity: .75; }
   .service__icon {
@@ -864,8 +778,7 @@ body {
         font-size: 18px; } }
 
 .partners {
-  padding: 90px 0;
-  height: 100%; }
+  padding: 90px 0; }
   @media (max-width: 767px) {
     .partners {
       padding: 45px 0; } }
@@ -1101,7 +1014,8 @@ body {
   font-weight: 600;
   color: #F9E5C5;
   max-width: 300px;
-  font-size: 24px; }
+  font-size: 24px;
+  line-height: 1.34; }
   @media screen and (max-height: 1200px) {
     .contact-rights {
       font-size: 2.4vh; } }

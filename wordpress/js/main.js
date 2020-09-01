@@ -75,7 +75,7 @@ if($(window).width() > 1024){
         setHeights: false,
         overflowScroll: false,
         updateHash: false,
-        touchScroll:true,
+        touchScroll:false,
         before:function(next,sections) {
             var nextEl = sections[next];
             var nextVideo = nextEl.find('[data-video]');
