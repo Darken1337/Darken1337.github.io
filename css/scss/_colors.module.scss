@@ -1,0 +1,85 @@
+$colorText: #666;
+$colorTextDark: #333;
+$colorTextDarkest: #171717;
+$colorTextLight: #999;
+$colorTextLighter: #bbb;
+
+$colorBrand: #00c0e8;
+$colorBrandDark: #09add5;
+$colorBrandDarker: #0085a7;
+$colorBrandLight: #def3fe;
+$colorBrandLighter: #e7f8fc;
+$colorBrandLightest: #f2faff;
+$colorBrandAlt: #ffd530;
+$colorBrandDim: #232a39;
+$colorBrandLink: #1688e0;
+
+$colorMuted: #f9f9f9;
+$colorMutedDark: #ededed;
+$colorMutedDarker: #dadada;
+$colorMutedLight: #fafafa;
+$colorMutedLighter: #fcfcfc;
+
+$colorLines: #e6e6e6;
+$colorLinesDark: #d5d5d5;
+$colorLinesDarker: #bcbcbc;
+$colorLinesDarkest: #999;
+$colorLinesLight: #f0f0f0;
+
+$colorGridBackground: rgba(black, 0.03);
+$colorGridLines: rgba(black, 0.05);
+$colorGridLinesLight: rgba(black, 0.03);
+$colorGridLinesDark: rgba(black, 0.07);
+
+$colorSuccess: #42bf00;
+$colorWarning: #ffa400;
+$colorDanger: #f05a67;
+$colorDangerVibrant: #ff4751;
+
+$colorFacebook: #3b5998;
+$colorTwitter: #1da1f2;
+$colorInstagram: #e4405f;
+$colorYouTube: #f00;
+
+:export {
+  text: $colorText;
+  textDark: $colorTextDark;
+  textDarkest: $colorTextDarkest;
+  textLight: $colorTextLight;
+  textLighter: $colorTextLighter;
+
+  brand: $colorBrand;
+  brandDark: $colorBrandDark;
+  brandLight: $colorBrandLight;
+  brandLighter: $colorBrandLighter;
+  brandLightest: $colorBrandLightest;
+  brandAlt: $colorBrandAlt;
+  brandDim: $colorBrandDim;
+  brandLink: $colorBrandLink;
+
+  muted: $colorMuted;
+  mutedDark: $colorMutedDark;
+  mutedLight: $colorMutedLight;
+  mutedLighter: $colorMutedLighter;
+
+  lines: $colorLines;
+  linesDark: $colorLinesDark;
+  linesDarker: $colorLinesDarker;
+  linesDarkest: $colorLinesDarkest;
+  linesLight: $colorLinesLight;
+
+  gridBackground: $colorGridBackground;
+  gridLines: $colorGridLines;
+  gridLinesLight: $colorGridLinesLight;
+  gridLinesDark: $colorGridLinesDark;
+
+  success: $colorSuccess;
+  warning: $colorWarning;
+  danger: $colorDanger;
+  dangerVibrant: $colorDangerVibrant;
+
+  facebook: #3b5998;
+  twitter: #1da1f2;
+  instagram: #e4405f;
+  youTube: #f00;
+}

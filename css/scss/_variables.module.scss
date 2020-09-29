@@ -1,0 +1,42 @@
+@import './colors.module';
+
+$width: 1200px;
+$minWidth: 320px;
+$maxWidth: 2580px;
+
+$tabletPortraitBreakpoint: 600px;
+$tabletLandscapeBreakpoint: 900px;
+$desktopBreakpoint: 1200px;
+$bigDesktopBreakpoint: 1800px;
+
+$containerPadding: 15px;
+$headerHeight: 66px;
+$offCanvasHorizontalPadding: 12px;
+$userPageContentOffset: 82px;
+$checkAnotherBarHeight: 66px;
+
+$font: 'Roboto', sans-serif;
+$fontAlt: 'proxima-nova', sans-serif;
+$fontSystem: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$fontMonospaced: 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+$fontFallback: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$fontSize: 16px;
+
+$weightRegular: 400;
+$weightLight: 300;
+$weightMedium: 500;
+$weightSemibold: 600;
+$weightBold: 700;
+
+$borderRadius: 10px;
+$borderRadiusSm: 5px;
+$borderRadiusXsm: 2px;
+
+:export {
+  tabletPortraitBreakpoint: $tabletPortraitBreakpoint;
+  tabletLandscapeBreakpoint: $tabletLandscapeBreakpoint;
+  desktopBreakpoint: $desktopBreakpoint;
+  bigDesktopBreakpoint: $bigDesktopBreakpoint;
+  headerHeight: $headerHeight;
+}

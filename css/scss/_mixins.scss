@@ -1,0 +1,209 @@
+@import './variables.module';
+
+@mixin resetMargin {
+  margin: 0;
+}
+
+@mixin unstyledList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin unstyledButton {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.25;
+  font-weight: inherit;
+  text-decoration: none;
+  color: inherit;
+  appearance: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+@mixin unstyledInput {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  line-height: 1;
+  background: none;
+  font-size: inherit;
+  color: inherit;
+  appearance: none;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin link($color: $colorBrandLink) {
+  color: $color;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+@mixin transition($properties: all, $speed: fast) {
+  @each $property in $properties {
+    transition: $property map-get((
+      fast: 100ms,
+      normal: 200ms,
+      slow: 400ms,
+      slower: 800ms,
+    ), $speed) ease-in-out;
+  }
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin circle($size) {
+  @include square($size);
+  border-radius: 50%;
+}
+
+@mixin absoluteCenter($size: null) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  @if $size {
+    margin: (-$size / 2) 0 0 (-$size / 2);
+  } @else {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin absoluteFill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin hiddenText {
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin for-phone-only {
+  @media screen and (max-width: $tabletPortraitBreakpoint - 1) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media screen and (min-width: $tabletPortraitBreakpoint) { @content; }
+}
+@mixin for-phone-tablet-portrait-only {
+  @media screen and (max-width: $tabletLandscapeBreakpoint - 1) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media screen and (min-width: $tabletLandscapeBreakpoint) { @content; }
+}
+@mixin for-desktop-up {
+  @media screen and (min-width: $desktopBreakpoint) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media screen and (min-width: $bigDesktopBreakpoint) { @content; }
+}
+
+@mixin primaryFont {
+  @include for-desktop-up {
+    font-family: $font;
+  }
+}
+
+@mixin secondaryFont {
+  @include for-desktop-up {
+    font-family: $fontAlt;
+  }
+}
+
+/**
+ * https://github.com/NigelOToole/angled-edges
+ *
+ * $angle: The angle in degrees: 1 - 45
+ * $angle-position-y: The Y position of the angle: top | bottom | both
+ * $angle-position-x: The X position of the angle: left | right
+ * $angle-position-bottom-x: The X position of the bottom angle if using 'both' for $angle-position-y: left | right
+ */
+
+@mixin angle-edge(
+  $angle,
+  $angle-position-y,
+  $angle-position-x,
+  $angle-position-bottom-x: ''
+) {
+  position: relative;
+  overflow: hidden;
+
+  @if $angle < 46 {
+    $angle: $angle * 2.22; // angle to VW
+  }
+  @if $angle > 45 {
+    $angle: 0;
+    @error 'Invalid angle, it must be between 1-45';
+  }
+
+  @if $angle-position-bottom-x == '' {
+    $angle-position-bottom-x: $angle-position-x;
+  }
+
+  $angle-calc-top: calc(0% + #{$angle}vw);
+  $angle-calc-bottom: calc(100% - #{$angle}vw);
+
+  $clip-path-top: 0 0, 100% 0;
+  $clip-path-bottom: 100% 100%, 0 100%;
+
+  @if $angle-position-y == 'top' or $angle-position-y == 'both' {
+
+    @if $angle-position-x == 'left' {
+      $clip-path-top: 0 $angle-calc-top, 100% 0;
+    }
+
+    @if $angle-position-x == 'right' {
+      $clip-path-top: 0 0, 100% $angle-calc-top;
+    }
+  }
+
+
+  @if $angle-position-y == 'bottom' or $angle-position-y == 'both' {
+
+    @if $angle-position-y == 'both' and $angle-position-x != $angle-position-bottom-x {
+      $angle-position-x: $angle-position-bottom-x;
+    }
+
+    @if $angle-position-x == 'left' {
+      $clip-path-bottom: 100% 100%, 0 $angle-calc-bottom;
+    }
+
+    @if $angle-position-x == 'right' {
+      $clip-path-bottom: 100% $angle-calc-bottom, 0 100%;
+    }
+  }
+
+  $clip-path: polygon($clip-path-top, $clip-path-bottom);
+  clip-path: $clip-path;
+}

@@ -1,0 +1,118 @@
+@import './scss/_normalize.scss';
+@import './scss/_mixins';
+@import './scss/_variables.module';
+@import './scss/_fonts';
+
+$tooltipColor: #faf5e8;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  @media print {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+
+  :global(.iframe) & {
+    height: auto;
+  }
+}
+
+html {
+  font-family: $fontFallback;
+  font-size: $fontSize;
+  line-height: 1.5;
+  color: $colorText;
+}
+
+.wf-active {
+  @include primaryFont;
+}
+
+body {
+  min-width: $minWidth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+h1, h2, h3, h4 {
+  @include secondaryFont;
+  line-height: 1.25;
+  font-weight: $weightMedium;
+
+  @include for-desktop-up {
+    font-weight: $weightSemibold;
+  }
+}
+
+pre,
+code {
+  font-family: $fontMonospaced;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  max-width: $maxWidth;
+  margin: 0 auto;
+}
+
+@page {
+  size: A4;
+  margin: 1cm;
+}
+
+@media print {
+  :global(.print-hidden) {
+    display: none;
+  }
+}
+
+
+.tippy-box[data-theme~='cv'] {
+  border-radius: 10px;
+  background: $tooltipColor;
+  box-shadow:
+    0 2px 2px rgba(black, 0.11),
+    0 1px 7px rgba(black, 0.12);
+  color: $colorTextDarkest;
+
+  .tippy-content {
+    padding: 12px 15px;
+  }
+
+  .tippy-arrow {
+    color: $tooltipColor;
+  }
+}
+
+.Modal--open {
+  @media print {
+    position: static !important;
+    overflow: auto !important;
+  }
+
+  :global(#root) {
+    filter: blur(5px);
+
+    @media print {
+      filter: none;
+    }
+  }
+}
