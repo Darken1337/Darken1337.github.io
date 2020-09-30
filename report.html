@@ -6246,6 +6246,59 @@
 
             var sections = $('.ReportSection_root___yzHb');
             var offsets = {};
+            var tips = {
+                vehicle: {
+                    title: 'Zusammenfassung',
+                    ofText: '1/10',
+                    text: '<p>Der Startbildschirm des connected report™ kann möglicherweise Identifizierungsdaten des Fahrzeugs enthalten, darunter den Hersteller, das Modell, Motoreigenschaften, Treibstoffart und mehr.</p><p>Warum ist das wichtig? Nun, es hilft dabei zu bestimmen, ob die Fahrgestellnummer (VIN), die Sie prüfen, wirklich zu dem Fahrzeug gehört, an dem Sie Interesse haben. Es gibt zum Beispiel Fälle von sogenannten „Zwillingsmodellen“, wie dem Opel Insignia / Buick Regal oder Toyota GT86 / Subaru BRZ, in denen die die meisten mechanischen Komponenten der Autos gleich sind. Unfaire Autohändler möchten die „Identität“ eines bestimmten Fahrzeugs austauschen, indem der kaputte vordere Kühlergrill, Automarkenzeichen oder andere Designelemente mit den entsprechenden Teilen eines „Zwillingsmodells“ ausgetauscht werden.</p><p>Sie verlieben sich dann vielleicht in die Marke Subaru und fahren in Wirklichkeit einen Toyota. Kaufen Sie Ihren carVertical connected report™ im Voraus, damit Sie nicht auf einen Betrug hereinfallen.</p><p>Dieser Abschnitt bietet Ihnen zusätzlich eine Note von carVertical, die einen kleinen Einblick in den Gesamtzustand des Fahrzeugs bietet. Wir stellen diese Note zusammen, indem wir Schadensdaten, Aufzeichnungen des Kilometerstands und die Schwachstellen des Automodells selbst erfassen. Dann geben wir noch ein bisschen unserer carVertical-Magie hinzu und voilà – fertig ist die Note. Sie können sie verwenden, wenn Sie das Auto mit anderen für Sie interessanten Autos vergleichen.</p>'
+                },
+                activity: {
+                    title: 'Gefundene Aktivitäten',
+                    ofText: '2/10',
+                    text: '<p>Wir denken, dass Sie auch an den Standorten vergangener Ereignisse in Bezug auf das Fahrzeug Ihres Interesses interessiert sein könnten.</p><p>Sie kennen wahrscheinlich die Situation, dass der Verkäufer behauptet der Gebrauchtwagen wurde in Deutschland gekauft (was aus irgendeinem Grund wie ein Mehrwert klingt). Leider muss dies nicht unbedingt stimmen</p><p>Daher haben wir dieses wunderbare Radar in den connected report™ von carVertical mit eingeschlossen. Damit können Sie Länder vorheriger Anmeldungen oder andere Ereignisse mit Standort erkennen. Wenn diese Daten verfügbar sind, können Sie das Datum und das Land der Herstellung, der ersten Anmeldung und weitere Standort-basierte verwaltungstechnische Änderungen feststellen.</p><p>Sie können uns später Danke sagen.</p>'
+                },
+                theft: {
+                    title: 'Prüfung auf Diebstahl',
+                    ofText: '3/10',
+                    text: '<p>Sie wollen sicherlich nicht in die Situation geraten, dass die Polizei Ihr Fahrzeug beschlagnahmt, weil es zuvor gestohlen worden ist. Leider kommt dies vor, obwohl der Kauf des Autos glatt abgelaufen ist und kein Verdacht über den Verkäufer bestanden hat.</p><p>Verwenden Sie den connected report™ von carVertical, um ein bestimmtes Fahrzeug in mehreren Datenbanken für gestohlene Fahrzeuge zu suchen. Wir erfassen darin ganz oder teilweise: Tschechien, Ungarn, Italien, Litauen, die Niederlande, Norwegen, Rumänien, Slowakei, Slowenien, Neuseeland und Kanada.</p><p>Lassen Sie keine Frage ungefragt.</p>'
+                },
+                mileage: {
+                    title: 'Kilometerstand',
+                    ofText: '4/10',
+                    text: '<p>Laut verschiedenen Quellen haben ungefähr 30% der Fahrzeuge weltweit betrügerisch manipulierte Kilometerzähler. Das bedeutet, dass deren Kilometerstand zurückgedreht wurde und so der Restwert erhöht wurde. In Europa alleine bedeutet dies Verluste für die Konsumenten in Höhe von 10 Milliarden Euro jährlich.</p><p>Der Abschnitt „Kilometerstand“ des connected report™ zeigt Kilometerzähler-Ablesungen, die von carVertical ausfindig gemacht werden konnten. Dies gibt Ihnen auf zweierlei Art Sicherheit und ein gutes Gefühl: Erstens kennen Sie die echte Abnutzung des Autos (Abnutzung und Verschleiß hängen normalerweise mit dem Kilometerstand zusammen); und zweitens können Sie anstehende Service-Aufgaben feststellen.</p><p>Einige der Daten in diesem Abschnitt kommen direkt von verbundenen Fahrzeugen. Nicht aus einem Register, einer Versteigerung oder einer Werkstatt, sondern direkt aus dem Auto! Das gibt es in der Branche der Berichte zur Fahrzeughistorie nur bei uns, und das gibt Ihnen wiederum ein unübertroffenes Niveau an Transparenz und Genauigkeit.</p>'
+                },
+                maintenance: {
+                    title: 'Wartung',
+                    ofText: '5/10',
+                    text: '<p>Jedes Fahrzeug wird mit Empfehlungen vom Hersteller zur Wartung geliefert, was normalerweise vordefinierte Intervalle zum Austausch alter Filter, Zündkerzen, Zahnriemen, Getriebepflege oder Ölwechsel bedeutet. Es ist essentiell diesen Empfehlungen Folge zu leisten, um den guten Zustand des Fahrzeugs aufrechtzuerhalten.</p><p>Unser Abschnitt „Wartung“ des Berichts bietet Ihnen mit einer Liste der bald anstehenden Service-Aufgaben für dieses bestimmte Auto. So können Sie die Ausgaben berechnen, die auf Sie zukommen. Je näher das nächste Service ist (was den Kilometerstand betrifft), umso früher werden Sie zusätzliche Ausgaben haben. Dabei sind die Ausgaben um 180 000 bis 200 000 Kilometer für gewöhnlich die größten.</p><p>Wir empfehlen Ihnen nach Fahrzeugen zu suchen, die die größten (teuersten) Service-Ausgaben schon hinter sich haben.</p><p>Darüber hinaus schließen wir auch Zeitpläne vorheriger empfohlener Wartungsaufgaben in den Bericht ein. Sie können diese mit den tatsächlichen Aufzeichnungen im Service-Buch des Fahrzeugs vergleichen. Wenn die Aufzeichnungen mit den Empfehlungen nicht übereinstimmen, haben Sie ein schlecht gewartetes Fahrzeug vor sich.</p>'
+                },
+                damage: {
+                    title: 'Schadenersatz',
+                    ofText: '6/10',
+                    text: '<p>Der Abschnitt „Unfälle“ des connected report™ (Bericht mit Daten von verbundenen Fahrzeugen) kann Informationen über den Schaden enthalten, der am Fahrzeug entstanden ist. Und nicht nur die Tatsache des Unfalls selbst, sondern auch der ungefähre Wert des Schadens, das Land in dem das Fahrzeug beschädigt wurde und die Teile, die betroffen waren (je nach Verfügbarkeit).</p><p>Diese Informationen sind ebenfalls essentiell für die Verhandlung mit dem Verkäufer. Wenn Sie den entdeckten Schaden in Kauf nehmen können, fragen Sie zumindest nach einem Preisnachlass!</p><p>Bitte beachten Sie, dass die Schwere des Schadens nur im Zusammenhang mit dem Fahrzeugpreis selbst bewertet werden sollte. Reparaturkosten von 1000€ für einen Ford Fiesta 1998 bedeuten für diesen wohl das aus, während dieselben Kosten für einen Bentley Bentayga 2017 nur ein paar kleine Kratzer an der Stoßstange bedeuten.</p>'
+                },
+                valuation: {
+                    title: 'Bewertung',
+                    ofText: '7/10',
+                    text: '<p>Ob Sie das Fahrzeug kaufen oder verkaufen, vergewissern Sie sich, dass Sie den besten Deal herausholen.</p><p>Wir helfen Ihnen dabei den besten Preis zu bestimmen, führen Sie durch die Weiterverkaufzeiten oder zeigen an, wann dieses bestimmte Fahrzeug zum Verkauf stand.</p><p>Keine Probleme, keine Eile Sie kontrollieren die Situation.</p>'
+                },
+                equipment: {
+                    title: 'Ausstattung (in Eng.)',
+                    ofText: '8/10',
+                    text: '<p>Stellen Sie einige intelligente Nachforschungen an, indem Sie den Abschnitt „Ausstattung“ des carVertical-Berichts studieren.</p><p>Wir bieten darin möglicherweise die Liste der Originalausstattung, die alle Optionen enthält, die werksseitig installiert wurden. Sehen Sie sich diese genau an und vergleichen Sie sie mit der tatsächlichen Ausstattung die momentan im Auto vorhanden ist (z. B. Klimaanlage, Zierleisten, Felgen, etc.).</p><p>Jede Nichtübereinstimmung kann auf schlechte oder unfaire Reparaturen nach einem Unfall hinweisen.</p>'
+                },
+                equipment: {
+                    title: 'Fotos',
+                    ofText: '9/10',
+                    text: '<p>Die Sichtprüfung war immer der Startpunkt eines Fahrzeugkaufs. Sehen Sie sich die historischen Bilder Ihres Fahrzeugs an, die wir möglicherweise haben</p><p>Achten Sie genau auf die Details, weil nicht nur die auffälligen Zeichen von Schäden von Bedeutung sind. Leicht andere Farbe der Karosserie, andere innere Zierleisten, fehlende Außenteile oder andere Radkappen – achten Sie auf alles, da es wichtige Fakten über die Historie Ihres Autos aufdecken.</p><p>Fragen Sie den Verkäufer immer nach, wenn etwas nicht übereinstimmt oder Sie verdächtige Punkte finden.</p>'
+                },
+                equipment: {
+                    title: 'Checkliste',
+                    ofText: '10/10',
+                    text: '<p>Hier ein praktisches Werkzeug für das „Grand Finale“ Ihrer Fahrzeugüberprüfung. Es besteht aus drei Teilen.</p><p>Der erste Teil identifiziert die Orte, an denen Sie die Fahrgestellnummer (VIN) finden. Nehmen Sie sich ein paar Minuten Zeit sie alle durchzugehen. Wenn Sie nicht übereinstimmende Fahrgestellnummern entdecken oder eines der Zeichen Anzeichen von Fälschung aufweist, sollten Sie auf jeden Fall die Hände von diesem Auto lassen. Überdies sollten Sie die Polizei davon in Kenntnis setzen.</p><p>Es ist ein offenes Geheimnis, dass jedes Modell seine eigenen Schwachstellen hat. Egal ob ein früher VW Passat mit dem problematischen DSG-Getriebe oder ein nicht mehr ganz so junger Mazda 3 mit rostiger Karosserie, Sie sollten diese Nachteile kennen, bevor Sie ein Fahrzeug kaufen. Wir zählen diese im zweiten Teil auf.</p><p>Und abschließend gibt es noch eine Liste der Dinge, die getan werden sollten, wenn Sie das Fahrzeug vor Ort inspizieren. Nichts kniffelig-schwieriges – alles ist einfach und leicht zu verstehen.</p>'
+                },
+
+            }
 
             sections.each(function(){
                 offsets[$(this).attr('id')] = $(this).offset().top - 10
@@ -6258,7 +6311,10 @@
                 
                 for (var i in offsets) {
                     if (offsets[i] <= scrollPosition) {
-                        
+                        var currentTip = tips[i];
+                        $('.ReportExplainer_title__3pGUl').text(currentTip.title)
+                        $('.ReportExplainer_counter__LHVVd').text(currentTip.ofText)
+                        $('.ReportExplainer_text__2dlJn').html(currentTip.text)
                         $('.ReportNav_item__2HqgC.ReportNav_itemActive__2-2DK').removeClass('ReportNav_itemActive__2-2DK');
                         $('a[href="#' + i + '"]').addClass('ReportNav_itemActive__2-2DK');
                     }
@@ -6272,6 +6328,13 @@
 
         $('#nav-mobile').on('click', function(){
             $(this).toggleClass('ReportNav_expanded__2FvbX')
+        })
+
+        $('.ReportExplainer_toggle__123uT').on('click', function(){
+            $(this).parents('.ReportExplainer_bubble__1UmBC').toggleClass('ReportExplainer_expanded__1HgNc');
+        })
+        $('.ReportExplainer_collapseButton__2kVuO').on('click', function(){
+            $('.ReportExplainer_bubble__1UmBC').removeClass('ReportExplainer_expanded__1HgNc');
         })
     </script>
     <script src="./js/main.js"></script>
