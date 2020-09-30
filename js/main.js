@@ -80,4 +80,5 @@ $(document).ready(function($){
     $('.HelpPage_questionToggle__1buEW').on('click', function(){
         $(this).parents('.HelpPage_question__1MeAN').toggleClass('HelpPage_questionActive__2a0gV');
     })
+    
 })
