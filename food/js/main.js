@@ -22,4 +22,9 @@ jQuery(document).ready(function(){
             elementToOpen.show(0);
         }
     })
+    $('.js-banner-slider').slick({
+        dots: true,
+        arrows: false,
+        appendDots: $('.banner-slider-dots')
+    })
 })
