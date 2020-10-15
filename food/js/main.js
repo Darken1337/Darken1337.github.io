@@ -12,13 +12,15 @@ jQuery(document).ready(function(){
         $('body').addClass('o-hidden')
     })
     $('[data-tab-open]').on('click', function(){
+        var parent = $(this).parents('[data-tabs="container"]');
+        if(parent.length === 0) return;
         var tabIdToOpen = $(this).attr('data-tab-open');
-        var elementToOpen = $('[data-tab="' + tabIdToOpen + '"]');
+        var elementToOpen = parent.find('[data-tab="' + tabIdToOpen + '"]');
 
         if(elementToOpen.length > 0){
-            $('[data-tab-open].is-active').removeClass('is-active');
+            parent.find('[data-tab-open].is-active').removeClass('is-active');
             $(this).addClass('is-active');
-            $('[data-tab]').hide(0);
+            parent.find('[data-tab]').hide(0);
             elementToOpen.show(0);
         }
     })
@@ -32,5 +34,13 @@ jQuery(document).ready(function(){
         prevArrow: '<button class="about-slider__arrow prev"></button>',
         nextArrow: '<button class="about-slider__arrow next"></button>',
         slidesToShow: 3
+    })
+    $('.js-drop-open').on('click', function(){
+        var dropToOpen = $(this).siblings('.js-drop-body');
+        if(dropToOpen.length === 0) return;
+        $('.js-drop-body.is-active').slideUp(200)
+                .removeClass('is-active');
+        dropToOpen.slideToggle(200)
+            .addClass('is-active');
     })
 })
