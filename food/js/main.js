@@ -31,9 +31,17 @@ jQuery(document).ready(function(){
     })
     $('.js-about-slider').slick({
         arrows: true,
-        prevArrow: '<button class="about-slider__arrow prev"></button>',
-        nextArrow: '<button class="about-slider__arrow next"></button>',
-        slidesToShow: 3
+        prevArrow: '<button class="about-slider__arrow prev"><svg><use xlink:href="./img/sprites.svg#arrow-left"></use></svg></button>',
+        nextArrow: '<button class="about-slider__arrow next"><svg><use xlink:href="./img/sprites.svg#arrow-right"></use></svg></button>',
+        slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     })
     $('.js-drop-open').on('click', function(){
         var dropToOpen = $(this).siblings('.js-drop-body');
