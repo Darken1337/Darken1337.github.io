@@ -27,4 +27,10 @@ jQuery(document).ready(function(){
         arrows: false,
         appendDots: $('.banner-slider-dots')
     })
+    $('.js-about-slider').slick({
+        arrows: true,
+        prevArrow: '<button class="about-slider__arrow prev"></button>',
+        nextArrow: '<button class="about-slider__arrow next"></button>',
+        slidesToShow: 3
+    })
 })
