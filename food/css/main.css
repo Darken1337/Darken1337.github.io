@@ -149,12 +149,18 @@ img {
       transform: translateY(-50%);
       width: 25px;
       height: 25px;
-      background-image: url(../img/fork.svg);
+      background-image: url(../img/leaves.png);
       background-size: 25px 25px;
       background-repeat: no-repeat;
       background-position: center center; }
     .title-1_w-icon .title-1__inner::after {
-      right: -70px; }
+      right: -70px;
+      -webkit-transform: scale(-1, 1) translateY(-50%);
+      -ms-transform: scale(-1, 1) translateY(-50%);
+      transform: scale(-1, 1) translateY(-50%);
+      -webkit-filter: FlipH;
+      filter: FlipH;
+      -ms-filter: "FlipH"; }
       @media (max-width: 767px) {
         .title-1_w-icon .title-1__inner::after {
           right: -45px; } }
@@ -442,7 +448,7 @@ img {
       -webkit-transform: translate(40%, -35%);
       -ms-transform: translate(40%, -35%);
       transform: translate(40%, -35%);
-      background-color: #6D6D6D;
+      background-color: #f68b1f;
       width: 15px;
       height: 15px;
       font-weight: 300;
@@ -859,7 +865,8 @@ img {
   .tabs__head {
     max-width: 160px;
     width: 100%;
-    margin-right: 30px; }
+    margin-right: 30px;
+    color: #FFFFFF; }
     @media (max-width: 767px) {
       .tabs__head {
         display: -webkit-box;
@@ -920,7 +927,7 @@ img {
         height: 0;
         border-style: solid;
         border-width: 10px 0 10px 20px;
-        border-color: transparent transparent transparent #C4C4C4;
+        border-color: transparent transparent transparent #98d855;
         position: absolute;
         left: 100%;
         top: 30px; }
@@ -949,6 +956,7 @@ img {
         padding: 15px 27px; } }
   .tab-tile__header {
     background-color: #98d855;
+    color: #FFFFFF;
     margin-bottom: 16px; }
   .tab-tile__body {
     background-color: #ECECEC;
@@ -1000,7 +1008,7 @@ img {
 
 .d-steps {
   padding: 44px 17px 50px 53px;
-  background-color: #E3E3E3;
+  background-color: #E4f2e5;
   border-radius: 20px; }
   @media (max-width: 767px) {
     .d-steps {
@@ -1055,7 +1063,8 @@ img {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background-color: #C4C4C4;
+    background-color: #98d855;
+    color: #FFFFFF;
     border-radius: 50%; }
     .d-steps__icon-num {
       -webkit-text-stroke: 1px #000;
@@ -2248,7 +2257,8 @@ img {
   .category:nth-child(even) {
     background-color: #E3E3E3; }
   .category:nth-child(odd) {
-    background-color: #C4C4C4; }
+    background-color: #98d855;
+    color: #FFFFFF; }
   .category__icon {
     width: 65px;
     height: 65px;
