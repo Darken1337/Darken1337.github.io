@@ -41,4 +41,13 @@ jQuery(function(){
     }
 
     modals.init();
+
+    $('.js-popup').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		image: {
+			verticalFit: true
+		}
+		
+	});
 })
