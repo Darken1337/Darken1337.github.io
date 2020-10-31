@@ -1,150 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="ru">
+
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600&display=swap" rel="stylesheet"> 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/main.css">
-    <title>Главная</title>
-  </head>
-  <body>
-    <header id="header">
-      <div class="container container--wide">
-        <nav class="nav">
-          <div class="logo"><img src="./img/logo.svg" alt="Партнерская программа"></div>
-        </nav>
-      </div>
-    </header>
-    <section id="s-banner">
-      <div class="container">
-        <div class="banner">
-          <h1 class="banner__title">Партнёрская программа «Лимон на чай»</h1>
-          <p class="banner__text">Прокачайтесь в инвестировании,<br>помогите прокачаться своим подписчикам, заработайте на этом</p><a class="btn btn_yellow" href="#" target="_blank">Начать работу</a>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="block_video"><iframe src="https://www.youtube.com/embed/MU3-4mlQcTY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="block">
-          <div class="block__header">
-            <h2 class="block__title">Если вам, как и нам, близка тема финансовой грамотности, присоединяйтесь</h2>
-          </div>
-          <div class="block__body finances">
-            <div class="block__body-inner">
-              <div class="block__body-item">Поможете подписчикам прокачаться в одном из самых важных навыков 21-го века;</div>
-              <div class="block__body-item"> Усилите свой авторитет и получите дополнительный инструмент в продвижении своего паблика;</div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="content">
+        <section id="s-tariffs">
+            <div class="container">
+                <h1 class="title-1">Выберите свой пакет</h1>
+                <div class="tariffs">
+                    <div class="tariff">
+                        <a href="#" class="tariff__link">Пакет «ЭКОНОМ»</a>
+                        <div class="tariff__prices">
+                            <div class="tariff__price-old">30 000 ₽</div>
+                            <div class="tariff__price-current">14 900 ₽</div>
+                        </div>
+                        <p class="tariff__text">В пакет эконом входит видео-курс, состоящий из 10 разделов:</p>
+                        <ul class="tariff__list">
+                            <li>Определение вашего типа инвестора (с точки зрения психологии)</li>
+                            <li>Оценка рисков</li>
+                            <li>Различные методы анализа</li>
+                            <li>Решение вопросов касательно государственного регулирования</li>
+                        </ul>
+                    </div>
+                    <div class="tariff">
+                        <a href="#" class="tariff__link">Пакет «РАСШИРЕННЫЙ»</a>
+                        <div class="tariff__prices">
+                            <div class="tariff__price-old">600 000 ₽</div>
+                            <div class="tariff__price-current">39 000 ₽</div>
+                        </div>
+                        <p class="tariff__text">Вы также получаете курс состоящий из 10 уроков. </p>
+                        <p class="tariff__text weight-700">Главным преимуществом Расширенного пакета является доступ в Закрытый канал, где я делюсь всеми своими сделками, которые вы сможете повторять и также зарабатывать на IPO.</p>
+                        <p class="tariff__text">Также в пакет Расширенный входит:</p>
+                        <ul class="tariff__list">
+                            <li>Помощь в выборе брокера при регистрации</li>
+                            <li>Советы по индивидуальному портфелю</li>
+                            <li>Сигналы по IPO на протяжении 12 месяцев</li>
+                            <li>Рекомендации по распределению депозита для участия в IPO</li>
+                            <li>Новостной бот + видео-курс из Пакета «ЭКОНОМ»</li>
+                            <li>Ответы на вопросы от личного помощника</li>
+                        </ul>
+                    </div>
+                    <div class="tariff">
+                        <a href="#" class="tariff__link">Пакет «VIP»</a>
+                        <div class="tariff__prices">
+                            <div class="tariff__price-current">99 000 ₽</div>
+                        </div>
+                        <p class="tariff__text">Кроме курса и доступа в Закрытый канал, пакет VIP включает в себя доступ
+                            в приватный чат инвесторов + моя личная консультация по телефону</p>
+                        <p class="tariff__text">Пакет VIP подойдёт для инвесторов с багажом знаний и опыта. С серьезным
+                            портфелем и намерениями.</p>
+                        <ul class="tariff__list">
+                            <li>Помощь в выборе брокера и регистрации</li>
+                            <li>Советы по индивидуальному портфелю</li>
+                            <li>Сигналы по IPO на протяжении 12 месяцев</li>
+                            <li>Рекомендации по распределению депозита для участия в IPO</li>
+                            <li>Ответы на вопросы от личного помощника</li>
+                            <li>Общий чат со мной и инвесторами</li>
+                            <li>Консультация по вопросам инвестиций лично со мной</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="block">
-          <div class="block__header">
-            <h2 class="block__title">Как стать партнером проекта</h2>
-          </div>
-          <div class="block-info"><img src="./img/info.png" alt="Инфографика"></div>
-          <div class="block__button"><a class="btn btn_yellow" href="#" target="_blank">Начать работу</a></div>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <h2 class="title-2">Преференции программы</h2>
-        <div class="steps">
-          <div class="steps__inner">
-                <div class="step">
-                  <div class="step__number">01</div>
-                  <div class="step__text">Бесплатный мини-курс по основам инвестирования для ваших друзей и подписчиков</div>
+        </section>
+        <section id="s-about">
+            <div class="container">
+                <h2 class="title-2">Автор и спикер курса</h2>
+                <div class="about">
+                    <div class="about__image">
+                        <img src="./img/kondrashov.jpg" alt="Кондрашов">
+                    </div>
+                    <div class="about__content">
+                        <ul class="about__list">
+                            <li>Предприниматель, блогер, инвестор</li>
+                            <li>Лучший тревел-блогер по версии National Geographic 2019</li>
+                            <li>Суммарная аудитория более 3 млн. подписчиков</li>
+                        </ul>
+                        <p class="about__name">Александр Кондрашов</p>
+                    </div>
                 </div>
-                <div class="step">
-                  <div class="step__number">02</div>
-                  <div class="step__text">До 15% партнерских выплат</div>
-                </div>
-                <div class="step">
-                  <div class="step__number">03</div>
-                  <div class="step__text">Личный кабинет партнёра</div>
-                </div>
-                <div class="step">
-                  <div class="step__number">04</div>
-                  <div class="step__text">Персональная консультация по эффективной партнерской интеграции на ваши ресурсы</div>
-                </div>
-                <div class="step">
-                  <div class="step__number">05</div>
-                  <div class="step__text">Трендовая ветка контента и привлечение новой аудитории, интересующейся доходом и финансами</div>
-                </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="block teachers">
-          <div class="block__header">
-            <h2 class="block__title">Наши эксперты — практикующие инвесторы</h2>
-          </div>
-          <div class="teachers__text">Они участвуют в разработке курсов и всех остальных продуктов «Лимон на чай»</div>
-          <div class="teachers__inner">
-            <div class="teacher">
-              <div class="teacher__image"><img src="./img/teacher_1.png" alt="Евгений Коваленко"></div>
-              <div class="teacher__content">
-                <h3 class="teacher__title">Евгений Коваленко</h3>
-                <div class="teacher__text">
-                  <p>Основатель крупнейшего канала по инвестированию в «Телеграме»;</p>
-                  <p>За 3 года через грабли и набивание шишек пришел к доходности 35%;</p>
-                </div>
-              </div>
             </div>
-            <div class="teacher">
-              <div class="teacher__image"><img src="./img/teacher_2.png" alt=" Олег Абелев"></div>
-              <div class="teacher__content">
-                <h3 class="teacher__title">Олег Абелев</h3>
-                <div class="teacher__text">
-                  <p>Кандидат экономических наук, умеющий рассказывать просто о сложном;</p>
-                  <p>В кризис 2014 года вышел в плюс, когда рынки посыпались.</p>
-                </div>
-              </div>
-            </div>
-            <div class="teacher">
-              <div class="teacher__image"><img src="./img/teacher_3.png" alt="Фатима Нибо"></div>
-              <div class="teacher__content">
-                <h3 class="teacher__title">Фатима Нибо</h3>
-                <div class="teacher__text">
-                  <p>Сертифицированный специалист по брокерской, дилерской деятельности и по управлению ценными бумагами;</p>
-                  <p>Один из лучших экспертов в России по техническому анализу.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="block__button"><a class="btn btn_red" href="#" target="_blank">Начать работу</a></div>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <div class="container">
-        <div class="footer">
-          <div class="logo">
-            <picture>
-              <source srcset="./img/logo-mobile.svg" media="(max-width: 767px)">
-              <source srcset="./img/logo.svg" media="(min-width: 768px)"><img src="./img/logo.svg" alt="Логотип">
-            </picture>
-          </div>
-          <ul class="menu">
-            <li><a href="https://t.me/lemonfortea" target="_blank"><img src="./img/telegram.svg" alt=""><span>Телеграмм</span></a></li>
-            <li><a href="https://lemonfortea.ru/"><img src="./img/globe.svg" alt=""><span>Лимон на чай           </span></a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="./libs/js/svg4everybody.min.js"></script>
-    <script src="./js/main.js"></script>
-  </body>
+        </section>
+        <footer class="footer">
+            <button type="button" 
+                    id="hamb"
+                    class="hamb">
+                <span class="hamb__inner"></span>
+            </button>
+            <ul class="footer__list" id="footer-menu">
+                <li>
+                    <a href="">ИП Кондрашова Анастасия Олеговна | ОГРН 317774600296433</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://kondrashovclosed.ru/politica">Политика конфиденциальности</a>
+                </li>
+                <li>
+                    <a href="mailto:info@kondrashovclosed.ru">Служба Поддержки: info@kondrashovclosed.ru</a>
+                </li>
+            </ul>
+        </footer>
+        <script>
+            window.onload = function(){
+                document.getElementById('hamb').onclick = function(){
+                    this.classList.toggle('is-active');
+                    document.getElementById('footer-menu')
+                        .classList.toggle('is-active')
+                }
+                
+            }
+        </script>
+    </div>
+
+</body>
+
 </html>
