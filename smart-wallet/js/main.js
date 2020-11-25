@@ -41,6 +41,7 @@ $(document).ready(function(){
         keyboardNav: true,
         linkHandling: 1,
         horizonOffsetMultiplier: 1,
+        autoPlay: 2000,
         movedToCenter: function(image){
             var imageId = findImageIndex(image[0]);
             var dotToEnable = $('#slider-dots .js-slider-dot').get(imageId);
@@ -50,49 +51,51 @@ $(document).ready(function(){
         }
     });
 
-    // Set manually dots
-    var dotsList = $('#slider-dots');
-    var dotTemplate = document.querySelector('[data-template="dot"]').content;
+    if(document.querySelector('[data-template="dot"]')){
+        // Set manually dots
+        var dotsList = $('#slider-dots');
+        var dotTemplate = document.querySelector('[data-template="dot"]').content;
 
-    $('#slider img').each(function(index, element){
-        var currentDot = dotTemplate.cloneNode(true);
-        var button = currentDot.querySelector('.js-slider-dot');
-            
-        if(index == 2){
-            button.classList.add('is-active');
+        $('#slider img').each(function(index, element){
+            var currentDot = dotTemplate.cloneNode(true);
+            var button = currentDot.querySelector('.js-slider-dot');
+                
+            if(index == 2){
+                button.classList.add('is-active');
+            }
+            button.onclick = function(){
+                $('.js-slider-dot.is-active').removeClass('is-active');
+                button.classList.add('is-active');
+                element.click();
+            };
+            dotsList[0].append(currentDot);
+        });
+
+        function findImageIndex(node){
+            return Array.prototype.slice
+                        .call( document.getElementById('slider').children )
+                        .indexOf( node );
         }
-        button.onclick = function(){
-            $('.js-slider-dot.is-active').removeClass('is-active');
-            button.classList.add('is-active');
-            element.click();
-        };
-        dotsList[0].append(currentDot);
-    });
 
-    function findImageIndex(node){
-        return Array.prototype.slice
-                    .call( document.getElementById('slider').children )
-                    .indexOf( node );
-    }
-
-    if(isMobile){
-        $('#clients').slick({
-            dots: false,
-            arrows: true,
-            prevArrow: '<button type="button" class="clients-list__arrow prev">&lsaquo;</button>',
-            nextArrow: '<button type="button" class="clients-list__arrow next">&rsaquo;</button>',
-            slidesToShow: 3,
-            responsive: [
-                {
-                    breakpoint: 566,
-                    settings: {
-                        slidesToShow: 1
+        if(isMobile){
+            $('#clients').slick({
+                dots: false,
+                arrows: true,
+                prevArrow: '<button type="button" class="clients-list__arrow prev">&lsaquo;</button>',
+                nextArrow: '<button type="button" class="clients-list__arrow next">&rsaquo;</button>',
+                slidesToShow: 3,
+                responsive: [
+                    {
+                        breakpoint: 566,
+                        settings: {
+                            slidesToShow: 1
+                        }
                     }
-                }
-            ]
-        })
-    }
+                ]
+            })
+        }
 
+    }
 
 })
 

@@ -63,14 +63,14 @@
       <section class="section_bg" id="s-banner" style="background-image: url(./img/home/banner-bg.png)">
         <div class="container">
           <div class="banner">
-            <div class="banner__decor banner__decor_one banner__decor_animate-right"><img src="./img/home/banner-phone-1.png" alt=""></div>
-            <div class="banner__decor banner__decor_two banner__decor_animate-right"><img src="./img/home/banner-phone-2.png" alt=""></div>
-            <div class="banner__decor banner__decor_three banner__decor_animate-right"><img src="./img/home/banner-phone-3.png" alt=""></div>
-            <div class="banner__decor banner__decor_four banner__decor_animate-right"><img src="./img/home/banner-phone-4.png" alt=""></div>
-            <div class="banner__decor banner__decor_five banner__decor_animate-left"><img src="./img/home/banner-phone-5.png" alt=""></div>
-            <div class="banner__decor banner__decor_six banner__decor_animate-left"><img src="./img/home/banner-phone-6.png" alt=""></div>
-            <div class="banner__decor banner__decor_seven banner__decor_animate-left"><img src="./img/home/banner-phone-7.png" alt=""></div>
-            <div class="banner__decor banner__decor_eight banner__decor_animate-left"><img src="./img/home/banner-phone-8.png" alt=""></div>
+            <div class="banner__decor banner__decor_one"><img src="./img/home/banner-phone-1.png" alt=""></div>
+            <div class="banner__decor banner__decor_two"><img src="./img/home/banner-phone-2.png" alt=""></div>
+            <div class="banner__decor banner__decor_three"><img src="./img/home/banner-phone-3.png" alt=""></div>
+            <div class="banner__decor banner__decor_four"><img src="./img/home/banner-phone-4.png" alt=""></div>
+            <div class="banner__decor banner__decor_five"><img src="./img/home/banner-phone-5.png" alt=""></div>
+            <div class="banner__decor banner__decor_six"><img src="./img/home/banner-phone-6.png" alt=""></div>
+            <div class="banner__decor banner__decor_seven"><img src="./img/home/banner-phone-7.png" alt=""></div>
+            <div class="banner__decor banner__decor_eight"><img src="./img/home/banner-phone-8.png" alt=""></div>
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <h1 class="text-uppercase text-center banner__title">ПОВЫШАЙТЕ ЭФФЕКТИВНОСТЬ БИЗНЕСА С СЕРВИСОМ ЭЛЕКТРОННЫХ КАРТ ЛОЯЛЬНОСТИ</h1>
@@ -80,7 +80,7 @@
             <div class="advantages">
               <div class="row flex-column flex-md-row align-items-center">
                 <div class="col-md-6 col-lg-4 advantage-item">
-                  <div class="row">
+                  <div class="row text-center text-md-left">
                     <div class="col-sm-4 mb-3 mb-sm-0"><img src="./img/advantages/1.png" alt="Удобно"></div>
                     <div class="col-sm-8">
                       <h3>Удобно</h3>
@@ -89,7 +89,7 @@
                   </div>
                 </div>
                 <div class="col-md-6 col-lg-4 advantage-item">
-                  <div class="row">
+                  <div class="row text-center text-md-left">
                     <div class="col-sm-4 mb-3 mb-sm-0"><img src="./img/advantages/2.png" alt="Эффективно"></div>
                     <div class="col-sm-8">
                       <h3>Эффективно</h3>
@@ -98,7 +98,7 @@
                   </div>
                 </div>
                 <div class="col-md-6 col-lg-4 advantage-item">
-                  <div class="row">
+                  <div class="row text-center text-md-left">
                     <div class="col-sm-4 mb-3 mb-sm-0"><img src="./img/advantages/3.png" alt="Интеграция"></div>
                     <div class="col-sm-8">
                       <h3>Интеграция</h3>
@@ -107,7 +107,7 @@
                   </div>
                 </div>
                 <div class="col-md-6 col-lg-4 advantage-item">
-                  <div class="row">
+                  <div class="row text-center text-md-left">
                     <div class="col-sm-4 mb-3 mb-sm-0"><img src="./img/advantages/4.png" alt="Практично"></div>
                     <div class="col-sm-8">
                       <h3>Практично</h3>
@@ -116,7 +116,7 @@
                   </div>
                 </div>
                 <div class="col-md-6 col-lg-4 advantage-item">
-                  <div class="row">
+                  <div class="row text-center text-md-left">
                     <div class="col-sm-4 mb-3 mb-sm-0"><img src="./img/advantages/5.png" alt="Экономично"></div>
                     <div class="col-sm-8">
                       <h3>Экономично</h3>
@@ -125,7 +125,7 @@
                   </div>
                 </div>
                 <div class="col-md-6 col-lg-4 advantage-item">
-                  <div class="row">
+                  <div class="row text-center text-md-left">
                     <div class="col-sm-4 mb-3 mb-sm-0"><img src="./img/advantages/6.png" alt="Быстро"></div>
                     <div class="col-sm-8">
                       <h3>Быстро</h3>
@@ -152,7 +152,12 @@
                 <button class="slider__dot js-slider-dot" type="button"></button>
               </li>
             </template>
-            <div class="slider__decor"><img src="./img/animation_1.gif" alt=""></div>
+            <div class="slider__decor">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/animation_1.gif">
+                <source media="(max-width: 767px)" srcset="./img/animation_1_mobile.png"><img src="./img/animation_1.gif" alt="">
+              </picture>
+            </div>
           </div>
         </div>
       </div>
@@ -233,12 +238,17 @@
       <section id="s-reviews" style="background-image: url(./img/reviews/reviews-bg.png)">
         <div class="container">
           <div class="reviews text-center">
-            <div class="reviews__decor"><img src="./img/animation_2.gif" alt=""></div>
+            <div class="reviews__decor">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/animation_2.gif">
+                <source media="(max-width: 767px)" srcset="./img/animation_2_mobile.png"><img src="./img/animation_2_mobile.png" alt="">
+              </picture>
+            </div>
             <h2 class="h1">Отзывы наших клиентов</h2>
             <div class="subtitle">Об использовании электронных карт лояльности WALLET в бизнесе</div>
             <div class="reviews__list">
-              <div class="row">
-                <div class="col-md-4 d-flex">
+              <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4 d-flex">
                         <div class="review-item">
                           <div class="review-item__image"><img src="./img/reviews/1.png" alt=""></div>
                           <div class="review-item__header">
@@ -250,7 +260,7 @@
                           </div>
                         </div>
                 </div>
-                <div class="col-md-4 d-flex justify-content-center">
+                <div class="col-md-6 col-lg-4 d-flex justify-content-center">
                         <div class="review-item">
                           <div class="review-item__image"><img src="./img/reviews/2.png" alt=""></div>
                           <div class="review-item__header">
@@ -262,7 +272,7 @@
                           </div>
                         </div>
                 </div>
-                <div class="col-md-4 d-flex justify-content-end">
+                <div class="col-md-6 col-lg-4 d-flex justify-content-end">
                         <div class="review-item">
                           <div class="review-item__image"><img src="./img/reviews/3.png" alt=""></div>
                           <div class="review-item__header">
