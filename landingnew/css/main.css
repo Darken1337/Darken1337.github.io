@@ -8,7 +8,8 @@ html {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Open Sans", sans-serif;
-  color: #313237; }
+  color: #313237;
+  scroll-behavior: smooth; }
   @media (max-width: 767px) {
     html {
       font-size: 14px; } }
@@ -145,19 +146,24 @@ img {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  border-radius: 5px; }
+  border-radius: 5px;
+  border: 2px solid transparent; }
   @media (max-width: 767px) {
     .button {
       font-size: 15px; } }
   .button_yellow {
     background-color: #FFD700; }
+    .button_yellow.is-active {
+      border-color: #FFD700;
+      background-color: #fff; }
 
 .section-header {
   position: relative;
   margin-bottom: 30px; }
   @media (max-width: 767px) {
     .section-header {
-      margin-bottom: 15px; } }
+      margin-bottom: 15px;
+      padding-left: 80px; } }
   .section-header::before {
     content: '';
     position: absolute;
@@ -169,6 +175,9 @@ img {
     background-image: url(../img/section-pre.svg);
     background-repeat: no-repeat;
     background-position: center center; }
+    @media (max-width: 767px) {
+      .section-header::before {
+        left: 0; } }
 
 .text {
   line-height: 1.4;
@@ -281,12 +290,22 @@ img {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start; }
+  @media (max-width: 767px) {
+    .banner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
   @media (max-width: 1024px) {
     .banner__image {
       margin-right: -17%; } }
   @media (max-width: 767px) {
     .banner__image {
-      display: none; } }
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+      order: 1;
+      max-width: 360px;
+      margin: 0 auto 20px; } }
   .banner__subtitle {
     font-weight: 600;
     font-size: 16px;
@@ -313,6 +332,11 @@ img {
         margin-bottom: 20px; } }
   .banner__list-title {
     margin-bottom: 10px; }
+  @media (max-width: 767px) {
+    .banner__content {
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+      order: 2; } }
   .banner .list {
     margin-bottom: 26px; }
     .banner .list li:not(:last-child) {
@@ -484,7 +508,8 @@ img {
   .practice__item-image {
     margin-bottom: 20px;
     -webkit-box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16);
-    box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16); }
+    box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16);
+    text-align: center; }
   .practice__item-text {
     text-align: center; }
 
@@ -590,6 +615,10 @@ img {
     @media (max-width: 767px) {
       .education-item__title {
         text-align: center; } }
+
+.education-dropdown {
+  padding: 40px 0;
+  display: none; }
 
 #footer {
   background-color: #FFFDEF; }

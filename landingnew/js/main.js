@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
-    if($(window).width() < 768){
+    var isMobile = $(window).width() < 768;
+
+    if(isMobile){
         $('#menu a').on('click', closeMenu)
         $('#hamb').on('click', function(){
             $(this).toggleClass('is-active');
@@ -20,5 +22,10 @@ $(document).ready(function(){
         $('#hamb').removeClass('is-active');
         $('#menu').hide();
     }
+
+    $('.js-open-course').on('click', function(){
+        $(this).siblings('.js-course').slideToggle();
+        $(this).toggleClass('is-active');
+    })
     
 })
