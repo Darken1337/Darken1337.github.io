@@ -76,26 +76,47 @@ $(document).ready(function(){
                         .call( document.getElementById('slider').children )
                         .indexOf( node );
         }
-
-        if(isMobile){
-            $('#clients').slick({
-                dots: false,
-                arrows: true,
-                prevArrow: '<button type="button" class="clients-list__arrow prev">&lsaquo;</button>',
-                nextArrow: '<button type="button" class="clients-list__arrow next">&rsaquo;</button>',
-                slidesToShow: 3,
-                responsive: [
-                    {
-                        breakpoint: 566,
-                        settings: {
-                            slidesToShow: 1
-                        }
-                    }
-                ]
-            })
-        }
-
     }
+
+    if(isMobile){
+        $('#clients').slick({
+            dots: false,
+            arrows: true,
+            prevArrow: '<button type="button" class="clients-list__arrow prev">&lsaquo;</button>',
+            nextArrow: '<button type="button" class="clients-list__arrow next">&rsaquo;</button>',
+            slidesToShow: 3,
+            responsive: [
+                {
+                    breakpoint: 566,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        })
+        $('#integration-list').slick({
+            dots: false,
+            arrows: true,
+            prevArrow: '<button type="button" class="integration__arrow prev">&lsaquo;</button>',
+            nextArrow: '<button type="button" class="integration__arrow next">&rsaquo;</button>',
+            slidesToShow: 1,
+        })
+    }
+
+    $('#usage-slider').slick({
+        dots: false,
+        arrows: true,
+        prevArrow: '<button type="button" class="usage-slider__arrow prev"><img src="./img/icons/arrow-left.svg"/></button>',
+        nextArrow: '<button type="button" class="usage-slider__arrow next"><img src="./img/icons/arrow-right.svg"/></button>',
+        slidesToShow: 1
+    })
+
+    $('#news-slider').slick({
+        dots: true,
+        appendDots: $('#news-dots'),
+        arrows: false,
+        slidesToShow: 1
+    })
 
 })
 
