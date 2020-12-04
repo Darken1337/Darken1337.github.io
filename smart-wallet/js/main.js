@@ -35,48 +35,68 @@ $(document).ready(function(){
         })
     }
 
+    $('#slider').slick({
+        dots: true,
+        arrows: true,
+        appendDots: $('#slider-dots'),
+        prevArrow: '<button type="button" class="usage-slider__arrow prev"><img src="./img/icons/arrow-left.svg"/></button>',
+        nextArrow: '<button type="button" class="usage-slider__arrow next"><img src="./img/icons/arrow-right.svg"/></button>',
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 4000
+    })
+    $('#services-slider').slick({
+        dots: false,
+        arrows: true,
+        prevArrow: '<button type="button" class="usage-slider__arrow prev"><img src="./img/icons/arrow-left.svg"/></button>',
+        nextArrow: '<button type="button" class="usage-slider__arrow next"><img src="./img/icons/arrow-right.svg"/></button>',
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 4000
+    })
+
     // Slider
-    $("#slider").waterwheelCarousel({
-        forcedImageWidth: 222,
-        keyboardNav: true,
-        linkHandling: 1,
-        horizonOffsetMultiplier: 1,
-        autoPlay: 2000,
-        movedToCenter: function(image){
-            var imageId = findImageIndex(image[0]);
-            var dotToEnable = $('#slider-dots .js-slider-dot').get(imageId);
+    // $("#slider").waterwheelCarousel({
+    //     forcedImageWidth: 222,
+    //     keyboardNav: true,
+    //     linkHandling: 1,
+    //     horizonOffsetMultiplier: 1,
+    //     autoPlay: 2000,
+    //     movedToCenter: function(image){
+    //         var imageId = findImageIndex(image[0]);
+    //         var dotToEnable = $('#slider-dots .js-slider-dot').get(imageId);
 
-            $('.js-slider-dot.is-active').removeClass('is-active');
-            $(dotToEnable).addClass('is-active');
-        }
-    });
+    //         $('.js-slider-dot.is-active').removeClass('is-active');
+    //         $(dotToEnable).addClass('is-active');
+    //     }
+    // });
 
-    if(document.querySelector('[data-template="dot"]')){
-        // Set manually dots
-        var dotsList = $('#slider-dots');
-        var dotTemplate = document.querySelector('[data-template="dot"]').content;
+    // if(document.querySelector('[data-template="dot"]')){
+    //     // Set manually dots
+    //     var dotsList = $('#slider-dots');
+    //     var dotTemplate = document.querySelector('[data-template="dot"]').content;
 
-        $('#slider img').each(function(index, element){
-            var currentDot = dotTemplate.cloneNode(true);
-            var button = currentDot.querySelector('.js-slider-dot');
+    //     $('#slider img').each(function(index, element){
+    //         var currentDot = dotTemplate.cloneNode(true);
+    //         var button = currentDot.querySelector('.js-slider-dot');
                 
-            if(index == 2){
-                button.classList.add('is-active');
-            }
-            button.onclick = function(){
-                $('.js-slider-dot.is-active').removeClass('is-active');
-                button.classList.add('is-active');
-                element.click();
-            };
-            dotsList[0].append(currentDot);
-        });
+    //         if(index == 2){
+    //             button.classList.add('is-active');
+    //         }
+    //         button.onclick = function(){
+    //             $('.js-slider-dot.is-active').removeClass('is-active');
+    //             button.classList.add('is-active');
+    //             element.click();
+    //         };
+    //         dotsList[0].append(currentDot);
+    //     });
 
-        function findImageIndex(node){
-            return Array.prototype.slice
-                        .call( document.getElementById('slider').children )
-                        .indexOf( node );
-        }
-    }
+    //     function findImageIndex(node){
+    //         return Array.prototype.slice
+    //                     .call( document.getElementById('slider').children )
+    //                     .indexOf( node );
+    //     }
+    // }
 
     if(isMobile){
         $('#clients').slick({
