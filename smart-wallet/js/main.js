@@ -5,33 +5,30 @@ $(document).ready(function(){
     // Menu init
 
     if(isMobile){
-        $('.js-menu-open').on('click', function(){
-            $('#menu').addClass('is-active');
-            $('.menu-overlay').fadeIn(200);
-        })
-        $('.js-menu-close').on('click', function(){
-            $('#menu').removeClass('is-active');
-            $('.menu-overlay').fadeOut(200);
-        })
-        $('.menu-overlay').on('click', function(){
-            $('#menu').removeClass('is-active');
-            $('.menu-overlay').fadeOut(200);
+        $('.js-menu-toggle').on('click', function(){
+            $('#menu').slideToggle();
+            $(this).toggleClass('is-active');
+            if(! $(this).hasClass('is-active')){
+                $('.js-open-submenu').removeClass('is-active');
+                $('#menu').find('.sub-menu').hide();
+                $('#menu').find('.js-drop-plus').text('+');
+            }
+
         })
         $('.js-open-submenu').on('click', function(ev){
-            ev.stopPropagation();
+            ev.preventDefault();
             // Structure - li > (a > .js-open-submenu) + ul.submenu
-            var subMenu = $(this).parent().siblings('.sub-menu');
-            var link = $(this).parent();
-
-            if(link.hasClass('is-active')) return;
+            var subMenu = $(this).siblings('.sub-menu');
     
             if(subMenu.length === 0) return;
     
-            $('#menu a.is-active').removeClass('is-active');
-            $('#menu .sub-menu').slideUp(200);
-    
-            link.toggleClass('is-active');
-            subMenu.slideDown(200);
+            $(this).toggleClass('is-active');
+            subMenu.slideToggle(200);
+            if($(this).hasClass('is-active')){
+                $(this).find('.js-drop-plus').text('-');
+            }else{
+                $(this).find('.js-drop-plus').text('+');
+            }
         })
     }
 
