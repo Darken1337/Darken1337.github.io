@@ -135,5 +135,21 @@ $(document).ready(function(){
         slidesToShow: 1
     })
 
+    for(var i = 1; i <= 3; i++){
+        $('#general-about-slider-' + i).slick({
+            dots: false,
+            arrows: false,
+            autoplay: 4000,
+            prevArrow: '<button type="button" class="usage-slider__arrow prev"><img src="./img/icons/arrow-left.svg"/></button>',
+            nextArrow: '<button type="button" class="usage-slider__arrow next"><img src="./img/icons/arrow-right.svg"/></button>',
+            slidesToShow: 1
+        })
+    }
+
+    $('[data-general-slider]').on('click', function(){
+        $('[data-general-slider].is-active').removeClass('is-active');
+        $(this).addClass('is-active');
+    })
+
 })
 
