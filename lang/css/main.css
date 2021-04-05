@@ -425,6 +425,45 @@ img {
 .text-gray-light {
   color: #fcfcfc; }
 
+.first-spot {
+  -webkit-transform-origin: 52% 38%;
+  -ms-transform-origin: 52% 38%;
+  transform-origin: 52% 38%; }
+
+.second-spot {
+  -webkit-transform-origin: 40% 32%;
+  -ms-transform-origin: 40% 32%;
+  transform-origin: 40% 32%; }
+
+#loader_spot {
+  position: absolute;
+  left: -190px;
+  top: -45px; }
+  @media screen and (max-width: 768px) {
+    #loader_spot {
+      position: static; } }
+
+.blobs {
+  -webkit-transform: translate(-50%, -20%);
+  -ms-transform: translate(-50%, -20%);
+  transform: translate(-50%, -20%); }
+
+.blobs-img {
+  -webkit-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  transform-origin: bottom;
+  -webkit-transform: translate(19%, -120%) rotate(135deg);
+  -ms-transform: translate(19%, -120%) rotate(135deg);
+  transform: translate(19%, -120%) rotate(135deg); }
+
+.blobs-sec {
+  -webkit-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  transform-origin: bottom;
+  -webkit-transform: translate(-22%, -121%) rotate(100deg);
+  -ms-transform: translate(-22%, -121%) rotate(100deg);
+  transform: translate(-22%, -121%) rotate(100deg); }
+
 .header {
   position: relative;
   z-index: 5; }
