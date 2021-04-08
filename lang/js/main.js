@@ -75,6 +75,99 @@ jQuery(document).ready(function($){
         }
         
     })
+
+    var newsSlider = {
+        sliderHeight: 0,
+        instance: null,
+        updateHeight: function(){
+            var sliderHeight = 0;
+            $('.news-card').each(function(index){
+                if(index > 2) return;
+                sliderHeight += $(this).height();
+            })
+            this.sliderHeight = sliderHeight;
+        },
+        init: function(){
+            this.updateHeight()
+            $('.js-news-slider').css('height', this.sliderHeight);
+
+            if(this.instance !== null){
+                this.instance.destroy();
+                this.instance = null;
+            }
+            this.instance = new Swiper('.js-news-slider', {
+                slidesPerView: 'auto',
+                direction: 'vertical',
+                pagination: {
+                    el: '.js-news-dots',
+                    bulletClass: 'slider-dots__bullet',
+                    bulletActiveClass: 'slider-dots__bullet_active',
+                    clickable: true
+                }
+            })
+        }
+    }
+
+    var gallerySlider = new Swiper('.js-gallery-slider', {
+        navigation: {
+            nextEl: '.gallery__next',
+            prevEl: '.gallery__prev',
+        },
+        pagination: {
+            el: '.js-gallery-dots',
+            bulletClass: 'slider-dots__bullet',
+            bulletActiveClass: 'slider-dots__bullet_active',
+            clickable: true
+        }
+    })
+
+    var teachersSlider = new Swiper('.js-teachers-slider', {
+        navigation: {
+            nextEl: '.teachers-slider__next',
+            prevEl: '.teachers-slider__prev',
+            clickable: true
+        },
+        breakpoints: {
+            1: {
+                slidesPerView: 1,
+                spaceBetween: 0
+            },
+            992: {
+                slidesPerView: 2,
+                spaceBetween: 18
+            }
+        }
+    })
+
+    window.onload = function(){
+        newsSlider.init();
+
+    }
+    
+    var tabsInit = function(){
+        var tabsTrigger = $('[data-tab-open]');
+
+        tabsTrigger.on('click', function(ev){
+            ev.preventDefault();
+            var tabId             = $(this).attr('data-tab-open');
+            var container         = $(this).parents('[data-tab-container]');
+            var currentTabTrigger = container.find('[data-tab-open].is-active');
+            var currentTab        = container.find('[data-tab].is-active');
+            var tabTriggerToOpen  = $(this);
+            var tabToOpen         = container.find('[data-tab="' + tabId + '"]');
+
+            currentTabTrigger.removeClass('is-active');
+
+            tabTriggerToOpen.addClass('is-active');
+
+            currentTab.hide()
+                      .removeClass('is-active');
+            tabToOpen.fadeIn()
+                     .addClass('is-active');
+        })
+    }
+
+    tabsInit();
     // ************* init spot animation *************
     var radius = 8;
     TweenMax.staggerFromTo('.blob', 5 ,{
@@ -105,7 +198,7 @@ jQuery(document).ready(function($){
 
     $(window).on('resize', function(){
         updateDevice();
-        menuInit()
+        menuInit();
     });
 
 })

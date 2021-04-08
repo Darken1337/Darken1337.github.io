@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg  id="animated" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink= "http://www.w3.org/1999/xlink"
+  preserveAspectRatio='xMinYMin slice'>
+  <style type="text/css">
+    .path {
+      animation: dash 45s linear  infinite reverse;
+      -moz-animation: dash 45s linear  infinite reverse;
+      -webkit-animation: dash 45s linear  infinite reverse;
+      -o-animation: dash 45s linear  infinite reverse;
+      -ms-animation: dash 45s linear  infinite reverse;
+    }
+
+
+    @keyframes dash {
+      from {stroke-dashoffset: 0;}
+      to {stroke-dashoffset: 2000;}
+    }
+    @-moz-keyframes dash {
+      from {stroke-dashoffset: 0;}
+      to {stroke-dashoffset: 2000;}
+    }
+    @-webkit-keyframes dash {
+      from {stroke-dashoffset: 0;}
+      to {stroke-dashoffset: 2000;}
+    }
+    @-o-keyframes dash {
+      from {stroke-dashoffset: 0;}
+      to {stroke-dashoffset: 2000;}
+    }
+    @-ms-keyframes dash {
+      from {stroke-dashoffset: 0;}
+      to {stroke-dashoffset: 2000;}
+    }
+  </style>
+  <rect x="2" y="2" rx="24" ry="24" width="98%" height="95%" fill="none" stroke-dasharray="6,6" stroke="rgb(128,0,0)" stroke-width="2" class="path" id="rect_anim"/>
+</svg>
